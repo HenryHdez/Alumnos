@@ -1,0 +1,16 @@
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.exe
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.deps.json
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.runtimeconfig.json
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.runtimeconfig.dev.json
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.dll
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\ref\Ejer.dll
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\bin\Debug\net5.0\Ejer.pdb
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.csproj.AssemblyReference.cache
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.AssemblyInfoInputs.cache
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.AssemblyInfo.cs
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.csproj.CoreCompileInputs.cache
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.dll
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\ref\Ejer.dll
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.pdb
+C:\Users\Hagui\Documents\Ejercicio_1\Ejer\obj\Debug\net5.0\Ejer.genruntimeconfig.cache

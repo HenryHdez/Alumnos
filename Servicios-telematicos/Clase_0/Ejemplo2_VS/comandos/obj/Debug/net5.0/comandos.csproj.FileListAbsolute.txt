@@ -1,0 +1,16 @@
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.exe
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.deps.json
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.runtimeconfig.json
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.runtimeconfig.dev.json
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.dll
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\ref\comandos.dll
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\bin\Debug\net5.0\comandos.pdb
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.csproj.AssemblyReference.cache
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.AssemblyInfoInputs.cache
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.AssemblyInfo.cs
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.csproj.CoreCompileInputs.cache
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.dll
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\ref\comandos.dll
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.pdb
+C:\Users\Hagui\Documents\Ejemplo2_VS\comandos\obj\Debug\net5.0\comandos.genruntimeconfig.cache
