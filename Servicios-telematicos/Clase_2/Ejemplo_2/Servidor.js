@@ -1,4 +1,4 @@
-//Importe el módulos
+//Importe los módulos requeridos
 const express = require("express");
 const app = express();
 const puerto = 5000;
