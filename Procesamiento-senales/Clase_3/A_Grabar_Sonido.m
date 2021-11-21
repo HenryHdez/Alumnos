@@ -1,8 +1,8 @@
 clc, clear;          %Limpiar pantalla y borrar variables
 Duracion=1;          %tiempo de grabación en segundos 
-Fs=44100;            % Frecuencia de muestreo 
+Fs=44100;            %Frecuencia de muestreo 
 %Crear un objeto con propiedades de audio 
-%En este caso es un microfono que se va a muestrear con Fs, una resolucion
+%En este caso es un microfono que se va a muestrear con Fs, una resolución
 %de 16 bits y por un solo canal.
 %1 es monofónico, 2 es estéreo
 Entrada=audiorecorder(Fs,16,1);

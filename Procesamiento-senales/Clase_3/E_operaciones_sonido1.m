@@ -5,10 +5,11 @@ plot(y);
 intervalo=3400:44000;
 yl=y(intervalo);%Extraer de y 
 sound(y,Fs)
-%Aumentara o disminuir la frecuenci de muestreo 
+%Aumentara o disminuir la frecuencia de muestreo 
 sound(y,Fs/2);  %Lento
 sound(y,Fs*2);  %rapido 
 %Diezmación 
 Factor_diezmacion=10;
 Senal_diezmada=y(1:Factor_diezmacion:end);
 sound(Senal_diezmada,Fs);
+

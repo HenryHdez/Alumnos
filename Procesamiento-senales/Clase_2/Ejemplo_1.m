@@ -2,7 +2,7 @@
 %Definicion de las funciones a operar
 %>>>>>Vector de tiempo<<<<<
 n=-10:1:10;
-%>>>>>Inddexación lógica<<<<<<
+%>>>>>Indexación lógica<<<<<<
 %Señal escalón unitario 
 u=double(n>0);%Casting de lógico a número
 x=(2/3).^n;

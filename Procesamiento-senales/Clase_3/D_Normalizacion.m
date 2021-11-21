@@ -9,7 +9,7 @@ Normalizada=Normalizada/Maximo;
 %Ampliando
 Ampliada=floor(255.*Normalizada);
 %Archivo plano
-dlmwrite('Sonido.txt',Ampliada);
+writematrix(Ampliada,'Sonido.txt');
 %Plot
 subplot(3,1,1)
 plot(Senal)
