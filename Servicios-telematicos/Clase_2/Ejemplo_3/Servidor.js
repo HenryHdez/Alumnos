@@ -12,6 +12,6 @@ app.get('/', (req,res)=>{
 });
 //Oyente
 app.listen(puerto, () => {
-    console.log("Ejecutando express");
+    console.log("Ejecutando servidor");
 });
 
