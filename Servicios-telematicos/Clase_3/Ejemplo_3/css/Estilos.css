@@ -1,0 +1,14 @@
+th{
+    border: 2px solid red;
+    padding: 10px;
+}
+
+td{
+    border: 3px solid blue;
+    padding: 15px;
+}
+
+td:hover{
+    background: blueviolet;
+}
+

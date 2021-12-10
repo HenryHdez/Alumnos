@@ -1,0 +1,122 @@
+ul{
+    list-style-type: square;
+    padding-left: 10;
+    margin: 2;
+}
+
+li{
+    display: inline;
+    background: cornflowerblue;
+}
+/*
+.imagen1{
+    width: 300px;
+}
+*/
+/*
+.imagen2{
+    width: 300px;
+    display: block;
+    border-radius: 10%;
+}
+*/
+
+/*Top, Right, Bottom, left*/
+/*body{
+    
+    margin: 120px, 200px, 250px, 60px;
+    background: ivory;
+}*/
+/*top-bottom rigth-left*/
+/*h1{
+    color:blue;
+    background: lavender;
+    
+    margin: 140px, 100px;
+    height: 100px;
+    width: 150px;
+}*/
+
+/*En resumen*/
+/*1: margin: aplica para todos los lados*/
+/*2: margin-x: aplica para solo un lado*/
+/*3: margin: top right bottom left => aplica para todos los lados*/
+/*4: margin: top-bottom rigth-left => aplica para todos los lados*/
+
+.Estilotexto{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.bloque{
+    width: 400px;
+    height: 250px;
+    background: lavender;
+}
+
+.borde1{
+    border: lightcoral solid 10px;
+}
+
+.borde2{
+    border-top: blue solid 10px;
+    border-bottom: royalblue solid 20px;
+}
+
+.borde3{
+    border-color:sandybrown;
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 100px;
+}
+
+/*Margenes del div*/
+.Margenes_1{
+    background: hotpink;
+    display: block;
+    font-size: 20mm;
+    height: 250px;
+    width: 300px;
+    margin-block-start: 50px;
+    margin-block-end: 30px;
+    margin-inline-start: 30px;
+    margin-inline-end: 20px;
+}
+
+/*Tamaños en CSS*/
+.Tamano_div1{
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+
+.Tamano_div2{
+    background: greenyellow;
+    height: 100px;
+    width: 100px;
+}
+
+/*Secciones en CSS*/
+#Menu{
+    background: skyblue;
+}
+#Contenido{
+    background: springgreen;
+}
+
+/*Colores en CSS*/
+.color1{
+    color:royalblue;
+    }
+
+.color2{
+    color:red;
+    }
+
+#contenido1{
+    background: silver;
+}
+
