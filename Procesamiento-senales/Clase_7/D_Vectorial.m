@@ -27,4 +27,4 @@ line([20 100],[380 420],'Color','w','LineWidth',2)
 text(380,420,'Hola','Color','w')
 %Guardar figura e imagen o figura
 imwrite(Ima,'Nombre.jpg') %Guarda imagen
-saveas(fig,'Grafico.jpg') %gcf es la figura actual
+saveas(gcf,'Grafico.jpg') %gcf es la figura actual

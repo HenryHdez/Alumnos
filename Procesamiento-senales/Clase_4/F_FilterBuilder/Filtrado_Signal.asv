@@ -1,0 +1,33 @@
+clc, clear all
+%>>>Diseñe una señal con frecuencia variable<<<<<
+Fs=4000;                         %Frecuencia de muestreo
+figure(1)                        %(Número de la figura)
+t=0:1/Fs:4;                      %Intervalo definido por Fs
+y=[sin(200*pi*t(1:end/2)),...    %...Indica que continua
+   sin(800*pi*t(end/2:end))];      %Continua
+%Grafico
+plot(t,y,'linewidth',2);
+grid on;title('Señal original');
+ylabel('Amplitud');xlabel('Tiempo (s)');
+%Definicion de la transformada 
+%Tome la longitud del vector 
+L=length(y);
+%nextpow devuelve la potencia más pequeña de dos, que es mayor o 
+%igual que el valor absoluto de L, ya que, el algoritmo de FFT 
+%calcula la transformada en potencias de 2.
+NFFT=2^nextpow2(L);
+%Algoritmo de  transformada rápida de Fourier
+Y=fft(y,NFFT)/L;
+%Generación del vector de frecuancias disponibles
+%Fs/2, es vaido porque el espectro de frecuencia de una señal 
+%tiene simetria hermitiana (loque significa que el espectro de 
+%valores por encima de Fs/2 se puede obtener del conjugado 
+%comlejode los valores por debajo de)
+f=(Fs/2)*linspace(0,1,NFFT/2+1);
+%Espectro en frecuencia 
+figure(2)
+%Imprime la magnitud en un rango de frecuencias
+plot(f,2*abs(Y(1:NFFT/2+1)),'linewidth',2);
+grid on;title('Espectro de frecuencia');
+ylabel('Magnitud |Y(f)|');xlabel('Frecuencia(Hz)');
+
