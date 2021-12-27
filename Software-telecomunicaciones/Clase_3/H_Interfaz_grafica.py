@@ -3,7 +3,7 @@
 from tkinter import *
 
 """Función principal"""
-if __name__ == ""__main__":
+if __name__ == "__main__":
     """Crear ventana vacia"""
     Aplicacion=Tk()
     """Definición de los objetos a usar"""

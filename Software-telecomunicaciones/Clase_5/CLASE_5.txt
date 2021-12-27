@@ -1,0 +1,427 @@
+﻿EJEMPLO II
+"""Importe la librería SMTP"""
+
+from email.mime.multipart import MIMEMuLtipart
+
+
+from email.mime.text import MIMEText
+
+
+import smtplib
+
+
+
+"""Cree un objeto para almacenar el correo electrónico a enviar"""
+
+MSG = MIMEMultipart()
+
+
+"""Escriba el cuerpo del correo electrónico"""
+
+
+Mensaje = "Bienvenido al módulo de administración de redes"
+""
+"""Establezca los parámetros del correo electrónico"""
+
+Contrasena     = "12345"
+
+
+MSG['From']    = "Profesor@AdministradorRed.com"
+
+
+MSG['To*]
+
+      = "Profesor@AdministradorRed.com"
+
+MSG['Subject'] =
+
+ 
+
+"Bienvenida"
+
+
+"""Agregue el cuerpo del correo al objeto"""
+
+MSG.attach(MIMEText (Mensaje, 'plain'))
+
+"""Cree un servidor temporal"""
+
+
+server = smtplib.SMTP(host='192.168.0.12', port=25)
+
+"""Ingrese al servicio"""
+
+server.login(MSG['From'], Contrasena)
+"""Envie el mensaje
+"""
+server.sendmail(MSG['From'], MSG['To'], MSG.as_string())
+
+server.quit()
+
+
+print ("Mensaje enviado a: %s" % (MSG['To']))
+
+
+
+----------------------------------------------------------------
+EJEMPLO II (EXTERNO)
+
+"""Importe la librería SMTP"""
+
+from email.mime.multipart import MIMEMuLtipart
+
+
+from email.mime.text import MIMEText
+
+
+import smtplib
+
+
+
+"""Cree un objeto para almacenar el correo electrónico a enviar"""
+
+MSG = MIMEMultipart()
+
+
+"""Escriba el cuerpo del correo electrónico"""
+
+
+Mensaje = "Bienvenido al módulo de administración de redes"
+""
+"""Establezca los parámetros del correo electrónico"""
+
+Contrasena     = "*******"
+
+
+MSG['From']    = "hahernandezm@udistrital.edu.co"
+
+
+MSG['To*]
+
+      = "heahernandezma@unal.edu.co"
+
+MSG['Subject'] =
+
+ 
+
+"Bienvenida"
+
+
+"""Agregue el cuerpo del correo al objeto"""
+
+MSG.attach(MIMEText (Mensaje, 'plain'))
+
+"""Establezca la conexión con el servidor de gmail"""
+
+
+server = smtplib.SMTP('smtp.gmail.com',587)
+server.starttls()
+
+
+"""Ingrese al servicio"""
+
+server.login(MSG['From'], Contrasena)
+"""Envie el mensaje
+"""
+server.sendmail(MSG['From'], MSG['To'], MSG.as_string())
+
+server.quit()
+
+
+print ("Mensaje enviado a: %s" % (MSG['To']))
+
+
+
+----------------------------------------------------------------
+EJEMPLO III (CONSULTA)
+
+"""Importar librería del conector de mysql"""
+
+import mysql.connector as mysql
+
+ 
+
+
+"""Crear variables con los parámetros de acceso a la BD"""
+
+ORIGEN="localhost"
+
+
+USUARIO="root"
+CONTRASENA=""
+
+BASEDATOS="Administrador_Red"
+
+ 
+
+ 
+
+
+
+"""Establecer la conexión con la BD"""
+
+BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
+
+Cursor = BD.cursor()
+"""
+
+Ejecutar comandos de SQL con .execute, por ejemplo una consulta"""
+
+Cursor.execute("SELECT * FROM Administrador_Red")
+
+for row in Cursor:
+
+   print(row)
+"""Cerrar la BD"""
+BD.close()
+
+EJEMPLO III (Agregar Campo)
+
+"""Importar librería del conector de mysql"""
+
+import mysql.connector as mysql
+
+ 
+
+
+"""Crear variables con los parámetros de acceso a la BD"""
+
+ORIGEN="localhost"
+
+
+USUARIO="root"
+CONTRASENA=""
+
+BASEDATOS="Administrador_Red"
+
+ 
+
+ 
+
+
+
+"""Establecer la conexión con la BD"""
+
+BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
+
+Cursor = BD.cursor()
+"""
+
+Ejecutar comandos de SQL con .execute, por ejemplo agregar un equipo"""
+
+Comando="INSERT INTO Administrador_Red (Equipos, Seriales) VALUES(%s, %s);"
+Valores=("PC Personal",str(77))
+Cursor.execute(Comando,Valores)
+
+BD.commit()
+"""Cerrar la BD"""
+BD.close()
+
+EJEMPLO III (Filtro)
+
+"""Importar librería del conector de mysql"""
+
+import mysql.connector as mysql
+
+ 
+
+
+
+"""Crear variables con los parámetros de acceso a la BD"""
+
+ORIGEN="localhost"
+
+
+USUARIO="root"
+CONTRASENA=""
+
+BASEDATOS="Administrador_Red"
+
+ 
+
+ 
+
+"""Establecer la conexión con la BD"""
+
+BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
+
+Cursor = BD.cursor()
+
+
+"""
+
+Ejecutar comandos de SQL con .execute, por ejemplo una consulta"""
+
+Cursor.execute('SELECT * FROM Administrador_Red WHERE (Equipos= "PC")')
+
+for row in Cursor:
+
+   print(row)
+"""Cerrar la BD"""
+BD.close()
+
+
+-------------------------------------------------------------------------------
+SERVIDOR WEB
+
+<html>
+    <!--Esto es un comentario en un lenguaje HTML-->
+    <head>
+ 
+    <!--Esta sección contiene informacón generañ de la página-->
+        <title>Mi pági
+
+na de emjemplo</title>
+    </head>
+
+    
+<body>
+
+
+        <!--Lo que va a mostrar en la pagina-->
+        Hola mundo
+.
+    </body>
+</html>
+
+
+-----------------------------------------------------------------------------------
+FLASK
+
+
+
+"""Importe la líbreria"""
+
+
+from flask import Flask
+"""Inicialización de la página"""
+
+
+pagina = Flask(__name__)
+
+
+
+
+"""Flask requiere de un direccionamiento por función.
+
+Es decir cuando va a mostrar algo en la pagina se dirige
+
+a la ruta asignada"""
+
+"""En este caso / indica la raíz del servidor
+"""
+"""Función particular para mostrar algo en la página"""
+@pagina.route('/')
+
+def Funcion(
+
+):
+    return 'Hola mundo'
+
+ 
+
+ 
+
+
+
+"""Ejecución del servidor de flask"""
+
+
+if __name__ == '__main__':
+    pagina.run()
+
+--------------------------------------------------------------
+EJEMPLO IV
+
+"""Importe la líbreria"""
+from flask import Flask, render_template
+"""Inicialización de la página"
+"""
+pagina = Flask(__name__)
+
+
+
+"""En este caso se direcciona un archivo con formato
+HTML"""
+@pagina.route('/')
+def Funcion():
+
+
+    return render_template('mi_primer_pagina.html')
+
+
+
+"""Ejecución del servidor de flask"""
+
+if __name__ == '__main__':
+
+
+    pagina.run()
+
+
+
+
+-----------------------------------------------------
+
+PYTHON
+"""Importe la líbreria"""
+from flask import Flask, render_template
+"""Inicialización de la página"
+"""
+pagina = Flask(__name__)
+
+
+
+"""Función particular"""
+@pagina.route('/')
+def Funcion():
+    lista=["Henry","Hernandez","Docente"]
+    """Las variables a mostrar en la página vn
+    separadas por comas"""
+    return render_template('mi_primer_pagina.html',
+                           Nombre_variable_mostrar=lista)
+HTML
+
+<body>
+    <!--Agregue doble llave para indicar que es una varible 
+    externa o una estructura de control de flujo-->
+
+
+
+
+    <h3>Mi nombre ea {{Nombre_variable_mostrar[0]}}</h3>
+    
+<h3>Mi Apellido es {{Nombre_variable_mostrar[1]}}</h3>
+    
+<h3>Mi Cargo es {{Nombre_varible_mostrar[2]}}</h3>
+
+
+</body>
+
+-------------------------------------------------------------
+EJEMPLO 5
+
+
+
+<body>
+     <!--Condicional-->
+     {% if Color[0]==1 %}
+         
+<font face="arial" size="6" color="blue">Color azul</font>
+     {% else %}
+         
+<font face="arial" size="6" color="red">Color rojo</font>
+     {% for etiqueta in Nombre_variable_mostrar %}
+
+     <hi>{{ etiqueta }} </h1>
+
+     {% endfor %}
+
+
+</body>
+
+
+
+
+ 
+ 

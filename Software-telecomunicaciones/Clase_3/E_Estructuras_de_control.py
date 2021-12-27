@@ -14,7 +14,7 @@ else:
     print("Numero Incorrecto")
 print("Continua la ejecución de la aplicación")
 
-""En PYTHON funcionan las formas de comparación convencionales como"""
+"""En PYTHON funcionan las formas de comparación convencionales como"""
 """x!=y             x No es igual a y"""
 """x==y             x Es igual a y"""
 """x>y              x Es mayor a y"""

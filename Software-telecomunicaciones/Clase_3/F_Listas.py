@@ -10,6 +10,7 @@ for i in range(len(Lista)):
 son una lista anidada."""
 #Ejemplo
 Matriz=[]
+Numero_Filas=5
 Numero_Columnas=10
 for i in range(Numero_Filas):
     Matriz.append([])
