@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Importar la líbertia os (Operating System)
 import os
 #Asigne a una variable la dirección IP

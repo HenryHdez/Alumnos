@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 """importe la libreria Tkinter"""
 from tkinter import *
 """sys contiene a try"""
 import sys 
 
 def clic():
-    """Verifique si el recuerso u objeto est· disponible"""
+    """Verifique si el recuerso u objeto est√° disponible"""
     try:
         """Leer desde el campo (String por defecto)"""
         Numero=int(C_Entrada.get())
@@ -12,21 +13,21 @@ def clic():
         """Modificar el estado de etiqueta"""
         etiqueta.config(text=T_Etiqueta)
     except ValueError:
-        """La excepciÛn se activa si hay al menos un error en el
+        """La excepci√≥n se activa si hay al menos un error en el
         dato del campo de entrada"""
         T_Etiqueta="Introduzca un dato"
         etiqueta.config(text=T_Etiqueta)
         
-"""FunciÛn principal"""
+"""Funci√≥n principal"""
 if __name__ == "__main__":
     """Crear ventana vacia"""
     Aplicacion=Tk()
-    """DefiniciÛn de los objetos a usar"""    
-    Aplicacion.title("EdiciÛn")
+    """Definici√≥n de los objetos a usar"""    
+    Aplicacion.title("Edici√≥n")
     """Crear etiqueta cpn variable de texto"""
     T_Etiqueta="Digite algo..."
     etiqueta=Label(Aplicacion,text=T_Etiqueta)
-    """Crear BotÛn (clic=nombre de la funciÛn
+    """Crear Bot√≥n (clic=nombre de la funci√≥n
     asociada)"""
     boton=Button(Aplicacion,text="Pulse",command=clic)
     """Crear campo de entrada y/o salida"""

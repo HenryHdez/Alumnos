@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Definición de funciones"""
 """Declaración de variables"""
 a=1

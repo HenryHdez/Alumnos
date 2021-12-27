@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 """PYTHON tiene la capacidad de almacenar listas"""
 Lista=["Sujeto 1", "Sujeto 2", "Sujeto 3"]
-"""La forma m·s sencilla de publicar es:"""
+"""La forma m√°s sencilla de publicar es:"""
 print(Lista)
 """Sin embargo, puede usar una estructura"""
 #El comando len se usa para conocer la longitud de la lista
@@ -15,6 +16,6 @@ Numero_Columnas=10
 for i in range(Numero_Filas):
     Matriz.append([])
     for j in range(Numero_Columnas):
-        Matriz[i].append("Dato a asignar en la posiciÛn: "
+        Matriz[i].append("Dato a asignar en la posici√≥n: "
               +str(i)+", "+str(j))
 print(Matriz)

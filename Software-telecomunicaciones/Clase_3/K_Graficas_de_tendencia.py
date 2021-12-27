@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 """importe la libreria Tkinter"""
 from tkinter import *
 """Matplotlib es una libreria para publicar graficas de tendencia."""
-import matplotlin.pyplot as plt
+import matplotlib.pyplot as plt
 
 def clic():
     lista=[1,2,3,4,5]
@@ -12,11 +13,11 @@ def clic():
     plt.title("Titulo")
     """Activar grilla"""
     plt.grid(True)
-    """Mostrar gr·fico"""
+    """Mostrar gr√°fico"""
     plt.show()
 
-"""FunciÛn principal"""
-if __name__ == ""__main__":
+"""Funci√≥n principal"""
+if __name__ == "__main__":
     Aplicacion=Tk()
     Aplicacion.title("Graficar")
     boton=Button(Aplicacion,text="Grafique",command=clic)

@@ -1,47 +1,34 @@
 ﻿<html>
-
-    <head>
-
-        
-<title>Ejemplo animacion</title> 
-    
-</head>
+    <head>   
+        <title>Ejemplo animacion</title> 
+    </head>
     <!--Onload permite cargar  una funcion al iniciar un objeto--> 
-    
-
-<body onload="Iniciar_Imagen():">
-
-    <img src="" id="imagen">
-    <script>
-    //Cree im array con los nombres de imagenes que se iran presentando.
-        var imagenes=new Array(
-            'Imagenes/Paisaje1.jpg',
-            'Imagenes/Paisaje2.jpg',
-            'Imagenes/Paisaje3.jpg',
-            'Imagenes/Paisaje4.jpg',
-        );
-    //Inicie un contador
-        var contador=0;
-
-
-    
-</script>
-
-    
-</body>
-
+    <body onload="Iniciar_Imagen():">
+        <img src="" id="imagen">
+        <script>
+        //Cree im array con los nombres de imagenes que se iran presentando.
+            var imagenes=new Array(
+                'Imagenes/Paisaje1.jpg',
+                'Imagenes/Paisaje2.jpg',
+                'Imagenes/Paisaje3.jpg',
+                'Imagenes/Paisaje4.jpg',
+            );
+        //Inicie un contador
+            var contador=0;
+        </script>
+    </body>
 </html>
 
 
 <script>
-//cree un array con los mombres de imagenes que iran representando
+    //cree un array con los mombres de imagenes que iran representando
      var imagenes=new Array(
             'Imagenes/Paisaje1.jpg',
             'Imagenes/Paisaje2.jpg',
             'Imagenes/Paisaje3.jpg',
             'Imagenes/Paisaje4.jpg',
         );
-//Inicie un contador
+    //Inicie un contador
     var contador=0;
     function Cambiar_Imagen(){
     //Cree una función para cambiar la imagen
@@ -49,7 +36,7 @@
             document.getElementById("Imagen").scr=imagenes[contador];
         else(contador=0;)}}
 
-    funcion Iniciar_Imagen(){
+    function Iniciar_Imagen(){
     // cargue una imagen inicial
         Cambiar_Imagen();
     // Actualizar función cada segundo

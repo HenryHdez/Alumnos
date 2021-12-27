@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """PYTHON no tiene un tipo de variable especifico"""
 Entero=4
 Decimal=2.4

@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 """PYTHON tiene dos estructuras de control de 
 entrada y salida por pantalla"""
 #Entrada
-numero=input("Digite un número:")
+numero=input("Digite un nÃºmero:")
 #Salida
-print("El número es: ",numero)
+print("El nÃºmero es: ",numero)
 
 """La estructura condicional asume que lo que esta
 adelante un espacio tabular(tab) pertenece a ella."""
@@ -12,23 +13,23 @@ if(int(numero)==3):
     print("Numero Correcto")
 else:
     print("Numero Incorrecto")
-print("Continua la ejecución de la aplicación")
+print("Continua la ejecuciÃ³n de la aplicaciÃ³n")
 
-"""En PYTHON funcionan las formas de comparación convencionales como"""
+"""En PYTHON funcionan las formas de comparaciÃ³n convencionales como"""
 """x!=y             x No es igual a y"""
 """x==y             x Es igual a y"""
 """x>y              x Es mayor a y"""
 """x<y              x Es menor a y"""
-"""and              Comparación lógica and"""
-"""or               Comparación lógica or"""
-#Ejemplo de implementación con un elif
-Selector=int(input("Digite una opción: "))
+"""and              ComparaciÃ³n lÃ³gica and"""
+"""or               ComparaciÃ³n lÃ³gica or"""
+#Ejemplo de implementaciÃ³n con un elif
+Selector=int(input("Digite una opciÃ³n: "))
 if(Selector==0):
-    print("El número es cero")
+    print("El nÃºmero es cero")
 elif(Selector==1):
-    print("El número es uno")
+    print("El nÃºmero es uno")
 elif(Selector<0 or Selector>2):
-    print("El número está fuera de rango")
+    print("El nÃºmero estÃ¡ fuera de rango")
 
 
 """Nota: la estructura SWITCH en PYTHON no existe"""

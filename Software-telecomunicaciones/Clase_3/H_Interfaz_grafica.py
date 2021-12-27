@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Mi primer aplicación con interfaz grafica"""
 """importe la libreria Tkinter"""
 from tkinter import *

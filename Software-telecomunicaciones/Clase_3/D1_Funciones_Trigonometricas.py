@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 """Algunas operaciones requieren de la liberia math, 
 por su complejidad."""
 import math as matematicas
-#Número PI
+#NÃºmero PI
 pi=matematicas.pi
-#Ejemplo funciones trigonométricas
+#Ejemplo funciones trigonomÃ©tricas
 print(matematicas.sin(pi/2))
 print(matematicas.cos(pi/2))
 print(matematicas.tan(pi/2))
-#Funciones trigonométricas inversas
+#Funciones trigonomÃ©tricas inversas
 print(matematicas.asin(0.37))
 print(matematicas.acos(1))
 print(matematicas.atan(0.4))

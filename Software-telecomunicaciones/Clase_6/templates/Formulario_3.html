@@ -1,0 +1,21 @@
+﻿<html>   
+    <head>   
+        <title>Formlario de ejemplo 3</title>
+    </head>
+    <body>
+        <form action="http://127.0.0.1:5000/"> 
+            <p> <input type="submit" value="Volver"> </p>
+            <p> <input type="text" id="Caja salida" values="defecto"> </p>
+            <!--Enlace para llamar a la funcion de JS-->
+            <p> <input type="button" onclick="Funcion_1()" value="Activar F1"> </p>
+            <!--Usa la estructura de Flask-->      
+            <p> <input type="button" onclick="Funcion_2({{Var}})" value="Activar F2"></p>
+        </form>
+        <!--Forma de llamar un script desarrollado en JS-->
+        <script type="text/javascript">
+            function Funcion_1() {}
+            function Funcion_2(entrada) {} 
+            function Funcion_n() {}
+        </script>
+    </body> 
+</html>
