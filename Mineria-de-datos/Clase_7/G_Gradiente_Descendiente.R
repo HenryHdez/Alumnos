@@ -1,4 +1,4 @@
-#Implemente una funci贸n que resulva la ecuaci贸n de
+#Implemente una funci髇 que resulva la ecuaci贸n de
 #minimos cuadrados.
 sum_residuos <- function(x, y, beta_0, beta_1){
   return(sum((y - (beta_0 + beta_1 * x))^2))
@@ -19,7 +19,7 @@ calc_gradiente <- function(beta_0, beta_1, x, y){
 
 # Implemente el algoritmo del gradiente descendiente.
 optimizacion_grad <- function(beta_0, beta_1, x, y, t, max_iter, tolerancia){
-  # Tabla para almacenar el valor de las estimaciones en cada iteraci贸n
+  # Tabla para almacenar el valor de las estimaciones en cada iteraci髇
   Tabla <- matrix(NA, nrow = max_iter, ncol = 4)
   colnames(Tabla) <- c("iteracion", "beta0", "beta1", "residuos")
   #Inicio del proceso iterativo
