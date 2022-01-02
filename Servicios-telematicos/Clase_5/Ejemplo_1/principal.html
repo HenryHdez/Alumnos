@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="scripts/Funciones.js"></script>
+  <script>
+    window.onload = Audio_Disp;
+  </script>
+  <title>Grabador de audio</title>
+</head>
+  
+<body>
+  <header>
+    <h1>Grabar y reproducir audio usando JS</h1>
+  </header>
+  <!--Botones para iniciar y parar la grabación-->
+  <p>
+    <button id="btnStart">INICIAR</button>      
+    <button id="btnStop">PARAR</button>
+  </p>
+  <!--Los controles permiten subir/bajar el volumen, reproducir, entre otros-->
+  <!--Control de audio para grabar-->
+  <audio controls></audio> 
+  <!--Para reproducir el audio-->
+  <audio id="adioPlay" controls></audio>
+</body>
+  
+</html>
+

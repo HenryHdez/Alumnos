@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="scripts/Funciones.js"></script>
+    <script>
+        window.onload = iniciar_WEBCAM;
+      </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Contenedor para video -->
+    <div class="video-wrap">
+        <video id="video" playsinline autoplay></video>
+    </div>
+
+    <!-- Botón para capturar desde la WEBCAM -->
+    <div class="controller">
+        <button id="snap">Capture</button>
+    </div>
+
+    <!-- Canvas para publicar la imágen -->
+    <canvas id="canvas" width="640" height="480"></canvas>
+</body>
+</html>
+
