@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Importar librer韆 socket"""
+"""Importar librer铆a socket"""
 import socket
 """Crear una variable que almacena al socket"""
 Nombre_Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -7,7 +7,7 @@ Nombre_Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 un conector IPv4"""
 """socket.SOCK_STREAM: Envia los paquetes en orden"""
 
-"""La funci髇 bind() crea un oyente que espera la conexi髇 al servidor"""
+"""La funci贸n bind() crea un oyente que espera la conexi贸n al servidor"""
 IP_Servidor = "127.0.0.1"
 Puerto=1234
 Nombre_Socket.bind((IP_Servidor, Puerto))
@@ -16,27 +16,29 @@ Nombre_Socket.bind((IP_Servidor, Puerto))
 aceptar el servidor"""
 Clientes = 2
 Nombre_Socket.listen(Clientes)
-"""La funci髇 .accep() crea dos objetos. En este caso la variable
-ID_Socket_Cliente almacena la informaci髇 que llega y drecci髇 es
+"""La funci贸n .accep() crea dos objetos. En este caso la variable
+ID_Socket_Cliente almacena la informaci贸n que llega y drecci贸n es
 una lista de los clientes conectados"""
 ID_Socket_Cliente, direccion = Nombre_Socket.accept()
 
 
 while True:
-    """La funci髇 .recv() espera hasta que llegue un mensaje"""
+    """La funci贸n .recv() espera hasta que llegue un mensaje"""
     bytes_a_recibir = 1024
     mensaje_recibido = ID_Socket_Cliente.recv(bytes_a_recibir)
-    """La instrucci髇 decode permite realizar un cambio de formato
+    """La instrucci贸n decode permite realizar un cambio de formato
     (bytes-str)"""
     texto = mensaje_recibido.decode("utf8")
     """Pregunta si el tecto que llega es cerrar para terminar la 
-    comunicac髇"""
+    comunicaci贸n"""
     if texto == 'cerrar':
         break 
     else:
         print (str(direccion) + "envio: ", texto)   
-
-print ('Termino la aplicaci髇')
+    """Enviar mensaje al cliente"""
+    Mensaje_Envio="Enviado"
+    ID_Socket_Cliente.send(Mensaje_Envio.encode())
+print ('Termino la aplicaci贸n')
 
 """Cerrar instancias del socket"""
 ID_Socket_Cliente.close()
