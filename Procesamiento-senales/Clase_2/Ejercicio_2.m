@@ -9,7 +9,7 @@ xlabel('n');ylabel('x[n]');title('Señal de prueba');
 %Syms es un tipo de variable simbolica que le 
 %permite definir funciones matematicas.
 syms k x(k)
-%la expresion li(ele i-latina) indica que es un número complejo
+%la expresion 1i(uno i-latina) indica que es un número complejo
 %Los puntos suspensivos indican que la instruccion continua abajo
 x(k)=2*exp(-2*1i*pi*k/7)+2*exp(-2*1i*pi*k*2/7)...
     +exp(-2*1i*pi*k*4/7)+exp(-2*1i*pi*k*5/7);
