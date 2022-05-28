@@ -67,4 +67,4 @@ ylabel('Magnitud |Y(f)|');xlabel('Frecuencia(Hz)');
 figure(5)
 plot(t,Filtrada,'linewidth',2);
 grid on;
-ylabel('Amplitud');xlabel('Frecuencia(Hz)');
+ylabel('Amplitud');xlabel('Tiempo (s)');
