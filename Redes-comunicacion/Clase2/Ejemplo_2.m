@@ -1,16 +1,24 @@
 clc, clear %Limpiar variables y pantalla
-%>>>>>>>>>TRANSFORMADA INVERSA DE FOURIER<<<<<<<<<<
-syms w t f(t)
-%int=integral(funcion, variable, limite inferior, limite superior)
-f(t)=int(((exp(-2*1i*w)/(1i*w))*(exp(1i*w)-1))*exp(1i*w*t),w,-1000,1000);
-%Presentación de la solución
-pretty(f(t))
-%Definición de los parámetros para asignar valores a la ecuación
-t=0:0.1:10;
+%>>>>>>>>>FUNCIÓN EN EL DOMINIO DEL TIEMPO<<<<<<<<<<
+t=0:0.01:5; %Crear vector con pasos de 0.01
+y=double(t>=1 & t<=2); %Amplitudes definidas de forma logica
 %Graficar
-plot(t,f(t),LineWidth=2, Color='blue')
+figure
+plot(t,y,LineWidth=2,Color='red') 
 %Caracteristicas del gráfico
 grid on %Activar la cuadricula
 xlabel('tiempo')
 ylabel('Amplitud')
 title('f(t)')
+%>>>>>>>>>TRANSFORMADA DE FOURIER<<<<<<<<<<
+syms w F(w)
+F(w)=exp(-2/1i*w)*(exp(1i*w)-1);
+w=-10:0.1:10;
+figure
+plot(w,F(w),LineWidth=2,Color='red')
+%Caracteristicas del gráfico
+grid on %Activar la cuadricula
+xlabel('Frecuencia')
+ylabel('Amplitud')
+title('F(w)')
+
