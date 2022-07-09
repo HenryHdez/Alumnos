@@ -8,7 +8,7 @@ Nombre_Socket = socket.socket()
 """Llamar al metodo connect para establecer una 
 conexión con el servidor. Teniendo en cuenta que
 tiene dos parámetros la dirección IP y el puerto"""
-IP_Servidor='127.0.0.1'
+IP_Servidor='192.168.68.54'
 Puerto=1234
 
 """Está estructura intenta establecer una conexión"""
