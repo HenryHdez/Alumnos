@@ -4,7 +4,7 @@
 install.packages("readr")
 install.packages("tidyverse")
 #Varias
-install.packages("funModeling", "Hmisc")
+install.packages(c("funModeling", "Hmisc"))
 
 #Importar una librería
 library("tidyverse")

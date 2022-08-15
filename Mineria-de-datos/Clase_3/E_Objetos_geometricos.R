@@ -1,40 +1,50 @@
 library(tidyverse)
 library(datos)
-Autos=datos::millas
-#Hay Otras mascaras diferentes de geom_point()
+autos <- datos::millas
+#Otras mascaras diferentes de geom_point ()
 
 #Ejemplo
-#geom_point()
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))
-#geom_smooth()
-ggplot(data=Autos)+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista))
+#geom_point ()
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista))
+#geom_smooth ()
+ggplot(data <- autos) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista))
 
-#Unión
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista))
+#Es posible graficar varias mascaras en el mismo grÃ¡fico usando +
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista))
 
-#clasificación
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista, linetype=traccion))
+#Asigne una linea de tendencÃ­a por clase
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista, linetype = traccion))
 
-#clasificación
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista, linetype=traccion))
-#clasificación
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista, color=traccion))
-#clasificación
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista))+
-  geom_smooth(mapping = aes(x=cilindrada, y=autopista, group=traccion))
+#Hay varÃ­as formas de presentar las lineas de tendencia
+#Por contorno
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista, linetype = traccion))
+#Por color
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista, color = traccion))
+#Area de influencia
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista, group = traccion))
 
-#clasificación
-ggplot(data=Autos, mapping = aes(x=cilindrada, y=autopista))+
-  geom_point(mapping = aes(color=clase))+
-  geom_smooth(data = filter(Autos, clase=="suv"))
+#Las mascaras se pueden aplicar sobre atributos fijos. Por ejm.
+ggplot(data <- autos, mapping = aes(x = cilindrada, y = autopista)) +
+  geom_point() +
+  geom_smooth()
+#Agregue algunas caracterÃ­sticas
+ggplot(data <- autos, mapping = aes(x = cilindrada, y = autopista)) +
+  geom_point(mapping = aes(color = clase)) +
+  geom_smooth(mapping = aes(group = clase))
+
+#El filtro presenta la informaciÃ³n seleccionada. En este caso solo la lÃ­nea SUV
+ggplot(data <- autos, mapping = aes(x = cilindrada, y = autopista)) +
+  geom_point(mapping = aes(color = clase)) +
+  geom_smooth(data = filter(autos, clase == "suv"))

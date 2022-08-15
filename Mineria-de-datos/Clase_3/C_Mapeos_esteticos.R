@@ -1,30 +1,28 @@
-#Importe las siguientes librerías
+#Importe las siguientes librerÃ­as
 library(tidyverse)
 library(datos)
 #Ejemplo
-Autos=datos::millas
-#Clasificación por color
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista, color=clase))
-#Otras formas de clasificación en ggplot
-#Tamaño
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista, size=clase))
+autos <- datos::millas
+#ClasificaciÃ³n por color
+ggplot(data <- autos) +
+    geom_point(mapping = aes(x = cilindrada, y = autopista, color = clase))
+#Otras formas de clasificaciÃ³n en ggplot
+#TamaÃ±o
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista, size = clase))
 #Escala de grises
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista, alpha=clase))
-#Geometría
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista, shape=clase))
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista, alpha = clase))
+#GeometrÃ­a
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista, shape = clase))
 #Cambiar color
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista), color="blue")
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista), color = "blue")
 #Agrupar por clase
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista, color="blue"))
-#Otras formas de figura geométrica
-ggplot(data=Autos)+
-  geom_point(mapping = aes(x=cilindrada, y=autopista),
-             shape=0, size=5, fill="red")
-
-
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista, color = "blue"))
+#Otras formas de figura geomÃ©trica
+ggplot(data <- autos) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista),
+             shape = 0, size = 5, fill = "red")

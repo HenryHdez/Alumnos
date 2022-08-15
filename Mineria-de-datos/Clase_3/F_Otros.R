@@ -1,22 +1,26 @@
 library(tidyverse)
 library(datos)
-Autos=datos::millas
+autos <- datos::millas
 #Otros
 #Diagrama de barras
-ggplot(data = Autos) +
+ggplot(data <- autos) +
   geom_bar(mapping = aes(x = traccion))
 #x muestra la etiqueta
 #y la cantidad de veces que se repite x
 
 #Identity permite asignar un conteo almacenado en una variable
-x_v=c("uno", "dos", "tres")
-y_v=c(100,50,300)
-Datos=data.frame(Etiquetas=x_v, Valores=y_v)
-ggplot(data = Datos)+
-  geom_bar(mapping = aes(x=Etiquetas, y=Valores), stat="identity")
+x_v <- c("uno", "dos", "tres")
+y_v <- c(100, 50, 300)
+datos <- data.frame(Etiquetas = x_v, Valores = y_v)
+ggplot(data = datos) +
+  geom_bar(mapping = aes(x = Etiquetas, y = Valores), stat = "identity")
 
+#Mostrar grafico proporcional
+ggplot(data = datos) +
+  geom_bar(mapping = aes(x = Etiquetas, y = stat(prop), group = 1))
 
-ggplot(data=Autos)+
+#Résumen en términos del valor medio, minímo y máximo
+ggplot(data <- autos) +
   stat_summary(
     mapping = aes(x = traccion, y = cilindrada),
     fun.min = min,
@@ -24,18 +28,19 @@ ggplot(data=Autos)+
     fun = median
   )
 
+#Apariencia de los gráficos de barras
 #Contorno
-ggplot(data = Autos) +
-  geom_bar(mapping = aes(x = autopista, colour= traccion))
+ggplot(data <- autos) +
+  geom_bar(mapping = aes(x = autopista, colour = traccion))
 
 #relleno
-ggplot(data = Autos) +
-  geom_bar(mapping = aes(x = autopista, fill= traccion))
+ggplot(data <- autos) +
+  geom_bar(mapping = aes(x = autopista, fill = traccion))
 
 #separar
-ggplot(data = Autos) +
-  geom_bar(mapping = aes(x = autopista, colour= traccion), position = "dodge")
+ggplot(data <- autos) +
+  geom_bar(mapping = aes(x = autopista, colour = traccion), position = "dodge")
 
-#jitter
-ggplot(data = Autos) +
+#jitter (ruido para visualizar las clases y/o especies)
+ggplot(data <- autos) +
   geom_point(mapping = aes(x = cilindrada, y = autopista), position = "jitter")

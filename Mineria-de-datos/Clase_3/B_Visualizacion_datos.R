@@ -1,4 +1,4 @@
-#Importe las siguientes librer韆s
+#Importe las siguientes librer铆as
 library(tidyverse)
 library(datos)
 #---Algunos paquetes requeridos estan en tidyverse---
@@ -6,14 +6,20 @@ library(datos)
 #v tibble  3.1.5     v dplyr   1.0.7
 #v tidyr   1.1.4     v stringr 1.4.0
 #v readr   2.0.2     v forcats 0.5.1
-#La procedencia de una funci髇 o conjunto de datos se
-#establece con ->>paquete::funci髇()<<-
+#La procedencia de una funci贸n o conjunto de datos se
+#establece con ->>paquete::funci贸n()<<-
 #Ejemplo
-Autos=datos::millas
-view(Autos)
-#Creaci髇 de un gr醘ico con ggplot
-ggplot(data=Autos)+geom_point(mapping = aes(x=cilindrada, y=autopista))
+autos <- datos::millas
+view(autos)
+#Creaci贸n de un gr谩fico con ggplot
+ggplot(data <- autos) +
+            geom_point(mapping = aes(x = cilindrada, y = autopista))
 #Ejercicio
-ggplot(data=millas)
-#Ayuda
+ggplot(data <- millas)
+#Ayuda (Informaci贸n complementaria del conjunto de datos)
 ?millas
+
+#La librer铆a datos contiene conjuntos de datos de prueba
+#Ejemplo
+autos <- datos::millas
+view(autos)
