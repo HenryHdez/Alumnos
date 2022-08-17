@@ -1,25 +1,26 @@
 # -*- coding: utf-8 -*-
-"""DefiniciÛn de funciones"""
-"""DeclaraciÛn de variables"""
+"""Definici√≥n de funciones"""
+"""Declaraci√≥n de variables"""
 a=1
-"""Est· funciÛn tiene par·metros de entrada"""
+"""Est√° funci√≥n tiene par√°metros de entrada"""
 def funcion1(Variable_Entrada):
-    """CÛdigo particular"""  
+    """C√≥digo particular"""  
     """Si desea usar una variable contenida definida en
        otro punto del codigo, use el comando global."""
     global a
     a=a*Variable_Entrada
 
-"""Esta funciÛn no tiene par·metros de entrada"""
-"""pero si tiene un par·metro de salida"""
+"""Esta funci√≥n no tiene par√°metros de entrada"""
+"""pero si tiene un par√°metro de salida"""
 def funcion2():
     global a
     b=a+3
     return b
 
-"""DefiniciÛn de la funciÛn principal"""
+"""Definici√≥n de la funci√≥n principal"""
 if __name__=="__main__":
     """Llamado a las distintas funciones"""
     funcion1(3)
     w=a*funcion2()
     print(w)
+
