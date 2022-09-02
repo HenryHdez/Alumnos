@@ -88,3 +88,5 @@ if __name__ == "__main__":
     #Prediga el valor de salida
     for e in X:
         print(e, RNA.predecir(e))
+        
+        

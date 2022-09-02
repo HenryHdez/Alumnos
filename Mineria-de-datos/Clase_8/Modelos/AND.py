@@ -2,22 +2,25 @@ import numpy as np
 #Defina la clase perceptrón
 class Perceptron:
     def __init__(self, entradas, salidas):
+        # Defina dos variables (Entrada-Salida)
         self.entradas_rna = np.array(entradas)
         self.salidas_rna = np.array(salidas)
     def Optimizar_pesos(self):
-        # Defina dos variables
-        # Epocas que es la cantidad de iteraciones que transcurren 
-        # para obtener una red entrenada
-        # num_entradas que es el numero de entradas
+        # epocas es la cantidad de iteraciones que
+        # transcurren para obtener una red entrenada
+        # num_entradas que es el numero de entradas de la red
         epocas, num_entradas = 0, 0
         while num_entradas < 4:
-            print('---------- iteración {} ---------- '.format(epocas))
-            # Genere pesos de forma aleatoria para que se actualicen en la RNA
-            # .shape le indica que se un vector de la misma dimensionalidad 
-            # que la entrada
-            pesos = np.array(np.random.uniform(-1, 1, self.entradas_rna.shape))
+            print('-------iteración {} -------'.format(epocas))
+            # Genere pesos de forma aleatoria para que se 
+            # actualicen en la RNA
+            # shape le indica que se un vector de la misma
+            # dimensionalidad que la entrada
+            pesos = np.array(np.random.uniform(-1, 1, 
+                                      self.entradas_rna.shape))
             
-            for entrada_red, peso, salida_red in zip(self.entradas_rna, pesos, self.salidas_rna):
+            empaquetado = zip(self.entradas_rna, pesos, self.salidas_rna)
+            for entrada_red, peso, salida_red in empaquetado:
                 """Nota la función zip() toma varios objetos iterables del mismo 
                 tamaño y retorna una nueva variable con la misma cantidad de 
                 elementos"""
@@ -26,7 +29,7 @@ class Perceptron:
                 print(salida_generada)
                 # Función sigmoide (Función de activación)
                 salida_generada = 0 if salida_generada < 0 else 1
-                #Si se cumple el criterio aumente en 1 las entradas encontradas
+                # Si se cumple el criterio aumente en 1 las entradas encontradas
                 if salida_generada == salida_red:
                     num_entradas +=1
                 else:

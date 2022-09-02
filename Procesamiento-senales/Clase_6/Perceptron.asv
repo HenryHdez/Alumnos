@@ -1,0 +1,16 @@
+%Definición del vector de entrada y salida
+%Combinaciones de la entrada
+x = [0 0 1 1; 0 1 0 1];
+%Combinaciones de la salida
+t = [0 1 1 1];
+%Definición de la red
+net = perceptron;
+%Parámetros de entrenamiento
+net.trainParam.epochs = 2;
+net.trainParam.goal = 0.001;
+%Entrenamiento
+net = train(net,x,t);
+%Simulación de la red
+y = net(x);
+disp(y)
+y

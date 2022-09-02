@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Importe la librer韆 SMTP"""
+"""Importe la librer铆a SMTP"""
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
-"""Cree un objeto para almacenar el correo electr髇ico a enviar"""
+"""Cree un objeto para almacenar el correo electr贸nico a enviar"""
 MSG = MIMEMultipart()
-"""Escriba el cuerpo del correo electr髇ico"""
-Mensaje = "Bienvenido al m骴ulo de administraci髇 de redes"
-"""Establezca los par醡etros del correo electr髇ico"""
+"""Escriba el cuerpo del correo electr贸nico"""
+Mensaje = "Bienvenido al m贸dulo de administraci贸n de redes"
+"""Establezca los par谩metros del correo electr贸nico"""
 Contrasena     = "12345"
 MSG['From']    = "Profesor@AdministradorRed.com"
 MSG['To']      = "Profesor@AdministradorRed.com"

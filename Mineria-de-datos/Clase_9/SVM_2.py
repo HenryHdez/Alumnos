@@ -21,9 +21,9 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
 titles = ['SVM con kernel lineal',
           'SVM con kernel RBF',
           'SVM con kernel polinomico de grado 3']
-#Preparar graficos
+#Preparar gráficos
 for i, clf in enumerate((svc, rbf_svc, poly_svc)):
-    # Trazo del limite del area de desicion de los datos
+    # Trazo del limite del area de desición de los datos
     plt.subplot(2, 2, i + 1)
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     #Estimar el valor de salida con cada predictor
@@ -31,7 +31,7 @@ for i, clf in enumerate((svc, rbf_svc, poly_svc)):
     # Ponga el resultado en el area sombreada
     Z = Z.reshape(xx.shape)
     plt.contourf(xx, yy, Z, cmap=plt.cm.coolwarm, alpha=0.8)
-    #Imprima los puntos sobre el area sombreada
+    #Imprima los puntos sobre el área sombreada
     plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.coolwarm)
     plt.xlabel('Longitud de tallo')
     plt.ylabel('Ancho de tallo')

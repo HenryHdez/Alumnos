@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='ConversionLogFile.xsl'?>
+<LogFile projectName="SECUENCIA_1_V13" typeText="Tipo" messageText="Mensaje" timeText="Hora">
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:26:50">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Actualización iniciada" />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:26:50">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Leyendo información de la librería o el proyecto anterior." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:26:56">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Actualizando librería o proyecto nuevo." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:26:57">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Actualizando librería o proyecto nuevo." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <Details ServiceId="80" MessageId="30" Timestamp="26/05/2017 12:26:59" Debug="false">
+    <Text>Preparando conversión del programa S7 para la CPU "PLC_1".</Text>
+  </Details>
+  <Details ServiceId="80" MessageId="30" Timestamp="26/05/2017 12:26:59" Debug="false">
+    <Text>Conversión finalizada.</Text>
+  </Details>
+  <Details ServiceId="80" MessageId="30" Timestamp="26/05/2017 12:27:02" Debug="false">
+    <Text>El programa S7 se está convirtiendo para la CPU "PLC_1".</Text>
+  </Details>
+  <Details ServiceId="80" MessageId="30" Timestamp="26/05/2017 12:27:04" Debug="false">
+    <Text>Conversión finalizada.</Text>
+  </Details>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Warning" Timestamp="26/05/2017 12:27:04">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Para finalizar la actualización del proyecto, elija para cada dispositivo del proyecto el comando Edición &gt; Compilar." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:27:07">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Actualizando librería o proyecto nuevo." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="26/05/2017 12:27:08">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Guardando la librería o el proyecto actualizado." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="Automation-ObjectFrame-Feedbacks" MessageId="ConversionInfoTabProjectSucceeded" MessageClass="Success" Timestamp="26/05/2017 12:27:08">
+    <Number ServiceNumber="80" MessageNumber="34" />
+    <Text FeedbackText="El proyecto 'SECUENCIA_1' se ha actualizado correctamente y se ha guardado como proyecto 'SECUENCIA_1_V13'." />
+    <Help HelpId="-1" HelpFile="" />
+  </MessageCell>
+</LogFile>

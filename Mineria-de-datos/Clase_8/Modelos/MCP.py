@@ -24,7 +24,6 @@ class Perceptron:
         self.w_ = np.zeros(1 + X.shape[1])
         #Cree un vector para estimar el margen de error
         self.errors_ = []
- 
         for _ in range(self.n_iter):
             errors = 0
             #xi es el valor de la entrada en una iteración

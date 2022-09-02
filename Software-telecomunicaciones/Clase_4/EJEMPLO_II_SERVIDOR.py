@@ -6,7 +6,7 @@ IP_Servidor = "127.0.0.1"
 Puerto=1234
 Nombre_Socket.bind((IP_Servidor, Puerto))
 
-"""Esta estructura de cÛdigo permite conectar m·s de un cliente"""
+"""Esta estructura de c√≥digo permite conectar m√°s de un cliente"""
 Clientes = 2
 Nombre_Socket.listen(Clientes)
 conexiones = 2
@@ -27,10 +27,10 @@ while True:
         mensaje_recibido = Lista_ID_Socket_Clientes[conexiones]
         mensaje_recibido = mensaje_recibido.recv(bytes_a_recibir)
         texto = mensaje_recibido.decode("utf-8") 
-        print(str(Lista_direcciones[conexiones]) + " envio: î", texto)
+        print(str(Lista_direcciones[conexiones]) + " envio: ", texto)
     if (texto == 'cerrar'):
         break
-print ("Termino la aplicaciÛn")
+print ("Termino la aplicaci√≥n")
 
 """Cerrar instancias del socket (En este caso se realiza con un for dada 
 la cantidad de clientes)"""

@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Importe la lÌbreria"""
+"""Importe la l√≠breria"""
 from flask import Flask, render_template
-"""InicializaciÛn de la p·gina"""
+"""Inicializaci√≥n de la p√°gina"""
 pagina = Flask(__name__)
+
 """En este caso se direcciona un archivo con formato HTML"""
 @pagina.route('/')
 def Funcion():
     return render_template('mi_primer_pagina.html')
 
-"""EjecuciÛn del servidor de flask"""
+"""Ejecuci√≥n del servidor de flask"""
 if __name__ == '__main__':
     pagina.run()
+

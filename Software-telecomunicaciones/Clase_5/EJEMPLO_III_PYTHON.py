@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-"""Importe la líbreria"""
+"""Importe la lÃ­breria"""
 from flask import Flask, render_template
-"""Inicialización de la página"""
+"""InicializaciÃ³n de la pÃ¡gina"""
 pagina = Flask(__name__)
 
-"""Función particular"""
+"""FunciÃ³n particular"""
 @pagina.route('/')
 def Funcion():
     lista=["Henry","Hernandez","Docente"]
-    """Las variables a mostrar en la página van
+    """Las variables a mostrar en la pÃ¡gina van
     separadas por comas"""
     return render_template('mi_primer_pagina.html',
                            Nombre_variable_mostrar=lista)
 
-"""Ejecución del servidor de flask"""
+"""EjecuciÃ³n del servidor de flask"""
 if __name__ == '__main__':
     pagina.run()

@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 11 20:29:19 2021
-
-@author: hahernandez
-"""
-
 from sklearn.neural_network import MLPClassifier
 import pandas as pd
 import numpy as np
-
 #Definición de la función principal
 if __name__ == '__main__':
     # Cargue el dataset

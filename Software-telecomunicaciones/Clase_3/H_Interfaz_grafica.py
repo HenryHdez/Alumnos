@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
-"""Mi primer aplicaci髇 con interfaz grafica"""
+"""Mi primer aplicaci贸n con interfaz grafica"""
 """importe la libreria Tkinter"""
 from tkinter import *
 
-"""Funci髇 principal"""
+"""Funci贸n principal"""
 if __name__ == "__main__":
     """Crear ventana vacia"""
     Aplicacion=Tk()
-    """Definici髇 de los objetos a usar"""
+    """Definici贸n de los objetos a usar"""
     Aplicacion.title("Primer App")
     etiqueta=Label(Aplicacion,text="Saludos")
     boton=Button(Aplicacion,text="OK")
     """Poner objetos en la ventana"""
     etiqueta.pack()
     boton.pack()
-    """La instrucci髇 Mainloop manitene activa 
-    la aplicaci髇"""
+    """La instrucci贸n Mainloop manitene activa 
+    la aplicaci贸n"""
     Aplicacion.mainloop()
+    
+    

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Importar librerÌa del conector de mysql"""
+"""Importar librer√≠a del conector de mysql"""
 import mysql.connector as mysql
 
-"""Crear variables con los par·metros de acceso a la BD"""
+"""Crear variables con los par√°metros de acceso a la BD"""
 ORIGEN="localhost"
 USUARIO="root"
-CONTRASENA=""
+CONTRASENA="12345"
 BASEDATOS="Administrador_Red"
-"""Establecer la conexiÛn con la BD"""
+"""Establecer la conexi√≥n con la BD"""
 BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
 Cursor = BD.cursor()
 """Ejecutar comandos de SQL con .execute, por ejemplo una consulta"""
@@ -16,3 +16,4 @@ for row in Cursor:
    print(row)
 """Cerrar la BD"""
 BD.close()
+

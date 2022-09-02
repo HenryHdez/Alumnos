@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """Ejemplo de temporizador 1"""
-"""Importe libreria de ejecuci髇 de hilos"""
+"""Importe libreria de ejecuci贸n de hilos"""
 import threading
-"""Defina la funci髇 que se va a asociar al temporizador"""
+"""Defina la funci贸n que se va a asociar al temporizador"""
 def Tempo_1():
     global bandera 
     print("\n Se activo el temporizador")
     bandera=False
 
-"""Funci髇 principal"""
+"""Funci贸n principal"""
 if __name__ == "__main__":
     global bandera
     bandera=True
@@ -17,4 +17,5 @@ if __name__ == "__main__":
     t1.start()
     while(bandera):    
         print("Mientras no se active el temporizador haga esto")
-    print("\n Fin de la aplicaci髇")
+    print("\n Fin de la aplicaci贸n")
+

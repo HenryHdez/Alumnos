@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Importe la l韇reria"""
+"""Importe la l铆breria"""
 from flask import Flask
-"""Inicializaci髇 de la p醙ina"""
+"""Inicializaci贸n de la p谩gina"""
 pagina = Flask(__name__)
-"""Flask requiere de un direccionamiento por funci髇.
+"""Flask requiere de un direccionamiento por funci贸n.
 Es decir cuando va a mostrar algo en la pagina se dirige
 a la ruta asignada"""
 
-"""En este caso / indica la ra韟 del servidor"""
-"""Funci髇 particular para mostrar algo en la p醙ina"""
+"""En este caso / indica la ra铆z del servidor"""
+"""Funci贸n particular para mostrar algo en la p谩gina"""
 @pagina.route('/')
 def Funcion():
     return 'Hola mundo'
 
-"""Ejecuci髇 del servidor de flask"""
+"""Ejecuci贸n del servidor de flask"""
 if __name__ == '__main__':
     pagina.run()
+

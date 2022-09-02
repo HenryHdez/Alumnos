@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Ejemplo de temporizador 2"""
-"""Importe la librer韆 de ejecuci髇 de hilos"""
+"""Importe la librer铆a de ejecuci贸n de hilos"""
 import threading
 
-"""Defina la funci髇 que se va a asociar al temporizador"""
+"""Defina la funci贸n que se va a asociar al temporizador"""
 def Tempo_1():
     global bandera1 
     print('\n Se activo el temporizador 1')
@@ -14,7 +14,7 @@ def Tempo_n():
     print('\n Se activo el temporizador n')
     bandera2=False
 
-"""Funci髇 principal"""
+"""Funci贸n principal"""
 if __name__=="__main__":
     global bandera1
     global bandera2    
@@ -28,7 +28,8 @@ if __name__=="__main__":
     tn.start()
     while(bandera1 or bandera2):
        print("Mientras temporizadores activos")
-    print('\n Fin de la aplicaci髇')
+    print('\n Fin de la aplicaci贸n')
+
 
  
     
