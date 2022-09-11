@@ -1,0 +1,12 @@
+˛ˇˇˇê###id###VisulizationRootBrowsableId###TargetIdNameDisplayName-###SearchableNonTechnicalFieldNamesOfDocument###ParentIds###ImmediateParentId###ReferenceFieldIds###ReconstitutionDataIDAssociatedCultureFieldIdAssociatedProjectVersion!AssociatedIndexDataVersionFieldId,AssociatedTechnicalFieldNamesHashCodeFieldId-AssociatedTechnicalFieldContentVersionFieldIdIndexAtomStore###SearchFilterIdsTitleLanguageVersion###UpdatableParentIdInterfaceMember_NameInterfaceMember_DatatypeInterfaceMember_ValueInterfaceMember_CommentNetwork titleLADFBD CodeAcknowledgementModelAlarmAlertAcknowledgementIdAcknowledgedText
+ComingTextComingGoingText	GoingText	Alignment	CycleUnitStartingPointDayStartingPointHourStartingPointMinuteStartingPointMonthStartingPointSecond	CycleTimeCommentNumber	ShortNameWebLanguageStartScreenWebUxStartScreen
+LogoutTimeDataTypeHmiDataTypeCode	BackColor	GridColorAboveUpperLimitColorBackFillStyleBackFlashingColorOffBackFlashingColorOnBackFlashingRateBelowLowerLimitColorBorderBackColorBorderColorBorderFlashingColorOffBorderFlashingColorOnBorderFlashingRateCornerStyle
+DataFormat	EdgeStyleFillPatternColorFlashingFlashingColorOffFlashingColorOnFlashingRateFontFontName	ForeColorFormatPatternHorizontalAlignmentLayerLineEndShapeStyleModeTextOrientationUnitVerticalAlignmentBorderBrightColor3DBorderShadeColor3DFillingDirectionPictureAlignmentStyleSettingsTextOffCommentColumnHeaderOperandColumnHeaderPathHeaderFontSymbolnameColumnHeaderSymbolTableFontTransitionHeaderFontTagAddressPanelInfoAddressAccessModeCoding
+ConnectionPlcNameControllerTagLimitHighConstantLimitLowConstant
+StartValueSubstituteValueRDT_TypeCommonAlarmClassStationNamePartnerNameNodeNamePropertyNameTagValueForPropertyTagPage	FunctionsEmailAddressAcknowledgementGroupTextInvalidAttempts	ValidDaysWarningDaysGenerationsMinNumPsswd
+ServerName
+PortNumberWindowsDomain
+LineColor1
+LineColor2OperatableAreaColor
+VisibilityFirstGradientColor
+FocusColorHorizontalPictureAlignmentMiddleGradientColorPictureAutoSizingSecondGradientColorTextOnVerticalPictureAlignmentAcquisitionTriggerModeAcquisitionCycleConfirmationTypeLimitHighLowConstantLimitLowHighConstant	JobNumberDatatypeAddress
