@@ -11,5 +11,5 @@ const promesa = new Promise((resolve, reject) => {
 //.then(var_retorno>=asignela a la función)
 promesa
     .then(Aviso => console.log(Aviso))
-    .catch(Alerta => console.error(Alerta));
+    .catch(Alerta => console.log(Alerta));
 
