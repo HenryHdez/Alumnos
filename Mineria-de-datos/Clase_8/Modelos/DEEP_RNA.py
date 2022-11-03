@@ -3,7 +3,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers.core import Dense
 from keras.utils import to_categorical
-from keras.engine.saving import load_model
+from keras.models import load_model
 import tensorflow as tf
 
 #Crear RNA       

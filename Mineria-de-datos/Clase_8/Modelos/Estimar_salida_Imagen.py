@@ -1,6 +1,6 @@
 #Importar librerías
 import numpy as np
-from keras.engine.saving import load_model
+from keras.models import load_model
 import tensorflow as tf       
 
 if __name__ == "__main__":
