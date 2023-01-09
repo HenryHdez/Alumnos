@@ -10,5 +10,5 @@ def Funcion():
 
 """Ejecución del servidor de flask"""
 if __name__ == '__main__':
-    pagina.run(port=5000)
+    pagina.run(host='0.0.0.0', port='5000')
 

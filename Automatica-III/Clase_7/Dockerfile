@@ -1,5 +1,5 @@
 #Sistema operativo
-FROM ubuntu:18.04 as build
+FROM ubuntu
 #Directorio de trabajo
 WORKDIR /opt/app
 #Copiar todos los archivos ..
