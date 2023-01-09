@@ -1,0 +1,24 @@
+#Construcción de un dockerfile
+web:
+  build:
+    context: ./ubicacion_del_Dockerfile
+    dockerfile: Dockerfile-personalizado
+#Ejecución de un comando
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8000
+#Ejecución despues de que se haya creado algun servicio
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8000
+  depends_on:
+    - db
+    - redis
+#Inicializar variables del entorno
+db:
+  image: postgres
+  environment:
+    - POSTGRES_USER=usuario
+    - POSTGRES_PASSWORD=contrasena
+
+    

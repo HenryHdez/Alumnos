@@ -10,9 +10,10 @@ def Funcion():
     lista=["Henry","Hernandez","Docente"]
     """Las variables a mostrar en la página van
     separadas por comas"""
-    return render_template('mi_primer_pagina.html',
+    return render_template('mi_primer_pagina_1.html',
                            Nombre_variable_mostrar=lista)
 
 """Ejecución del servidor de flask"""
 if __name__ == '__main__':
     pagina.run()
+    

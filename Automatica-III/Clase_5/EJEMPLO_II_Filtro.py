@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 """Importar librería del conector de mysql"""
 import mysql.connector as mysql
-
 """Crear variables con los parámetros de acceso a la BD"""
 ORIGEN="localhost"
 USUARIO="root"
 CONTRASENA="12345"
-BASEDATOS="Administrador_Red"
+BASEDATOS="Admin_auto_III"
+
 """Establecer la conexión con la BD"""
 BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
 Cursor = BD.cursor()
 """Ejecutar comandos de SQL con .execute, por ejemplo una consulta"""
-Cursor.execute('SELECT * FROM Administrador_Red WHERE (Equipos= "PC")')
+Cursor.execute('SELECT * FROM Motor WHERE (Valvulas = 12)')
 for row in Cursor:
    print(row)
 """Cerrar la BD"""

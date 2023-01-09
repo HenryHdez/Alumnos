@@ -5,14 +5,14 @@ import mysql.connector as mysql
 ORIGEN="localhost"
 USUARIO="root"
 CONTRASENA="12345"
-BASEDATOS="Administrador_Red"
+BASEDATOS="Admin_auto_III"
 
 """Establecer la conexión con la BD"""
 BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
 Cursor = BD.cursor()
 """Ejecutar comandos de SQL con .execute, por ejemplo agregar un equipo"""
-Comando="INSERT INTO Administrador_Red (Equipos, Seriales) VALUES(%s, %s);"
-Valores=("PC Personal",str(77))
+Comando="INSERT INTO Motor (Valvulas, Seriales) VALUES(%s, %s);"
+Valores=(str(12),str(123))
 Cursor.execute(Comando,Valores)
 BD.commit()
 """Cerrar la BD"""
