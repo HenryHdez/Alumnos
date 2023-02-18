@@ -9,7 +9,7 @@ res.send("Hola curso usando express")
 });
 //Solicitud 2 atendida en el espacio servicios
 app.get('/curso', (req,res)=>{
-    res.send("Hola curso usando express v2")
+    res.sendFile("<h1>Hola</h1> curso usando express v2")
     });
 //Luego se agrega el oyente al servidor
 app.listen(puerto, () => {
