@@ -1,0 +1,35 @@
+﻿<html>   
+    <head>   
+        <title>Formlario de ejemplo 3</title>
+    </head>
+    <body>
+        <form action="http://127.0.0.1:5000/"> 
+            <p> <input type="submit" value="Volver"> </p>
+            <p> <input type="text" id="Caja_salida" values="defecto"> </p>
+            <!--Enlace para llamar a la funcion de JS-->
+            <p> <input type="button" onclick="Funcion_1()" value="Activar F1"> </p>
+            <!--Usa la estructura de Flask-->      
+            <p> <input type="button" onclick="Funcion_2({{Var}})" value="Activar F2"></p>
+        </form>
+        <!--Forma de llamar un script desarrollado en JS-->
+        <script type="text/javascript">
+            function Funcion_1() {
+                document.getElementById("Caja_salida").value="Hola mundo";
+            }  
+            function Funcion_2(entrada) { 
+                /*Esto es un comentario*/
+                var nombre="Tarea"; //Definición de la variable 1
+                var i=0;            //Definición de la variable 2 
+                var arreglo= new Array (1,2,3);         //Arreglos       
+                if(entrada<10){ 
+                    document.getElementById("Caja_salida").value="Activo if";
+                }
+                for(i; 1<10; i++){                        //Ciclos
+                    document.getElementById("Caja_salida").value=i;
+                }
+                var cadena="Tarea 2";
+                cadena=cadena+nombre;                     //Concatenar
+            }
+        </script>
+    </body> 
+</html>
