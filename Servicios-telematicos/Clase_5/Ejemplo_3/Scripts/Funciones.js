@@ -6,9 +6,25 @@ function draw() {
         //Defina una variable donde dibujar
         var lienzo = canvas.getContext('2d');
         //Defina el color a utilizar
-        lienzo.fillStyle = 'rgb(200, 0, 0)';
+        //lienzo.fillStyle = 'rgb(200, 0, 0)';
+        lienzo.beginPath();
+        lienzo.lineWidth=4;
+        lienzo.strokeStyle = "red";
+        lienzo.moveTo(20,30);
+        lienzo.lineTo(10,20);
+        lienzo.stroke();
+        
+        lienzo.beginPath();
+        lienzo.lineWidth=6;
+        lienzo.strokeStyle = "blue";
+        lienzo.moveTo(44,12);
+        lienzo.lineTo(30,40);
+        lienzo.stroke();
+
+        lienzo.beginPath();
+        lienzo.fillRect(40, 40, 50, 50);
         //Dibuja un rectángulo
-        lienzo.fillRect(10, 10, 50, 50);
+        /*lienzo.fillRect(10, 10, 50, 50);
         //Dibuja un arco
         //arc(pos x, pos y, radio, ángulo inicio, ángulo fin, sentido horario?);
         var apertura1=Math.PI;
@@ -29,6 +45,6 @@ function draw() {
         grd.addColorStop(1, "white");
         // Llene algo con el gradiente
         lienzo.fillStyle = grd;
-        lienzo.fillRect(10, 10, 150, 80); 
+        lienzo.fillRect(10, 10, 150, 80); */
     }
 }
