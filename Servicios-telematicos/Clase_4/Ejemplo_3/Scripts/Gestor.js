@@ -14,5 +14,6 @@ function Rotar_Imagenes(){
     document.getElementById("imagen").src = Lista[i];
     i++;
     if(i>=Lista.length){i=0;}
+    setInterval(Rotar_Imagenes,1000)
 }
 
