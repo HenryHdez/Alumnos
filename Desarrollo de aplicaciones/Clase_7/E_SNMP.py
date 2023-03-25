@@ -3,7 +3,7 @@
 from pysnmp.hlapi import *
 """Identificador del equipo"""
 OID = "1.3.6.1.2.1.1.1.0"
-IP = "192.168.0.1" 
+IP = "10.28.48.1" 
 Puerto = 161
 
 if __name__ == "__main__":

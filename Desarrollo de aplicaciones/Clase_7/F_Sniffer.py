@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Ejemplo de detecci髇 de circulaci髇 de paquetes."""
+"""Ejemplo de detecci贸n de circulaci贸n de paquetes."""
 from scapy.all import *
 """Define interface a traves de la cual se realiza en escane"""
 interface1 = "Ethernet"
 interface2 = "Wi-Fi"
-"""Funci髇 para ejercutar el sniffer"""
+"""Funci贸n para ejercutar el sniffer"""
 def Imprimir_Informacion(paquete):
-    """IP es un par醡etro heredado de la red"""
-    ip_layer = paquete.getlayer(IP)
-    print("Informaci髇 del paquete de {src}: \n" 
+    """IP es un par谩metro heredado de la red"""
+    ip_layer = paquete.getlayer('10.28.48.116')
+    print("Informaci贸n del paquete de {src}: \n" 
           .format(src=ip_layer.src))
     if ip_layer.haslayer( Raw ):
-        """Informac髇 del paquete"""
+        """Informaci贸n del paquete"""
         Cabecera = ip_layer.getlayer( Raw ).load
         print(Cabecera.decode(errors='ignore'))
 
