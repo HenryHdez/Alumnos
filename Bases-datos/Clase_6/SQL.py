@@ -19,11 +19,5 @@ df.to_sql('clientes', conn, if_exists='replace')
 #query = 'UPDATE nombre_de_tu_tabla SET columna1 = 4, columna2 = "d" WHERE id = 1'
 #conn.execute(query)
 df['NOMBRE'].hist()
-import base64
-with open('SQL.py', 'rb') as file:
-    archivo = file.read()
-archivo_base64 = base64.b64encode(archivo)
-print(archivo_base64)
-archivo_decodificado = base64.b64decode(archivo_base64)
-print(archivo_decodificado)
+
 
