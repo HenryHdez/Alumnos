@@ -5,17 +5,20 @@ print(psutil.cpu_freq())
 """Porcentaje de uso del procesador"""
 print(psutil.cpu_percent())
 """ Devuelve varias estadisticas de CPU como una tupla con nombre:
-    ctx_switches: número de cambios de contexto (voluntario + involuntario)
+    ctx_switches: nÃºmero de cambios de contexto (voluntario + involuntario)
     desde el arranque.
-    interrupciones: número de interrupciones desde el arranque.
-    soft_interrupts: número de interrupciones de software desde el arranque.
-    syscalls: número de llamadas al sistema desde el inicio.
+    interrupciones: nÃºmero de interrupciones desde el arranque.
+    soft_interrupts: nÃºmero de interrupciones de software desde el arranque.
+    syscalls: nÃºmero de llamadas al sistema desde el inicio.
     """
 print(psutil.cpu_stats())
-"""Segunos que ha pasado la CPU en ejecución"""
+"""Segunos que ha pasado la CPU en ejecuciÃ³n"""
 print(psutil.cpu_times())
 """Promedio de carga de la CPU en los ultimos 15 minutos"""
 print(psutil.getloadavg())
+
+
+
 """Uso de la memoria RAM"""
 print(psutil.virtual_memory())
 """Uso de la memoria de intercambio"""
@@ -35,7 +38,7 @@ print( psutil.net_if_addrs())
 print(psutil.net_if_stats())
 
 """Sensores"""
-"""Medir uso de la batería del computador (si la hay)"""
+"""Medir uso de la baterÃ­a del computador (si la hay)"""
 print(psutil.sensors_battery())
 """Uso de los ventiladores (Si los hay)"""
 #print(psutil.sensors_fans())
@@ -43,3 +46,4 @@ print(psutil.sensors_battery())
 #print(psutil.sensors_temperatures())
 """Usuarios del CPU"""
 print(psutil.users())
+

@@ -5,22 +5,21 @@ import numpy as np
 #librería de graficos
 import matplotlib.pyplot as plt
 #librería de aprendizaje computacional
-from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+from sklearn import datasets
 
 """>>>>>>>>>>>>>>>>>>>>>>PASO 1 (Selección)<<<<<<<<<<<<<<<<<<<<<"""
-#Ruta de acceso al directorio
-ruta = "D:\GitHub\Alumnos\Mineria-de-datos\A_Datasets\Flores.csv"
-#Crear un dataFrame usando pandas
-df = pd.read_csv(ruta)
-#Retorna las últimas filas del dataFrame
-box = df.tail()
+# Cargar el conjunto de datos Iris
+iris = datasets.load_iris()
+df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+df['target'] = iris.target 
 #Dividir el dataFrame en dos 
 #Predictores (4 primeras columnas)
 X = df.iloc[:, 0:4].values
 #Datos a predecir (especies)
 y = df.iloc[:, 4].values
 print(X)
+#0=Iris-setosa, 1=Iris-Versicolor, 2=Iris-Virginica
 print(y)
 
 """>>>>>>>>>>>>>>>>>>>>>PASO 2 (Normalización)<<<<<<<<<<<<<<<<<<<"""
@@ -84,9 +83,9 @@ x_1 = Y[:, 0]
 y_1 = Y[:, 1]
 colores = []
 for i in y:
-    if(i=="Iris-setosa"):
+    if(i==0):#"Iris-setosa"):
         colores.append("magenta")
-    elif(i=="Iris-versicolor"):
+    elif(i==1):#"Iris-versicolor"):
         colores.append("blue")
     else:
         colores.append("red")
