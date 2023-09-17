@@ -1,0 +1,42 @@
+docker network create mysql-replication
+
+docker run --name mysql-master -p 3308:3306 --network=mysql-replication -e MYSQL_ROOT_PASSWORD=micontrasena -d mysql:latest --server-id=1 --log-bin=mysql-bin
+docker run --name mysql-slave -p 3307:3306 --network=mysql-replication -e MYSQL_ROOT_PASSWORD=contraslave -d mysql:latest --server-id=2
+
+docker exec -it mysql-master mysql -uroot -pmicontrasena
+docker exec -it mysql-slave mysql -uroot -pcontraslave
+
+CREATE USER 'repl'@'%' IDENTIFIED BY 'slavepass';
+GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
+FLUSH PRIVILEGES;
+EXIT;
+
+FLUSH TABLES WITH READ LOCK;
+SHOW MASTER STATUS;
+
+
+CHANGE MASTER TO 
+
+   MASTER_HOST='127.0.0.1',
+   MASTER_USER='repl',
+   MASTER_PASSWORD='slavepass',
+   MASTER_PORT=3308;
+
+
+CHANGE MASTER TO 
+MASTER_HOST='mysql-master', 
+MASTER_USER='repl', 
+MASTER_PASSWORD='slavepass', 
+MASTER_LOG_FILE='mysql-bin.000003', 
+MASTER_LOG_POS=857,
+MASTER_PORT=3306;
+
+CHANGE MASTER TO 
+   MASTER_HOST='mysql-master',
+   MASTER_USER='repl',
+   MASTER_PASSWORD='slavepass',
+   MASTER_PORT=3306;
+
+START SLAVE;
+SHOW SLAVE STATUS\G;
+

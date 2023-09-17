@@ -5,6 +5,9 @@ install.packages("readr")
 install.packages("tidyverse")
 #Varias
 install.packages(c("funModeling", "Hmisc"))
+#En caso de que funModeling no este disponible
+library(remotes)
+install_github("cran/remotes")
 
 #Importar una librería
 library("tidyverse")
