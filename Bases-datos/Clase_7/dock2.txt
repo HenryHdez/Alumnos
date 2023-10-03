@@ -15,9 +15,10 @@ docker exec -it mysql-slave mysql -uroot -pcontraslave
 #Crear usuario
 CREATE USER 'udistrital'@'%' IDENTIFIED BY 'Slavepass123';
 GRANT REPLICATION SLAVE ON *.* TO 'udistrital'@'%';
+#BLOQUEAR DB
 FLUSH PRIVILEGES;
-#Bloquear acceso y mostrar ubicación del log
 FLUSH TABLES WITH READ LOCK;
+#Bloquear acceso y mostrar ubicación del log
 SHOW MASTER STATUS;
 
 #Ejecutar en el esclavo (configurar de acuerdo con MASTER STATUS)
@@ -26,7 +27,7 @@ MASTER_HOST='mysql-master',
 MASTER_USER='udistrital', 
 MASTER_PASSWORD='Slavepass123', 
 MASTER_LOG_FILE='mysql-bin.000003', 
-MASTER_LOG_POS=2015,
+MASTER_LOG_POS=871,
 MASTER_PORT=3306;
 
 #Iniciar esclavo

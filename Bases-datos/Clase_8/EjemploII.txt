@@ -1,0 +1,85 @@
+#Mostrar los libros que tienen "Novela" como género y fueron publicados después de 1960.
+
+db.libros.find({ 
+    generos: { $eq: "Novela" },
+    publicado: { $gt: 1960 }
+});
+
+#Mostrar todos los libros que fueron publicados antes de 1980 o tienen más de 7 ejemplares en stock
+db.libros.find({ 
+    $or: [ 
+        { publicado: { $lt: 1980 } },
+        { enStock: { $gt: 7 } }
+    ] 
+});
+
+#Mostrar libros que no fueron publicados en 1955
+db.libros.find({ publicado: { $ne: 1955 } });
+
+#Mostrar libros que tienen exactamente 2 valoraciones
+db.libros.find({ valoraciones: { $size: 2 } });
+
+#Mostrar los libros que han sido valorados por "Laura" pero no por "Carlos"
+db.libros.find({ 
+    "valoraciones.usuario": { $eq: "Laura" },
+    "valoraciones.usuario": { $ne: "Carlos" } 
+});
+
+#Todos los libros que tienen una valoración donde la puntuación sea mayor que 4
+db.libros.find({ "valoraciones.puntuacion": { $gt: 4 } });
+
+
+#En Mongo compass agregar las comillas a cada documento
+{
+    "titulo": "Cien años de soledad2",
+    "autor": "Gabriel García Márquez",
+    "publicado": 1967,
+    "generos": ["Realismo mágico", "Novela"],
+    "editora": {
+        "nombre": "Editorial Sudamericana",
+        "pais": "Argentina"
+    },
+    "enStock": 12,
+    "valoraciones": [
+        { "usuario": "Carlos", "puntuacion": 5, "comentario": "Increíble historia." },
+        { "usuario": "Maria", "puntuacion": 4, "comentario": "Muy buen libro." }
+    ]
+}
+
+
+#Agregar varios documentos
+[
+{
+    "titulo": "Crimen y Castigo",
+    "autor": "Fiodor Dostoievski",
+    "publicado": 1866,
+    "generos": ["Novela", "Ficción psicológica"],
+    "editora": {
+        "nombre": "Editorial Rusia Clásica",
+        "pais": "Rusia"
+    },
+    "enStock": 10,
+    "valoraciones": [
+        { "usuario": "Elena", "puntuacion": 5, "comentario": "Una introspección profunda del alma humana." },
+        { "usuario": "Igor", "puntuacion": 4, "comentario": "Una lectura pesada, pero gratificante." }
+    ]
+},
+{
+    "titulo": "El Gran Gatsby",
+    "autor": "F. Scott Fitzgerald",
+    "publicado": 1925,
+    "generos": ["Novela", "Ficción"],
+    "editora": {
+        "nombre": "Charles Scribner's Sons",
+        "pais": "Estados Unidos"
+    },
+    "enStock": 15,
+    "valoraciones": [
+        { "usuario": "Alice", "puntuacion": 4, "comentario": "Un reflejo deslumbrante de la era del jazz." },
+        { "usuario": "Bob", "puntuacion": 5, "comentario": "Una crítica brillante al sueño americano." }
+    ]
+}
+]
+
+
+

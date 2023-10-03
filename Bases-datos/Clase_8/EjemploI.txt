@@ -1,0 +1,105 @@
+#Crear y ejecutar imagen de Mongo
+docker run --name mongo -d -p 27017:27017 mongo:4.4
+
+#Conectarse al terminal de Mongo
+docker exec -it mongo mongo
+
+#Crear una base de datos
+use EjemploI
+
+#>>>>>>>>>>>>>>>>Comandos básicos de CRUD en Mongo<<<<<<<<<<<<<<<<<<<<<<<<
+
+#Crear
+db.libros.insert({
+    titulo: "Cien años de soledad",
+    autor: "Gabriel García Márquez",
+    publicado: 1967,
+    generos: ["Realismo mágico", "Novela"],
+    editora: {
+        nombre: "Editorial Sudamericana",
+        pais: "Argentina"
+    },
+    enStock: 12,
+    valoraciones: [
+        { usuario: "Carlos", puntuacion: 5, comentario: "Increíble historia." },
+        { usuario: "Maria", puntuacion: 4, comentario: "Muy buen libro." }
+    ]
+});
+
+#Leer
+db.libros.find({ titulo: "Cien años de soledad" });
+
+#Actualizar
+db.libros.update(
+    { titulo: "Cien años de soledad" },
+    { $set: { enStock: 10 } }
+);
+
+#Eliminar
+db.libros.remove({ titulo: "Cien años de soledad" });
+-----------------------------------------------------------------------------
+#Agregue dos libros más a la colección
+#Libro 1
+db.libros.insert({
+    titulo: "El amor en los tiempos del cólera",
+    autor: "Gabriel García Márquez",
+    publicado: 1985,
+    generos: ["Novela"],
+    editora: {
+        nombre: "Editorial Oveja Negra",
+        pais: "Colombia"
+    },
+    enStock: 8,
+    valoraciones: [
+        { usuario: "Andrea", puntuacion: 5, comentario: "Una historia de amor apasionante." },
+        { usuario: "Juan", puntuacion: 4, comentario: "Muy romántico." }
+    ]
+});
+
+#Libro 2
+db.libros.insert({
+    titulo: "La hojarasca",
+    autor: "Gabriel García Márquez",
+    publicado: 1955,
+    generos: ["Novela"],
+    editora: {
+        nombre: "Editorial Sopesa",
+        pais: "Colombia"
+    },
+    enStock: 5,
+    valoraciones: [
+        { usuario: "Laura", puntuacion: 4, comentario: "Un inicio interesante al mundo de Macondo." },
+        { usuario: "Roberto", puntuacion: 3, comentario: "Buen relato, aunque preferí otros de García Márquez." }
+    ]
+});
+
+#Libro 3
+db.libros.insert({
+    titulo: "Don Quijote de la Mancha",
+    autor: "Miguel de Cervantes Saavedra",
+    publicado: 1605,
+    generos: ["Novela", "Aventura", "Sátira"],
+    editora: {
+        nombre: "Editorial Mancha",
+        pais: "España"
+    },
+    enStock: 10,
+    valoraciones: [
+        { usuario: "Fernando", puntuacion: 5, comentario: "Una obra maestra de la literatura mundial." },
+        { usuario: "Isabella", puntuacion: 5, comentario: "Un relato profundo y divertido. Indispensable." },
+        { usuario: "Ricardo", puntuacion: 4, comentario: "Extenso, pero vale la pena leerlo." }
+    ]
+});
+
+#Consultar todos los libros de Gabriel Garcia Marquez
+db.libros.find({ autor: "Gabriel García Márquez" });
+#Libros publicados despues de 1980
+db.libros.find({ publicado: { $gt: 1980 } });
+#Libros que en el titulo tienen la palabra ijote
+db.libros.find({ titulo: /ijote/i });
+#Libros que han sido valorados por Laura
+db.libros.find({ "valoraciones.usuario": "Laura" });
+#Cantidad de libros en la coleccion
+db.libros.count();
+#Libros de la editorial oveja Negra
+db.libros.find({ "editora.nombre": "Editorial Oveja Negra" });

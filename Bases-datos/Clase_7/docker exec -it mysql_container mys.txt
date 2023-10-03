@@ -1,0 +1,11 @@
+docker exec -it mysql_container mysqlimport --ignore-lines=1 --fields-terminated-by=',' --local -u root -pTuContra000 EJEMPLOI /tmp/iris.csv
+
+docker cp <ruta_del_archivo_local> <nombre_del_contenedor>:<ruta_del_archivo_en_el_contenedor>
+docker cp C:/Users/usuario/Desktop/iris.csv mysql_container:/tmp/
+
+docker exec -it mi_contenedor /bin/bash
+docker exec -it mysql_container /bin/bash
+
+
+USE EJEMPLOI;
+LOAD DATA LOCAL INFILE '/tmp/iris.csv' INTO TABLE FLORES FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;

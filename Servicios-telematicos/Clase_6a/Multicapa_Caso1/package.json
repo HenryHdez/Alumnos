@@ -1,0 +1,14 @@
+{
+    "name": "api",
+    "version": "1.0.0",
+    "description": "Este es un API usando express",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mysql2": "^2.2.5"
+    }
+  }
+  

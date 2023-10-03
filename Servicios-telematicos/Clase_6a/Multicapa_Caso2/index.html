@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Item</title>
+</head>
+<body>
+    <h2>Update Item</h2>
+
+    <form id="updateForm">
+        <label for="itemId">Item ID:</label>
+        <input type="number" id="itemId" required><br><br>
+        
+        <label for="itemName">New Name:</label>
+        <input type="text" id="itemName" required><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+
+    <script>
+        document.getElementById("updateForm").onsubmit = async function(e) {
+            e.preventDefault();
+
+            const itemId = 1;//document.getElementById("itemId").value;
+            const itemName = "asdasd";document.getElementById("itemName").value;
+
+            try {
+                const response = await fetch('http://localhost:3000/elementos', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: itemName
+                    })
+                });
+                const data = await response.text();
+                alert(data);
+            } catch (error) {
+                console.error("There was an error updating the item", error);
+            }
+        };
+    </script>
+</body>
+</html>

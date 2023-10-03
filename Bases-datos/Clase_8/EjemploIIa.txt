@@ -1,0 +1,69 @@
+#Insertar un solo libro en la colección
+db.libros.insertOne({
+    "titulo": "El Gran Gatsby",
+    "autor": "F. Scott Fitzgerald",
+    "publicado": 1925,
+    "generos": ["Novela", "Ficción"],
+    "editora": {
+        "nombre": "Charles Scribner's Sons",
+        "pais": "Estados Unidos"
+    },
+    "enStock": 15,
+    "valoraciones": [
+        { "usuario": "Alice", "puntuacion": 4, "comentario": "Un reflejo deslumbrante de la era del jazz." },
+        { "usuario": "Bob", "puntuacion": 5, "comentario": "Una crítica brillante al sueño americano." }
+    ]
+});
+
+#Insertar mas de un libro en la colección
+db.libros.insertMany([
+    {
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "publicado": 1925,
+        "generos": ["Novela", "Ficción"],
+        "editora": {
+            "nombre": "Charles Scribner's Sons",
+            "pais": "Estados Unidos"
+        },
+        "enStock": 15,
+        "valoraciones": [
+            { "usuario": "Alice", "puntuacion": 4, "comentario": "Un reflejo deslumbrante de la era del jazz." },
+            { "usuario": "Bob", "puntuacion": 5, "comentario": "Una crítica brillante al sueño americano." }
+        ]
+    },
+    {
+        "titulo": "Crimen y Castigo",
+        "autor": "Fiodor Dostoievski",
+        "publicado": 1866,
+        "generos": ["Novela", "Ficción psicológica"],
+        "editora": {
+            "nombre": "Editorial Rusia Clásica",
+            "pais": "Rusia"
+        },
+        "enStock": 10,
+        "valoraciones": [
+            { "usuario": "Elena", "puntuacion": 5, "comentario": "Una introspección profunda del alma humana." },
+            { "usuario": "Igor", "puntuacion": 4, "comentario": "Una lectura pesada, pero gratificante." }
+        ]
+    }
+]);
+
+#Borrar 1
+db.libros.deleteOne({ "titulo": "El Gran Gatsby" });
+
+#Borrar muchos
+db.libros.deleteMany({ "autor": "Fiodor Dostoievski" });
+
+#Actualizar 1
+db.libros.updateOne(
+    { "titulo": "El Gran Gatsby" }, 
+    { $set: { "enStock": 20 } }
+);
+
+#Actualizar muchos
+db.libros.updateMany(
+    { "autor": "Gabriel García Márquez" },
+    { $inc: { "enStock": 5 } }
+);
+
