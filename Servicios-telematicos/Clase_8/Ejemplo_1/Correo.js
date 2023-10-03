@@ -3,13 +3,13 @@ var nodemailer = require('nodemailer');
 var MTA = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'hahernandezm@udistrital.edu.co',
-    pass: 'Ti88031255206'
+    user: 'usuario@udistrital.edu.co',
+    pass: '*****'
   }});
 //Configurar el correo electrónico
 var Opciones = {
-  from: 'hahernandezm@udistrital.edu.co',
-  to: 'hahernandezm@udistrital.edu.co',
+  from: 'usuario@udistrital.edu.co',
+  to: 'destino@udistrital.edu.co',
   subject: 'Correo enviado usando JS',
   text: 'Facil!',
   attachments: [
