@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correos</title>
+</head>
+<body>
+    <form action="/enviar-email" method="POST">
+        <div>
+            <input type="email" name="para" placeholder="Correo destinatario" required>
+        </div>
+        <div>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+        </div>
+        <div>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,8 +1,12 @@
+#Imagen de node Js versión 16
 FROM node:16-slim
-
+#Directorio de trabajo
 WORKDIR /app
+#Copiar directorio de paquetes
 COPY package.json package.json
+#Ejecutar instalación de los paquetes
 RUN npm install
+#Mover archivos de la carpeta al contenedor
 COPY . .
-
-CMD ["node", "server.js"]
+#Ejecutar el archivo server usando el terminal
+CMD ["node", "servidor.js"]

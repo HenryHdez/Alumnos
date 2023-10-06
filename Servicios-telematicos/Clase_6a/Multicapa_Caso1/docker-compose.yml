@@ -1,27 +1,6 @@
 version: '3'
 services:
-  db:
-    build:
-      context: .
-      dockerfile: Dockerfile-db
-    environment:
-      - MYSQL_DATABASE=Ejemplo
-      - MYSQL_USER=usuario
-      - MYSQL_PASSWORD=contrasena
-      - MYSQL_ROOT_PASSWORD=contrasena123
+  web:
+    build: .
     ports:
-      - "3308:3306"
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile-api
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile-frontend
-    ports:
-      - "8080:80"
+      - "5000:5000"

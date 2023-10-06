@@ -3,4 +3,5 @@ ENV MYSQL_DATABASE=Ejemplo
 ENV MYSQL_USER=usuario
 ENV MYSQL_PASSWORD=contrasena
 ENV MYSQL_ROOT_PASSWORD=contrasena123
+#Copiar achivo para su ejecución al iniciar el contenedor
 COPY init.sql /docker-entrypoint-initdb.d/

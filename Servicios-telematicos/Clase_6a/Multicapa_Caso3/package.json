@@ -1,14 +1,16 @@
 {
     "name": "api",
     "version": "1.0.0",
-    "description": "Este es un API usando express",
+    "description": "Multicapa ejemplo 2",
     "main": "servidor.js",
     "scripts": {
       "start": "node servidor.js"
     },
     "dependencies": {
       "express": "^4.17.1",
-      "mysql2": "^2.2.5"
+      "mysql2": "^2.2.5",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5"
     }
   }
   

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar y actualiza elementos al API</title>
+</head>
+
+<body>
+    <h2>Actualizar elemento</h2>
+    <form id="ActualizarFormulario">
+        <label for="ElemenID">ID del elemento:</label>
+        <input type="number" id="ElemenID" required><br><br>
+        
+        <label for="Nombreelem">Nombre del elemento:</label>
+        <input type="text" id="Nombreelem" required><br><br>
+
+        <input type="submit" value="Actualizar">
+    </form>
+
+    <script>
+        document.getElementById("ActualizarFormulario").onsubmit = async function(e) {
+            e.preventDefault();
+            const ElemenID = document.getElementById("ElemenID").value;
+            const Nombreelem = document.getElementById("Nombreelem").value;
+    
+            try {
+                const res = await fetch(`http://localhost:5000/elementos/${ElemenID}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nombre: Nombreelem
+                    })
+                });
+    
+                const Tipocontenido = res.headers.get("content-type");
+                if (Tipocontenido && Tipocontenido.includes("application/json")) {
+                    const datos = await res.json();
+                    if (datos.message) {
+                        alert(datos.message);
+                    } else if (datos.error) {
+                        alert(datos.error);
+                    }
+                } else {
+                    const texto = await res.text();
+                    alert(texto);
+                }
+            } catch (error) {
+                console.error("Error durante la actualización", error);
+            }
+        };
+    </script>
+
+    <h2>Agregar elemento</h2>
+    <form id="Agregar">
+        <label for="NuevoNom">Nombre del elemento:</label>
+        <input type="text" id="NuevoNom" required><br><br>
+        <input type="submit" value="Agregar">
+    </form>
+
+    <script>
+        document.getElementById("Agregar").onsubmit = async function(e) {
+            e.preventDefault();
+
+            const NuevoNom = document.getElementById("NuevoNom").value;
+            try {
+                const res = await fetch(`http://localhost:5000/elementos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nombre: NuevoNom
+                    })
+                });
+
+                const Tipocontenido = res.headers.get("content-type");
+                if (Tipocontenido && Tipocontenido.includes("application/json")) {
+                    const datos = await res.json();
+                    if (datos.message) {
+                        alert(datos.message + ". Nuevo ID para elemento: " + datos.id);
+                    } else if (datos.error) {
+                        alert(datos.error);
+                    }
+                } else {
+                    const texto = await res.text();
+                    alert(texto);
+                }
+            } catch (error) {
+                console.error("Error al momento de agregar", error);
+            }
+        };
+    </script>
+
+</body>
+</html>

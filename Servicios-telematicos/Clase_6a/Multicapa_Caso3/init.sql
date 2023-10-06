@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS elementos (
 );
 
 INSERT INTO elementos (name) VALUES 
-('Item 1'),
-('Item 2'),
-('Item 3'),
-('Item 4'),
-('Item 5');
+('Elemento 1'),
+('Elemento 2'),
+('Elemento 3'),
+('Elemento 4'),
+('Elemento 5');
