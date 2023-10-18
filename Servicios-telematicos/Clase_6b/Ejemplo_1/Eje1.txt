@@ -1,0 +1,39 @@
+#Ejemplo 1
+#Docker Swarm es una herramienta de orquestación nativa 
+#de Docker que permite a los usuarios crear y administrar 
+#un cluster de nodos Docker.
+#Ventajas "Despliegue Continuo" 
+
+#Inicializar el cluster
+docker swarm init
+docker swarm join-token manager
+
+#Crear un servidor nginx
+docker service create --name nginx-servicio --replicas 3 -p 8080:80 nginx
+
+#Verificar servicios de docker
+docker service ls
+
+#Eliminar cluster
+docker service rm nginx-servicio
+docker swarm leave --force
+
+#Aumentar la cantidad de nodos
+docker service scale nginx-servicio=5
+
+#Ejemplo 2
+#Cree el archivo docker-compose.yml
+
+#Inicializar el cluster
+docker swarm init
+
+#Ejecutar el archivo compose
+docker stack deploy -c docker-compose.yml nginx_stack
+
+#Verificar el cluster
+docker service ls
+
+#Detener y eliminar
+docker stack rm nginx_stack
+docker swarm leave --force
+

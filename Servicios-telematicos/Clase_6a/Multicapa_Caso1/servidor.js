@@ -26,6 +26,7 @@ const MTA = nodemailer.createTransport({
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
+
 //Enviar correo
 app.post('/enviar-email', (req, res) => {
     const { para, asunto, mensaje } = req.body;

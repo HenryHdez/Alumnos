@@ -1,0 +1,16 @@
+#Crear docker compose
+docker-compose up -d
+
+#Crear usuario y contraseña
+#docker exec -it <nombre_del_contenedor> pure-pw useradd NOMBREUSUARIO -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/NOMBREUSUARIO
+docker exec -it servidor_ftpd-1 pure-pw useradd Henry -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/Henry
+
+#o pegar en exec de docker
+
+pure-pw useradd Henry -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/Henry
+
+#Descargue Filezilla e ingrese con las credenciales al servidor 
+
+#Ver archivos en el servidor
+#ls -l /home/ftpusers/NOMBREUSUARIO
+ls -l /home/ftpusers/Henry

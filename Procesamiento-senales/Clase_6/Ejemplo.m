@@ -16,8 +16,8 @@ red = newrb(Entrada,Salida);
 %Simulación de la red
 %Todas las combinaciones
 y = red(x2);
-plot(y)
-prom=mean(y);
+%plot(y)
+prom=mean(y)
 if(prom>0.9 && prom<1.2)
     disp("tangente")
 elseif(prom>1.9 && prom<2.2)

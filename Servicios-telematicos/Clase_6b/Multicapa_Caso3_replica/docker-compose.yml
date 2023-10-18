@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: basedatos
+    environment:
+      - MYSQL_DATABASE=Ejemplo
+      - MYSQL_USER=usuario
+      - MYSQL_PASSWORD=contrasena
+      - MYSQL_ROOT_PASSWORD=contrasena123
+    ports:
+      - "3308:3306"
+
+  api:
+    image: apimg
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  frontend:
+    image: imafront
+    ports:
+      - "8080:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure

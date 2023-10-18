@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nginx-servicio:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+          - ./html:/usr/share/nginx/html
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure

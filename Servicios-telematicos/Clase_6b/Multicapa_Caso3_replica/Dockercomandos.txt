@@ -1,0 +1,14 @@
+#Contruir las imágenes primero
+docker build -f Dockerfile-db -t basedatos .
+docker build -f Dockerfile-api -t apimg .
+docker build -f Dockerfile-frontend -t imafront .
+
+#Inicializar el cluster
+docker swarm init
+docker swarm join-token manager
+
+#Crear la pila
+docker stack deploy -c docker-compose.yml nombrestack
+
+#Eliminar cluster
+docker stack rm nombrestack
