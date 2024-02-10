@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView In1, In2, Sal;
+    private EditText In1, In2, Sal;
     private RadioButton R1, R2;
 
     @Override
