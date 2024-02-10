@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
-    int x=50;
+    int x=500;
     ImageButton B1;
     ImageButton B2;
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         RelativeLayout lienzo = (RelativeLayout) findViewById(R.id.Lienzo);
         lienzo.addView(fondo);
+
         B1=(ImageButton) findViewById(R.id.imageButton2);
         B1.setOnClickListener(
                 new View.OnClickListener(){
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
         B2=(ImageButton) findViewById(R.id.imageButton3);
         B2.setOnClickListener(
                 new View.OnClickListener(){
@@ -63,13 +65,12 @@ public class MainActivity extends AppCompatActivity {
             //Otras caracteristicas
             pincel.setStyle(Paint.Style.FILL);
             pincel.setColor(Color.RED);
-            canvas.drawCircle(x,50,30,pincel);
+            canvas.drawCircle(x,600,30,pincel);
         }
         public void Aumentar(View view){
             x=x+10;
             postInvalidate();
         }
-
         public void Disminuir(View view){
             x=x-10;
             postInvalidate();

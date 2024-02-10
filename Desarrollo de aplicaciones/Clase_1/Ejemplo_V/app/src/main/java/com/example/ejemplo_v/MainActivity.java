@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         public Micanvas(Context context) {
             super(context);
         }
+
         @Override
         protected void onDraw(Canvas canvas) {
             //Cree objeto para dibujar
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             pincel.setColor(Color.RED);
             //Configure el objeto
             canvas.drawRect(10,70,70,1200,pincel);
+
             pincel.setTextSize(50); 
             pincel.setStrokeWidth(20);
             pincel.setColor(Color.BLUE);

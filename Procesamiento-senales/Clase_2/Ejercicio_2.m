@@ -12,9 +12,10 @@ syms k x(k)
 %la expresion 1i(uno i-latina) indica que es un número complejo
 %Los puntos suspensivos indican que la instruccion continua abajo
 x(k)=2*exp(-2*1i*pi*k/7)+2*exp(-2*1i*pi*k*2/7)...
-    +exp(-2*1i*pi*k*4/7)+exp(-2*1i*pi*k*5/7);
+     +exp(-2*1i*pi*k*4/7)+exp(-2*1i*pi*k*5/7);
 %Rango de valores para k
 k=-10:0.2:10;
+disp(y)
 %Grafica de la transformada de Fourier
 subplot(2,1,2)
 plot(k,x(k),'linewidth',2);grid on;axis([-10,10,-1,6.5]);

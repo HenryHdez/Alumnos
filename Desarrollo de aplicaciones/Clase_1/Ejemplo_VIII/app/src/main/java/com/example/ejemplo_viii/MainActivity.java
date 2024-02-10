@@ -9,7 +9,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.List;
 

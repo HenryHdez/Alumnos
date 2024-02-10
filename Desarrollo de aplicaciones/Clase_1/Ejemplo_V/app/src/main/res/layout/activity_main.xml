@@ -5,13 +5,4 @@
     android:id="@+id/Lienzo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="395dp"
-        app:srcCompat="@android:drawable/arrow_down_float" />
-</RelativeLayout>
+    tools:context=".MainActivity" />
