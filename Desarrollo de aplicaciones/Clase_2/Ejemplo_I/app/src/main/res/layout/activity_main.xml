@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="389dp"
+        android:layout_marginRight="82dp"
+        android:layout_marginBottom="162dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="169dp"
+        android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="287dp"
+        android:text="Desconectar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="276dp"
+        android:layout_height="43dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginBottom="623dp"
+        android:text="APLICACIÓN CLIENTE"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="454dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Texto a enviar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="142dp"
+        android:layout_height="53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="378dp"
+        android:text="Enviar Mensaje" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="206dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="530dp"
+        android:text="Conectar con el servidor" />
+</RelativeLayout>
