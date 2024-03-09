@@ -1,0 +1,35 @@
+#Fijar la carpeta y crear la aplicación
+npx create-react-app ejemplo
+
+#ejemplo_1 es una etiqueta cualquiera
+#Fijar la ruta
+cd ejemplo
+#Iniciar el programa
+npm start
+#Visualización de react en la pantalla
+
+#Si hay error durante la creación utilice el comando
+npm uninstall -g create-react-app
+
+#Crear un componente es un archivo con la estructura del Saludo.js
+
+#Salir es ctrl+c
+
+
+#Ejemplo_5 (instalar en la carpeta)
+npx create-react-app ejemplo_5
+cd ejemplo_5
+npm start
+npm i bootstrap 
+#importa bootstrap en el componente principal o en el que se requiera
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+#Añadir el link en el public/index.html
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+#Ejemplo_6 (Instalar dom router)
+npx create-react-app ejemplo_6
+cd ejemplo_6
+npm start
+npm install react-router-dom

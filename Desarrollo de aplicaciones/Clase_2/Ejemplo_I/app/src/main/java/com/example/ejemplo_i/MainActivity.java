@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Socket clientSocket;
     private PrintWriter socketOut;
     private int port = 1234;
-    private final String ip = "192.168.10.13";
+    private final String ip = "192.168.104.54";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
