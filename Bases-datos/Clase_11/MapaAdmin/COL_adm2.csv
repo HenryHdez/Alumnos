@@ -1,0 +1,1066 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,53,"COL","Colombia",1,"Amazonas",1,"El Encanto","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+2,53,"COL","Colombia",1,"Amazonas",2,"La Chorrera","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+3,53,"COL","Colombia",1,"Amazonas",3,"La Pedrera","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+4,53,"COL","Colombia",1,"Amazonas",4,"Leticia","Municipio","Municipality",NA,NA
+5,53,"COL","Colombia",1,"Amazonas",5,"Mirití-Paraná","Corregimiento Departamento","Corregimiento Departamento",NA,"Miriti Parana"
+6,53,"COL","Colombia",1,"Amazonas",6,"Puerto Nariño","Municipio","Municipality",NA,NA
+7,53,"COL","Colombia",1,"Amazonas",7,"Puerto Santander","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+8,53,"COL","Colombia",1,"Amazonas",8,"Tarapacá","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+9,53,"COL","Colombia",2,"Antioquia",9,"Abejorral","Municipio","Municipality",NA,NA
+10,53,"COL","Colombia",2,"Antioquia",10,"Abriaquí","Municipio","Municipality",NA,NA
+11,53,"COL","Colombia",2,"Antioquia",11,"Alejandría","Municipio","Municipality",NA,NA
+12,53,"COL","Colombia",2,"Antioquia",12,"Amagá","Municipio","Municipality",NA,NA
+13,53,"COL","Colombia",2,"Antioquia",13,"Amalfi","Municipio","Municipality",NA,NA
+14,53,"COL","Colombia",2,"Antioquia",14,"Andes","Municipio","Municipality",NA,NA
+15,53,"COL","Colombia",2,"Antioquia",15,"Angelópolis","Municipio","Municipality",NA,NA
+16,53,"COL","Colombia",2,"Antioquia",16,"Angostura","Municipio","Municipality",NA,NA
+17,53,"COL","Colombia",2,"Antioquia",17,"Anorí","Municipio","Municipality",NA,NA
+18,53,"COL","Colombia",2,"Antioquia",18,"Anzá","Municipio","Municipality",NA,NA
+19,53,"COL","Colombia",2,"Antioquia",19,"Apartadó","Municipio","Municipality",NA,NA
+20,53,"COL","Colombia",2,"Antioquia",20,"Arboletes","Municipio","Municipality",NA,NA
+21,53,"COL","Colombia",2,"Antioquia",21,"Argelia","Municipio","Municipality",NA,NA
+22,53,"COL","Colombia",2,"Antioquia",22,"Armenia","Municipio","Municipality",NA,"Mantequilla"
+23,53,"COL","Colombia",2,"Antioquia",23,"Barbosa","Municipio","Municipality",NA,NA
+24,53,"COL","Colombia",2,"Antioquia",24,"Bello","Municipio","Municipality",NA,NA
+25,53,"COL","Colombia",2,"Antioquia",25,"Belmira","Municipio","Municipality",NA,NA
+26,53,"COL","Colombia",2,"Antioquia",26,"Betania","Municipio","Municipality",NA,NA
+27,53,"COL","Colombia",2,"Antioquia",27,"Betulia","Municipio","Municipality",NA,NA
+28,53,"COL","Colombia",2,"Antioquia",28,"Bolívar","Municipio","Municipality",NA,NA
+29,53,"COL","Colombia",2,"Antioquia",29,"Briceño","Municipio","Municipality",NA,NA
+30,53,"COL","Colombia",2,"Antioquia",30,"Buriticá","Municipio","Municipality",NA,NA
+31,53,"COL","Colombia",2,"Antioquia",31,"Cáceres","Municipio","Municipality",NA,NA
+32,53,"COL","Colombia",2,"Antioquia",32,"Cañasgordas","Municipio","Municipality",NA,NA
+33,53,"COL","Colombia",2,"Antioquia",33,"Caicedo","Municipio","Municipality",NA,NA
+34,53,"COL","Colombia",2,"Antioquia",34,"Caldas","Municipio","Municipality",NA,NA
+35,53,"COL","Colombia",2,"Antioquia",35,"Campamento","Municipio","Municipality",NA,NA
+36,53,"COL","Colombia",2,"Antioquia",36,"Caracolí","Municipio","Municipality",NA,NA
+37,53,"COL","Colombia",2,"Antioquia",37,"Caramanta","Municipio","Municipality",NA,NA
+38,53,"COL","Colombia",2,"Antioquia",38,"Carepa","Municipio","Municipality",NA,NA
+39,53,"COL","Colombia",2,"Antioquia",39,"Carolina del Principe","Municipio","Municipality",NA,"Carolina"
+40,53,"COL","Colombia",2,"Antioquia",40,"Caucasia","Municipio","Municipality",NA,NA
+41,53,"COL","Colombia",2,"Antioquia",41,"Chigorodó","Municipio","Municipality",NA,NA
+42,53,"COL","Colombia",2,"Antioquia",42,"Cisneros","Municipio","Municipality",NA,NA
+43,53,"COL","Colombia",2,"Antioquia",43,"Cocorná","Municipio","Municipality",NA,NA
+44,53,"COL","Colombia",2,"Antioquia",44,"Concepción","Municipio","Municipality",NA,NA
+45,53,"COL","Colombia",2,"Antioquia",45,"Concordia","Municipio","Municipality",NA,NA
+46,53,"COL","Colombia",2,"Antioquia",46,"Copacabana","Municipio","Municipality",NA,NA
+47,53,"COL","Colombia",2,"Antioquia",47,"Dabeiba","Municipio","Municipality",NA,NA
+48,53,"COL","Colombia",2,"Antioquia",48,"Don Matías","Municipio","Municipality",NA,NA
+49,53,"COL","Colombia",2,"Antioquia",49,"Ebéjico","Municipio","Municipality",NA,NA
+50,53,"COL","Colombia",2,"Antioquia",50,"El Bagre","Municipio","Municipality",NA,NA
+51,53,"COL","Colombia",2,"Antioquia",51,"El Carmen de Viboral","Municipio","Municipality",NA,"Carmen De Vibora"
+52,53,"COL","Colombia",2,"Antioquia",52,"El Santuario","Municipio","Municipality",NA,"Santuario"
+53,53,"COL","Colombia",2,"Antioquia",53,"Entrerríos","Municipio","Municipality",NA,NA
+54,53,"COL","Colombia",2,"Antioquia",54,"Envigado","Municipio","Municipality",NA,NA
+55,53,"COL","Colombia",2,"Antioquia",55,"Fredonia","Municipio","Municipality",NA,NA
+56,53,"COL","Colombia",2,"Antioquia",56,"Frontino","Municipio","Municipality",NA,NA
+57,53,"COL","Colombia",2,"Antioquia",57,"Gómez Plata","Municipio","Municipality",NA,NA
+58,53,"COL","Colombia",2,"Antioquia",58,"Giraldo","Municipio","Municipality",NA,NA
+59,53,"COL","Colombia",2,"Antioquia",59,"Girardota","Municipio","Municipality",NA,NA
+60,53,"COL","Colombia",2,"Antioquia",60,"Granada","Municipio","Municipality",NA,NA
+61,53,"COL","Colombia",2,"Antioquia",61,"Guadalupe","Municipio","Municipality",NA,NA
+62,53,"COL","Colombia",2,"Antioquia",62,"Guarne","Municipio","Municipality",NA,NA
+63,53,"COL","Colombia",2,"Antioquia",63,"Guatapé","Municipio","Municipality",NA,NA
+64,53,"COL","Colombia",2,"Antioquia",64,"Heliconia","Municipio","Municipality",NA,NA
+65,53,"COL","Colombia",2,"Antioquia",65,"Hispania","Municipio","Municipality",NA,NA
+66,53,"COL","Colombia",2,"Antioquia",66,"Itagüí","Municipio","Municipality",NA,NA
+67,53,"COL","Colombia",2,"Antioquia",67,"Ituango","Municipio","Municipality",NA,NA
+68,53,"COL","Colombia",2,"Antioquia",68,"Jardín","Municipio","Municipality",NA,NA
+69,53,"COL","Colombia",2,"Antioquia",69,"Jericó","Municipio","Municipality",NA,NA
+70,53,"COL","Colombia",2,"Antioquia",70,"La Ceja","Municipio","Municipality",NA,NA
+71,53,"COL","Colombia",2,"Antioquia",71,"La Estrella","Municipio","Municipality",NA,NA
+72,53,"COL","Colombia",2,"Antioquia",72,"La Unión de Sucre","Municipio","Municipality",NA,"La Union|La Unión"
+73,53,"COL","Colombia",2,"Antioquia",73,"Liborina","Municipio","Municipality",NA,NA
+74,53,"COL","Colombia",2,"Antioquia",74,"Maceo","Municipio","Municipality",NA,NA
+75,53,"COL","Colombia",2,"Antioquia",75,"Marinilla","Municipio","Municipality",NA,NA
+76,53,"COL","Colombia",2,"Antioquia",76,"Medellín","Municipio","Municipality",NA,NA
+77,53,"COL","Colombia",2,"Antioquia",77,"Montebello","Municipio","Municipality",NA,NA
+78,53,"COL","Colombia",2,"Antioquia",78,"Murindó","Municipio","Municipality",NA,NA
+79,53,"COL","Colombia",2,"Antioquia",79,"Mutatá","Municipio","Municipality",NA,NA
+80,53,"COL","Colombia",2,"Antioquia",80,"Nariño","Municipio","Municipality",NA,NA
+81,53,"COL","Colombia",2,"Antioquia",81,"Nechí","Municipio","Municipality",NA,NA
+82,53,"COL","Colombia",2,"Antioquia",82,"Necoclí","Municipio","Municipality",NA,NA
+83,53,"COL","Colombia",2,"Antioquia",83,"Olaya","Municipio","Municipality",NA,NA
+84,53,"COL","Colombia",2,"Antioquia",84,"Peñol","Municipio","Municipality",NA,NA
+85,53,"COL","Colombia",2,"Antioquia",85,"Pequé","Municipio","Municipality",NA,NA
+86,53,"COL","Colombia",2,"Antioquia",86,"Pueblorrico","Municipio","Municipality",NA,NA
+87,53,"COL","Colombia",2,"Antioquia",87,"Puerto Berrío","Municipio","Municipality",NA,NA
+88,53,"COL","Colombia",2,"Antioquia",88,"Puerto Nare","Municipio","Municipality",NA,"La Magdalena"
+89,53,"COL","Colombia",2,"Antioquia",89,"Puerto Triunfo","Municipio","Municipality",NA,NA
+90,53,"COL","Colombia",2,"Antioquia",90,"Remedios","Municipio","Municipality",NA,NA
+91,53,"COL","Colombia",2,"Antioquia",91,"Retiro","Municipio","Municipality",NA,NA
+92,53,"COL","Colombia",2,"Antioquia",92,"Rionegro","Municipio","Municipality",NA,NA
+93,53,"COL","Colombia",2,"Antioquia",93,"Sabanalarga","Municipio","Municipality",NA,NA
+94,53,"COL","Colombia",2,"Antioquia",94,"Sabaneta","Municipio","Municipality",NA,NA
+95,53,"COL","Colombia",2,"Antioquia",95,"Salgar","Municipio","Municipality",NA,NA
+96,53,"COL","Colombia",2,"Antioquia",96,"San Andrés de Cuerquia","Municipio","Municipality",NA,"San Andres|San Andrés"
+97,53,"COL","Colombia",2,"Antioquia",97,"San Carlos","Municipio","Municipality",NA,NA
+98,53,"COL","Colombia",2,"Antioquia",98,"San Francisco","Municipio","Municipality",NA,NA
+99,53,"COL","Colombia",2,"Antioquia",99,"San Jerónimo","Municipio","Municipality",NA,NA
+100,53,"COL","Colombia",2,"Antioquia",100,"San José de la Montaña","Municipio","Municipality",NA,NA
+101,53,"COL","Colombia",2,"Antioquia",101,"San Juan de Urabá","Municipio","Municipality",NA,"San Juan De Urab"
+102,53,"COL","Colombia",2,"Antioquia",102,"San Luis","Municipio","Municipality",NA,NA
+103,53,"COL","Colombia",2,"Antioquia",103,"San Pedro de los Milagros","Municipio","Municipality",NA,"San Pedro"
+104,53,"COL","Colombia",2,"Antioquia",104,"San Pedro de Urabá","Municipio","Municipality",NA,NA
+105,53,"COL","Colombia",2,"Antioquia",105,"San Rafael","Municipio","Municipality",NA,NA
+106,53,"COL","Colombia",2,"Antioquia",106,"San Roque","Municipio","Municipality",NA,NA
+107,53,"COL","Colombia",2,"Antioquia",107,"San Vicente","Municipio","Municipality",NA,NA
+108,53,"COL","Colombia",2,"Antioquia",108,"Santa Bárbara","Municipio","Municipality",NA,NA
+109,53,"COL","Colombia",2,"Antioquia",109,"Santa Fe de Antioquia","Municipio","Municipality",NA,"Antioquia"
+110,53,"COL","Colombia",2,"Antioquia",110,"Santa Rosa de Osos","Municipio","Municipality",NA,NA
+111,53,"COL","Colombia",2,"Antioquia",111,"Santo Domingo","Municipio","Municipality",NA,NA
+112,53,"COL","Colombia",2,"Antioquia",112,"Segovia","Municipio","Municipality",NA,NA
+113,53,"COL","Colombia",2,"Antioquia",113,"Sonsón","Municipio","Municipality",NA,NA
+114,53,"COL","Colombia",2,"Antioquia",114,"Sopetrán","Municipio","Municipality",NA,NA
+115,53,"COL","Colombia",2,"Antioquia",115,"Támesis","Municipio","Municipality",NA,NA
+116,53,"COL","Colombia",2,"Antioquia",116,"Tarazá","Municipio","Municipality",NA,NA
+117,53,"COL","Colombia",2,"Antioquia",117,"Tarso","Municipio","Municipality",NA,NA
+118,53,"COL","Colombia",2,"Antioquia",118,"Titiribí","Municipio","Municipality",NA,NA
+119,53,"COL","Colombia",2,"Antioquia",119,"Toledo","Municipio","Municipality",NA,NA
+120,53,"COL","Colombia",2,"Antioquia",120,"Turbo","Municipio","Municipality",NA,NA
+121,53,"COL","Colombia",2,"Antioquia",121,"Uramita","Municipio","Municipality",NA,NA
+122,53,"COL","Colombia",2,"Antioquia",122,"Urrao","Municipio","Municipality",NA,NA
+123,53,"COL","Colombia",2,"Antioquia",123,"Valdivia","Municipio","Municipality",NA,NA
+124,53,"COL","Colombia",2,"Antioquia",124,"Valparaíso","Municipio","Municipality",NA,NA
+125,53,"COL","Colombia",2,"Antioquia",125,"Vegachí","Municipio","Municipality",NA,NA
+126,53,"COL","Colombia",2,"Antioquia",126,"Venecia","Municipio","Municipality",NA,NA
+127,53,"COL","Colombia",2,"Antioquia",127,"Vigía del Fuerte","Municipio","Municipality",NA,NA
+128,53,"COL","Colombia",2,"Antioquia",128,"Yalí","Municipio","Municipality",NA,NA
+129,53,"COL","Colombia",2,"Antioquia",129,"Yarumal","Municipio","Municipality",NA,NA
+130,53,"COL","Colombia",2,"Antioquia",130,"Yolombó","Municipio","Municipality",NA,NA
+131,53,"COL","Colombia",2,"Antioquia",131,"Yondó","Municipio","Municipality",NA,NA
+132,53,"COL","Colombia",2,"Antioquia",132,"Zaragoza","Municipio","Municipality",NA,NA
+133,53,"COL","Colombia",3,"Arauca",133,"Arauca","Municipio","Municipality",NA,NA
+134,53,"COL","Colombia",3,"Arauca",134,"Arauquita","Municipio","Municipality",NA,NA
+135,53,"COL","Colombia",3,"Arauca",135,"Cravo Norte","Municipio","Municipality",NA,NA
+136,53,"COL","Colombia",3,"Arauca",136,"Fortul","Municipio","Municipality",NA,NA
+137,53,"COL","Colombia",3,"Arauca",137,"Puerto Rondón","Municipio","Municipality",NA,NA
+138,53,"COL","Colombia",3,"Arauca",138,"Saravena","Municipio","Municipality",NA,NA
+139,53,"COL","Colombia",3,"Arauca",139,"Tame","Municipio","Municipality",NA,NA
+140,53,"COL","Colombia",4,"Atlántico",140,"Baranoa","Municipio","Municipality",NA,NA
+141,53,"COL","Colombia",4,"Atlántico",141,"Barranquilla",NA,NA,NA,NA
+142,53,"COL","Colombia",4,"Atlántico",142,"Campo de la Cruz","Municipio","Municipality",NA,NA
+143,53,"COL","Colombia",4,"Atlántico",143,"Candelaria","Municipio","Municipality",NA,NA
+144,53,"COL","Colombia",4,"Atlántico",144,"Galapa","Municipio","Municipality",NA,NA
+145,53,"COL","Colombia",4,"Atlántico",145,"Juan de Acosta","Municipio","Municipality",NA,NA
+146,53,"COL","Colombia",4,"Atlántico",146,"Luruaco","Municipio","Municipality",NA,NA
+147,53,"COL","Colombia",4,"Atlántico",147,"Malambo","Municipio","Municipality",NA,NA
+148,53,"COL","Colombia",4,"Atlántico",148,"Manatí","Municipio","Municipality",NA,NA
+149,53,"COL","Colombia",4,"Atlántico",149,"Palmar de Varela","Municipio","Municipality",NA,NA
+150,53,"COL","Colombia",4,"Atlántico",150,"Piojó","Municipio","Municipality",NA,NA
+151,53,"COL","Colombia",4,"Atlántico",151,"Polonuevo","Municipio","Municipality",NA,"Polo Nuevo"
+152,53,"COL","Colombia",4,"Atlántico",152,"Ponedera","Municipio","Municipality",NA,NA
+153,53,"COL","Colombia",4,"Atlántico",153,"Puerto Colombia","Municipio","Municipality",NA,NA
+154,53,"COL","Colombia",4,"Atlántico",154,"Repelón","Municipio","Municipality",NA,NA
+155,53,"COL","Colombia",4,"Atlántico",155,"Sabanagrande","Municipio","Municipality",NA,NA
+156,53,"COL","Colombia",4,"Atlántico",156,"Sabanalarga","Municipio","Municipality",NA,NA
+157,53,"COL","Colombia",4,"Atlántico",157,"Santa Lucía","Municipio","Municipality",NA,NA
+158,53,"COL","Colombia",4,"Atlántico",158,"Santo Tomás","Municipio","Municipality",NA,NA
+159,53,"COL","Colombia",4,"Atlántico",159,"Soledad","Municipio","Municipality",NA,NA
+160,53,"COL","Colombia",4,"Atlántico",160,"Suan","Municipio","Municipality",NA,NA
+161,53,"COL","Colombia",4,"Atlántico",161,"Tubará","Municipio","Municipality",NA,NA
+162,53,"COL","Colombia",4,"Atlántico",162,"Usiacurí","Municipio","Municipality",NA,NA
+163,53,"COL","Colombia",5,"Bolívar",163,"Achí","Municipio","Municipality",NA,NA
+164,53,"COL","Colombia",5,"Bolívar",164,"Altos del Rosario","Municipio","Municipality",NA,NA
+165,53,"COL","Colombia",5,"Bolívar",165,"Arjona","Municipio","Municipality",NA,NA
+166,53,"COL","Colombia",5,"Bolívar",166,"Barranco de Loba","Municipio","Municipality",NA,NA
+167,53,"COL","Colombia",5,"Bolívar",167,"Córdoba","Municipio","Municipality",NA,NA
+168,53,"COL","Colombia",5,"Bolívar",168,"Calamar","Municipio","Municipality",NA,NA
+169,53,"COL","Colombia",5,"Bolívar",169,"Cantagallo","Municipio","Municipality",NA,NA
+170,53,"COL","Colombia",5,"Bolívar",170,"Cartagena de Indias","Municipio","Municipality",NA,"Cartagena"
+171,53,"COL","Colombia",5,"Bolívar",171,"Cicuco","Municipio","Municipality",NA,NA
+172,53,"COL","Colombia",5,"Bolívar",172,"El Carmen de Bolívar","Municipio","Municipality",NA,"El Carmen De Bol|El Carmen"
+173,53,"COL","Colombia",5,"Bolívar",173,"El Guamo","Municipio","Municipality",NA,NA
+174,53,"COL","Colombia",5,"Bolívar",174,"Hatillo de Loba","Municipio","Municipality",NA,NA
+175,53,"COL","Colombia",5,"Bolívar",175,"Mahates","Municipio","Municipality",NA,NA
+176,53,"COL","Colombia",5,"Bolívar",176,"María la Baja","Municipio","Municipality",NA,NA
+177,53,"COL","Colombia",5,"Bolívar",177,"Margarita","Municipio","Municipality",NA,NA
+178,53,"COL","Colombia",5,"Bolívar",178,"Mompós","Municipio","Municipality",NA,NA
+179,53,"COL","Colombia",5,"Bolívar",179,"Montecristo","Municipio","Municipality",NA,NA
+180,53,"COL","Colombia",5,"Bolívar",180,"Morales","Municipio","Municipality",NA,NA
+181,53,"COL","Colombia",5,"Bolívar",181,"Pinillos","Municipio","Municipality",NA,NA
+182,53,"COL","Colombia",5,"Bolívar",182,"Río Viejo","Municipio","Municipality",NA,NA
+183,53,"COL","Colombia",5,"Bolívar",183,"San Estanislao de Kostka","Municipio","Municipality",NA,"San Estanislao"
+184,53,"COL","Colombia",5,"Bolívar",184,"San Fernando","Municipio","Municipality",NA,NA
+185,53,"COL","Colombia",5,"Bolívar",185,"San Jacinto","Municipio","Municipality",NA,NA
+186,53,"COL","Colombia",5,"Bolívar",186,"San Juan Nepomuceno","Municipio","Municipality",NA,"San Juan Nepomuc"
+187,53,"COL","Colombia",5,"Bolívar",187,"San Martín de Loba","Municipio","Municipality",NA,NA
+188,53,"COL","Colombia",5,"Bolívar",188,"San Pablo","Municipio","Municipality",NA,NA
+189,53,"COL","Colombia",5,"Bolívar",189,"Santa Catalina","Municipio","Municipality",NA,NA
+190,53,"COL","Colombia",5,"Bolívar",190,"Santa Rosa del Sur","Municipio","Municipality",NA,NA
+191,53,"COL","Colombia",5,"Bolívar",191,"Santa Rosa","Municipio","Municipality",NA,NA
+192,53,"COL","Colombia",5,"Bolívar",192,"Simití","Municipio","Municipality",NA,NA
+193,53,"COL","Colombia",5,"Bolívar",193,"Soplaviento","Municipio","Municipality",NA,NA
+194,53,"COL","Colombia",5,"Bolívar",194,"Talaigua Nuevo","Municipio","Municipality",NA,NA
+195,53,"COL","Colombia",5,"Bolívar",195,"Turbaco","Municipio","Municipality",NA,NA
+196,53,"COL","Colombia",5,"Bolívar",196,"Turbaná","Municipio","Municipality",NA,NA
+197,53,"COL","Colombia",5,"Bolívar",197,"Villanueva","Municipio","Municipality",NA,NA
+198,53,"COL","Colombia",5,"Bolívar",198,"Zambrano","Municipio","Municipality",NA,NA
+199,53,"COL","Colombia",6,"Boyacá",199,"Almeida","Municipio","Municipality",NA,NA
+200,53,"COL","Colombia",6,"Boyacá",200,"Aquitania","Municipio","Municipality",NA,NA
+201,53,"COL","Colombia",6,"Boyacá",201,"Arcabuco","Municipio","Municipality",NA,NA
+202,53,"COL","Colombia",6,"Boyacá",202,"Belén",NA,NA,NA,NA
+203,53,"COL","Colombia",6,"Boyacá",203,"Berbeo","Municipio","Municipality",NA,NA
+204,53,"COL","Colombia",6,"Boyacá",204,"Beteitiva","Municipio","Municipality",NA,NA
+205,53,"COL","Colombia",6,"Boyacá",205,"Boavita","Municipio","Municipality",NA,NA
+206,53,"COL","Colombia",6,"Boyacá",206,"Boyacá","Municipio","Municipality",NA,NA
+207,53,"COL","Colombia",6,"Boyacá",207,"Briceño","Municipio","Municipality",NA,NA
+208,53,"COL","Colombia",6,"Boyacá",208,"Buenavista","Municipio","Municipality",NA,NA
+209,53,"COL","Colombia",6,"Boyacá",209,"Busbanza","Municipio","Municipality",NA,NA
+210,53,"COL","Colombia",6,"Boyacá",210,"Cómbita","Municipio","Municipality",NA,NA
+211,53,"COL","Colombia",6,"Boyacá",211,"Caldas","Municipio","Municipality",NA,NA
+212,53,"COL","Colombia",6,"Boyacá",212,"Campohermoso","Municipio","Municipality",NA,NA
+213,53,"COL","Colombia",6,"Boyacá",213,"Cerinza","Municipio","Municipality",NA,NA
+214,53,"COL","Colombia",6,"Boyacá",214,"Chíquiza","Municipio","Municipality",NA,NA
+215,53,"COL","Colombia",6,"Boyacá",215,"Chinavita","Municipio","Municipality",NA,NA
+216,53,"COL","Colombia",6,"Boyacá",216,"Chiquinquirá","Municipio","Municipality",NA,NA
+217,53,"COL","Colombia",6,"Boyacá",217,"Chiscas","Municipio","Municipality",NA,NA
+218,53,"COL","Colombia",6,"Boyacá",218,"Chita","Municipio","Municipality",NA,NA
+219,53,"COL","Colombia",6,"Boyacá",219,"Chitaraque","Municipio","Municipality",NA,NA
+220,53,"COL","Colombia",6,"Boyacá",220,"Chivatá","Municipio","Municipality",NA,NA
+221,53,"COL","Colombia",6,"Boyacá",221,"Chivor","Municipio","Municipality",NA,NA
+222,53,"COL","Colombia",6,"Boyacá",222,"Ciénaga","Municipio","Municipality",NA,NA
+223,53,"COL","Colombia",6,"Boyacá",223,"Coper","Municipio","Municipality",NA,NA
+224,53,"COL","Colombia",6,"Boyacá",224,"Corrales","Municipio","Municipality",NA,NA
+225,53,"COL","Colombia",6,"Boyacá",225,"Covarachía","Municipio","Municipality",NA,NA
+226,53,"COL","Colombia",6,"Boyacá",226,"Cuítiva","Municipio","Municipality",NA,NA
+227,53,"COL","Colombia",6,"Boyacá",227,"Cubará","Municipio","Municipality",NA,NA
+228,53,"COL","Colombia",6,"Boyacá",228,"Cucaita","Municipio","Municipality",NA,NA
+229,53,"COL","Colombia",6,"Boyacá",229,"Duitama","Municipio","Municipality",NA,NA
+230,53,"COL","Colombia",6,"Boyacá",230,"El Cocuy","Municipio","Municipality",NA,NA
+231,53,"COL","Colombia",6,"Boyacá",231,"El Espino","Municipio","Municipality",NA,NA
+232,53,"COL","Colombia",6,"Boyacá",232,"Firavitoba","Municipio","Municipality",NA,NA
+233,53,"COL","Colombia",6,"Boyacá",233,"Floresta","Municipio","Municipality",NA,NA
+234,53,"COL","Colombia",6,"Boyacá",234,"Gámeza","Municipio","Municipality",NA,NA
+235,53,"COL","Colombia",6,"Boyacá",235,"Gachantivá","Municipio","Municipality",NA,NA
+236,53,"COL","Colombia",6,"Boyacá",236,"Garagoa","Municipio","Municipality",NA,NA
+237,53,"COL","Colombia",6,"Boyacá",237,"Guacamayas","Municipio","Municipality",NA,NA
+238,53,"COL","Colombia",6,"Boyacá",238,"Guateque","Municipio","Municipality",NA,NA
+239,53,"COL","Colombia",6,"Boyacá",239,"Guayatá","Municipio","Municipality",NA,NA
+240,53,"COL","Colombia",6,"Boyacá",240,"Guicán","Municipio","Municipality",NA,NA
+241,53,"COL","Colombia",6,"Boyacá",241,"Izá","Municipio","Municipality",NA,NA
+242,53,"COL","Colombia",6,"Boyacá",242,"Jenesano","Municipio","Municipality",NA,NA
+243,53,"COL","Colombia",6,"Boyacá",243,"Jericó","Municipio","Municipality",NA,NA
+244,53,"COL","Colombia",6,"Boyacá",244,"La Capilla","Municipio","Municipality",NA,NA
+245,53,"COL","Colombia",6,"Boyacá",245,"La Uvita","Municipio","Municipality",NA,NA
+246,53,"COL","Colombia",6,"Boyacá",246,"La Victoria","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+247,53,"COL","Colombia",6,"Boyacá",247,"Labranzagrande","Municipio","Municipality",NA,NA
+248,53,"COL","Colombia",6,"Boyacá",248,"Macanal","Municipio","Municipality",NA,NA
+249,53,"COL","Colombia",6,"Boyacá",249,"Maripí","Municipio","Municipality",NA,NA
+250,53,"COL","Colombia",6,"Boyacá",250,"Miraflores","Municipio","Municipality",NA,NA
+251,53,"COL","Colombia",6,"Boyacá",251,"Mongua","Municipio","Municipality",NA,NA
+252,53,"COL","Colombia",6,"Boyacá",252,"Monguí","Municipio","Municipality",NA,NA
+253,53,"COL","Colombia",6,"Boyacá",253,"Moniquirá","Municipio","Municipality",NA,NA
+254,53,"COL","Colombia",6,"Boyacá",254,"Motavita","Municipio","Municipality",NA,NA
+255,53,"COL","Colombia",6,"Boyacá",255,"Muzo","Municipio","Municipality",NA,NA
+256,53,"COL","Colombia",6,"Boyacá",256,"Nobsa","Municipio","Municipality",NA,NA
+257,53,"COL","Colombia",6,"Boyacá",257,"Nuevo Colón","Municipio","Municipality",NA,NA
+258,53,"COL","Colombia",6,"Boyacá",258,"Oicatá","Municipio","Municipality",NA,NA
+259,53,"COL","Colombia",6,"Boyacá",259,"Otanche","Municipio","Municipality",NA,NA
+260,53,"COL","Colombia",6,"Boyacá",260,"Páez","Municipio","Municipality",NA,NA
+261,53,"COL","Colombia",6,"Boyacá",261,"Pachavita","Municipio","Municipality",NA,NA
+262,53,"COL","Colombia",6,"Boyacá",262,"Paipa","Municipio","Municipality",NA,NA
+263,53,"COL","Colombia",6,"Boyacá",263,"Pajarito","Municipio","Municipality",NA,NA
+264,53,"COL","Colombia",6,"Boyacá",264,"Panqueba","Municipio","Municipality",NA,NA
+265,53,"COL","Colombia",6,"Boyacá",265,"Pauna","Municipio","Municipality",NA,NA
+266,53,"COL","Colombia",6,"Boyacá",266,"Paya","Municipio","Municipality",NA,NA
+267,53,"COL","Colombia",6,"Boyacá",267,"Paz de Río","Municipio","Municipality",NA,NA
+268,53,"COL","Colombia",6,"Boyacá",268,"Pesca","Municipio","Municipality",NA,NA
+269,53,"COL","Colombia",6,"Boyacá",269,"Pisba","Municipio","Municipality",NA,"Pisva"
+270,53,"COL","Colombia",6,"Boyacá",270,"Puerto Boyacá","Municipio","Municipality",NA,"Puerto Boyacáa"
+271,53,"COL","Colombia",6,"Boyacá",271,"Quípama","Municipio","Municipality",NA,NA
+272,53,"COL","Colombia",6,"Boyacá",272,"Ráquira","Municipio","Municipality",NA,NA
+273,53,"COL","Colombia",6,"Boyacá",273,"Ramiriquí","Municipio","Municipality",NA,NA
+274,53,"COL","Colombia",6,"Boyacá",274,"Rondón","Municipio","Municipality",NA,NA
+275,53,"COL","Colombia",6,"Boyacá",275,"Sáchica","Municipio","Municipality",NA,NA
+276,53,"COL","Colombia",6,"Boyacá",276,"Saboyá","Municipio","Municipality",NA,NA
+277,53,"COL","Colombia",6,"Boyacá",277,"Samacá","Municipio","Municipality",NA,NA
+278,53,"COL","Colombia",6,"Boyacá",278,"San Eduardo","Municipio","Municipality",NA,NA
+279,53,"COL","Colombia",6,"Boyacá",279,"San José de Pare","Municipio","Municipality",NA,NA
+280,53,"COL","Colombia",6,"Boyacá",280,"San Luis de Gaceno","Municipio","Municipality",NA,"San Luis De Gace"
+281,53,"COL","Colombia",6,"Boyacá",281,"San Mateo","Municipio","Municipality",NA,NA
+282,53,"COL","Colombia",6,"Boyacá",282,"San Miguel de Sema","Municipio","Municipality",NA,NA
+283,53,"COL","Colombia",6,"Boyacá",283,"San Pablo de Borbur","Municipio","Municipality",NA,NA
+284,53,"COL","Colombia",6,"Boyacá",284,"Santa María","Municipio","Municipality",NA,"Santamaria"
+285,53,"COL","Colombia",6,"Boyacá",285,"Santa Rosa de Viterbo","Municipio","Municipality",NA,NA
+286,53,"COL","Colombia",6,"Boyacá",286,"Santa Sofía","Municipio","Municipality",NA,NA
+287,53,"COL","Colombia",6,"Boyacá",287,"Santana","Municipio","Municipality",NA,NA
+288,53,"COL","Colombia",6,"Boyacá",288,"Sativanorte","Municipio","Municipality",NA,NA
+289,53,"COL","Colombia",6,"Boyacá",289,"Sativasur","Municipio","Municipality",NA,NA
+290,53,"COL","Colombia",6,"Boyacá",290,"Siachoque","Municipio","Municipality",NA,NA
+291,53,"COL","Colombia",6,"Boyacá",291,"Soatá","Municipio","Municipality",NA,NA
+292,53,"COL","Colombia",6,"Boyacá",292,"Socha","Municipio","Municipality",NA,NA
+293,53,"COL","Colombia",6,"Boyacá",293,"Socotá","Municipio","Municipality",NA,NA
+294,53,"COL","Colombia",6,"Boyacá",294,"Sogamoso","Municipio","Municipality",NA,NA
+295,53,"COL","Colombia",6,"Boyacá",295,"Somondoco","Municipio","Municipality",NA,NA
+296,53,"COL","Colombia",6,"Boyacá",296,"Soracá","Municipio","Municipality",NA,NA
+297,53,"COL","Colombia",6,"Boyacá",297,"Sora","Municipio","Municipality",NA,NA
+298,53,"COL","Colombia",6,"Boyacá",298,"Sotaquirá","Municipio","Municipality",NA,NA
+299,53,"COL","Colombia",6,"Boyacá",299,"Susacón","Municipio","Municipality",NA,NA
+300,53,"COL","Colombia",6,"Boyacá",300,"Sutamarchán","Municipio","Municipality",NA,NA
+301,53,"COL","Colombia",6,"Boyacá",301,"Sutatenza","Municipio","Municipality",NA,NA
+302,53,"COL","Colombia",6,"Boyacá",302,"Tasco","Municipio","Municipality",NA,NA
+303,53,"COL","Colombia",6,"Boyacá",303,"Tenza","Municipio","Municipality",NA,NA
+304,53,"COL","Colombia",6,"Boyacá",304,"Tibaná","Municipio","Municipality",NA,NA
+305,53,"COL","Colombia",6,"Boyacá",305,"Tibasosa","Municipio","Municipality",NA,"Tibabosa"
+306,53,"COL","Colombia",6,"Boyacá",306,"Tinjacá","Municipio","Municipality",NA,NA
+307,53,"COL","Colombia",6,"Boyacá",307,"Tipacoque","Municipio","Municipality",NA,NA
+308,53,"COL","Colombia",6,"Boyacá",308,"Toca","Municipio","Municipality",NA,NA
+309,53,"COL","Colombia",6,"Boyacá",309,"Toguí","Municipio","Municipality",NA,NA
+310,53,"COL","Colombia",6,"Boyacá",310,"Topagá","Municipio","Municipality",NA,NA
+311,53,"COL","Colombia",6,"Boyacá",311,"Tota","Municipio","Municipality",NA,NA
+312,53,"COL","Colombia",6,"Boyacá",312,"Tunja","Municipio","Municipality",NA,NA
+313,53,"COL","Colombia",6,"Boyacá",313,"Tunungua","Municipio","Municipality",NA,NA
+314,53,"COL","Colombia",6,"Boyacá",314,"Turmequé","Municipio","Municipality",NA,NA
+315,53,"COL","Colombia",6,"Boyacá",315,"Tuta","Municipio","Municipality",NA,NA
+316,53,"COL","Colombia",6,"Boyacá",316,"Tutazá","Municipio","Municipality",NA,"Tutasa"
+317,53,"COL","Colombia",6,"Boyacá",317,"Umbita","Municipio","Municipality",NA,NA
+318,53,"COL","Colombia",6,"Boyacá",318,"Ventaquemada","Municipio","Municipality",NA,NA
+319,53,"COL","Colombia",6,"Boyacá",319,"Villa de Leyva","Municipio","Municipality",NA,NA
+320,53,"COL","Colombia",6,"Boyacá",320,"Viracachá","Municipio","Municipality",NA,NA
+321,53,"COL","Colombia",6,"Boyacá",321,"Zetaquirá","Municipio","Municipality",NA,NA
+322,53,"COL","Colombia",7,"Córdoba",322,"Ayapel","Municipio","Municipality",NA,NA
+323,53,"COL","Colombia",7,"Córdoba",323,"Buenavista","Municipio","Municipality",NA,NA
+324,53,"COL","Colombia",7,"Córdoba",324,"Canalete","Municipio","Municipality",NA,NA
+325,53,"COL","Colombia",7,"Córdoba",325,"Cereté","Municipio","Municipality",NA,NA
+326,53,"COL","Colombia",7,"Córdoba",326,"Chimá","Municipio","Municipality",NA,NA
+327,53,"COL","Colombia",7,"Córdoba",327,"Chinú","Municipio","Municipality",NA,"Chiné"
+328,53,"COL","Colombia",7,"Córdoba",328,"Ciénaga de Oro","Municipio","Municipality",NA,NA
+329,53,"COL","Colombia",7,"Córdoba",329,"Los Córdobas","Municipio","Municipality",NA,NA
+330,53,"COL","Colombia",7,"Córdoba",330,"Moñitos","Municipio","Municipality",NA,NA
+331,53,"COL","Colombia",7,"Córdoba",331,"Momil","Municipio","Municipality",NA,NA
+332,53,"COL","Colombia",7,"Córdoba",332,"Montelíbano","Municipio","Municipality",NA,NA
+333,53,"COL","Colombia",7,"Córdoba",333,"Montería","Municipio","Municipality",NA,NA
+334,53,"COL","Colombia",7,"Córdoba",334,"Planeta Rica","Municipio","Municipality",NA,NA
+335,53,"COL","Colombia",7,"Córdoba",335,"Pueblo Nuevo","Municipio","Municipality",NA,NA
+336,53,"COL","Colombia",7,"Córdoba",336,"Puerto Escondido","Municipio","Municipality",NA,NA
+337,53,"COL","Colombia",7,"Córdoba",337,"Puerto Libertador","Municipio","Municipality",NA,"Puerto Libertado"
+338,53,"COL","Colombia",7,"Córdoba",338,"Purísima","Municipio","Municipality",NA,NA
+339,53,"COL","Colombia",7,"Córdoba",339,"San Andrés de Sotavento","Municipio","Municipality",NA,"San Andres De So"
+340,53,"COL","Colombia",7,"Córdoba",340,"San Antero","Municipio","Municipality",NA,NA
+341,53,"COL","Colombia",7,"Córdoba",341,"San Bernardino de Sahagún","Municipio","Municipality",NA,"Sahagun|Sahagún|Sahagén"
+342,53,"COL","Colombia",7,"Córdoba",342,"San Bernardo del Viento","Municipio","Municipality",NA,NA
+343,53,"COL","Colombia",7,"Córdoba",343,"San Carlos","Municipio","Municipality",NA,NA
+344,53,"COL","Colombia",7,"Córdoba",344,"San Pelayo","Municipio","Municipality",NA,NA
+345,53,"COL","Colombia",7,"Córdoba",345,"Santa Cruz de Lorica","Municipio","Municipality",NA,"Lorica"
+346,53,"COL","Colombia",7,"Córdoba",346,"Tierralta","Municipio","Municipality",NA,NA
+347,53,"COL","Colombia",7,"Córdoba",347,"Valencia","Municipio","Municipality",NA,NA
+348,53,"COL","Colombia",8,"Caldas",348,"Aguadas","Municipio","Municipality",NA,NA
+349,53,"COL","Colombia",8,"Caldas",349,"Anserma","Municipio","Municipality",NA,NA
+350,53,"COL","Colombia",8,"Caldas",350,"Aranzazú","Municipio","Municipality",NA,"Aranzazé"
+351,53,"COL","Colombia",8,"Caldas",351,"Belalcázar","Municipio","Municipality",NA,NA
+352,53,"COL","Colombia",8,"Caldas",352,"Chinchiná","Municipio","Municipality",NA,NA
+353,53,"COL","Colombia",8,"Caldas",353,"Filadelfia","Municipio","Municipality",NA,NA
+354,53,"COL","Colombia",8,"Caldas",354,"La Dorada","Municipio","Municipality",NA,NA
+355,53,"COL","Colombia",8,"Caldas",355,"La Merced","Municipio","Municipality",NA,NA
+356,53,"COL","Colombia",8,"Caldas",356,"Manizales","Municipio","Municipality",NA,NA
+357,53,"COL","Colombia",8,"Caldas",357,"Manzanares","Municipio","Municipality",NA,NA
+358,53,"COL","Colombia",8,"Caldas",358,"Marmato","Municipio","Municipality",NA,NA
+359,53,"COL","Colombia",8,"Caldas",359,"Marquetalia","Municipio","Municipality",NA,NA
+360,53,"COL","Colombia",8,"Caldas",360,"Marulanda","Municipio","Municipality",NA,NA
+361,53,"COL","Colombia",8,"Caldas",361,"Neira","Municipio","Municipality",NA,NA
+362,53,"COL","Colombia",8,"Caldas",362,"Pácora","Municipio","Municipality",NA,NA
+363,53,"COL","Colombia",8,"Caldas",363,"Palestina","Municipio","Municipality",NA,NA
+364,53,"COL","Colombia",8,"Caldas",364,"Pensilvania","Municipio","Municipality",NA,NA
+365,53,"COL","Colombia",8,"Caldas",365,"Riosucio","Municipio","Municipality",NA,NA
+366,53,"COL","Colombia",8,"Caldas",366,"Risaralda","Municipio","Municipality",NA,NA
+367,53,"COL","Colombia",8,"Caldas",367,"Salamina","Municipio","Municipality",NA,NA
+368,53,"COL","Colombia",8,"Caldas",368,"Samaná","Municipio","Municipality",NA,NA
+369,53,"COL","Colombia",8,"Caldas",369,"Supía","Municipio","Municipality",NA,NA
+370,53,"COL","Colombia",8,"Caldas",370,"Victoria","Municipio","Municipality",NA,NA
+371,53,"COL","Colombia",8,"Caldas",371,"Villamaría","Municipio","Municipality",NA,NA
+372,53,"COL","Colombia",8,"Caldas",372,"Viterbo","Municipio","Municipality",NA,NA
+373,53,"COL","Colombia",9,"Caquetá",373,"Albania","Municipio","Municipality",NA,NA
+374,53,"COL","Colombia",9,"Caquetá",374,"Belén de los Andaquies","Municipio","Municipality",NA,NA
+375,53,"COL","Colombia",9,"Caquetá",375,"Cartagena del Chairá","Municipio","Municipality",NA,NA
+376,53,"COL","Colombia",9,"Caquetá",376,"Curillo","Municipio","Municipality",NA,NA
+377,53,"COL","Colombia",9,"Caquetá",377,"El Doncello","Municipio","Municipality",NA,NA
+378,53,"COL","Colombia",9,"Caquetá",378,"El Paujíl","Municipio","Municipality",NA,NA
+379,53,"COL","Colombia",9,"Caquetá",379,"Florencia","Municipio","Municipality",NA,NA
+380,53,"COL","Colombia",9,"Caquetá",380,"La Montañita","Municipio","Municipality",NA,NA
+381,53,"COL","Colombia",9,"Caquetá",381,"Milán","Municipio","Municipality",NA,NA
+382,53,"COL","Colombia",9,"Caquetá",382,"Morelia","Municipio","Municipality",NA,NA
+383,53,"COL","Colombia",9,"Caquetá",383,"Puerto Rico","Municipio","Municipality",NA,NA
+384,53,"COL","Colombia",9,"Caquetá",384,"San José del Fragua","Municipio","Municipality",NA,"San Jose De Frag"
+385,53,"COL","Colombia",9,"Caquetá",385,"San Vicente del Caguán","Municipio","Municipality",NA,NA
+386,53,"COL","Colombia",9,"Caquetá",386,"Solano","Municipio","Municipality",NA,NA
+387,53,"COL","Colombia",9,"Caquetá",387,"Valparaíso","Municipio","Municipality",NA,NA
+388,53,"COL","Colombia",10,"Casanare",388,"Aguazul","Municipio","Municipality",NA,NA
+389,53,"COL","Colombia",10,"Casanare",389,"Chámeza","Municipio","Municipality",NA,NA
+390,53,"COL","Colombia",10,"Casanare",390,"Hato Corozal","Municipio","Municipality",NA,NA
+391,53,"COL","Colombia",10,"Casanare",391,"La Salina","Municipio","Municipality",NA,NA
+392,53,"COL","Colombia",10,"Casanare",392,"Maní","Municipio","Municipality",NA,NA
+393,53,"COL","Colombia",10,"Casanare",393,"Monterrey","Municipio","Municipality",NA,NA
+394,53,"COL","Colombia",10,"Casanare",394,"Nunchía","Municipio","Municipality",NA,NA
+395,53,"COL","Colombia",10,"Casanare",395,"Orocué","Municipio","Municipality",NA,NA
+396,53,"COL","Colombia",10,"Casanare",396,"Paz de Ariporo","Municipio","Municipality",NA,NA
+397,53,"COL","Colombia",10,"Casanare",397,"Pore","Municipio","Municipality",NA,NA
+398,53,"COL","Colombia",10,"Casanare",398,"Recetor","Municipio","Municipality",NA,NA
+399,53,"COL","Colombia",10,"Casanare",399,"Sácama","Municipio","Municipality",NA,NA
+400,53,"COL","Colombia",10,"Casanare",400,"Sabanalarga","Municipio","Municipality",NA,NA
+401,53,"COL","Colombia",10,"Casanare",401,"San Luis de Palenque","Municipio","Municipality",NA,"San Luis De Pale"
+402,53,"COL","Colombia",10,"Casanare",402,"Támara","Municipio","Municipality",NA,NA
+403,53,"COL","Colombia",10,"Casanare",403,"Tauramena","Municipio","Municipality",NA,NA
+404,53,"COL","Colombia",10,"Casanare",404,"Trinidad","Municipio","Municipality",NA,NA
+405,53,"COL","Colombia",10,"Casanare",405,"Villanueva","Municipio","Municipality",NA,NA
+406,53,"COL","Colombia",10,"Casanare",406,"Yopal","Municipio","Municipality",NA,NA
+407,53,"COL","Colombia",11,"Cauca",407,"Almaguer","Municipio","Municipality",NA,NA
+408,53,"COL","Colombia",11,"Cauca",408,"Argelia","Municipio","Municipality",NA,NA
+409,53,"COL","Colombia",11,"Cauca",409,"Balboa","Municipio","Municipality",NA,NA
+410,53,"COL","Colombia",11,"Cauca",410,"Bolívar","Municipio","Municipality",NA,NA
+411,53,"COL","Colombia",11,"Cauca",411,"Buenos Aires","Municipio","Municipality",NA,NA
+412,53,"COL","Colombia",11,"Cauca",412,"Cajibío","Municipio","Municipality",NA,NA
+413,53,"COL","Colombia",11,"Cauca",413,"Caldonó","Municipio","Municipality",NA,NA
+414,53,"COL","Colombia",11,"Cauca",414,"Caloto","Municipio","Municipality",NA,NA
+415,53,"COL","Colombia",11,"Cauca",415,"Corinto","Municipio","Municipality",NA,NA
+416,53,"COL","Colombia",11,"Cauca",416,"El Tambo","Municipio","Municipality",NA,NA
+417,53,"COL","Colombia",11,"Cauca",417,"Florencia","Municipio","Municipality",NA,NA
+418,53,"COL","Colombia",11,"Cauca",418,"Guapí","Municipio","Municipality",NA,NA
+419,53,"COL","Colombia",11,"Cauca",419,"Inzá","Municipio","Municipality",NA,NA
+420,53,"COL","Colombia",11,"Cauca",420,"Jambaló","Municipio","Municipality",NA,NA
+421,53,"COL","Colombia",11,"Cauca",421,"La Sierra","Municipio","Municipality",NA,NA
+422,53,"COL","Colombia",11,"Cauca",422,"La Vega","Municipio","Municipality",NA,NA
+423,53,"COL","Colombia",11,"Cauca",423,"López de Micay","Municipio","Municipality",NA,"López"
+424,53,"COL","Colombia",11,"Cauca",424,"Mercaderes","Municipio","Municipality",NA,NA
+425,53,"COL","Colombia",11,"Cauca",425,"Miranda","Municipio","Municipality",NA,NA
+426,53,"COL","Colombia",11,"Cauca",426,"Morales","Municipio","Municipality",NA,NA
+427,53,"COL","Colombia",11,"Cauca",427,"Páez","Municipio","Municipality",NA,NA
+428,53,"COL","Colombia",11,"Cauca",428,"Padilla","Municipio","Municipality",NA,NA
+429,53,"COL","Colombia",11,"Cauca",429,"Patía","Municipio","Municipality",NA,"El Bordo"
+430,53,"COL","Colombia",11,"Cauca",430,"Piendamó","Municipio","Municipality",NA,NA
+431,53,"COL","Colombia",11,"Cauca",431,"Popayán","Municipio","Municipality",NA,NA
+432,53,"COL","Colombia",11,"Cauca",432,"Puerto Tejada","Municipio","Municipality",NA,NA
+433,53,"COL","Colombia",11,"Cauca",433,"Puracé","Municipio","Municipality",NA,NA
+434,53,"COL","Colombia",11,"Cauca",434,"Rosas","Municipio","Municipality",NA,NA
+435,53,"COL","Colombia",11,"Cauca",435,"San Sebastián","Municipio","Municipality",NA,NA
+436,53,"COL","Colombia",11,"Cauca",436,"Santa Rosa","Municipio","Municipality",NA,NA
+437,53,"COL","Colombia",11,"Cauca",437,"Santander de Quilichao","Municipio","Municipality",NA,NA
+438,53,"COL","Colombia",11,"Cauca",438,"Silvia","Municipio","Municipality",NA,NA
+439,53,"COL","Colombia",11,"Cauca",439,"Sotará","Municipio","Municipality",NA,NA
+440,53,"COL","Colombia",11,"Cauca",440,"Suárez","Municipio","Municipality",NA,NA
+441,53,"COL","Colombia",11,"Cauca",441,"Timbío","Municipio","Municipality",NA,NA
+442,53,"COL","Colombia",11,"Cauca",442,"Timbiquí","Municipio","Municipality",NA,NA
+443,53,"COL","Colombia",11,"Cauca",443,"Toribío","Municipio","Municipality",NA,NA
+444,53,"COL","Colombia",11,"Cauca",444,"Totoró","Municipio","Municipality",NA,NA
+445,53,"COL","Colombia",12,"Cesar",445,"Aguachica","Municipio","Municipality",NA,NA
+446,53,"COL","Colombia",12,"Cesar",446,"Agustín Codazzi","Municipio","Municipality",NA,NA
+447,53,"COL","Colombia",12,"Cesar",447,"Astrea","Municipio","Municipality",NA,NA
+448,53,"COL","Colombia",12,"Cesar",448,"Becerril","Municipio","Municipality",NA,NA
+449,53,"COL","Colombia",12,"Cesar",449,"Bosconia","Municipio","Municipality",NA,NA
+450,53,"COL","Colombia",12,"Cesar",450,"Chimichagua","Municipio","Municipality",NA,NA
+451,53,"COL","Colombia",12,"Cesar",451,"Chiriguaná","Municipio","Municipality",NA,NA
+452,53,"COL","Colombia",12,"Cesar",452,"Curumaní","Municipio","Municipality",NA,NA
+453,53,"COL","Colombia",12,"Cesar",453,"El Copey","Municipio","Municipality",NA,NA
+454,53,"COL","Colombia",12,"Cesar",454,"El Paso","Municipio","Municipality",NA,NA
+455,53,"COL","Colombia",12,"Cesar",455,"Gamarra","Municipio","Municipality",NA,NA
+456,53,"COL","Colombia",12,"Cesar",456,"González","Municipio","Municipality",NA,NA
+457,53,"COL","Colombia",12,"Cesar",457,"La Gloria","Municipio","Municipality",NA,NA
+458,53,"COL","Colombia",12,"Cesar",458,"La Jagua de Ibirico","Municipio","Municipality",NA,"La Jagua De Irib"
+459,53,"COL","Colombia",12,"Cesar",459,"La Paz","Municipio","Municipality",NA,NA
+460,53,"COL","Colombia",12,"Cesar",460,"Manaure","Municipio","Municipality",NA,"Manaure Balcon D|Balcón del Cesar"
+461,53,"COL","Colombia",12,"Cesar",461,"Pailitas","Municipio","Municipality",NA,NA
+462,53,"COL","Colombia",12,"Cesar",462,"Pelaya","Municipio","Municipality",NA,NA
+463,53,"COL","Colombia",12,"Cesar",463,"Río de Oro","Municipio","Municipality",NA,NA
+464,53,"COL","Colombia",12,"Cesar",464,"San Alberto","Municipio","Municipality",NA,NA
+465,53,"COL","Colombia",12,"Cesar",465,"San Diego","Municipio","Municipality",NA,NA
+466,53,"COL","Colombia",12,"Cesar",466,"San Martín","Municipio","Municipality",NA,NA
+467,53,"COL","Colombia",12,"Cesar",467,"Tamalameque","Municipio","Municipality",NA,NA
+468,53,"COL","Colombia",12,"Cesar",468,"Valledupar","Municipio","Municipality",NA,NA
+469,53,"COL","Colombia",13,"Chocó",469,"Acandí","Municipio","Municipality",NA,NA
+470,53,"COL","Colombia",13,"Chocó",470,"Alto Baudó","Municipio","Municipality",NA,"Pie de Pato"
+471,53,"COL","Colombia",13,"Chocó",471,"Bagadó","Municipio","Municipality",NA,NA
+472,53,"COL","Colombia",13,"Chocó",472,"Bahía Solano",NA,NA,NA,NA
+473,53,"COL","Colombia",13,"Chocó",473,"Bajo Baudó",NA,NA,NA,"Piza|Pizarro"
+474,53,"COL","Colombia",13,"Chocó",474,"Bojayá","Municipio","Municipality",NA,NA
+475,53,"COL","Colombia",13,"Chocó",475,"Condoto","Municipio","Municipality",NA,NA
+476,53,"COL","Colombia",13,"Chocó",476,"El Cantón del San Pablo","Municipio","Municipality",NA,"San Pablo"
+477,53,"COL","Colombia",13,"Chocó",477,"El Carmen de Atrato","Municipio","Municipality",NA,"El Carmen"
+478,53,"COL","Colombia",13,"Chocó",478,"El Litoral del San Juan","Municipio","Municipality",NA,"Litoral Del San Juan"
+479,53,"COL","Colombia",13,"Chocó",479,"Istmina","Municipio","Municipality",NA,NA
+480,53,"COL","Colombia",13,"Chocó",480,"Juradó","Municipio","Municipality",NA,NA
+481,53,"COL","Colombia",13,"Chocó",481,"Lloró","Municipio","Municipality",NA,NA
+482,53,"COL","Colombia",13,"Chocó",482,"Novita","Municipio","Municipality",NA,NA
+483,53,"COL","Colombia",13,"Chocó",483,"Nuquí","Municipio","Municipality",NA,NA
+484,53,"COL","Colombia",13,"Chocó",484,"Quibdó","Municipio","Municipality",NA,NA
+485,53,"COL","Colombia",13,"Chocó",485,"Riosucio","Municipio","Municipality",NA,NA
+486,53,"COL","Colombia",13,"Chocó",486,"San José del Palmar","Municipio","Municipality",NA,"San Jose Del Pal"
+487,53,"COL","Colombia",13,"Chocó",487,"Sipí","Municipio","Municipality",NA,NA
+488,53,"COL","Colombia",13,"Chocó",488,"Tadó","Municipio","Municipality",NA,NA
+489,53,"COL","Colombia",13,"Chocó",489,"Unguía","Municipio","Municipality",NA,NA
+490,53,"COL","Colombia",14,"Cundinamarca",490,"Agua de Dios","Municipio","Municipality",NA,NA
+491,53,"COL","Colombia",14,"Cundinamarca",491,"Albán","Municipio","Municipality",NA,NA
+492,53,"COL","Colombia",14,"Cundinamarca",492,"Anapoima","Municipio","Municipality",NA,NA
+493,53,"COL","Colombia",14,"Cundinamarca",493,"Anolaima","Municipio","Municipality",NA,NA
+494,53,"COL","Colombia",14,"Cundinamarca",494,"Apulo","Municipio","Municipality",NA,"Rafael Re"
+495,53,"COL","Colombia",14,"Cundinamarca",495,"Arbeláez","Municipio","Municipality",NA,NA
+496,53,"COL","Colombia",14,"Cundinamarca",496,"Beltrán","Municipio","Municipality",NA,NA
+497,53,"COL","Colombia",14,"Cundinamarca",497,"Bituima","Municipio","Municipality",NA,NA
+498,53,"COL","Colombia",14,"Cundinamarca",498,"Bojacá","Municipio","Municipality",NA,NA
+499,53,"COL","Colombia",14,"Cundinamarca",499,"Cáqueza","Municipio","Municipality",NA,NA
+500,53,"COL","Colombia",14,"Cundinamarca",500,"Cabrera","Municipio","Municipality",NA,NA
+501,53,"COL","Colombia",14,"Cundinamarca",501,"Cachipay","Municipio","Municipality",NA,NA
+502,53,"COL","Colombia",14,"Cundinamarca",502,"Cajicá","Municipio","Municipality",NA,NA
+503,53,"COL","Colombia",14,"Cundinamarca",503,"Caparrapí","Municipio","Municipality",NA,NA
+504,53,"COL","Colombia",14,"Cundinamarca",504,"Carmen de Carupa","Municipio","Municipality",NA,NA
+505,53,"COL","Colombia",14,"Cundinamarca",505,"Chía","Municipio","Municipality",NA,NA
+506,53,"COL","Colombia",14,"Cundinamarca",506,"Chaguaní","Municipio","Municipality",NA,NA
+507,53,"COL","Colombia",14,"Cundinamarca",507,"Chipaque","Municipio","Municipality",NA,NA
+508,53,"COL","Colombia",14,"Cundinamarca",508,"Choachí","Municipio","Municipality",NA,NA
+509,53,"COL","Colombia",14,"Cundinamarca",509,"Chocontá","Municipio","Municipality",NA,NA
+510,53,"COL","Colombia",14,"Cundinamarca",510,"Cogua","Municipio","Municipality",NA,NA
+511,53,"COL","Colombia",14,"Cundinamarca",511,"Cota","Municipio","Municipality",NA,NA
+512,53,"COL","Colombia",14,"Cundinamarca",512,"Cucunubá","Municipio","Municipality",NA,NA
+513,53,"COL","Colombia",14,"Cundinamarca",513,"El Colegio","Municipio","Municipality",NA,NA
+514,53,"COL","Colombia",14,"Cundinamarca",514,"El Peñon","Municipio","Municipality",NA,NA
+515,53,"COL","Colombia",14,"Cundinamarca",515,"Fómeque","Municipio","Municipality",NA,NA
+516,53,"COL","Colombia",14,"Cundinamarca",516,"Facatativá","Municipio","Municipality",NA,NA
+517,53,"COL","Colombia",14,"Cundinamarca",517,"Fúquene","Municipio","Municipality",NA,"Féquene"
+518,53,"COL","Colombia",14,"Cundinamarca",518,"Fosca","Municipio","Municipality",NA,NA
+519,53,"COL","Colombia",14,"Cundinamarca",519,"Funza","Municipio","Municipality",NA,NA
+520,53,"COL","Colombia",14,"Cundinamarca",520,"Fusagasugá","Municipio","Municipality",NA,NA
+521,53,"COL","Colombia",14,"Cundinamarca",521,"Gachalá","Municipio","Municipality",NA,NA
+522,53,"COL","Colombia",14,"Cundinamarca",522,"Gachancipá","Municipio","Municipality",NA,NA
+523,53,"COL","Colombia",14,"Cundinamarca",523,"Gachetá","Municipio","Municipality",NA,NA
+524,53,"COL","Colombia",14,"Cundinamarca",524,"Gama","Municipio","Municipality",NA,NA
+525,53,"COL","Colombia",14,"Cundinamarca",525,"Girardot","Municipio","Municipality",NA,NA
+526,53,"COL","Colombia",14,"Cundinamarca",526,"Guachetá","Municipio","Municipality",NA,NA
+527,53,"COL","Colombia",14,"Cundinamarca",527,"Guaduas","Municipio","Municipality",NA,NA
+528,53,"COL","Colombia",14,"Cundinamarca",528,"Guasca","Municipio","Municipality",NA,NA
+529,53,"COL","Colombia",14,"Cundinamarca",529,"Guataquí","Municipio","Municipality",NA,NA
+530,53,"COL","Colombia",14,"Cundinamarca",530,"Guatavita","Municipio","Municipality",NA,NA
+531,53,"COL","Colombia",14,"Cundinamarca",531,"Guayabal de Síquima","Municipio","Municipality",NA,"Guayabal De Siqu"
+532,53,"COL","Colombia",14,"Cundinamarca",532,"Guayabetal","Municipio","Municipality",NA,NA
+533,53,"COL","Colombia",14,"Cundinamarca",533,"Gutiérrez","Municipio","Municipality",NA,NA
+534,53,"COL","Colombia",14,"Cundinamarca",534,"Jerusalén","Municipio","Municipality",NA,NA
+535,53,"COL","Colombia",14,"Cundinamarca",535,"Junín","Municipio","Municipality",NA,NA
+536,53,"COL","Colombia",14,"Cundinamarca",536,"La Calera","Municipio","Municipality",NA,NA
+537,53,"COL","Colombia",14,"Cundinamarca",537,"La Mesa","Municipio","Municipality",NA,NA
+538,53,"COL","Colombia",14,"Cundinamarca",538,"La Palma","Municipio","Municipality",NA,NA
+539,53,"COL","Colombia",14,"Cundinamarca",539,"La Peña","Municipio","Municipality",NA,NA
+540,53,"COL","Colombia",14,"Cundinamarca",540,"La Vega","Municipio","Municipality",NA,NA
+541,53,"COL","Colombia",14,"Cundinamarca",541,"Lenguazaque","Municipio","Municipality",NA,NA
+542,53,"COL","Colombia",14,"Cundinamarca",542,"Machetá","Municipio","Municipality",NA,NA
+543,53,"COL","Colombia",14,"Cundinamarca",543,"Madrid","Municipio","Municipality",NA,NA
+544,53,"COL","Colombia",14,"Cundinamarca",544,"Manta","Municipio","Municipality",NA,NA
+545,53,"COL","Colombia",14,"Cundinamarca",545,"Medina","Municipio","Municipality",NA,NA
+546,53,"COL","Colombia",14,"Cundinamarca",546,"Mosquera","Municipio","Municipality",NA,NA
+547,53,"COL","Colombia",14,"Cundinamarca",547,"Nariño","Municipio","Municipality",NA,NA
+548,53,"COL","Colombia",14,"Cundinamarca",548,"Nemocón","Municipio","Municipality",NA,NA
+549,53,"COL","Colombia",14,"Cundinamarca",549,"Nilo","Municipio","Municipality",NA,NA
+550,53,"COL","Colombia",14,"Cundinamarca",550,"Nimaima","Municipio","Municipality",NA,NA
+551,53,"COL","Colombia",14,"Cundinamarca",551,"Nocaima","Municipio","Municipality",NA,NA
+552,53,"COL","Colombia",14,"Cundinamarca",552,"Pacho","Municipio","Municipality",NA,NA
+553,53,"COL","Colombia",14,"Cundinamarca",553,"Paime","Municipio","Municipality",NA,NA
+554,53,"COL","Colombia",14,"Cundinamarca",554,"Pandi","Municipio","Municipality",NA,NA
+555,53,"COL","Colombia",14,"Cundinamarca",555,"Paratebueno","Municipio","Municipality",NA,NA
+556,53,"COL","Colombia",14,"Cundinamarca",556,"Pasca","Municipio","Municipality",NA,NA
+557,53,"COL","Colombia",14,"Cundinamarca",557,"Puerto Salgar","Municipio","Municipality",NA,NA
+558,53,"COL","Colombia",14,"Cundinamarca",558,"Pulí","Municipio","Municipality",NA,NA
+559,53,"COL","Colombia",14,"Cundinamarca",559,"Quebradanegra","Municipio","Municipality",NA,NA
+560,53,"COL","Colombia",14,"Cundinamarca",560,"Quetame","Municipio","Municipality",NA,NA
+561,53,"COL","Colombia",14,"Cundinamarca",561,"Quipile","Municipio","Municipality",NA,NA
+562,53,"COL","Colombia",14,"Cundinamarca",562,"Ricaurte","Municipio","Municipality",NA,NA
+563,53,"COL","Colombia",14,"Cundinamarca",563,"San Antonio del Tequendama","Municipio","Municipality",NA,"San Antonio Del"
+564,53,"COL","Colombia",14,"Cundinamarca",564,"San Bernardo","Municipio","Municipality",NA,NA
+565,53,"COL","Colombia",14,"Cundinamarca",565,"San Cayetano","Municipio","Municipality",NA,NA
+566,53,"COL","Colombia",14,"Cundinamarca",566,"San Francisco","Municipio","Municipality",NA,NA
+567,53,"COL","Colombia",14,"Cundinamarca",567,"San Juan de Río Seco","Municipio","Municipality",NA,"San Juan De Rio"
+568,53,"COL","Colombia",14,"Cundinamarca",568,"Santafé de Bogotá",NA,NA,NA,NA
+569,53,"COL","Colombia",14,"Cundinamarca",569,"Sasaima","Municipio","Municipality",NA,NA
+570,53,"COL","Colombia",14,"Cundinamarca",570,"Sesquilé","Municipio","Municipality",NA,NA
+571,53,"COL","Colombia",14,"Cundinamarca",571,"Sibaté","Municipio","Municipality",NA,NA
+572,53,"COL","Colombia",14,"Cundinamarca",572,"Silvania","Municipio","Municipality",NA,NA
+573,53,"COL","Colombia",14,"Cundinamarca",573,"Simijaca","Municipio","Municipality",NA,NA
+574,53,"COL","Colombia",14,"Cundinamarca",574,"Soacha","Municipio","Municipality",NA,NA
+575,53,"COL","Colombia",14,"Cundinamarca",575,"Sopó","Municipio","Municipality",NA,NA
+576,53,"COL","Colombia",14,"Cundinamarca",576,"Subachoque","Municipio","Municipality",NA,NA
+577,53,"COL","Colombia",14,"Cundinamarca",577,"Suesca","Municipio","Municipality",NA,NA
+578,53,"COL","Colombia",14,"Cundinamarca",578,"Supatá","Municipio","Municipality",NA,NA
+579,53,"COL","Colombia",14,"Cundinamarca",579,"Susa","Municipio","Municipality",NA,NA
+580,53,"COL","Colombia",14,"Cundinamarca",580,"Sutatausa","Municipio","Municipality",NA,NA
+581,53,"COL","Colombia",14,"Cundinamarca",581,"Tabio","Municipio","Municipality",NA,NA
+582,53,"COL","Colombia",14,"Cundinamarca",582,"Tausa","Municipio","Municipality",NA,NA
+583,53,"COL","Colombia",14,"Cundinamarca",583,"Tena","Municipio","Municipality",NA,NA
+584,53,"COL","Colombia",14,"Cundinamarca",584,"Tenjo","Municipio","Municipality",NA,NA
+585,53,"COL","Colombia",14,"Cundinamarca",585,"Tibacuy","Municipio","Municipality",NA,NA
+586,53,"COL","Colombia",14,"Cundinamarca",586,"Tibirita","Municipio","Municipality",NA,NA
+587,53,"COL","Colombia",14,"Cundinamarca",587,"Tocaima","Municipio","Municipality",NA,NA
+588,53,"COL","Colombia",14,"Cundinamarca",588,"Tocancipá","Municipio","Municipality",NA,NA
+589,53,"COL","Colombia",14,"Cundinamarca",589,"Topaipí","Municipio","Municipality",NA,NA
+590,53,"COL","Colombia",14,"Cundinamarca",590,"Ubalá","Municipio","Municipality",NA,NA
+591,53,"COL","Colombia",14,"Cundinamarca",591,"Ubaque","Municipio","Municipality",NA,NA
+592,53,"COL","Colombia",14,"Cundinamarca",592,"Une","Municipio","Municipality",NA,NA
+593,53,"COL","Colombia",14,"Cundinamarca",593,"Utica","Municipio","Municipality",NA,NA
+594,53,"COL","Colombia",14,"Cundinamarca",594,"Venecia","Municipio","Municipality",NA,"Ospina Perez"
+595,53,"COL","Colombia",14,"Cundinamarca",595,"Vergara","Municipio","Municipality",NA,NA
+596,53,"COL","Colombia",14,"Cundinamarca",596,"Vianí","Municipio","Municipality",NA,NA
+597,53,"COL","Colombia",14,"Cundinamarca",597,"Villa de San Diego de Ubaté","Municipio","Municipality",NA,"Ubate|Ubaté"
+598,53,"COL","Colombia",14,"Cundinamarca",598,"Villagómez","Municipio","Municipality",NA,NA
+599,53,"COL","Colombia",14,"Cundinamarca",599,"Villapinzón","Municipio","Municipality",NA,NA
+600,53,"COL","Colombia",14,"Cundinamarca",600,"Villeta","Municipio","Municipality",NA,NA
+601,53,"COL","Colombia",14,"Cundinamarca",601,"Viotá","Municipio","Municipality",NA,NA
+602,53,"COL","Colombia",14,"Cundinamarca",602,"Yacopí","Municipio","Municipality",NA,NA
+603,53,"COL","Colombia",14,"Cundinamarca",603,"Zipacón","Municipio","Municipality",NA,NA
+604,53,"COL","Colombia",14,"Cundinamarca",604,"Zipaquirá","Municipio","Municipality",NA,NA
+605,53,"COL","Colombia",15,"Guainía",605,"Barranco Minas",NA,NA,NA,NA
+606,53,"COL","Colombia",15,"Guainía",606,"Cacahual","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+607,53,"COL","Colombia",15,"Guainía",607,"La Guadalupe","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+608,53,"COL","Colombia",15,"Guainía",608,"Pana Pana","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+609,53,"COL","Colombia",15,"Guainía",609,"Puerto Colombia","Municipio","Municipality",NA,NA
+610,53,"COL","Colombia",15,"Guainía",610,"Puerto Inírida",NA,NA,NA,"Inirida"
+611,53,"COL","Colombia",15,"Guainía",611,"San Felipe","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+612,53,"COL","Colombia",16,"Guaviare",612,"Calamar","Municipio","Municipality",NA,NA
+613,53,"COL","Colombia",16,"Guaviare",613,"El Retorno","Municipio","Municipality",NA,NA
+614,53,"COL","Colombia",16,"Guaviare",614,"Miraflores","Municipio","Municipality",NA,NA
+615,53,"COL","Colombia",16,"Guaviare",615,"San José del Guaviare","Municipio","Municipality",NA,"San Jose Del Gua"
+616,53,"COL","Colombia",17,"Huila",616,"Acevedo","Municipio","Municipality",NA,NA
+617,53,"COL","Colombia",17,"Huila",617,"Agrado","Municipio","Municipality",NA,NA
+618,53,"COL","Colombia",17,"Huila",618,"Aipe","Municipio","Municipality",NA,NA
+619,53,"COL","Colombia",17,"Huila",619,"Algeciras","Municipio","Municipality",NA,NA
+620,53,"COL","Colombia",17,"Huila",620,"Altamira","Municipio","Municipality",NA,NA
+621,53,"COL","Colombia",17,"Huila",621,"Baraya","Municipio","Municipality",NA,NA
+622,53,"COL","Colombia",17,"Huila",622,"Campoalegre","Municipio","Municipality",NA,NA
+623,53,"COL","Colombia",17,"Huila",623,"Colombia","Municipio","Municipality",NA,NA
+624,53,"COL","Colombia",17,"Huila",624,"Elías","Municipio","Municipality",NA,NA
+625,53,"COL","Colombia",17,"Huila",625,"Garzón","Municipio","Municipality",NA,NA
+626,53,"COL","Colombia",17,"Huila",626,"Gigante","Municipio","Municipality",NA,NA
+627,53,"COL","Colombia",17,"Huila",627,"Guadalupe","Municipio","Municipality",NA,NA
+628,53,"COL","Colombia",17,"Huila",628,"Hobo","Municipio","Municipality",NA,NA
+629,53,"COL","Colombia",17,"Huila",629,"Iquira","Municipio","Municipality",NA,NA
+630,53,"COL","Colombia",17,"Huila",630,"Isnos","Municipio","Municipality",NA,NA
+631,53,"COL","Colombia",17,"Huila",631,"La Argentina","Municipio","Municipality",NA,NA
+632,53,"COL","Colombia",17,"Huila",632,"La Plata","Municipio","Municipality",NA,NA
+633,53,"COL","Colombia",17,"Huila",633,"Nátaga","Municipio","Municipality",NA,NA
+634,53,"COL","Colombia",17,"Huila",634,"Neiva","Municipio","Municipality",NA,NA
+635,53,"COL","Colombia",17,"Huila",635,"Oporapa","Municipio","Municipality",NA,NA
+636,53,"COL","Colombia",17,"Huila",636,"Paicol","Municipio","Municipality",NA,NA
+637,53,"COL","Colombia",17,"Huila",637,"Palermo","Municipio","Municipality",NA,NA
+638,53,"COL","Colombia",17,"Huila",638,"Palestina","Municipio","Municipality",NA,NA
+639,53,"COL","Colombia",17,"Huila",639,"Pitalito","Municipio","Municipality",NA,NA
+640,53,"COL","Colombia",17,"Huila",640,"Pital","Municipio","Municipality",NA,NA
+641,53,"COL","Colombia",17,"Huila",641,"Rivera","Municipio","Municipality",NA,NA
+642,53,"COL","Colombia",17,"Huila",642,"Saladoblanco","Municipio","Municipality",NA,"Salado Blanco"
+643,53,"COL","Colombia",17,"Huila",643,"San Agustín","Municipio","Municipality",NA,NA
+644,53,"COL","Colombia",17,"Huila",644,"Santa María","Municipio","Municipality",NA,NA
+645,53,"COL","Colombia",17,"Huila",645,"Suaza","Municipio","Municipality",NA,NA
+646,53,"COL","Colombia",17,"Huila",646,"Tarquí","Municipio","Municipality",NA,NA
+647,53,"COL","Colombia",17,"Huila",647,"Tello","Municipio","Municipality",NA,NA
+648,53,"COL","Colombia",17,"Huila",648,"Teruel","Municipio","Municipality",NA,NA
+649,53,"COL","Colombia",17,"Huila",649,"Tesalia","Municipio","Municipality",NA,NA
+650,53,"COL","Colombia",17,"Huila",650,"Timaná","Municipio","Municipality",NA,NA
+651,53,"COL","Colombia",17,"Huila",651,"Villavieja","Municipio","Municipality",NA,"Villa Vieja"
+652,53,"COL","Colombia",17,"Huila",652,"Yaguará","Municipio","Municipality",NA,NA
+653,53,"COL","Colombia",18,"La Guajira",653,"Barrancas","Municipio","Municipality",NA,NA
+654,53,"COL","Colombia",18,"La Guajira",654,"El Molino","Municipio","Municipality",NA,NA
+655,53,"COL","Colombia",18,"La Guajira",655,"Fonseca","Municipio","Municipality",NA,NA
+656,53,"COL","Colombia",18,"La Guajira",656,"Maicao","Municipio","Municipality",NA,NA
+657,53,"COL","Colombia",18,"La Guajira",657,"Manaure","Municipio","Municipality",NA,NA
+658,53,"COL","Colombia",18,"La Guajira",658,"Riohacha","Municipio","Municipality",NA,NA
+659,53,"COL","Colombia",18,"La Guajira",659,"San Juan del Cesar","Municipio","Municipality",NA,"San Juan Del Ces"
+660,53,"COL","Colombia",18,"La Guajira",660,"Uribia","Municipio","Municipality",NA,NA
+661,53,"COL","Colombia",18,"La Guajira",661,"Urumita","Municipio","Municipality",NA,NA
+662,53,"COL","Colombia",18,"La Guajira",662,"Villanueva","Municipio","Municipality",NA,NA
+663,53,"COL","Colombia",19,"Magdalena",663,"Aracataca","Municipio","Municipality",NA,NA
+664,53,"COL","Colombia",19,"Magdalena",664,"Ariguaní","Municipio","Municipality",NA,NA
+665,53,"COL","Colombia",19,"Magdalena",665,"Cerro de San Antonio","Municipio","Municipality",NA,NA
+666,53,"COL","Colombia",19,"Magdalena",666,"Chivolo","Municipio","Municipality",NA,NA
+667,53,"COL","Colombia",19,"Magdalena",667,"Ciénaga","Municipio","Municipality",NA,NA
+668,53,"COL","Colombia",19,"Magdalena",668,"El Banco","Municipio","Municipality",NA,NA
+669,53,"COL","Colombia",19,"Magdalena",669,"El Piñón","Municipio","Municipality",NA,NA
+670,53,"COL","Colombia",19,"Magdalena",670,"Fundación","Municipio","Municipality",NA,NA
+671,53,"COL","Colombia",19,"Magdalena",671,"Guamal","Municipio","Municipality",NA,NA
+672,53,"COL","Colombia",19,"Magdalena",672,"Pedraza","Municipio","Municipality",NA,NA
+673,53,"COL","Colombia",19,"Magdalena",673,"Pivijay","Municipio","Municipality",NA,NA
+674,53,"COL","Colombia",19,"Magdalena",674,"Plato","Municipio","Municipality",NA,NA
+675,53,"COL","Colombia",19,"Magdalena",675,"Pueblo Viejo","Municipio","Municipality",NA,NA
+676,53,"COL","Colombia",19,"Magdalena",676,"Remolino","Municipio","Municipality",NA,NA
+677,53,"COL","Colombia",19,"Magdalena",677,"Salamina","Municipio","Municipality",NA,NA
+678,53,"COL","Colombia",19,"Magdalena",678,"San Sebastián de Buenavista","Municipio","Municipality",NA,NA
+679,53,"COL","Colombia",19,"Magdalena",679,"San Zenón","Municipio","Municipality",NA,NA
+680,53,"COL","Colombia",19,"Magdalena",680,"Santa Ana","Municipio","Municipality",NA,NA
+681,53,"COL","Colombia",19,"Magdalena",681,"Santa Marta (Dist. Esp.)","Municipio","Municipality",NA,"Santa Marta"
+682,53,"COL","Colombia",19,"Magdalena",682,"Tenerife","Municipio","Municipality",NA,NA
+683,53,"COL","Colombia",20,"Meta",683,"Acacías","Municipio","Municipality",NA,NA
+684,53,"COL","Colombia",20,"Meta",684,"Barranca de Upía","Municipio","Municipality",NA,NA
+685,53,"COL","Colombia",20,"Meta",685,"Cabuyaro","Municipio","Municipality",NA,NA
+686,53,"COL","Colombia",20,"Meta",686,"Castilla la Nueva","Municipio","Municipality",NA,NA
+687,53,"COL","Colombia",20,"Meta",687,"Cumaral","Municipio","Municipality",NA,NA
+688,53,"COL","Colombia",20,"Meta",688,"El Calvario","Municipio","Municipality",NA,NA
+689,53,"COL","Colombia",20,"Meta",689,"El Castillo","Municipio","Municipality",NA,NA
+690,53,"COL","Colombia",20,"Meta",690,"El Dorado","Municipio","Municipality",NA,NA
+691,53,"COL","Colombia",20,"Meta",691,"Fuente de Oro","Municipio","Municipality",NA,NA
+692,53,"COL","Colombia",20,"Meta",692,"Granada","Municipio","Municipality",NA,NA
+693,53,"COL","Colombia",20,"Meta",693,"Guamal","Municipio","Municipality",NA,NA
+694,53,"COL","Colombia",20,"Meta",694,"La Macarena","Municipio","Municipality",NA,NA
+695,53,"COL","Colombia",20,"Meta",695,"La Uribe","Municipio","Municipality",NA,NA
+696,53,"COL","Colombia",20,"Meta",696,"Lejanías","Municipio","Municipality",NA,NA
+697,53,"COL","Colombia",20,"Meta",697,"Mapiripán","Municipio","Municipality",NA,NA
+698,53,"COL","Colombia",20,"Meta",698,"Mesetas","Municipio","Municipality",NA,NA
+699,53,"COL","Colombia",20,"Meta",699,"Puerto Concordia","Municipio","Municipality",NA,NA
+700,53,"COL","Colombia",20,"Meta",700,"Puerto Gaitán","Municipio","Municipality",NA,NA
+701,53,"COL","Colombia",20,"Meta",701,"Puerto López","Municipio","Municipality",NA,NA
+702,53,"COL","Colombia",20,"Meta",702,"Puerto Lleras","Municipio","Municipality",NA,NA
+703,53,"COL","Colombia",20,"Meta",703,"Puerto Rico","Municipio","Municipality",NA,NA
+704,53,"COL","Colombia",20,"Meta",704,"Restrepo","Municipio","Municipality",NA,NA
+705,53,"COL","Colombia",20,"Meta",705,"San Carlos de Guaroa","Municipio","Municipality",NA,NA
+706,53,"COL","Colombia",20,"Meta",706,"San Juan de Arama","Municipio","Municipality",NA,"San Juan De Aram"
+707,53,"COL","Colombia",20,"Meta",707,"San Juanito","Municipio","Municipality",NA,NA
+708,53,"COL","Colombia",20,"Meta",708,"San Luis de Cubarral","Municipio","Municipality",NA,"Cubarral"
+709,53,"COL","Colombia",20,"Meta",709,"San Martín","Municipio","Municipality",NA,NA
+710,53,"COL","Colombia",20,"Meta",710,"Villavicencio","Municipio","Municipality",NA,NA
+711,53,"COL","Colombia",20,"Meta",711,"Vista Hermosa","Municipio","Municipality",NA,"Vistahermosa"
+712,53,"COL","Colombia",21,"Nariño",712,"Albán","Municipio","Municipality",NA,NA
+713,53,"COL","Colombia",21,"Nariño",713,"Aldana","Municipio","Municipality",NA,NA
+714,53,"COL","Colombia",21,"Nariño",714,"Ancuyá","Municipio","Municipality",NA,NA
+715,53,"COL","Colombia",21,"Nariño",715,"Arboleda","Municipio","Municipality",NA,NA
+716,53,"COL","Colombia",21,"Nariño",716,"Barbacoas","Municipio","Municipality",NA,NA
+717,53,"COL","Colombia",21,"Nariño",717,"Belén",NA,NA,NA,NA
+718,53,"COL","Colombia",21,"Nariño",718,"Buesaco","Municipio","Municipality",NA,NA
+719,53,"COL","Colombia",21,"Nariño",719,"Córdoba","Municipio","Municipality",NA,NA
+720,53,"COL","Colombia",21,"Nariño",720,"Chachagüí","Municipio","Municipality",NA,NA
+721,53,"COL","Colombia",21,"Nariño",721,"Colón","Municipio","Municipality",NA,NA
+722,53,"COL","Colombia",21,"Nariño",722,"Consacá","Municipio","Municipality",NA,NA
+723,53,"COL","Colombia",21,"Nariño",723,"Contadero","Municipio","Municipality",NA,NA
+724,53,"COL","Colombia",21,"Nariño",724,"Cuaspud","Municipio","Municipality",NA,NA
+725,53,"COL","Colombia",21,"Nariño",725,"Cumbal","Municipio","Municipality",NA,NA
+726,53,"COL","Colombia",21,"Nariño",726,"Cumbitara","Municipio","Municipality",NA,NA
+727,53,"COL","Colombia",21,"Nariño",727,"El Charco","Municipio","Municipality",NA,NA
+728,53,"COL","Colombia",21,"Nariño",728,"El Rosario","Municipio","Municipality",NA,NA
+729,53,"COL","Colombia",21,"Nariño",729,"El Tablón de Gomez","Municipio","Municipality",NA,"El Tablon|El Tablón"
+730,53,"COL","Colombia",21,"Nariño",730,"El Tambo","Municipio","Municipality",NA,NA
+731,53,"COL","Colombia",21,"Nariño",731,"Francisco Pizarro","Municipio","Municipality",NA,"Francisco Pizarr"
+732,53,"COL","Colombia",21,"Nariño",732,"Funes","Municipio","Municipality",NA,NA
+733,53,"COL","Colombia",21,"Nariño",733,"Guachucal","Municipio","Municipality",NA,NA
+734,53,"COL","Colombia",21,"Nariño",734,"Guaitarilla","Municipio","Municipality",NA,NA
+735,53,"COL","Colombia",21,"Nariño",735,"Gualmatán","Municipio","Municipality",NA,NA
+736,53,"COL","Colombia",21,"Nariño",736,"Iles","Municipio","Municipality",NA,NA
+737,53,"COL","Colombia",21,"Nariño",737,"Imués","Municipio","Municipality",NA,NA
+738,53,"COL","Colombia",21,"Nariño",738,"Ipiales","Municipio","Municipality",NA,NA
+739,53,"COL","Colombia",21,"Nariño",739,"La Cruz","Municipio","Municipality",NA,NA
+740,53,"COL","Colombia",21,"Nariño",740,"La Florida","Municipio","Municipality",NA,NA
+741,53,"COL","Colombia",21,"Nariño",741,"La Llanada","Municipio","Municipality",NA,NA
+742,53,"COL","Colombia",21,"Nariño",742,"La Tola","Municipio","Municipality",NA,NA
+743,53,"COL","Colombia",21,"Nariño",743,"La Unión de Sucre","Municipio","Municipality",NA,"La Union|La Unión"
+744,53,"COL","Colombia",21,"Nariño",744,"Leiva","Municipio","Municipality",NA,NA
+745,53,"COL","Colombia",21,"Nariño",745,"Linares","Municipio","Municipality",NA,NA
+746,53,"COL","Colombia",21,"Nariño",746,"Los Andes","Municipio","Municipality",NA,NA
+747,53,"COL","Colombia",21,"Nariño",747,"Magüí","Municipio","Municipality",NA,NA
+748,53,"COL","Colombia",21,"Nariño",748,"Mallama","Municipio","Municipality",NA,NA
+749,53,"COL","Colombia",21,"Nariño",749,"Mosquera","Municipio","Municipality",NA,NA
+750,53,"COL","Colombia",21,"Nariño",750,"Olaya Herrera","Municipio","Municipality",NA,NA
+751,53,"COL","Colombia",21,"Nariño",751,"Ospina","Municipio","Municipality",NA,NA
+752,53,"COL","Colombia",21,"Nariño",752,"Policarpa","Municipio","Municipality",NA,NA
+753,53,"COL","Colombia",21,"Nariño",753,"Potosí","Municipio","Municipality",NA,NA
+754,53,"COL","Colombia",21,"Nariño",754,"Providencia","Municipio","Municipality",NA,NA
+755,53,"COL","Colombia",21,"Nariño",755,"Puerres","Municipio","Municipality",NA,NA
+756,53,"COL","Colombia",21,"Nariño",756,"Pupiales","Municipio","Municipality",NA,NA
+757,53,"COL","Colombia",21,"Nariño",757,"Ricaurte","Municipio","Municipality",NA,NA
+758,53,"COL","Colombia",21,"Nariño",758,"Roberto Payán","Municipio","Municipality",NA,NA
+759,53,"COL","Colombia",21,"Nariño",759,"Samaniego","Municipio","Municipality",NA,NA
+760,53,"COL","Colombia",21,"Nariño",760,"San Bernardo","Municipio","Municipality",NA,NA
+761,53,"COL","Colombia",21,"Nariño",761,"San Juan de Pasto","Municipio","Municipality",NA,"Pasto"
+762,53,"COL","Colombia",21,"Nariño",762,"San Lorenzo","Municipio","Municipality",NA,NA
+763,53,"COL","Colombia",21,"Nariño",763,"San Pablo","Municipio","Municipality",NA,NA
+764,53,"COL","Colombia",21,"Nariño",764,"San Pedro de Cartago","Municipio","Municipality",NA,NA
+765,53,"COL","Colombia",21,"Nariño",765,"Sandoná","Municipio","Municipality",NA,NA
+766,53,"COL","Colombia",21,"Nariño",766,"Santa Bárbara","Municipio","Municipality",NA,NA
+767,53,"COL","Colombia",21,"Nariño",767,"Santa Cruz","Municipio","Municipality",NA,NA
+768,53,"COL","Colombia",21,"Nariño",768,"Sapuyes","Municipio","Municipality",NA,NA
+769,53,"COL","Colombia",21,"Nariño",769,"Taminango","Municipio","Municipality",NA,NA
+770,53,"COL","Colombia",21,"Nariño",770,"Tangua","Municipio","Municipality",NA,NA
+771,53,"COL","Colombia",21,"Nariño",771,"Túquerres","Municipio","Municipality",NA,"Téquerres"
+772,53,"COL","Colombia",21,"Nariño",772,"Tumaco","Municipio","Municipality",NA,NA
+773,53,"COL","Colombia",21,"Nariño",773,"Yacuanquer","Municipio","Municipality",NA,NA
+774,53,"COL","Colombia",22,"Norte de Santander",774,"Abrego","Municipio","Municipality",NA,NA
+775,53,"COL","Colombia",22,"Norte de Santander",775,"Arboledas","Municipio","Municipality",NA,NA
+776,53,"COL","Colombia",22,"Norte de Santander",776,"Bochalema","Municipio","Municipality",NA,NA
+777,53,"COL","Colombia",22,"Norte de Santander",777,"Bucarasica","Municipio","Municipality",NA,NA
+778,53,"COL","Colombia",22,"Norte de Santander",778,"Cáchira","Municipio","Municipality",NA,NA
+779,53,"COL","Colombia",22,"Norte de Santander",779,"Cácota","Municipio","Municipality",NA,NA
+780,53,"COL","Colombia",22,"Norte de Santander",780,"Chinácota","Municipio","Municipality",NA,NA
+781,53,"COL","Colombia",22,"Norte de Santander",781,"Chitagá","Municipio","Municipality",NA,NA
+782,53,"COL","Colombia",22,"Norte de Santander",782,"Convención","Municipio","Municipality",NA,NA
+783,53,"COL","Colombia",22,"Norte de Santander",783,"Cucutilla","Municipio","Municipality",NA,NA
+784,53,"COL","Colombia",22,"Norte de Santander",784,"Durania","Municipio","Municipality",NA,NA
+785,53,"COL","Colombia",22,"Norte de Santander",785,"El Carmen","Municipio","Municipality",NA,NA
+786,53,"COL","Colombia",22,"Norte de Santander",786,"El Tarra","Municipio","Municipality",NA,NA
+787,53,"COL","Colombia",22,"Norte de Santander",787,"El Zulia","Municipio","Municipality",NA,NA
+788,53,"COL","Colombia",22,"Norte de Santander",788,"Gramalote","Municipio","Municipality",NA,NA
+789,53,"COL","Colombia",22,"Norte de Santander",789,"Hacarí","Municipio","Municipality",NA,NA
+790,53,"COL","Colombia",22,"Norte de Santander",790,"Herrán","Municipio","Municipality",NA,NA
+791,53,"COL","Colombia",22,"Norte de Santander",791,"La Esperanza","Municipio","Municipality",NA,NA
+792,53,"COL","Colombia",22,"Norte de Santander",792,"La Playa de Belén","Municipio","Municipality",NA,"La Playa"
+793,53,"COL","Colombia",22,"Norte de Santander",793,"Labateca","Municipio","Municipality",NA,NA
+794,53,"COL","Colombia",22,"Norte de Santander",794,"Los Patios","Municipio","Municipality",NA,NA
+795,53,"COL","Colombia",22,"Norte de Santander",795,"Lourdes","Municipio","Municipality",NA,NA
+796,53,"COL","Colombia",22,"Norte de Santander",796,"Mutiscua","Municipio","Municipality",NA,NA
+797,53,"COL","Colombia",22,"Norte de Santander",797,"Ocaña","Municipio","Municipality",NA,NA
+798,53,"COL","Colombia",22,"Norte de Santander",798,"Pamplona","Municipio","Municipality",NA,NA
+799,53,"COL","Colombia",22,"Norte de Santander",799,"Pamplonita","Municipio","Municipality",NA,NA
+800,53,"COL","Colombia",22,"Norte de Santander",800,"Puerto Santander","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+801,53,"COL","Colombia",22,"Norte de Santander",801,"Ragonvalia","Municipio","Municipality",NA,NA
+802,53,"COL","Colombia",22,"Norte de Santander",802,"Salazar de las Palmas","Municipio","Municipality",NA,"Salazar"
+803,53,"COL","Colombia",22,"Norte de Santander",803,"San Calixto","Municipio","Municipality",NA,NA
+804,53,"COL","Colombia",22,"Norte de Santander",804,"San Cayetano","Municipio","Municipality",NA,NA
+805,53,"COL","Colombia",22,"Norte de Santander",805,"San José de Cúcuta","Municipio","Municipality",NA,"Cucuta|Cúcuta|Cécuta"
+806,53,"COL","Colombia",22,"Norte de Santander",806,"Santiago","Municipio","Municipality",NA,NA
+807,53,"COL","Colombia",22,"Norte de Santander",807,"Santo Domingo de Silos","Municipio","Municipality",NA,"Silos"
+808,53,"COL","Colombia",22,"Norte de Santander",808,"Sardinata","Municipio","Municipality",NA,NA
+809,53,"COL","Colombia",22,"Norte de Santander",809,"Teorama","Municipio","Municipality",NA,NA
+810,53,"COL","Colombia",22,"Norte de Santander",810,"Tibú","Municipio","Municipality",NA,"Tibé"
+811,53,"COL","Colombia",22,"Norte de Santander",811,"Toledo","Municipio","Municipality",NA,NA
+812,53,"COL","Colombia",22,"Norte de Santander",812,"Villa Caro","Municipio","Municipality",NA,NA
+813,53,"COL","Colombia",22,"Norte de Santander",813,"Villa del Rosario","Municipio","Municipality",NA,"Villa Del Rosari"
+814,53,"COL","Colombia",23,"Putumayo",814,"Colón","Municipio","Municipality",NA,NA
+815,53,"COL","Colombia",23,"Putumayo",815,"Orito","Municipio","Municipality",NA,NA
+816,53,"COL","Colombia",23,"Putumayo",816,"Puerto Asís","Municipio","Municipality",NA,NA
+817,53,"COL","Colombia",23,"Putumayo",817,"Puerto Caicedo","Municipio","Municipality",NA,NA
+818,53,"COL","Colombia",23,"Putumayo",818,"Puerto Guzmán","Municipio","Municipality",NA,NA
+819,53,"COL","Colombia",23,"Putumayo",819,"Puerto Leguízamo","Municipio","Municipality",NA,NA
+820,53,"COL","Colombia",23,"Putumayo",820,"San Francisco","Municipio","Municipality",NA,NA
+821,53,"COL","Colombia",23,"Putumayo",821,"San Miguel de Mocoa","Municipio","Municipality",NA,"Mocoa"
+822,53,"COL","Colombia",23,"Putumayo",822,"Santiago","Municipio","Municipality",NA,NA
+823,53,"COL","Colombia",23,"Putumayo",823,"Sibundoy","Municipio","Municipality",NA,NA
+824,53,"COL","Colombia",23,"Putumayo",824,"Valle del Guamuez","Municipio","Municipality",NA,NA
+825,53,"COL","Colombia",23,"Putumayo",825,"Villagarzón","Municipio","Municipality",NA,NA
+826,53,"COL","Colombia",24,"Quindío",826,"Armenia","Municipio","Municipality",NA,"Mantequilla"
+827,53,"COL","Colombia",24,"Quindío",827,"Buenavista","Municipio","Municipality",NA,NA
+828,53,"COL","Colombia",24,"Quindío",828,"Córdoba","Municipio","Municipality",NA,NA
+829,53,"COL","Colombia",24,"Quindío",829,"Calarcá","Municipio","Municipality",NA,NA
+830,53,"COL","Colombia",24,"Quindío",830,"Circasia","Municipio","Municipality",NA,NA
+831,53,"COL","Colombia",24,"Quindío",831,"Filandia","Municipio","Municipality",NA,NA
+832,53,"COL","Colombia",24,"Quindío",832,"Génova","Municipio","Municipality",NA,NA
+833,53,"COL","Colombia",24,"Quindío",833,"La Tebaida","Municipio","Municipality",NA,NA
+834,53,"COL","Colombia",24,"Quindío",834,"Montenegro","Municipio","Municipality",NA,NA
+835,53,"COL","Colombia",24,"Quindío",835,"Pijao","Municipio","Municipality",NA,NA
+836,53,"COL","Colombia",24,"Quindío",836,"Quimbaya","Municipio","Municipality",NA,NA
+837,53,"COL","Colombia",24,"Quindío",837,"Salento","Municipio","Municipality",NA,NA
+838,53,"COL","Colombia",25,"Risaralda",838,"Apía","Municipio","Municipality",NA,NA
+839,53,"COL","Colombia",25,"Risaralda",839,"Balboa","Municipio","Municipality",NA,NA
+840,53,"COL","Colombia",25,"Risaralda",840,"Belén de Umbría","Municipio","Municipality",NA,NA
+841,53,"COL","Colombia",25,"Risaralda",841,"Dosquebradas","Municipio","Municipality",NA,"Dos Quebradas"
+842,53,"COL","Colombia",25,"Risaralda",842,"Guática","Municipio","Municipality",NA,NA
+843,53,"COL","Colombia",25,"Risaralda",843,"La Celia","Municipio","Municipality",NA,NA
+844,53,"COL","Colombia",25,"Risaralda",844,"La Virginia","Municipio","Municipality",NA,NA
+845,53,"COL","Colombia",25,"Risaralda",845,"Marsella","Municipio","Municipality",NA,NA
+846,53,"COL","Colombia",25,"Risaralda",846,"Mistrato","Municipio","Municipality",NA,NA
+847,53,"COL","Colombia",25,"Risaralda",847,"Pereira","Municipio","Municipality",NA,NA
+848,53,"COL","Colombia",25,"Risaralda",848,"Pueblo Rico","Municipio","Municipality",NA,NA
+849,53,"COL","Colombia",25,"Risaralda",849,"Quinchía","Municipio","Municipality",NA,NA
+850,53,"COL","Colombia",25,"Risaralda",850,"Santa Rosa de Cabal","Municipio","Municipality",NA,NA
+851,53,"COL","Colombia",25,"Risaralda",851,"Santuario","Municipio","Municipality",NA,NA
+852,53,"COL","Colombia",26,"San Andrés y Providencia",852,"n.a. (1)",NA,NA,NA,NA
+853,53,"COL","Colombia",26,"San Andrés y Providencia",853,"Providencia","Municipio","Municipality",NA,NA
+854,53,"COL","Colombia",26,"San Andrés y Providencia",854,"San Andrés","Municipio","Municipality",NA,NA
+855,53,"COL","Colombia",27,"Santander",855,"Aguada","Municipio","Municipality",NA,NA
+856,53,"COL","Colombia",27,"Santander",856,"Albania","Municipio","Municipality",NA,NA
+857,53,"COL","Colombia",27,"Santander",857,"Aratoca","Municipio","Municipality",NA,NA
+858,53,"COL","Colombia",27,"Santander",858,"Barbosa","Municipio","Municipality",NA,NA
+859,53,"COL","Colombia",27,"Santander",859,"Barichara","Municipio","Municipality",NA,NA
+860,53,"COL","Colombia",27,"Santander",860,"Barrancabermeja","Municipio","Municipality",NA,NA
+861,53,"COL","Colombia",27,"Santander",861,"Betulia","Municipio","Municipality",NA,NA
+862,53,"COL","Colombia",27,"Santander",862,"Bolívar","Municipio","Municipality",NA,NA
+863,53,"COL","Colombia",27,"Santander",863,"Bucaramanga","Municipio","Municipality",NA,NA
+864,53,"COL","Colombia",27,"Santander",864,"Cabrera","Municipio","Municipality",NA,NA
+865,53,"COL","Colombia",27,"Santander",865,"California","Municipio","Municipality",NA,NA
+866,53,"COL","Colombia",27,"Santander",866,"Capitanejo","Municipio","Municipality",NA,NA
+867,53,"COL","Colombia",27,"Santander",867,"Carcasí","Municipio","Municipality",NA,NA
+868,53,"COL","Colombia",27,"Santander",868,"Cepitá","Municipio","Municipality",NA,NA
+869,53,"COL","Colombia",27,"Santander",869,"Cerrito","Municipio","Municipality",NA,NA
+870,53,"COL","Colombia",27,"Santander",870,"Charalá","Municipio","Municipality",NA,NA
+871,53,"COL","Colombia",27,"Santander",871,"Charta","Municipio","Municipality",NA,NA
+872,53,"COL","Colombia",27,"Santander",872,"Chimá","Municipio","Municipality",NA,NA
+873,53,"COL","Colombia",27,"Santander",873,"Chipatá","Municipio","Municipality",NA,NA
+874,53,"COL","Colombia",27,"Santander",874,"Cimitarra","Municipio","Municipality",NA,NA
+875,53,"COL","Colombia",27,"Santander",875,"Concepción","Municipio","Municipality",NA,NA
+876,53,"COL","Colombia",27,"Santander",876,"Confines","Municipio","Municipality",NA,NA
+877,53,"COL","Colombia",27,"Santander",877,"Contratación","Municipio","Municipality",NA,NA
+878,53,"COL","Colombia",27,"Santander",878,"Coromoro","Municipio","Municipality",NA,NA
+879,53,"COL","Colombia",27,"Santander",879,"Curití","Municipio","Municipality",NA,NA
+880,53,"COL","Colombia",27,"Santander",880,"El Carmen de Chucurí","Municipio","Municipality",NA,"El Carmen"
+881,53,"COL","Colombia",27,"Santander",881,"El Guacamayo","Municipio","Municipality",NA,NA
+882,53,"COL","Colombia",27,"Santander",882,"El Peñon","Municipio","Municipality",NA,NA
+883,53,"COL","Colombia",27,"Santander",883,"El Playón","Municipio","Municipality",NA,NA
+884,53,"COL","Colombia",27,"Santander",884,"Encino","Municipio","Municipality",NA,NA
+885,53,"COL","Colombia",27,"Santander",885,"Enciso","Municipio","Municipality",NA,NA
+886,53,"COL","Colombia",27,"Santander",886,"Florián","Municipio","Municipality",NA,NA
+887,53,"COL","Colombia",27,"Santander",887,"Floridablanca","Municipio","Municipality",NA,NA
+888,53,"COL","Colombia",27,"Santander",888,"Gámbita","Municipio","Municipality",NA,NA
+889,53,"COL","Colombia",27,"Santander",889,"Güepsa","Municipio","Municipality",NA,NA
+890,53,"COL","Colombia",27,"Santander",890,"Galán","Municipio","Municipality",NA,NA
+891,53,"COL","Colombia",27,"Santander",891,"Girón","Municipio","Municipality",NA,NA
+892,53,"COL","Colombia",27,"Santander",892,"Guaca","Municipio","Municipality",NA,NA
+893,53,"COL","Colombia",27,"Santander",893,"Guadalupe","Municipio","Municipality",NA,NA
+894,53,"COL","Colombia",27,"Santander",894,"Guapotá","Municipio","Municipality",NA,NA
+895,53,"COL","Colombia",27,"Santander",895,"Guavatá","Municipio","Municipality",NA,NA
+896,53,"COL","Colombia",27,"Santander",896,"Hato","Municipio","Municipality",NA,NA
+897,53,"COL","Colombia",27,"Santander",897,"Jesús María","Municipio","Municipality",NA,"Jesús María"
+898,53,"COL","Colombia",27,"Santander",898,"Jordán","Municipio","Municipality",NA,NA
+899,53,"COL","Colombia",27,"Santander",899,"La Belleza","Municipio","Municipality",NA,NA
+900,53,"COL","Colombia",27,"Santander",900,"La Paz","Municipio","Municipality",NA,NA
+901,53,"COL","Colombia",27,"Santander",901,"Landázuri","Municipio","Municipality",NA,NA
+902,53,"COL","Colombia",27,"Santander",902,"Lebrija","Municipio","Municipality",NA,NA
+903,53,"COL","Colombia",27,"Santander",903,"Los Santos","Municipio","Municipality",NA,NA
+904,53,"COL","Colombia",27,"Santander",904,"Málaga","Municipio","Municipality",NA,NA
+905,53,"COL","Colombia",27,"Santander",905,"Macaravita","Municipio","Municipality",NA,NA
+906,53,"COL","Colombia",27,"Santander",906,"Matanza","Municipio","Municipality",NA,NA
+907,53,"COL","Colombia",27,"Santander",907,"Mogotes","Municipio","Municipality",NA,NA
+908,53,"COL","Colombia",27,"Santander",908,"Molagavita","Municipio","Municipality",NA,NA
+909,53,"COL","Colombia",27,"Santander",909,"Ocamonte","Municipio","Municipality",NA,NA
+910,53,"COL","Colombia",27,"Santander",910,"Oiba","Municipio","Municipality",NA,NA
+911,53,"COL","Colombia",27,"Santander",911,"Onzaga","Municipio","Municipality",NA,NA
+912,53,"COL","Colombia",27,"Santander",912,"Páramo","Municipio","Municipality",NA,NA
+913,53,"COL","Colombia",27,"Santander",913,"Palmar","Municipio","Municipality",NA,NA
+914,53,"COL","Colombia",27,"Santander",914,"Palmas del Socorro","Municipio","Municipality",NA,"Palmas Del Socor"
+915,53,"COL","Colombia",27,"Santander",915,"Piedecuesta","Municipio","Municipality",NA,NA
+916,53,"COL","Colombia",27,"Santander",916,"Pinchote","Municipio","Municipality",NA,NA
+917,53,"COL","Colombia",27,"Santander",917,"Puente Nacional","Municipio","Municipality",NA,NA
+918,53,"COL","Colombia",27,"Santander",918,"Puerto Parra","Municipio","Municipality",NA,NA
+919,53,"COL","Colombia",27,"Santander",919,"Puerto Wilches","Municipio","Municipality",NA,NA
+920,53,"COL","Colombia",27,"Santander",920,"Rionegro","Municipio","Municipality",NA,NA
+921,53,"COL","Colombia",27,"Santander",921,"Sabana de Torres","Municipio","Municipality",NA,NA
+922,53,"COL","Colombia",27,"Santander",922,"San Andrés de Cuerquia","Municipio","Municipality",NA,"San Andres|San Andrés"
+923,53,"COL","Colombia",27,"Santander",923,"San Benito","Municipio","Municipality",NA,NA
+924,53,"COL","Colombia",27,"Santander",924,"San Gil","Municipio","Municipality",NA,NA
+925,53,"COL","Colombia",27,"Santander",925,"San Joaquín","Municipio","Municipality",NA,NA
+926,53,"COL","Colombia",27,"Santander",926,"San José de Miranda","Municipio","Municipality",NA,"San Jose Miranda"
+927,53,"COL","Colombia",27,"Santander",927,"San Miguel","Municipio","Municipality",NA,NA
+928,53,"COL","Colombia",27,"Santander",928,"San Vicente de Chucurí","Municipio","Municipality",NA,NA
+929,53,"COL","Colombia",27,"Santander",929,"Santa Bárbara","Municipio","Municipality",NA,NA
+930,53,"COL","Colombia",27,"Santander",930,"Santa Helena del Opón","Municipio","Municipality",NA,"Santa Helena"
+931,53,"COL","Colombia",27,"Santander",931,"Simacota","Municipio","Municipality",NA,NA
+932,53,"COL","Colombia",27,"Santander",932,"Socorro","Municipio","Municipality",NA,NA
+933,53,"COL","Colombia",27,"Santander",933,"Suaita","Municipio","Municipality",NA,NA
+934,53,"COL","Colombia",27,"Santander",934,"Sucre","Municipio","Municipality",NA,NA
+935,53,"COL","Colombia",27,"Santander",935,"Suratá","Municipio","Municipality",NA,NA
+936,53,"COL","Colombia",27,"Santander",936,"Tona","Municipio","Municipality",NA,NA
+937,53,"COL","Colombia",27,"Santander",937,"Vélez","Municipio","Municipality",NA,NA
+938,53,"COL","Colombia",27,"Santander",938,"Valle de San José","Municipio","Municipality",NA,NA
+939,53,"COL","Colombia",27,"Santander",939,"Vetas","Municipio","Municipality",NA,NA
+940,53,"COL","Colombia",27,"Santander",940,"Villanueva","Municipio","Municipality",NA,NA
+941,53,"COL","Colombia",27,"Santander",941,"Zapatoca","Municipio","Municipality",NA,NA
+942,53,"COL","Colombia",28,"Sucre",942,"Buenavista","Municipio","Municipality",NA,NA
+943,53,"COL","Colombia",28,"Sucre",943,"Caimito","Municipio","Municipality",NA,NA
+944,53,"COL","Colombia",28,"Sucre",944,"Chalán","Municipio","Municipality",NA,NA
+945,53,"COL","Colombia",28,"Sucre",945,"Colosó","Municipio","Municipality",NA,NA
+946,53,"COL","Colombia",28,"Sucre",946,"Corozal","Municipio","Municipality",NA,NA
+947,53,"COL","Colombia",28,"Sucre",947,"Galeras","Municipio","Municipality",NA,NA
+948,53,"COL","Colombia",28,"Sucre",948,"Guarandá","Municipio","Municipality",NA,NA
+949,53,"COL","Colombia",28,"Sucre",949,"La Unión de Sucre","Municipio","Municipality",NA,"La Union|La Unión"
+950,53,"COL","Colombia",28,"Sucre",950,"Los Palmitos","Municipio","Municipality",NA,NA
+951,53,"COL","Colombia",28,"Sucre",951,"Majagual","Municipio","Municipality",NA,NA
+952,53,"COL","Colombia",28,"Sucre",952,"Morroa","Municipio","Municipality",NA,NA
+953,53,"COL","Colombia",28,"Sucre",953,"Ovejas","Municipio","Municipality",NA,NA
+954,53,"COL","Colombia",28,"Sucre",954,"Sampués","Municipio","Municipality",NA,NA
+955,53,"COL","Colombia",28,"Sucre",955,"San Antonio de Palmito","Municipio","Municipality",NA,"Palmito"
+956,53,"COL","Colombia",28,"Sucre",956,"San Benito Abad","Municipio","Municipality",NA,NA
+957,53,"COL","Colombia",28,"Sucre",957,"San Juan de Betulia","Municipio","Municipality",NA,"San Juan De Betu"
+958,53,"COL","Colombia",28,"Sucre",958,"San Marcos","Municipio","Municipality",NA,NA
+959,53,"COL","Colombia",28,"Sucre",959,"San Onofre","Municipio","Municipality",NA,NA
+960,53,"COL","Colombia",28,"Sucre",960,"San Pedro","Municipio","Municipality",NA,NA
+961,53,"COL","Colombia",28,"Sucre",961,"Sincé","Municipio","Municipality",NA,NA
+962,53,"COL","Colombia",28,"Sucre",962,"Sincelejo","Municipio","Municipality",NA,NA
+963,53,"COL","Colombia",28,"Sucre",963,"Sucre","Municipio","Municipality",NA,NA
+964,53,"COL","Colombia",28,"Sucre",964,"Tolú","Municipio","Municipality",NA,"Tolé"
+965,53,"COL","Colombia",28,"Sucre",965,"Toluviejo","Municipio","Municipality",NA,NA
+966,53,"COL","Colombia",29,"Tolima",966,"Alpujarra","Municipio","Municipality",NA,NA
+967,53,"COL","Colombia",29,"Tolima",967,"Alvarado","Municipio","Municipality",NA,NA
+968,53,"COL","Colombia",29,"Tolima",968,"Ambalema","Municipio","Municipality",NA,NA
+969,53,"COL","Colombia",29,"Tolima",969,"Anzoátegui","Municipio","Municipality",NA,NA
+970,53,"COL","Colombia",29,"Tolima",970,"Armero","Municipio","Municipality",NA,NA
+971,53,"COL","Colombia",29,"Tolima",971,"Ataco","Municipio","Municipality",NA,NA
+972,53,"COL","Colombia",29,"Tolima",972,"Cajamarca","Municipio","Municipality",NA,NA
+973,53,"COL","Colombia",29,"Tolima",973,"Carmen de Apicalá","Municipio","Municipality",NA,NA
+974,53,"COL","Colombia",29,"Tolima",974,"Casabianca","Municipio","Municipality",NA,NA
+975,53,"COL","Colombia",29,"Tolima",975,"Chaparral","Municipio","Municipality",NA,NA
+976,53,"COL","Colombia",29,"Tolima",976,"Coello","Municipio","Municipality",NA,NA
+977,53,"COL","Colombia",29,"Tolima",977,"Coyaima","Municipio","Municipality",NA,NA
+978,53,"COL","Colombia",29,"Tolima",978,"Cunday","Municipio","Municipality",NA,NA
+979,53,"COL","Colombia",29,"Tolima",979,"Dolores","Municipio","Municipality",NA,NA
+980,53,"COL","Colombia",29,"Tolima",980,"Espinal","Municipio","Municipality",NA,NA
+981,53,"COL","Colombia",29,"Tolima",981,"Falán","Municipio","Municipality",NA,NA
+982,53,"COL","Colombia",29,"Tolima",982,"Flandes","Municipio","Municipality",NA,NA
+983,53,"COL","Colombia",29,"Tolima",983,"Fresno","Municipio","Municipality",NA,NA
+984,53,"COL","Colombia",29,"Tolima",984,"Guamo","Municipio","Municipality",NA,NA
+985,53,"COL","Colombia",29,"Tolima",985,"Herveo","Municipio","Municipality",NA,NA
+986,53,"COL","Colombia",29,"Tolima",986,"Honda","Municipio","Municipality",NA,NA
+987,53,"COL","Colombia",29,"Tolima",987,"Ibagué","Municipio","Municipality",NA,NA
+988,53,"COL","Colombia",29,"Tolima",988,"Icononzo","Municipio","Municipality",NA,NA
+989,53,"COL","Colombia",29,"Tolima",989,"Lérida","Municipio","Municipality",NA,NA
+990,53,"COL","Colombia",29,"Tolima",990,"Líbano","Municipio","Municipality",NA,NA
+991,53,"COL","Colombia",29,"Tolima",991,"Melgar","Municipio","Municipality",NA,NA
+992,53,"COL","Colombia",29,"Tolima",992,"Murillo","Municipio","Municipality",NA,NA
+993,53,"COL","Colombia",29,"Tolima",993,"Natagaima","Municipio","Municipality",NA,NA
+994,53,"COL","Colombia",29,"Tolima",994,"Ortega","Municipio","Municipality",NA,NA
+995,53,"COL","Colombia",29,"Tolima",995,"Piedras","Municipio","Municipality",NA,NA
+996,53,"COL","Colombia",29,"Tolima",996,"Planadas","Municipio","Municipality",NA,NA
+997,53,"COL","Colombia",29,"Tolima",997,"Prado","Municipio","Municipality",NA,NA
+998,53,"COL","Colombia",29,"Tolima",998,"Purificación","Municipio","Municipality",NA,NA
+999,53,"COL","Colombia",29,"Tolima",999,"Rioblanco","Municipio","Municipality",NA,NA
+1000,53,"COL","Colombia",29,"Tolima",1000,"Roncesvalles","Municipio","Municipality",NA,NA
+1001,53,"COL","Colombia",29,"Tolima",1001,"Rovira","Municipio","Municipality",NA,NA
+1002,53,"COL","Colombia",29,"Tolima",1002,"Saldaña","Municipio","Municipality",NA,NA
+1003,53,"COL","Colombia",29,"Tolima",1003,"San Antonio","Municipio","Municipality",NA,NA
+1004,53,"COL","Colombia",29,"Tolima",1004,"San Luís","Municipio","Municipality",NA,NA
+1005,53,"COL","Colombia",29,"Tolima",1005,"San Sebastian de Mariquita","Municipio","Municipality",NA,"Mariquita"
+1006,53,"COL","Colombia",29,"Tolima",1006,"Santa Isabel","Municipio","Municipality",NA,NA
+1007,53,"COL","Colombia",29,"Tolima",1007,"Suárez","Municipio","Municipality",NA,NA
+1008,53,"COL","Colombia",29,"Tolima",1008,"Valle de San Juan","Municipio","Municipality",NA,NA
+1009,53,"COL","Colombia",29,"Tolima",1009,"Venadillo","Municipio","Municipality",NA,NA
+1010,53,"COL","Colombia",29,"Tolima",1010,"Villahermosa","Municipio","Municipality",NA,"Villa Hermosa"
+1011,53,"COL","Colombia",29,"Tolima",1011,"Villarrica","Municipio","Municipality",NA,NA
+1012,53,"COL","Colombia",30,"Valle del Cauca",1012,"Alcalá","Municipio","Municipality",NA,NA
+1013,53,"COL","Colombia",30,"Valle del Cauca",1013,"Andalucía","Municipio","Municipality",NA,NA
+1014,53,"COL","Colombia",30,"Valle del Cauca",1014,"Ansermanuevo","Municipio","Municipality",NA,NA
+1015,53,"COL","Colombia",30,"Valle del Cauca",1015,"Argelia","Municipio","Municipality",NA,NA
+1016,53,"COL","Colombia",30,"Valle del Cauca",1016,"Bolívar","Municipio","Municipality",NA,NA
+1017,53,"COL","Colombia",30,"Valle del Cauca",1017,"Buenaventura","Municipio","Municipality",NA,NA
+1018,53,"COL","Colombia",30,"Valle del Cauca",1018,"Bugalagrande","Municipio","Municipality",NA,NA
+1019,53,"COL","Colombia",30,"Valle del Cauca",1019,"Caicedonia","Municipio","Municipality",NA,NA
+1020,53,"COL","Colombia",30,"Valle del Cauca",1020,"Calima","Municipio","Municipality",NA,NA
+1021,53,"COL","Colombia",30,"Valle del Cauca",1021,"Candelaria","Municipio","Municipality",NA,NA
+1022,53,"COL","Colombia",30,"Valle del Cauca",1022,"Cartago","Municipio","Municipality",NA,NA
+1023,53,"COL","Colombia",30,"Valle del Cauca",1023,"Dagua","Municipio","Municipality",NA,NA
+1024,53,"COL","Colombia",30,"Valle del Cauca",1024,"El Águila","Municipio","Municipality",NA,NA
+1025,53,"COL","Colombia",30,"Valle del Cauca",1025,"El Cairo","Municipio","Municipality",NA,NA
+1026,53,"COL","Colombia",30,"Valle del Cauca",1026,"El Cerrito","Municipio","Municipality",NA,NA
+1027,53,"COL","Colombia",30,"Valle del Cauca",1027,"El Dovio","Municipio","Municipality",NA,NA
+1028,53,"COL","Colombia",30,"Valle del Cauca",1028,"Florida","Municipio","Municipality",NA,NA
+1029,53,"COL","Colombia",30,"Valle del Cauca",1029,"Ginebra","Municipio","Municipality",NA,NA
+1030,53,"COL","Colombia",30,"Valle del Cauca",1030,"Guacarí","Municipio","Municipality",NA,NA
+1031,53,"COL","Colombia",30,"Valle del Cauca",1031,"Guadalajara de Buga","Municipio","Municipality",NA,"Buga"
+1032,53,"COL","Colombia",30,"Valle del Cauca",1032,"Jamundí","Municipio","Municipality",NA,NA
+1033,53,"COL","Colombia",30,"Valle del Cauca",1033,"La Cumbre","Municipio","Municipality",NA,NA
+1034,53,"COL","Colombia",30,"Valle del Cauca",1034,"La Unión de Sucre","Municipio","Municipality",NA,"La Union|La Unión"
+1035,53,"COL","Colombia",30,"Valle del Cauca",1035,"La Victoria","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+1036,53,"COL","Colombia",30,"Valle del Cauca",1036,"Obando","Municipio","Municipality",NA,NA
+1037,53,"COL","Colombia",30,"Valle del Cauca",1037,"Palmira","Municipio","Municipality",NA,NA
+1038,53,"COL","Colombia",30,"Valle del Cauca",1038,"Pradera","Municipio","Municipality",NA,NA
+1039,53,"COL","Colombia",30,"Valle del Cauca",1039,"Restrepo","Municipio","Municipality",NA,NA
+1040,53,"COL","Colombia",30,"Valle del Cauca",1040,"Riofrío","Municipio","Municipality",NA,NA
+1041,53,"COL","Colombia",30,"Valle del Cauca",1041,"Roldanillo","Municipio","Municipality",NA,NA
+1042,53,"COL","Colombia",30,"Valle del Cauca",1042,"San Pedro","Municipio","Municipality",NA,NA
+1043,53,"COL","Colombia",30,"Valle del Cauca",1043,"Santiago de Cali","Municipio","Municipality",NA,"Cali"
+1044,53,"COL","Colombia",30,"Valle del Cauca",1044,"Sevilla","Municipio","Municipality",NA,NA
+1045,53,"COL","Colombia",30,"Valle del Cauca",1045,"Toro","Municipio","Municipality",NA,NA
+1046,53,"COL","Colombia",30,"Valle del Cauca",1046,"Trujillo","Municipio","Municipality",NA,NA
+1047,53,"COL","Colombia",30,"Valle del Cauca",1047,"Tuluá","Municipio","Municipality",NA,NA
+1048,53,"COL","Colombia",30,"Valle del Cauca",1048,"Ulloa","Municipio","Municipality",NA,NA
+1049,53,"COL","Colombia",30,"Valle del Cauca",1049,"Versalles","Municipio","Municipality",NA,NA
+1050,53,"COL","Colombia",30,"Valle del Cauca",1050,"Vijes","Municipio","Municipality",NA,NA
+1051,53,"COL","Colombia",30,"Valle del Cauca",1051,"Yotoco","Municipio","Municipality",NA,NA
+1052,53,"COL","Colombia",30,"Valle del Cauca",1052,"Yumbo","Municipio","Municipality",NA,NA
+1053,53,"COL","Colombia",30,"Valle del Cauca",1053,"Zarzal","Municipio","Municipality",NA,NA
+1054,53,"COL","Colombia",31,"Vaupés",1054,"Carurú","Municipio","Municipality",NA,"Caruré"
+1055,53,"COL","Colombia",31,"Vaupés",1055,"Mitú","Municipio","Municipality",NA,"Mité"
+1056,53,"COL","Colombia",31,"Vaupés",1056,"Pacoa","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+1057,53,"COL","Colombia",31,"Vaupés",1057,"Papunahua","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+1058,53,"COL","Colombia",31,"Vaupés",1058,"Taraira","Municipio","Municipality",NA,NA
+1059,53,"COL","Colombia",31,"Vaupés",1059,"Yavaraté","Corregimiento Departamento","Corregimiento Departamento",NA,NA
+1060,53,"COL","Colombia",32,"Vichada",1060,"Cumaribo","Municipio","Municipality",NA,NA
+1061,53,"COL","Colombia",32,"Vichada",1061,"La Primavera","Municipio","Municipality",NA,NA
+1062,53,"COL","Colombia",32,"Vichada",1062,"Puerto Carreño","Municipio","Municipality",NA,NA
+1063,53,"COL","Colombia",32,"Vichada",1063,"San Jose de Ocune","Municipio","Municipality",NA,NA
+1064,53,"COL","Colombia",32,"Vichada",1064,"Santa Rita","Municipio","Municipality",NA,NA
+1065,53,"COL","Colombia",32,"Vichada",1065,"Santa Rosalía","Municipio","Municipality",NA,NA

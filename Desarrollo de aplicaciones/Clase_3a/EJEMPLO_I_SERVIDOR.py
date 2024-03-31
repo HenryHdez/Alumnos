@@ -14,7 +14,7 @@ Nombre_Socket.bind((IP_Servidor, Puerto))
 
 """Listen designa el numero de conexiones posibles que puede
 aceptar el servidor"""
-Clientes = 2
+Clientes = 1
 Nombre_Socket.listen(Clientes)
 """La función .accep() crea dos objetos. En este caso la variable
 ID_Socket_Cliente almacena la información que llega y drección es
