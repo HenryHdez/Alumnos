@@ -3,7 +3,7 @@ from scapy.all import srp,IP,ICMP
 #Definir la cantidad de intentos que necesita (paquetes)
 Cantidas_paquetes=4
 #Definir la dirección IP
-Direccion_IP="192.168.1.6"
+Direccion_IP="192.168.130.54"
 # Variable tiempo
 t=0.0
 #Estructura para enviar cierta cantidad de paquetes

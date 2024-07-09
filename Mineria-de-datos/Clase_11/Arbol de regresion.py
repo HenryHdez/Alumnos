@@ -37,12 +37,12 @@ if __name__ == "__main__":
     print(f"Número de nodos terminales: {Arbol.get_n_leaves()}")
     plot = plot_tree(
                 decision_tree = Arbol,
-                class_names   = 'Ejemplo_1',
+                #class_names   = 'Ejemplo_1',
                 filled        = True,
                 impurity      = False,
                 fontsize      = 7,
                 ax            = ax
            )
-    
+
     
     

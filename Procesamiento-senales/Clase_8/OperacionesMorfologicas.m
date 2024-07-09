@@ -1,6 +1,6 @@
 clear, clc
 %Operaciones morfológicas
-Ima=imread('circulos.jpg');
+Ima=imread('Imagenes/circulos.jpg');
 %Circulos rojos
 Ima_R=Ima(:,:,1);
 Ima_R=edge(Ima_R,'canny');

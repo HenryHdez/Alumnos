@@ -1,7 +1,7 @@
 #Importar librerías
 import numpy as np
 from keras.models import Sequential
-from keras.layers.core import Dense
+from keras.layers import Dense
 from keras.utils import to_categorical
 from keras.models import load_model
 import tensorflow as tf
@@ -25,10 +25,10 @@ class Red:
         # Entrenar el modelo
         self.Modelo.fit(self.Entrada, self.Objetivo, batch_size=50, epochs=50)
         # Guardar RNA en una carpeta
-        self.Modelo.save('Mi_RNA')
+        self.Modelo.save('Mi_RNA.h5')
     def Validar(self):
         # Importar RNA
-        Modelo_Importado = load_model('Mi_RNA')
+        Modelo_Importado = load_model('Mi_RNA.h5')
         # Evaluar el modelo
         loss, acc = Modelo_Importado.evaluate(self.Entrada, self.Objetivo)
         print('Precisión:', acc)

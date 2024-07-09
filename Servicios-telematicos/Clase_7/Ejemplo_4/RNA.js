@@ -11,7 +11,7 @@ network.train([
   {input:[1,1], output:[1]},
 ]);
 //Simulación de la RNA
-let resultado = network.run([1,1]);
+let resultado = network.run([1,0]);
 //presentación del resultado en consola
 console.log(resultado)
 

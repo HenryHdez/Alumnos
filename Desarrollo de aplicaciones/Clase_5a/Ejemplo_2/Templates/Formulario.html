@@ -1,0 +1,33 @@
+<html>
+    <!--Esto es un comentario en un lenguaje HTML-->
+    <head>
+    <!--El elemento HEAD provee información de la 
+     página como el nombre, enlaces y hojas de estilo-->
+        <title>ejemplo hola mundo </title>
+    </head>
+    <!--Atributos en HTML-->
+    <body>
+        <!--Este es el contenedor del formulario-->
+        <form action="http://127.0.0.1:5000/otrapag" method="POST">
+        <p> Digite su nombre: 
+            <input type="text" name="Caja1" placeholder="Digite su nombre">
+        </p>
+        <!--Atributos de un controlador (Otros)-->
+        <select name="select">   
+            <option value="Valor1">Rojo</option>        
+            <option value="Valor2" selected>Azul</option>       
+            <option value="Valor3">Verde</option>   
+        </select>
+        <button onclick="Funcion()"> Hagaclic</button>
+        <!--Acción del botón-->
+        <p> <input type="submit" value="Enviar"> </p>
+        </form>
+    </body>
+
+    <script>
+        function Funcion(){
+            console.log("Hola mundo")
+            alert("Hola mundo")
+        }
+    </script>
+</html>

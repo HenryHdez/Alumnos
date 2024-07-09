@@ -3,7 +3,7 @@
 import os
 #Asigne a una variable la dirección IP
 #del equipo con el que desee establecer una conexión
-IP="192.168.0.1"
+IP="172.24.32.1"
 #Use el comando ping
 Estado=os.system("ping "+IP)
 print(Estado)

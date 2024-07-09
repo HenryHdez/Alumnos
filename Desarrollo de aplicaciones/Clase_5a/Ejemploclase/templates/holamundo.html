@@ -1,0 +1,15 @@
+<!DOCTYPE html> <!--html-skeleton-->
+<html lang="es">
+  <head>
+    <title>holamundo</title>
+  </head>
+
+  <body>
+    <img src="{{ url_for('static', filename='/imagenes/diagram.png') }}", title="Hola"/>
+    {%for i in lista%}
+    <font color={{i}}>Texto</font>
+    <br>
+    {%endfor%}
+  </body>
+
+</html>

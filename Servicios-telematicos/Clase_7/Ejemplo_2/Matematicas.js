@@ -40,9 +40,9 @@ modelo.add(tf.layers.dense({units: 1, inputShape: [1]}));
 // Preparar entreno
 modelo.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
 //Estimar coeficientes de la recta
-modelo.fit(x,y,{epochs: 20});
+modelo.fit(x,y,{epochs: 500});
 //Convertir tensor en arreglo 
 var sal=modelo.predict(tf.tensor([9, 2],[2,1])).arraySync();
 //Leer valor de la lista
-console.log(sal[0])
+console.log(sal)
 

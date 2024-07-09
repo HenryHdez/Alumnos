@@ -24,7 +24,7 @@ function draw() {
         lienzo.beginPath();
         lienzo.fillRect(40, 40, 50, 50);
         //Dibuja un rectángulo
-        /*lienzo.fillRect(10, 10, 50, 50);
+        lienzo.fillRect(10, 10, 50, 50);
         //Dibuja un arco
         //arc(pos x, pos y, radio, ángulo inicio, ángulo fin, sentido horario?);
         var apertura1=Math.PI;
@@ -45,6 +45,6 @@ function draw() {
         grd.addColorStop(1, "white");
         // Llene algo con el gradiente
         lienzo.fillStyle = grd;
-        lienzo.fillRect(10, 10, 150, 80); */
+        lienzo.fillRect(10, 10, 150, 80); 
     }
 }

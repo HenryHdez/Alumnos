@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimscapeMultibodyImportXML xmlns="urn:mathworks:SimscapeMultibody:import"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            version="2.0">
+   <Created by="Henry Hernandez" from="Onshape" on="04/06/24||10:18:00"
+            using="Simscape Multibody Exporter"/>
+   <ModelUnits length="millimeter" mass="kilogram"/>
+   <DataUnits length="meter" mass="kilogram"/>
+   <RootAssembly name="Ensamblaje" uid="6b42e2cef0994c3c832af116"
+                 version="w-15d5b228a48037828996c863">
+      <InstanceTree>
+         <Instance entityUid="JHD*:*d4364895e15b4c06b64581eb" name="Part 1 &lt;1&gt;"
+                   uid="Mk62tS/h+W1ug6NHc">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.009586938 -0.129245956 0.102550742 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JHD*:*11bf37a94bc6482c2b590be7" name="Part 1 &lt;4&gt;"
+                   uid="MC7H5yIVcr1pDYaN1">
+            <Transform>
+               <Rotation>-0.000000000 -1.000000000 0.000000000 1.000000000 -0.000000000 -0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>-0.018662153 -0.110443698 0.083063655 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JHD*:*bfd21b3c4ec36ff7830a4337" name="Part 1 &lt;2&gt;"
+                   uid="MeYLadb0CKO+1Rtg8">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.009370776 0.067576404 0.143623971 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JHD*:*11bf37a94bc6482c2b590be7" name="Part 1 &lt;3&gt;"
+                   uid="MJJniJqj50kO0g5iO">
+            <Transform>
+               <Rotation>0.000000000 1.000000000 0.000000000 -0.999390827 0.000000000 0.034899497 0.034899497 -0.000000000 0.999390827 </Rotation>
+               <Translation>0.047668258 0.249080496 0.083156861 </Translation>
+            </Transform>
+         </Instance>
+      </InstanceTree>
+      <Constraints/>
+      <Joints/>
+   </RootAssembly>
+   <Assemblies/>
+   <Parts>
+      <Part name="Part 1" uid="JHD*:*11bf37a94bc6482c2b590be7">
+         <ModelUnits length="millimeter" mass="kilogram"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Part 13.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.054901961" g="0.756862745" r="1.000000000"/>
+            <Diffuse a="1.000000000" b="0.054901961" g="0.756862745" r="1.000000000"/>
+            <Specular a="1.000000000" b="0.054901961" g="0.756862745" r="1.000000000"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="Part 1" uid="JHD*:*bfd21b3c4ec36ff7830a4337">
+         <ModelUnits length="millimeter" mass="kilogram"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Part 14.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="1.000000000" g="0.000000000" r="0.000000000"/>
+            <Diffuse a="1.000000000" b="1.000000000" g="0.000000000" r="0.000000000"/>
+            <Specular a="1.000000000" b="1.000000000" g="0.000000000" r="0.000000000"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="Part 1" uid="JHD*:*d4364895e15b4c06b64581eb">
+         <ModelUnits length="millimeter" mass="kilogram"/>
+         <MassProperties>
+            <Mass>0</Mass>
+            <CenterOfMass>0.000000000 0.000000000 0.000000000 </CenterOfMass>
+            <Inertia>0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Part 15.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.000000000" g="0.000000000" r="1.000000000"/>
+            <Diffuse a="1.000000000" b="0.000000000" g="0.000000000" r="1.000000000"/>
+            <Specular a="1.000000000" b="0.000000000" g="0.000000000" r="1.000000000"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+   </Parts>
+</SimscapeMultibodyImportXML>

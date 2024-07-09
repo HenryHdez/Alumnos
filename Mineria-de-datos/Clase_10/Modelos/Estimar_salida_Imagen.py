@@ -5,11 +5,11 @@ import tensorflow as tf
 
 if __name__ == "__main__":
     # Importar RNA
-    Modelo_Importado = load_model('Mi_RNA')
+    Modelo_Importado = load_model('Mi_RNA.h5')
     # Crear los arreglos de entrada y de salida
     Etiquetas=['Ambulancia', 'Ciclomotor', 'Moto', 'Policia', 'Taxi']
     # Seleccionar imagen
-    Seleccion=Etiquetas.index(Etiquetas[4])
+    Seleccion=Etiquetas.index(Etiquetas[3])
     X=[]
     # Leer imagenes desde una ubicación
     for i in Etiquetas:
