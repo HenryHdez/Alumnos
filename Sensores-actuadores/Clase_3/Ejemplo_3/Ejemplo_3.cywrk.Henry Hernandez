@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Ejemplo_3\Ejemplo_3\TopDesign">
+<ExpandedNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Pins</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Analog</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Clocks</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Interrupts</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\DMA</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\System</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Directives</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Flash Security</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\EEPROM</v>
+<v>Ejemplo_3\Ejemplo_3\Header Files</v>
+<v>Ejemplo_3\Ejemplo_3\Header Files\cyapicallbacks.h</v>
+<v>Ejemplo_3\Ejemplo_3\Source Files</v>
+<v>Ejemplo_3\Ejemplo_3\Source Files\main.c</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Pins</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Analog</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Clocks</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Interrupts</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\DMA</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\System</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Directives</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\Flash Security</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.cydwr\EEPROM</v>
+<v>Ejemplo_3\Ejemplo_3\Header Files</v>
+<v>Ejemplo_3\Ejemplo_3\Header Files\cyapicallbacks.h</v>
+<v>Ejemplo_3\Ejemplo_3\Source Files</v>
+<v>Ejemplo_3\Ejemplo_3\Source Files\main.c</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\ADC_SAR</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\ADC_SAR_IRQ</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\ADC_SAR_theACLK</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cy_boot</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\LCD</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\LCD_LCDPort</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\Pin_1</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\Pin_2</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\VDAC</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cydevice.h</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Ejemplo_3\Ejemplo_3\Generated_Source\PSoC5\cydeviceiar.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign</v>
+<v>Ejemplo_3\Ejemplo_3\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_INT.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_IRQ.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_theACLK.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.elf</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.hex</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.map</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.gpdsc</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.rpt</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_INT.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_IRQ.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_theACLK.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC_PM.lst</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.elf</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.hex</v>
+<v>Ejemplo_3\Ejemplo_3\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.map</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.gpdsc</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3.rpt</v>
+<v>Ejemplo_3\Ejemplo_3\Ejemplo_3_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\PSoC 5LP Architecture TRM</v>
+<v>Ejemplo_3\Ejemplo_3\CY8C58LP Family Datasheet</v>
+<v>Ejemplo_3\Ejemplo_3\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3</v>
+<v>Ejemplo_3\Ejemplo_3\PSoC 5LP Architecture TRM</v>
+<v>Ejemplo_3\Ejemplo_3\CY8C58LP Family Datasheet</v>
+<v>Ejemplo_3\Ejemplo_3\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Ejemplo_3.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1119, 523" SelectedTabbedMdiWindow="608fd330-ecd3-4667-b533-0712752dc263"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\TopDesign\TopDesign.cysch" Guid="608fd330-ecd3-4667-b533-0712752dc263" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

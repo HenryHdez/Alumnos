@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Ejemplo_1\Ejemplo_1\TopDesign">
+<ExpandedNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Pins</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Analog</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Clocks</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Interrupts</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\DMA</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\System</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Directives</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Flash Security</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\EEPROM</v>
+<v>Ejemplo_1\Ejemplo_1\Header Files</v>
+<v>Ejemplo_1\Ejemplo_1\Header Files\cyapicallbacks.h</v>
+<v>Ejemplo_1\Ejemplo_1\Source Files</v>
+<v>Ejemplo_1\Ejemplo_1\Source Files\main.c</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Pins</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Analog</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Clocks</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Interrupts</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\DMA</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\System</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Directives</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\Flash Security</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.cydwr\EEPROM</v>
+<v>Ejemplo_1\Ejemplo_1\Header Files</v>
+<v>Ejemplo_1\Ejemplo_1\Header Files\cyapicallbacks.h</v>
+<v>Ejemplo_1\Ejemplo_1\Source Files</v>
+<v>Ejemplo_1\Ejemplo_1\Source Files\main.c</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\A_1</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\A_2</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\B_2</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\B1</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\B2</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\B3</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\C1</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cy_boot</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\Ent</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\Sal</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cydevice.h</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Ejemplo_1\Ejemplo_1\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign</v>
+<v>Ejemplo_1\Ejemplo_1\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\A_1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\A_2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B_2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B3.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\C1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Ent.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Sal.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.elf</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.hex</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.map</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.gpdsc</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.rpt</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\A_1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\A_2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B_2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\B3.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\C1.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Ent.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Listing Files\Sal.lst</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.elf</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.hex</v>
+<v>Ejemplo_1\Ejemplo_1\CortexM3\ARM_GCC_541\Debug\Ejemplo_1.map</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.gpdsc</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1.rpt</v>
+<v>Ejemplo_1\Ejemplo_1\Ejemplo_1_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\PSoC 5LP Architecture TRM</v>
+<v>Ejemplo_1\Ejemplo_1\CY8C58LP Family Datasheet</v>
+<v>Ejemplo_1\Ejemplo_1\System Reference Guides</v>
+<v>Ejemplo_1\Ejemplo_1\System Reference Guides\cy_boot_v6_0</v>
+<v>Ejemplo_1\Ejemplo_1\and_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\cy_constant_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\cy_pins_v2_20</v>
+<v>Ejemplo_1\Ejemplo_1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\LUT_v1_60.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\not_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\or_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1</v>
+<v>Ejemplo_1\Ejemplo_1\PSoC 5LP Architecture TRM</v>
+<v>Ejemplo_1\Ejemplo_1\CY8C58LP Family Datasheet</v>
+<v>Ejemplo_1\Ejemplo_1\System Reference Guides</v>
+<v>Ejemplo_1\Ejemplo_1\System Reference Guides\cy_boot_v6_0</v>
+<v>Ejemplo_1\Ejemplo_1\and_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\cy_constant_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\cy_pins_v2_20</v>
+<v>Ejemplo_1\Ejemplo_1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\LUT_v1_60.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\not_v1_0.pdf</v>
+<v>Ejemplo_1\Ejemplo_1\or_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Ejemplo_1.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Ejemplo_1.cydsn\Ejemplo_1.cydwr" />
+<name v=".\Ejemplo_1.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1119, 523" SelectedTabbedMdiWindow="a883d647-81c7-4dcc-a7fe-9d6844821008"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_1\Ejemplo_1.cydsn\TopDesign\TopDesign.cysch" Guid="a883d647-81c7-4dcc-a7fe-9d6844821008" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_1\Ejemplo_1.cydsn\Ejemplo_1.cydwr" Guid="875a6f4f-d446-427c-b9a2-d71bf1547ed1" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_1\Ejemplo_1.cydsn\main.c" Guid="3132a139-bb2c-4c41-9b73-5643728ef497" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

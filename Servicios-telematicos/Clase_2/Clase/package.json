@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "clase": "file:",
     "cowsay": "^1.6.0",
     "express": "^4.18.2"
   },

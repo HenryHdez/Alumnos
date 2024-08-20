@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         double Resul=0;
         if(R1.isChecked()){
             Resul=N1+N2;
+            R1.setChecked(false);
         }
         else if(R2.isChecked()){
             Resul=N1-N2;
