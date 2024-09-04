@@ -1563,4 +1563,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.elf elf32-littlearm)
+OUTPUT(D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\CortexM3\ARM_GCC_541\Debug\Ejemplo_3.elf elf32-littlearm)

@@ -19,8 +19,9 @@ npm uninstall -g create-react-app
 #Ejemplo_5 (instalar en la carpeta)
 npx create-react-app ejemplo_5
 cd ejemplo_5
-npm start
 npm i bootstrap 
+npm start
+
 #importa bootstrap en el componente principal o en el que se requiera
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,5 +32,5 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 #Ejemplo_6 (Instalar dom router)
 npx create-react-app ejemplo_6
 cd ejemplo_6
-npm start
 npm install react-router-dom
+npm start

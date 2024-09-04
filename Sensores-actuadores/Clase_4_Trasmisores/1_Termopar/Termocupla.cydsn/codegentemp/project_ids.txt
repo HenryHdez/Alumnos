@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ee19210f-3655-46f6-b7ea-d95b039c0e3b
+C:\Users\Henry Hernandez\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7d583ae3-3669-4094-b781-9739d21cd653
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|96d70309-0840-4de2-b26a-ebc24b41c2b4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a1a4bdc2-abfb-496f-b715-69af3611e851
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a63214e4-b122-4670-9a7a-6df99e2696fd
+D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termocupla.cydsn\Termocupla.cyprj|a9725a57-3739-439b-b9b6-2fc2174d1ccd

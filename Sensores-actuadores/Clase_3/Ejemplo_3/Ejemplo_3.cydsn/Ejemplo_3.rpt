@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.140ms
+Loading plugins phase: Elapsed time ==> 0s.156ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -d CY8C5868AXI-LP035 -s C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -d CY8C5868AXI-LP035 -s D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.083ms
+Elaboration phase: Elapsed time ==> 1s.328ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.023ms
+HDL generation phase: Elapsed time ==> 0s.031ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.023ms
 ======================================================================
 Compiling:  Ejemplo_3.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 Ejemplo_3.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 Ejemplo_3.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Ejemplo_3.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 Ejemplo_3.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 Ejemplo_3.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Ejemplo_3.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Aug 19 20:20:27 2024
+Tue Aug 20 19:05:49 2024
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Ejemplo_3.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Aug 19 20:20:27 2024
+Tue Aug 20 19:05:49 2024
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -82,11 +82,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Ejemplo_3.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Aug 19 20:20:27 2024
+Tue Aug 20 19:05:50 2024
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -97,9 +97,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.ctl'.
+Linking 'D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.v'.
+Linking 'D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.v'.
@@ -112,11 +112,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Ejemplo_3.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 -verilog Ejemplo_3.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Aug 19 20:20:27 2024
+Tue Aug 20 19:05:50 2024
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -127,9 +127,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.ctl'.
+Linking 'D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.v'.
+Linking 'D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\codegentemp\Ejemplo_3.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.v'.
@@ -251,13 +251,13 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj" -dcpsoc3 Ejemplo_3.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -dcpsoc3 Ejemplo_3.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.306ms
+Warp synthesis phase: Elapsed time ==> 0s.328ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 19 August 2024 20:20:27
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Hernandez\Documents\PSoC Creator\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -d CY8C5868AXI-LP035 Ejemplo_3.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 20 August 2024 19:05:50
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cyprj -d CY8C5868AXI-LP035 Ejemplo_3.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
 Design parsing phase: Elapsed time ==> 0s.015ms
@@ -710,7 +710,7 @@ DAC                           :      :      :      :
   VIDAC                       :    1 :    3 :    4 : 25.00 %
 </CYPRESSTAG>
 Technology Mapping: Elapsed time ==> 0s.015ms
-Tech Mapping phase: Elapsed time ==> 0s.078ms
+Tech Mapping phase: Elapsed time ==> 0s.093ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -742,10 +742,10 @@ SAR[0]@[FFB(SAR,0)] : \ADC_SAR:ADC_SAR\
 Vref[13]@[FFB(Vref,13)] : \ADC_SAR:vRef_Vdda_1\
 VIDAC[2]@[FFB(VIDAC,2)] : \VDAC:viDAC8\
 
-Analog Placement phase: Elapsed time ==> 0s.360ms
+Analog Placement phase: Elapsed time ==> 0s.406ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.000ms
+Analog Routing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -808,12 +808,12 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = True
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.219ms
+Analog Code Generation phase: Elapsed time ==> 0s.187ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.4 sec.
+I2076: Total run-time: 0.5 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -827,7 +827,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.015ms
+Partitioning: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1374,32 +1374,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connectio
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.015ms
-Digital Placement phase: Elapsed time ==> 0s.659ms
+Digital Placement phase: Elapsed time ==> 0s.671ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Ejemplo_3_r.vh2" --pcf-path "Ejemplo_3.pco" --des-name "Ejemplo_3" --dsf-path "Ejemplo_3.dsf" --sdc-path "Ejemplo_3.sdc" --lib-path "Ejemplo_3_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.957ms
+Digital Routing phase: Elapsed time ==> 0s.953ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.157ms
+Bitstream Generation phase: Elapsed time ==> 0s.171ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.015ms
+Bitstream Verification phase: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Ejemplo_3_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.188ms
+Static timing analysis phase: Elapsed time ==> 0s.171ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.141ms
+Design database save phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.856ms
+cydsfit: Elapsed time ==> 2s.921ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.856ms
-API generation phase: Elapsed time ==> 0s.878ms
-Dependency generation phase: Elapsed time ==> 0s.015ms
+Fitter phase: Elapsed time ==> 2s.921ms
+API generation phase: Elapsed time ==> 1s.687ms
+Dependency generation phase: Elapsed time ==> 0s.000ms
 Cleanup phase: Elapsed time ==> 0s.000ms

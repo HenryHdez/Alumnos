@@ -1,0 +1,14 @@
+--------------- Build Started: 09/02/2024 11:47:32 Project: Termistor, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+The compile step is up to date, no work needs to be done.
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Termistor.a .\CortexM3\ARM_GCC_541\Debug\ADC.o .\CortexM3\ARM_GCC_541\Debug\ADC_PM.o .\CortexM3\ARM_GCC_541\Debug\ADC_INT.o .\CortexM3\ARM_GCC_541\Debug\AMux_1.o .\CortexM3\ARM_GCC_541\Debug\LCD.o .\CortexM3\ARM_GCC_541\Debug\LCD_PM.o .\CortexM3\ARM_GCC_541\Debug\Termistor.o .\CortexM3\ARM_GCC_541\Debug\V_Nodo.o .\CortexM3\ARM_GCC_541\Debug\V1.o .\CortexM3\ARM_GCC_541\Debug\V2.o .\CortexM3\ARM_GCC_541\Debug\ADC_Ext_CP_Clk.o .\CortexM3\ARM_GCC_541\Debug\ADC_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_theACLK.o .\CortexM3\ARM_GCC_541\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Termistor.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\CortexM3\ARM_GCC_541\Debug\Termistor.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Termistor.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Termistor.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\CortexM3\ARM_GCC_541\Debug\Termistor.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\CortexM3\ARM_GCC_541\Debug\Termistor.elf
+Flash used: 15700 of 262144 bytes (6,0 %).
+SRAM used: 2585 of 65536 bytes (3,9 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 09/02/2024 11:47:33 ---------------

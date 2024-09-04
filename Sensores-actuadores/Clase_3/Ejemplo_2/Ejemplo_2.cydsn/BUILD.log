@@ -1,4 +1,4 @@
---------------- Build Started: 08/19/2024 19:45:13 Project: Ejemplo_2, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 08/20/2024 18:50:03 Project: Ejemplo_2, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\Henry Hernandez\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_2\Ejemplo_2.cydsn\Ejemplo_2.cyprj -d CY8C5868AXI-LP035 -s D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_2\Ejemplo_2.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation...
@@ -31,6 +31,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_2\Ejemplo_2.cydsn\CortexM3\ARM_GCC_541\Debug\Ejemplo_2.elf
-Flash used: 1454 of 262144 bytes (0,6 %).
+Flash used: 1582 of 262144 bytes (0,6 %).
 SRAM used: 2505 of 65536 bytes (3,8 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 08/19/2024 19:45:21 ---------------
+--------------- Build Succeeded: 08/20/2024 18:50:25 ---------------

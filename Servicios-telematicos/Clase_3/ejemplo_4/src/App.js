@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Formulario from './Formulario';
 import Visualizacion from './Visualizacion';
-//import Slider from './Barra'
+import Slider from './Barra'
 
 function App() {
   //Elementos del formulario

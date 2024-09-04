@@ -179,6 +179,12 @@
 <v>Ejemplo_3\Ejemplo_3\PSoC 5LP Architecture TRM</v>
 <v>Ejemplo_3\Ejemplo_3\CY8C58LP Family Datasheet</v>
 <v>Ejemplo_3\Ejemplo_3\System Reference Guides</v>
+<v>Ejemplo_3\Ejemplo_3\System Reference Guides\cy_boot_v6_0</v>
+<v>Ejemplo_3\Ejemplo_3\ADC_SAR_v3_10.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\CharLCD_v2_20.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\cy_pins_v2_20</v>
+<v>Ejemplo_3\Ejemplo_3\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\VDAC8_v1_90.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Ejemplo_3</v>
@@ -186,6 +192,12 @@
 <v>Ejemplo_3\Ejemplo_3\PSoC 5LP Architecture TRM</v>
 <v>Ejemplo_3\Ejemplo_3\CY8C58LP Family Datasheet</v>
 <v>Ejemplo_3\Ejemplo_3\System Reference Guides</v>
+<v>Ejemplo_3\Ejemplo_3\System Reference Guides\cy_boot_v6_0</v>
+<v>Ejemplo_3\Ejemplo_3\ADC_SAR_v3_10.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\CharLCD_v2_20.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\cy_pins_v2_20</v>
+<v>Ejemplo_3\Ejemplo_3\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Ejemplo_3\Ejemplo_3\VDAC8_v1_90.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -196,6 +208,8 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Ejemplo_3.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Ejemplo_3.cydsn\main.c" />
+<name v=".\Ejemplo_3.cydsn\Ejemplo_3.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -203,7 +217,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1119, 523" SelectedTabbedMdiWindow="608fd330-ecd3-4667-b533-0712752dc263"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\TopDesign\TopDesign.cysch" Guid="608fd330-ecd3-4667-b533-0712752dc263" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1119, 523" SelectedTabbedMdiWindow="608fd330-ecd3-4667-b533-0712752dc263"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\TopDesign\TopDesign.cysch" Guid="608fd330-ecd3-4667-b533-0712752dc263" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\main.c" Guid="c0a7151b-7d71-4823-bcda-faf9fe22e698" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_3\Ejemplo_3\Ejemplo_3.cydsn\Ejemplo_3.cydwr" Guid="f233554a-300a-4849-9d27-c1e8d0622ff2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -1,0 +1,66 @@
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_Ext_CP_Clk.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_IRQ.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_theACLK.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyDmac.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyFlash.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyLib.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CySpc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T1.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T1_aliases.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T2.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T2_aliases.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/Termocupla.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_armcc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_compiler.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_gcc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/core_cm3.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyPm.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydevice.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyfitter.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cypins.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cytypes.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/project.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/main.c 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_Ext_CP_Clk.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_IRQ.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/ADC_theACLK.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T1.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T1_aliases.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T2.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/T2_aliases.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/Termocupla.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/Generated_Source/PSoC5/project.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_4_Trasmisores/1_Termopar/Termocupla.cydsn/main.c : 
+

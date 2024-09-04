@@ -1,0 +1,2392 @@
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Termocupla.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Termocupla_MultShift24,"ax",%progbits
+  20              		.align	2
+  21              		.global	Termocupla_MultShift24
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Termocupla_MultShift24, %function
+  25              	Termocupla_MultShift24:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Termocupla.c"
+   1:Generated_Source\PSoC5/Termocupla.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Termocupla.c **** * File Name: Termocupla.c
+   3:Generated_Source\PSoC5/Termocupla.c **** * Version 1.20
+   4:Generated_Source\PSoC5/Termocupla.c **** *
+   5:Generated_Source\PSoC5/Termocupla.c **** * Description:
+   6:Generated_Source\PSoC5/Termocupla.c **** *  This file provides the source code to the API for the Termocupla
+   7:Generated_Source\PSoC5/Termocupla.c **** *  component
+   8:Generated_Source\PSoC5/Termocupla.c **** *
+   9:Generated_Source\PSoC5/Termocupla.c **** * Note:
+  10:Generated_Source\PSoC5/Termocupla.c **** *  None
+  11:Generated_Source\PSoC5/Termocupla.c **** *
+  12:Generated_Source\PSoC5/Termocupla.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/Termocupla.c **** * Copyright 2012-2013, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC5/Termocupla.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC5/Termocupla.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC5/Termocupla.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/Termocupla.c **** *******************************************************************************/
+  18:Generated_Source\PSoC5/Termocupla.c **** 
+  19:Generated_Source\PSoC5/Termocupla.c **** #include "Termocupla.h"
+  20:Generated_Source\PSoC5/Termocupla.c **** 
+  21:Generated_Source\PSoC5/Termocupla.c **** #if(!CY_PSOC3)
+  22:Generated_Source\PSoC5/Termocupla.c **** 
+  23:Generated_Source\PSoC5/Termocupla.c ****     /*******************************************************************************
+  24:Generated_Source\PSoC5/Termocupla.c ****     * Function Name: Termocupla_MultShift24
+  25:Generated_Source\PSoC5/Termocupla.c ****     ********************************************************************************
+  26:Generated_Source\PSoC5/Termocupla.c ****     *
+  27:Generated_Source\PSoC5/Termocupla.c ****     * Summary:
+  28:Generated_Source\PSoC5/Termocupla.c ****     *  Performs the math function (op1 * op2) >> 24 using 64 bit arithmetic without
+  29:Generated_Source\PSoC5/Termocupla.c ****     *  any loss of precision and without overflow.
+  30:Generated_Source\PSoC5/Termocupla.c ****     *
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Termocupla.c ****     * Parameters:
+  32:Generated_Source\PSoC5/Termocupla.c ****     *  op1: Signed 32-bit operand
+  33:Generated_Source\PSoC5/Termocupla.c ****     *  op2: Signed 24-bit operand
+  34:Generated_Source\PSoC5/Termocupla.c ****     *
+  35:Generated_Source\PSoC5/Termocupla.c ****     * Return:
+  36:Generated_Source\PSoC5/Termocupla.c ****     *  Signed 32-bit result of the math calculation
+  37:Generated_Source\PSoC5/Termocupla.c ****     *
+  38:Generated_Source\PSoC5/Termocupla.c ****     *******************************************************************************/
+  39:Generated_Source\PSoC5/Termocupla.c ****     int32 Termocupla_MultShift24(int32 op1, int32 op2) 
+  40:Generated_Source\PSoC5/Termocupla.c ****     {
+  28              		.loc 1 40 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  34 0000 30B4     		push	{r4, r5}
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 4, -8
+  37              		.cfi_offset 5, -4
+  38              	.LVL1:
+  41:Generated_Source\PSoC5/Termocupla.c ****         int64 result=0;
+  42:Generated_Source\PSoC5/Termocupla.c **** 
+  43:Generated_Source\PSoC5/Termocupla.c ****         result = (int64)op1 * (int64)op2;
+  39              		.loc 1 43 0
+  40 0002 C517     		asrs	r5, r0, #31
+  41 0004 CB17     		asrs	r3, r1, #31
+  42 0006 00FB03F3 		mul	r3, r0, r3
+  43 000a 01FB0533 		mla	r3, r1, r5, r3
+  44 000e A0FB0101 		umull	r0, r1, r0, r1
+  45              	.LVL2:
+  46 0012 1944     		add	r1, r1, r3
+  47              	.LVL3:
+  44:Generated_Source\PSoC5/Termocupla.c ****         if (result < 0)
+  48              		.loc 1 44 0
+  49 0014 0028     		cmp	r0, #0
+  50 0016 71F10003 		sbcs	r3, r1, #0
+  51 001a 07DA     		bge	.L2
+  45:Generated_Source\PSoC5/Termocupla.c ****         {
+  46:Generated_Source\PSoC5/Termocupla.c ****             result = -result;
+  52              		.loc 1 46 0
+  53 001c 4042     		rsbs	r0, r0, #0
+  54              	.LVL4:
+  55 001e 61EB4101 		sbc	r1, r1, r1, lsl #1
+  56              	.LVL5:
+  47:Generated_Source\PSoC5/Termocupla.c ****             result = (int32)((uint64)((uint64)result >> Termocupla_24BIT_SHIFTING));
+  57              		.loc 1 47 0
+  58 0022 000E     		lsrs	r0, r0, #24
+  59              	.LVL6:
+  60 0024 40EA0120 		orr	r0, r0, r1, lsl #8
+  61              	.LVL7:
+  48:Generated_Source\PSoC5/Termocupla.c ****             result = -result;
+  62              		.loc 1 48 0
+  63 0028 4042     		rsbs	r0, r0, #0
+  64              	.LVL8:
+  65 002a 02E0     		b	.L3
+  66              	.LVL9:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 3
+
+
+  67              	.L2:
+  49:Generated_Source\PSoC5/Termocupla.c ****         }
+  50:Generated_Source\PSoC5/Termocupla.c ****         else
+  51:Generated_Source\PSoC5/Termocupla.c ****         {
+  52:Generated_Source\PSoC5/Termocupla.c ****             result = (int32)((uint64)((uint64)result >> Termocupla_24BIT_SHIFTING));
+  68              		.loc 1 52 0
+  69 002c 000E     		lsrs	r0, r0, #24
+  70              	.LVL10:
+  71 002e 40EA0120 		orr	r0, r0, r1, lsl #8
+  72              	.LVL11:
+  73              	.L3:
+  53:Generated_Source\PSoC5/Termocupla.c ****         }
+  54:Generated_Source\PSoC5/Termocupla.c ****         return (result);
+  55:Generated_Source\PSoC5/Termocupla.c ****     }        
+  74              		.loc 1 55 0
+  75 0032 30BC     		pop	{r4, r5}
+  76              		.cfi_restore 5
+  77              		.cfi_restore 4
+  78              		.cfi_def_cfa_offset 0
+  79 0034 7047     		bx	lr
+  80              		.cfi_endproc
+  81              	.LFE0:
+  82              		.size	Termocupla_MultShift24, .-Termocupla_MultShift24
+  83 0036 00BF     		.section	.text.Termocupla_GetTemperature,"ax",%progbits
+  84              		.align	2
+  85              		.global	Termocupla_GetTemperature
+  86              		.thumb
+  87              		.thumb_func
+  88              		.type	Termocupla_GetTemperature, %function
+  89              	Termocupla_GetTemperature:
+  90              	.LFB1:
+  56:Generated_Source\PSoC5/Termocupla.c **** #endif /* End (!CY_PSOC3) */
+  57:Generated_Source\PSoC5/Termocupla.c **** 
+  58:Generated_Source\PSoC5/Termocupla.c **** 
+  59:Generated_Source\PSoC5/Termocupla.c **** /*******************************************************************************
+  60:Generated_Source\PSoC5/Termocupla.c **** * Function Name: Termocupla_GetTemperature
+  61:Generated_Source\PSoC5/Termocupla.c **** ********************************************************************************
+  62:Generated_Source\PSoC5/Termocupla.c **** *
+  63:Generated_Source\PSoC5/Termocupla.c **** * Summary:
+  64:Generated_Source\PSoC5/Termocupla.c **** *  This function takes thermocouple voltage in microvolt as i/p and calculates
+  65:Generated_Source\PSoC5/Termocupla.c **** *  temperature corresponding to the thermocouple voltage. The order of the
+  66:Generated_Source\PSoC5/Termocupla.c **** *  polynomial and the polynomial coefficients used to convert voltage to
+  67:Generated_Source\PSoC5/Termocupla.c **** *  temperature are dependent on the type of thermocouple selected.
+  68:Generated_Source\PSoC5/Termocupla.c **** *
+  69:Generated_Source\PSoC5/Termocupla.c **** * Parameters:
+  70:Generated_Source\PSoC5/Termocupla.c **** *  int32 voltage : Thermocouple voltage measured in microvolts.
+  71:Generated_Source\PSoC5/Termocupla.c **** *
+  72:Generated_Source\PSoC5/Termocupla.c **** * Return:
+  73:Generated_Source\PSoC5/Termocupla.c **** *  int32 : Temperature in 1/100 degree C
+  74:Generated_Source\PSoC5/Termocupla.c **** *
+  75:Generated_Source\PSoC5/Termocupla.c **** *******************************************************************************/
+  76:Generated_Source\PSoC5/Termocupla.c **** int32 Termocupla_GetTemperature(int32 voltage) 
+  77:Generated_Source\PSoC5/Termocupla.c **** 
+  78:Generated_Source\PSoC5/Termocupla.c **** #if(CY_PSOC3)
+  79:Generated_Source\PSoC5/Termocupla.c **** {
+  80:Generated_Source\PSoC5/Termocupla.c **** 
+  81:Generated_Source\PSoC5/Termocupla.c ****     /***************************************
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 4
+
+
+  82:Generated_Source\PSoC5/Termocupla.c ****     *  Customizer Generated Coefficients
+  83:Generated_Source\PSoC5/Termocupla.c ****     ***************************************/
+  84:Generated_Source\PSoC5/Termocupla.c ****     const int32 CYCODE Termocupla_coeffVT[][3] = {{0, 0, -1687114},
+  85:Generated_Source\PSoC5/Termocupla.c ****                                               {2639629, 164388, 40518839},
+  86:Generated_Source\PSoC5/Termocupla.c ****                                               {-1001834, 16879, -90491511},
+  87:Generated_Source\PSoC5/Termocupla.c ****                                               {-7623495, -1761422, 196887684},
+  88:Generated_Source\PSoC5/Termocupla.c ****                                               {-51750922, 19173707, -227871065},
+  89:Generated_Source\PSoC5/Termocupla.c ****                                               {-176344390, -92787626, 136207339},
+  90:Generated_Source\PSoC5/Termocupla.c ****                                               {-335143805, 242736174, -31547361},
+  91:Generated_Source\PSoC5/Termocupla.c ****                                               {-331192671, -358027528, 0},
+  92:Generated_Source\PSoC5/Termocupla.c ****                                               {-134793524, 281193929, 0},
+  93:Generated_Source\PSoC5/Termocupla.c ****                                               {0, -91707895, 0}};
+  94:Generated_Source\PSoC5/Termocupla.c **** 
+  95:Generated_Source\PSoC5/Termocupla.c **** const int32 CYCODE Termocupla_voltRange[2] = {0, 20644};
+  96:Generated_Source\PSoC5/Termocupla.c **** 
+  97:Generated_Source\PSoC5/Termocupla.c **** const int8 CYCODE Termocupla_xScaleVT[3] = {13, 15, 16};
+  98:Generated_Source\PSoC5/Termocupla.c **** const int8 CYCODE Termocupla_coefScaleVT[3] = {7, 1, 7};
+  99:Generated_Source\PSoC5/Termocupla.c **** 
+ 100:Generated_Source\PSoC5/Termocupla.c ****     /* Variable to store temperature */
+ 101:Generated_Source\PSoC5/Termocupla.c ****     float32 temp=0.0f;
+ 102:Generated_Source\PSoC5/Termocupla.c ****     float32 voltageNorm=0.0f;
+ 103:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 104:Generated_Source\PSoC5/Termocupla.c **** 
+ 105:Generated_Source\PSoC5/Termocupla.c ****     #if (Termocupla_VT_RANGE_LEN == Termocupla_THREE)
+ 106:Generated_Source\PSoC5/Termocupla.c ****     {
+ 107:Generated_Source\PSoC5/Termocupla.c ****         voltageNorm = (float32)voltage;
+ 108:Generated_Source\PSoC5/Termocupla.c **** 
+ 109:Generated_Source\PSoC5/Termocupla.c ****         if(voltage < Termocupla_voltRange[Termocupla_RANGE_MAS_0] )
+ 110:Generated_Source\PSoC5/Termocupla.c ****         {
+ 111:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 112:Generated_Source\PSoC5/Termocupla.c ****             {
+ 113:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_0]) * voltageNorm;
+ 114:Generated_Source\PSoC5/Termocupla.c ****             }
+ 115:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]);
+ 116:Generated_Source\PSoC5/Termocupla.c ****         }
+ 117:Generated_Source\PSoC5/Termocupla.c **** 
+ 118:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_1] )
+ 119:Generated_Source\PSoC5/Termocupla.c ****         {
+ 120:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 121:Generated_Source\PSoC5/Termocupla.c ****             {
+ 122:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_1]) * voltageNorm;
+ 123:Generated_Source\PSoC5/Termocupla.c ****             }
+ 124:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]);
+ 125:Generated_Source\PSoC5/Termocupla.c ****         }
+ 126:Generated_Source\PSoC5/Termocupla.c **** 
+ 127:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_2] )
+ 128:Generated_Source\PSoC5/Termocupla.c ****         {
+ 129:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 130:Generated_Source\PSoC5/Termocupla.c ****             {
+ 131:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_2]) * voltageNorm;
+ 132:Generated_Source\PSoC5/Termocupla.c ****             }
+ 133:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]);
+ 134:Generated_Source\PSoC5/Termocupla.c ****         }
+ 135:Generated_Source\PSoC5/Termocupla.c **** 
+ 136:Generated_Source\PSoC5/Termocupla.c ****         else
+ 137:Generated_Source\PSoC5/Termocupla.c ****         {
+ 138:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 5
+
+
+ 139:Generated_Source\PSoC5/Termocupla.c ****             {
+ 140:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_3]) * voltageNorm;
+ 141:Generated_Source\PSoC5/Termocupla.c ****             }
+ 142:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_3]);
+ 143:Generated_Source\PSoC5/Termocupla.c ****         }
+ 144:Generated_Source\PSoC5/Termocupla.c ****     }
+ 145:Generated_Source\PSoC5/Termocupla.c **** 
+ 146:Generated_Source\PSoC5/Termocupla.c ****     #else
+ 147:Generated_Source\PSoC5/Termocupla.c ****     {
+ 148:Generated_Source\PSoC5/Termocupla.c ****         voltageNorm = (float32)voltage;
+ 149:Generated_Source\PSoC5/Termocupla.c **** 
+ 150:Generated_Source\PSoC5/Termocupla.c ****         if(voltage < Termocupla_voltRange[Termocupla_RANGE_MAS_0] )
+ 151:Generated_Source\PSoC5/Termocupla.c ****         {
+ 152:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 153:Generated_Source\PSoC5/Termocupla.c ****             {
+ 154:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_0]) * voltageNorm;
+ 155:Generated_Source\PSoC5/Termocupla.c ****             }
+ 156:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]);
+ 157:Generated_Source\PSoC5/Termocupla.c ****         }
+ 158:Generated_Source\PSoC5/Termocupla.c **** 
+ 159:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_1] )
+ 160:Generated_Source\PSoC5/Termocupla.c ****         {
+ 161:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 162:Generated_Source\PSoC5/Termocupla.c ****             {
+ 163:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_1]) * voltageNorm;
+ 164:Generated_Source\PSoC5/Termocupla.c ****             }
+ 165:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]);
+ 166:Generated_Source\PSoC5/Termocupla.c ****         }
+ 167:Generated_Source\PSoC5/Termocupla.c **** 
+ 168:Generated_Source\PSoC5/Termocupla.c ****         else
+ 169:Generated_Source\PSoC5/Termocupla.c ****         {
+ 170:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 171:Generated_Source\PSoC5/Termocupla.c ****             {
+ 172:Generated_Source\PSoC5/Termocupla.c ****                 temp = (temp + Termocupla_coeffVT[i][Termocupla_RANGE_MAS_2]) * voltageNorm;
+ 173:Generated_Source\PSoC5/Termocupla.c ****             }
+ 174:Generated_Source\PSoC5/Termocupla.c ****             temp = (temp + Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]);
+ 175:Generated_Source\PSoC5/Termocupla.c ****         }
+ 176:Generated_Source\PSoC5/Termocupla.c ****     }
+ 177:Generated_Source\PSoC5/Termocupla.c **** 
+ 178:Generated_Source\PSoC5/Termocupla.c ****     #endif /* End  Termocupla_VT_RANGE_LEN == Termocupla_THREE */
+ 179:Generated_Source\PSoC5/Termocupla.c **** 
+ 180:Generated_Source\PSoC5/Termocupla.c ****     return ((int32)(temp));
+ 181:Generated_Source\PSoC5/Termocupla.c **** }
+ 182:Generated_Source\PSoC5/Termocupla.c **** #else
+ 183:Generated_Source\PSoC5/Termocupla.c **** {
+  91              		.loc 1 183 0
+  92              		.cfi_startproc
+  93              		@ args = 0, pretend = 0, frame = 120
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95              	.LVL12:
+  96 0000 30B5     		push	{r4, r5, lr}
+  97              		.cfi_def_cfa_offset 12
+  98              		.cfi_offset 4, -12
+  99              		.cfi_offset 5, -8
+ 100              		.cfi_offset 14, -4
+ 101 0002 9FB0     		sub	sp, sp, #124
+ 102              		.cfi_def_cfa_offset 136
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 6
+
+
+ 103 0004 0446     		mov	r4, r0
+ 184:Generated_Source\PSoC5/Termocupla.c **** 
+ 185:Generated_Source\PSoC5/Termocupla.c ****     /***************************************
+ 186:Generated_Source\PSoC5/Termocupla.c ****     *  Customizer Generated Coefficients
+ 187:Generated_Source\PSoC5/Termocupla.c ****     ***************************************/
+ 188:Generated_Source\PSoC5/Termocupla.c ****     const int32 CYCODE Termocupla_coeffVT[][3] = {{0, 0, -1687114},
+ 104              		.loc 1 188 0
+ 105 0006 7822     		movs	r2, #120
+ 106 0008 3249     		ldr	r1, .L22
+ 107 000a 6846     		mov	r0, sp
+ 108              	.LVL13:
+ 109 000c FFF7FEFF 		bl	memcpy
+ 110              	.LVL14:
+ 189:Generated_Source\PSoC5/Termocupla.c ****                                               {2639629, 164388, 40518839},
+ 190:Generated_Source\PSoC5/Termocupla.c ****                                               {-1001834, 16879, -90491511},
+ 191:Generated_Source\PSoC5/Termocupla.c ****                                               {-7623495, -1761422, 196887684},
+ 192:Generated_Source\PSoC5/Termocupla.c ****                                               {-51750922, 19173707, -227871065},
+ 193:Generated_Source\PSoC5/Termocupla.c ****                                               {-176344390, -92787626, 136207339},
+ 194:Generated_Source\PSoC5/Termocupla.c ****                                               {-335143805, 242736174, -31547361},
+ 195:Generated_Source\PSoC5/Termocupla.c ****                                               {-331192671, -358027528, 0},
+ 196:Generated_Source\PSoC5/Termocupla.c ****                                               {-134793524, 281193929, 0},
+ 197:Generated_Source\PSoC5/Termocupla.c ****                                               {0, -91707895, 0}};
+ 198:Generated_Source\PSoC5/Termocupla.c **** 
+ 199:Generated_Source\PSoC5/Termocupla.c **** const int32 CYCODE Termocupla_voltRange[2] = {0, 20644};
+ 200:Generated_Source\PSoC5/Termocupla.c **** 
+ 201:Generated_Source\PSoC5/Termocupla.c **** const int8 CYCODE Termocupla_xScaleVT[3] = {13, 15, 16};
+ 202:Generated_Source\PSoC5/Termocupla.c **** const int8 CYCODE Termocupla_coefScaleVT[3] = {7, 1, 7};
+ 203:Generated_Source\PSoC5/Termocupla.c **** 
+ 204:Generated_Source\PSoC5/Termocupla.c ****     /* Variable to store temperature */
+ 205:Generated_Source\PSoC5/Termocupla.c ****     int32 temp=0;
+ 206:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 207:Generated_Source\PSoC5/Termocupla.c **** 
+ 208:Generated_Source\PSoC5/Termocupla.c ****     #if (Termocupla_VT_RANGE_LEN == Termocupla_THREE)
+ 209:Generated_Source\PSoC5/Termocupla.c ****     {
+ 210:Generated_Source\PSoC5/Termocupla.c ****         if(voltage < Termocupla_voltRange[Termocupla_RANGE_MAS_0] )
+ 211:Generated_Source\PSoC5/Termocupla.c ****         {
+ 212:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 213:Generated_Source\PSoC5/Termocupla.c ****             {
+ 214:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 215:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 216:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 217:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_0])));
+ 218:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 219:Generated_Source\PSoC5/Termocupla.c ****             }
+ 220:Generated_Source\PSoC5/Termocupla.c ****             else
+ 221:Generated_Source\PSoC5/Termocupla.c ****             {
+ 222:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 223:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 224:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_0])));
+ 225:Generated_Source\PSoC5/Termocupla.c ****             }            
+ 226:Generated_Source\PSoC5/Termocupla.c **** 
+ 227:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 228:Generated_Source\PSoC5/Termocupla.c ****             {
+ 229:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_0] +
+ 230:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 231:Generated_Source\PSoC5/Termocupla.c ****             }
+ 232:Generated_Source\PSoC5/Termocupla.c **** 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 7
+
+
+ 233:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0] < 0)
+ 234:Generated_Source\PSoC5/Termocupla.c ****             {
+ 235:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 236:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]) << 
+ 237:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0]));
+ 238:Generated_Source\PSoC5/Termocupla.c ****             }
+ 239:Generated_Source\PSoC5/Termocupla.c **** 
+ 240:Generated_Source\PSoC5/Termocupla.c ****             else
+ 241:Generated_Source\PSoC5/Termocupla.c ****             {
+ 242:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 243:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]) >> 
+ 244:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0]));
+ 245:Generated_Source\PSoC5/Termocupla.c ****             }
+ 246:Generated_Source\PSoC5/Termocupla.c ****         }
+ 247:Generated_Source\PSoC5/Termocupla.c **** 
+ 248:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_1] )
+ 249:Generated_Source\PSoC5/Termocupla.c ****         {
+ 250:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 251:Generated_Source\PSoC5/Termocupla.c ****             {
+ 252:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 253:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 254:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 255:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_1])));
+ 256:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 257:Generated_Source\PSoC5/Termocupla.c ****             }
+ 258:Generated_Source\PSoC5/Termocupla.c ****             else
+ 259:Generated_Source\PSoC5/Termocupla.c ****             {
+ 260:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 261:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 262:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_1])));
+ 263:Generated_Source\PSoC5/Termocupla.c ****             }              
+ 264:Generated_Source\PSoC5/Termocupla.c ****             
+ 265:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 266:Generated_Source\PSoC5/Termocupla.c ****             {
+ 267:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_1] +
+ 268:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 269:Generated_Source\PSoC5/Termocupla.c ****             }
+ 270:Generated_Source\PSoC5/Termocupla.c **** 
+ 271:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1] < 0)
+ 272:Generated_Source\PSoC5/Termocupla.c ****             {
+ 273:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 274:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]) << 
+ 275:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1]));
+ 276:Generated_Source\PSoC5/Termocupla.c ****             }
+ 277:Generated_Source\PSoC5/Termocupla.c **** 
+ 278:Generated_Source\PSoC5/Termocupla.c ****             else
+ 279:Generated_Source\PSoC5/Termocupla.c ****             {
+ 280:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 281:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]) >> 
+ 282:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1]));
+ 283:Generated_Source\PSoC5/Termocupla.c ****             }
+ 284:Generated_Source\PSoC5/Termocupla.c **** 
+ 285:Generated_Source\PSoC5/Termocupla.c ****         }
+ 286:Generated_Source\PSoC5/Termocupla.c **** 
+ 287:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_2] )
+ 288:Generated_Source\PSoC5/Termocupla.c ****         {
+ 289:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 8
+
+
+ 290:Generated_Source\PSoC5/Termocupla.c ****             {
+ 291:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 292:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 293:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 294:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_2])));
+ 295:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 296:Generated_Source\PSoC5/Termocupla.c ****             }
+ 297:Generated_Source\PSoC5/Termocupla.c ****             else
+ 298:Generated_Source\PSoC5/Termocupla.c ****             {
+ 299:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 300:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 301:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_2])));
+ 302:Generated_Source\PSoC5/Termocupla.c ****             }              
+ 303:Generated_Source\PSoC5/Termocupla.c **** 
+ 304:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 305:Generated_Source\PSoC5/Termocupla.c ****             {
+ 306:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_2] +
+ 307:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 308:Generated_Source\PSoC5/Termocupla.c ****             }
+ 309:Generated_Source\PSoC5/Termocupla.c **** 
+ 310:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2] < 0)
+ 311:Generated_Source\PSoC5/Termocupla.c ****             {
+ 312:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 313:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]) << 
+ 314:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2]));
+ 315:Generated_Source\PSoC5/Termocupla.c ****             }
+ 316:Generated_Source\PSoC5/Termocupla.c **** 
+ 317:Generated_Source\PSoC5/Termocupla.c ****             else
+ 318:Generated_Source\PSoC5/Termocupla.c ****             {
+ 319:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 320:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]) >> 
+ 321:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2]));
+ 322:Generated_Source\PSoC5/Termocupla.c ****             }
+ 323:Generated_Source\PSoC5/Termocupla.c ****         }
+ 324:Generated_Source\PSoC5/Termocupla.c **** 
+ 325:Generated_Source\PSoC5/Termocupla.c ****         else
+ 326:Generated_Source\PSoC5/Termocupla.c ****         {
+ 327:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 328:Generated_Source\PSoC5/Termocupla.c ****             {
+ 329:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 330:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 331:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 332:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_3])));
+ 333:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 334:Generated_Source\PSoC5/Termocupla.c ****             }
+ 335:Generated_Source\PSoC5/Termocupla.c ****             else
+ 336:Generated_Source\PSoC5/Termocupla.c ****             {
+ 337:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 338:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 339:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_3])));
+ 340:Generated_Source\PSoC5/Termocupla.c ****             }              
+ 341:Generated_Source\PSoC5/Termocupla.c **** 
+ 342:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 343:Generated_Source\PSoC5/Termocupla.c ****             {
+ 344:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_3] +
+ 345:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 346:Generated_Source\PSoC5/Termocupla.c ****             }
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 9
+
+
+ 347:Generated_Source\PSoC5/Termocupla.c **** 
+ 348:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_3] < 0)
+ 349:Generated_Source\PSoC5/Termocupla.c ****             {
+ 350:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 351:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_3]) << 
+ 352:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_3]));
+ 353:Generated_Source\PSoC5/Termocupla.c ****             }
+ 354:Generated_Source\PSoC5/Termocupla.c **** 
+ 355:Generated_Source\PSoC5/Termocupla.c ****             else
+ 356:Generated_Source\PSoC5/Termocupla.c ****             {
+ 357:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 358:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_3]) >> 
+ 359:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_3]));
+ 360:Generated_Source\PSoC5/Termocupla.c ****             }
+ 361:Generated_Source\PSoC5/Termocupla.c ****         }
+ 362:Generated_Source\PSoC5/Termocupla.c ****     }
+ 363:Generated_Source\PSoC5/Termocupla.c **** 
+ 364:Generated_Source\PSoC5/Termocupla.c ****     #else
+ 365:Generated_Source\PSoC5/Termocupla.c ****     {
+ 366:Generated_Source\PSoC5/Termocupla.c ****         if(voltage < Termocupla_voltRange[Termocupla_RANGE_MAS_0] )
+ 111              		.loc 1 366 0
+ 112 0010 002C     		cmp	r4, #0
+ 113 0012 1CDA     		bge	.L6
+ 367:Generated_Source\PSoC5/Termocupla.c ****         {
+ 368:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 114              		.loc 1 368 0
+ 115 0014 03DA     		bge	.L7
+ 369:Generated_Source\PSoC5/Termocupla.c ****             {
+ 370:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 116              		.loc 1 370 0
+ 117 0016 6442     		negs	r4, r4
+ 118              	.LVL15:
+ 371:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 119              		.loc 1 371 0
+ 120 0018 E402     		lsls	r4, r4, #11
+ 121              	.LVL16:
+ 372:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 373:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_0])));
+ 374:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 122              		.loc 1 374 0
+ 123 001a 6542     		negs	r5, r4
+ 124              	.LVL17:
+ 125 001c 00E0     		b	.L8
+ 126              	.LVL18:
+ 127              	.L7:
+ 375:Generated_Source\PSoC5/Termocupla.c ****             }
+ 376:Generated_Source\PSoC5/Termocupla.c ****             else
+ 377:Generated_Source\PSoC5/Termocupla.c ****             {
+ 378:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 128              		.loc 1 378 0
+ 129 001e E502     		lsls	r5, r4, #11
+ 130              	.LVL19:
+ 131              	.L8:
+ 379:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 380:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_0])));
+ 381:Generated_Source\PSoC5/Termocupla.c ****             }            
+ 382:Generated_Source\PSoC5/Termocupla.c **** 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 10
+
+
+ 383:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 132              		.loc 1 383 0
+ 133 0020 0924     		movs	r4, #9
+ 205:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 134              		.loc 1 205 0
+ 135 0022 0020     		movs	r0, #0
+ 136              		.loc 1 383 0
+ 137 0024 0CE0     		b	.L9
+ 138              	.LVL20:
+ 139              	.L10:
+ 384:Generated_Source\PSoC5/Termocupla.c ****             {
+ 385:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_0] +
+ 140              		.loc 1 385 0 discriminator 3
+ 141 0026 04EB4402 		add	r2, r4, r4, lsl #1
+ 142 002a 9300     		lsls	r3, r2, #2
+ 143 002c 1EAA     		add	r2, sp, #120
+ 144 002e 1344     		add	r3, r3, r2
+ 145 0030 53F8783C 		ldr	r3, [r3, #-120]
+ 146 0034 2946     		mov	r1, r5
+ 147 0036 1844     		add	r0, r0, r3
+ 148              	.LVL21:
+ 149 0038 FFF7FEFF 		bl	Termocupla_MultShift24
+ 150              	.LVL22:
+ 383:Generated_Source\PSoC5/Termocupla.c ****             {
+ 151              		.loc 1 383 0 discriminator 3
+ 152 003c 013C     		subs	r4, r4, #1
+ 153              	.LVL23:
+ 154 003e E4B2     		uxtb	r4, r4
+ 155              	.LVL24:
+ 156              	.L9:
+ 383:Generated_Source\PSoC5/Termocupla.c ****             {
+ 157              		.loc 1 383 0 is_stmt 0 discriminator 1
+ 158 0040 002C     		cmp	r4, #0
+ 159 0042 F0D1     		bne	.L10
+ 386:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 387:Generated_Source\PSoC5/Termocupla.c ****             }
+ 388:Generated_Source\PSoC5/Termocupla.c **** 
+ 389:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0] < 0)
+ 390:Generated_Source\PSoC5/Termocupla.c ****             {
+ 391:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 392:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]) << 
+ 393:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0]));
+ 394:Generated_Source\PSoC5/Termocupla.c ****             }
+ 395:Generated_Source\PSoC5/Termocupla.c **** 
+ 396:Generated_Source\PSoC5/Termocupla.c ****             else
+ 397:Generated_Source\PSoC5/Termocupla.c ****             {
+ 398:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 160              		.loc 1 398 0 is_stmt 1
+ 161 0044 C517     		asrs	r5, r0, #31
+ 162              	.LVL25:
+ 399:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_0]) >> 
+ 163              		.loc 1 399 0
+ 164 0046 C309     		lsrs	r3, r0, #7
+ 165 0048 43EA4560 		orr	r0, r3, r5, lsl #25
+ 166              	.LVL26:
+ 167 004c 40E0     		b	.L11
+ 168              	.LVL27:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 11
+
+
+ 169              	.L6:
+ 400:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_0]));
+ 401:Generated_Source\PSoC5/Termocupla.c ****             }
+ 402:Generated_Source\PSoC5/Termocupla.c ****         }
+ 403:Generated_Source\PSoC5/Termocupla.c **** 
+ 404:Generated_Source\PSoC5/Termocupla.c ****         else if(voltage <= Termocupla_voltRange[Termocupla_RANGE_MAS_1] )
+ 170              		.loc 1 404 0
+ 171 004e 45F2A403 		movw	r3, #20644
+ 172 0052 9C42     		cmp	r4, r3
+ 173 0054 1DDC     		bgt	.L12
+ 405:Generated_Source\PSoC5/Termocupla.c ****         {
+ 406:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 174              		.loc 1 406 0
+ 175 0056 002C     		cmp	r4, #0
+ 176 0058 03DA     		bge	.L13
+ 407:Generated_Source\PSoC5/Termocupla.c ****             {
+ 408:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 177              		.loc 1 408 0
+ 178 005a 6442     		negs	r4, r4
+ 179              	.LVL28:
+ 409:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 180              		.loc 1 409 0
+ 181 005c 6402     		lsls	r4, r4, #9
+ 182              	.LVL29:
+ 410:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 411:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_1])));
+ 412:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 183              		.loc 1 412 0
+ 184 005e 6542     		negs	r5, r4
+ 185              	.LVL30:
+ 186 0060 00E0     		b	.L14
+ 187              	.LVL31:
+ 188              	.L13:
+ 413:Generated_Source\PSoC5/Termocupla.c ****             }
+ 414:Generated_Source\PSoC5/Termocupla.c ****             else
+ 415:Generated_Source\PSoC5/Termocupla.c ****             {
+ 416:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 189              		.loc 1 416 0
+ 190 0062 6502     		lsls	r5, r4, #9
+ 191              	.LVL32:
+ 192              	.L14:
+ 417:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 418:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_1])));
+ 419:Generated_Source\PSoC5/Termocupla.c ****             }              
+ 420:Generated_Source\PSoC5/Termocupla.c ****             
+ 421:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 193              		.loc 1 421 0
+ 194 0064 0924     		movs	r4, #9
+ 205:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 195              		.loc 1 205 0
+ 196 0066 0020     		movs	r0, #0
+ 197              		.loc 1 421 0
+ 198 0068 0CE0     		b	.L15
+ 199              	.LVL33:
+ 200              	.L16:
+ 422:Generated_Source\PSoC5/Termocupla.c ****             {
+ 423:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_1] +
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 12
+
+
+ 201              		.loc 1 423 0 discriminator 3
+ 202 006a 04EB4402 		add	r2, r4, r4, lsl #1
+ 203 006e 9300     		lsls	r3, r2, #2
+ 204 0070 1EAA     		add	r2, sp, #120
+ 205 0072 1344     		add	r3, r3, r2
+ 206 0074 53F8743C 		ldr	r3, [r3, #-116]
+ 207 0078 2946     		mov	r1, r5
+ 208 007a 1844     		add	r0, r0, r3
+ 209              	.LVL34:
+ 210 007c FFF7FEFF 		bl	Termocupla_MultShift24
+ 211              	.LVL35:
+ 421:Generated_Source\PSoC5/Termocupla.c ****             {
+ 212              		.loc 1 421 0 discriminator 3
+ 213 0080 013C     		subs	r4, r4, #1
+ 214              	.LVL36:
+ 215 0082 E4B2     		uxtb	r4, r4
+ 216              	.LVL37:
+ 217              	.L15:
+ 421:Generated_Source\PSoC5/Termocupla.c ****             {
+ 218              		.loc 1 421 0 is_stmt 0 discriminator 1
+ 219 0084 002C     		cmp	r4, #0
+ 220 0086 F0D1     		bne	.L16
+ 424:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 425:Generated_Source\PSoC5/Termocupla.c ****             }
+ 426:Generated_Source\PSoC5/Termocupla.c **** 
+ 427:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1] < 0)
+ 428:Generated_Source\PSoC5/Termocupla.c ****             {
+ 429:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 430:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]) << 
+ 431:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1]));
+ 432:Generated_Source\PSoC5/Termocupla.c ****             }
+ 433:Generated_Source\PSoC5/Termocupla.c **** 
+ 434:Generated_Source\PSoC5/Termocupla.c ****             else
+ 435:Generated_Source\PSoC5/Termocupla.c ****             {
+ 436:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 221              		.loc 1 436 0 is_stmt 1
+ 222 0088 C117     		asrs	r1, r0, #31
+ 437:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_1]) >> 
+ 223              		.loc 1 437 0
+ 224 008a 4908     		movs	r1, r1, lsr #1
+ 225 008c 4FEA3000 		mov	r0, r0, rrx
+ 226              	.LVL38:
+ 227 0090 1EE0     		b	.L11
+ 228              	.LVL39:
+ 229              	.L12:
+ 438:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_1]));
+ 439:Generated_Source\PSoC5/Termocupla.c ****             }
+ 440:Generated_Source\PSoC5/Termocupla.c ****         }
+ 441:Generated_Source\PSoC5/Termocupla.c **** 
+ 442:Generated_Source\PSoC5/Termocupla.c ****         else
+ 443:Generated_Source\PSoC5/Termocupla.c ****         {
+ 444:Generated_Source\PSoC5/Termocupla.c ****             if (voltage < 0)
+ 230              		.loc 1 444 0
+ 231 0092 002C     		cmp	r4, #0
+ 232 0094 03DA     		bge	.L17
+ 445:Generated_Source\PSoC5/Termocupla.c ****             {
+ 446:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 13
+
+
+ 233              		.loc 1 446 0
+ 234 0096 6442     		negs	r4, r4
+ 235              	.LVL40:
+ 447:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 236              		.loc 1 447 0
+ 237 0098 2402     		lsls	r4, r4, #8
+ 238              	.LVL41:
+ 448:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 449:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_2])));
+ 450:Generated_Source\PSoC5/Termocupla.c ****                 voltage = -voltage;
+ 239              		.loc 1 450 0
+ 240 009a 6542     		negs	r5, r4
+ 241              	.LVL42:
+ 242 009c 00E0     		b	.L18
+ 243              	.LVL43:
+ 244              	.L17:
+ 451:Generated_Source\PSoC5/Termocupla.c ****             }
+ 452:Generated_Source\PSoC5/Termocupla.c ****             else
+ 453:Generated_Source\PSoC5/Termocupla.c ****             {
+ 454:Generated_Source\PSoC5/Termocupla.c ****                 voltage = (int32)((uint64)((uint64)voltage << 
+ 245              		.loc 1 454 0
+ 246 009e 2502     		lsls	r5, r4, #8
+ 247              	.LVL44:
+ 248              	.L18:
+ 455:Generated_Source\PSoC5/Termocupla.c ****                                                (Termocupla_IN_NORMALIZATION_VT - 
+ 456:Generated_Source\PSoC5/Termocupla.c ****                                                 Termocupla_xScaleVT[Termocupla_RANGE_MAS_2])));
+ 457:Generated_Source\PSoC5/Termocupla.c ****             }              
+ 458:Generated_Source\PSoC5/Termocupla.c **** 
+ 459:Generated_Source\PSoC5/Termocupla.c ****             for (i=Termocupla_ORDER_VT - 1u; i > 0u; i--)
+ 249              		.loc 1 459 0
+ 250 00a0 0924     		movs	r4, #9
+ 205:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 251              		.loc 1 205 0
+ 252 00a2 0020     		movs	r0, #0
+ 253              		.loc 1 459 0
+ 254 00a4 0CE0     		b	.L19
+ 255              	.LVL45:
+ 256              	.L20:
+ 460:Generated_Source\PSoC5/Termocupla.c ****             {
+ 461:Generated_Source\PSoC5/Termocupla.c ****                 temp = Termocupla_MultShift24((Termocupla_coeffVT[i][Termocupla_RANGE_MAS_2] +
+ 257              		.loc 1 461 0 discriminator 3
+ 258 00a6 04EB4402 		add	r2, r4, r4, lsl #1
+ 259 00aa 9300     		lsls	r3, r2, #2
+ 260 00ac 1EAA     		add	r2, sp, #120
+ 261 00ae 1344     		add	r3, r3, r2
+ 262 00b0 53F8703C 		ldr	r3, [r3, #-112]
+ 263 00b4 2946     		mov	r1, r5
+ 264 00b6 1844     		add	r0, r0, r3
+ 265              	.LVL46:
+ 266 00b8 FFF7FEFF 		bl	Termocupla_MultShift24
+ 267              	.LVL47:
+ 459:Generated_Source\PSoC5/Termocupla.c ****             {
+ 268              		.loc 1 459 0 discriminator 3
+ 269 00bc 013C     		subs	r4, r4, #1
+ 270              	.LVL48:
+ 271 00be E4B2     		uxtb	r4, r4
+ 272              	.LVL49:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 14
+
+
+ 273              	.L19:
+ 459:Generated_Source\PSoC5/Termocupla.c ****             {
+ 274              		.loc 1 459 0 is_stmt 0 discriminator 1
+ 275 00c0 002C     		cmp	r4, #0
+ 276 00c2 F0D1     		bne	.L20
+ 462:Generated_Source\PSoC5/Termocupla.c ****                        temp), voltage);
+ 463:Generated_Source\PSoC5/Termocupla.c ****             }
+ 464:Generated_Source\PSoC5/Termocupla.c **** 
+ 465:Generated_Source\PSoC5/Termocupla.c ****             if(Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2] < 0)
+ 466:Generated_Source\PSoC5/Termocupla.c ****             {
+ 467:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint64)((uint64)(int32)(temp + 
+ 468:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]) << 
+ 469:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2]));
+ 470:Generated_Source\PSoC5/Termocupla.c ****             }
+ 471:Generated_Source\PSoC5/Termocupla.c **** 
+ 472:Generated_Source\PSoC5/Termocupla.c ****             else
+ 473:Generated_Source\PSoC5/Termocupla.c ****             {
+ 474:Generated_Source\PSoC5/Termocupla.c ****                 temp = (int32)((uint32)((uint64)(int32)(temp + 
+ 277              		.loc 1 474 0 is_stmt 1
+ 278 00c4 044B     		ldr	r3, .L22+4
+ 279 00c6 0344     		add	r3, r3, r0
+ 280 00c8 D917     		asrs	r1, r3, #31
+ 475:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coeffVT[Termocupla_FIRST_EL_MAS][Termocupla_RANGE_MAS_2]) >> 
+ 281              		.loc 1 475 0
+ 282 00ca DB09     		lsrs	r3, r3, #7
+ 283 00cc 43EA4160 		orr	r0, r3, r1, lsl #25
+ 284              	.LVL50:
+ 285              	.L11:
+ 476:Generated_Source\PSoC5/Termocupla.c ****                         Termocupla_coefScaleVT[Termocupla_RANGE_MAS_2]));
+ 477:Generated_Source\PSoC5/Termocupla.c ****             }
+ 478:Generated_Source\PSoC5/Termocupla.c ****         }
+ 479:Generated_Source\PSoC5/Termocupla.c ****     }
+ 480:Generated_Source\PSoC5/Termocupla.c **** 
+ 481:Generated_Source\PSoC5/Termocupla.c ****     #endif /* End Termocupla_VT_RANGE_LEN == Termocupla_THREE */
+ 482:Generated_Source\PSoC5/Termocupla.c **** 
+ 483:Generated_Source\PSoC5/Termocupla.c ****     return (temp);
+ 484:Generated_Source\PSoC5/Termocupla.c **** }
+ 286              		.loc 1 484 0
+ 287 00d0 1FB0     		add	sp, sp, #124
+ 288              		.cfi_def_cfa_offset 12
+ 289              		@ sp needed
+ 290 00d2 30BD     		pop	{r4, r5, pc}
+ 291              	.LVL51:
+ 292              	.L23:
+ 293              		.align	2
+ 294              	.L22:
+ 295 00d4 00000000 		.word	.LANCHOR0
+ 296 00d8 B641E6FF 		.word	-1687114
+ 297              		.cfi_endproc
+ 298              	.LFE1:
+ 299              		.size	Termocupla_GetTemperature, .-Termocupla_GetTemperature
+ 300              		.section	.text.Termocupla_GetVoltage,"ax",%progbits
+ 301              		.align	2
+ 302              		.global	Termocupla_GetVoltage
+ 303              		.thumb
+ 304              		.thumb_func
+ 305              		.type	Termocupla_GetVoltage, %function
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 15
+
+
+ 306              	Termocupla_GetVoltage:
+ 307              	.LFB2:
+ 485:Generated_Source\PSoC5/Termocupla.c **** #endif /* End CY_PSOC3 */
+ 486:Generated_Source\PSoC5/Termocupla.c **** 
+ 487:Generated_Source\PSoC5/Termocupla.c **** 
+ 488:Generated_Source\PSoC5/Termocupla.c **** /*******************************************************************************
+ 489:Generated_Source\PSoC5/Termocupla.c **** * Function Name: Termocupla_GetVoltage
+ 490:Generated_Source\PSoC5/Termocupla.c **** ********************************************************************************
+ 491:Generated_Source\PSoC5/Termocupla.c **** *
+ 492:Generated_Source\PSoC5/Termocupla.c **** * Summary:
+ 493:Generated_Source\PSoC5/Termocupla.c **** *  This function takes the temperature as input and provides the expected
+ 494:Generated_Source\PSoC5/Termocupla.c **** *  voltage for that temperature.
+ 495:Generated_Source\PSoC5/Termocupla.c **** *
+ 496:Generated_Source\PSoC5/Termocupla.c **** * Parameters:
+ 497:Generated_Source\PSoC5/Termocupla.c **** *  int32 temperature : Temperature of the cold junction in 1/100 degree C
+ 498:Generated_Source\PSoC5/Termocupla.c **** *
+ 499:Generated_Source\PSoC5/Termocupla.c **** * Return:
+ 500:Generated_Source\PSoC5/Termocupla.c **** *  int32 : Expected voltage output of the thermocouple in microvolts
+ 501:Generated_Source\PSoC5/Termocupla.c **** *
+ 502:Generated_Source\PSoC5/Termocupla.c **** *******************************************************************************/
+ 503:Generated_Source\PSoC5/Termocupla.c **** int32 Termocupla_GetVoltage(int32 temperature) 
+ 504:Generated_Source\PSoC5/Termocupla.c **** 
+ 505:Generated_Source\PSoC5/Termocupla.c **** #if (CY_PSOC3)
+ 506:Generated_Source\PSoC5/Termocupla.c **** {
+ 507:Generated_Source\PSoC5/Termocupla.c **** 
+ 508:Generated_Source\PSoC5/Termocupla.c ****     /***************************************
+ 509:Generated_Source\PSoC5/Termocupla.c ****     *  Customizer Generated Coefficients
+ 510:Generated_Source\PSoC5/Termocupla.c ****     ***************************************/
+ 511:Generated_Source\PSoC5/Termocupla.c ****     const int32 CYCODE Termocupla_coeffTV[9] = {0, 
+ 512:Generated_Source\PSoC5/Termocupla.c ****                                             413735, 
+ 513:Generated_Source\PSoC5/Termocupla.c ****                                             83372, 
+ 514:Generated_Source\PSoC5/Termocupla.c ****                                             -137607, 
+ 515:Generated_Source\PSoC5/Termocupla.c ****                                             1089544, 
+ 516:Generated_Source\PSoC5/Termocupla.c ****                                             -9978037, 
+ 517:Generated_Source\PSoC5/Termocupla.c ****                                             43567176, 
+ 518:Generated_Source\PSoC5/Termocupla.c ****                                             -95708775, 
+ 519:Generated_Source\PSoC5/Termocupla.c ****                                             84037362};
+ 520:Generated_Source\PSoC5/Termocupla.c **** 
+ 521:Generated_Source\PSoC5/Termocupla.c ****     /* Variable to store calculated voltage */
+ 522:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 523:Generated_Source\PSoC5/Termocupla.c ****     float32 voltage=0.0f;
+ 524:Generated_Source\PSoC5/Termocupla.c ****     float32 temperatureNorm=0.0f;
+ 525:Generated_Source\PSoC5/Termocupla.c **** 
+ 526:Generated_Source\PSoC5/Termocupla.c ****     temperatureNorm  = (float32)temperature;
+ 527:Generated_Source\PSoC5/Termocupla.c **** 
+ 528:Generated_Source\PSoC5/Termocupla.c ****     for (i = Termocupla_ORDER_TV - 1u; i > 0u; i--)
+ 529:Generated_Source\PSoC5/Termocupla.c ****     {
+ 530:Generated_Source\PSoC5/Termocupla.c ****         voltage = (Termocupla_coeffTV[i] + voltage) * temperatureNorm;
+ 531:Generated_Source\PSoC5/Termocupla.c ****     }
+ 532:Generated_Source\PSoC5/Termocupla.c ****     voltage = (voltage + Termocupla_coeffTV[Termocupla_FIRST_EL_MAS]);
+ 533:Generated_Source\PSoC5/Termocupla.c **** 
+ 534:Generated_Source\PSoC5/Termocupla.c ****     return ((int32) (voltage));
+ 535:Generated_Source\PSoC5/Termocupla.c **** }
+ 536:Generated_Source\PSoC5/Termocupla.c **** #else
+ 537:Generated_Source\PSoC5/Termocupla.c **** {
+ 308              		.loc 1 537 0
+ 309              		.cfi_startproc
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 16
+
+
+ 310              		@ args = 0, pretend = 0, frame = 40
+ 311              		@ frame_needed = 0, uses_anonymous_args = 0
+ 312              	.LVL52:
+ 313 0000 70B5     		push	{r4, r5, r6, lr}
+ 314              		.cfi_def_cfa_offset 16
+ 315              		.cfi_offset 4, -16
+ 316              		.cfi_offset 5, -12
+ 317              		.cfi_offset 6, -8
+ 318              		.cfi_offset 14, -4
+ 319 0002 8AB0     		sub	sp, sp, #40
+ 320              		.cfi_def_cfa_offset 56
+ 321 0004 0646     		mov	r6, r0
+ 538:Generated_Source\PSoC5/Termocupla.c **** 
+ 539:Generated_Source\PSoC5/Termocupla.c ****     /***************************************
+ 540:Generated_Source\PSoC5/Termocupla.c ****     *  Customizer Generated Coefficients
+ 541:Generated_Source\PSoC5/Termocupla.c ****     ***************************************/
+ 542:Generated_Source\PSoC5/Termocupla.c ****     const int32 CYCODE Termocupla_coeffTV[9] = {0, 
+ 322              		.loc 1 542 0
+ 323 0006 01AC     		add	r4, sp, #4
+ 324 0008 114D     		ldr	r5, .L30
+ 325 000a 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 326              	.LVL53:
+ 327 000c 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 328 000e 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 329 0010 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 330 0012 2B68     		ldr	r3, [r5]
+ 331 0014 2360     		str	r3, [r4]
+ 332              	.LVL54:
+ 543:Generated_Source\PSoC5/Termocupla.c ****                                             413735, 
+ 544:Generated_Source\PSoC5/Termocupla.c ****                                             83372, 
+ 545:Generated_Source\PSoC5/Termocupla.c ****                                             -137607, 
+ 546:Generated_Source\PSoC5/Termocupla.c ****                                             1089544, 
+ 547:Generated_Source\PSoC5/Termocupla.c ****                                             -9978037, 
+ 548:Generated_Source\PSoC5/Termocupla.c ****                                             43567176, 
+ 549:Generated_Source\PSoC5/Termocupla.c ****                                             -95708775, 
+ 550:Generated_Source\PSoC5/Termocupla.c ****                                             84037362};
+ 551:Generated_Source\PSoC5/Termocupla.c **** 
+ 552:Generated_Source\PSoC5/Termocupla.c ****     /* Variable to store calculated voltage */
+ 553:Generated_Source\PSoC5/Termocupla.c ****     uint8 i=0u;
+ 554:Generated_Source\PSoC5/Termocupla.c ****     int32 voltage=0;
+ 555:Generated_Source\PSoC5/Termocupla.c **** 
+ 556:Generated_Source\PSoC5/Termocupla.c ****     if (temperature < 0)
+ 333              		.loc 1 556 0
+ 334 0016 002E     		cmp	r6, #0
+ 335 0018 03DA     		bge	.L25
+ 557:Generated_Source\PSoC5/Termocupla.c ****     {
+ 558:Generated_Source\PSoC5/Termocupla.c ****         temperature = -temperature;
+ 336              		.loc 1 558 0
+ 337 001a 7542     		negs	r5, r6
+ 338              	.LVL55:
+ 559:Generated_Source\PSoC5/Termocupla.c ****         temperature = (int32)((uint64)((uint64)temperature << 
+ 339              		.loc 1 559 0
+ 340 001c 6D02     		lsls	r5, r5, #9
+ 341              	.LVL56:
+ 560:Generated_Source\PSoC5/Termocupla.c ****                                        (Termocupla_IN_NORMALIZATION_TV - Termocupla_X_SCALE_TV)));
+ 561:Generated_Source\PSoC5/Termocupla.c ****         temperature = -temperature;
+ 342              		.loc 1 561 0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 17
+
+
+ 343 001e 6D42     		negs	r5, r5
+ 344              	.LVL57:
+ 345 0020 00E0     		b	.L26
+ 346              	.LVL58:
+ 347              	.L25:
+ 562:Generated_Source\PSoC5/Termocupla.c ****     }
+ 563:Generated_Source\PSoC5/Termocupla.c ****     else
+ 564:Generated_Source\PSoC5/Termocupla.c ****     {
+ 565:Generated_Source\PSoC5/Termocupla.c ****         temperature = (int32)((uint64)((uint64)temperature << 
+ 348              		.loc 1 565 0
+ 349 0022 7502     		lsls	r5, r6, #9
+ 350              	.LVL59:
+ 351              	.L26:
+ 554:Generated_Source\PSoC5/Termocupla.c **** 
+ 352              		.loc 1 554 0
+ 353 0024 0020     		movs	r0, #0
+ 566:Generated_Source\PSoC5/Termocupla.c ****                                        (Termocupla_IN_NORMALIZATION_TV - Termocupla_X_SCALE_TV)));
+ 567:Generated_Source\PSoC5/Termocupla.c ****     }
+ 568:Generated_Source\PSoC5/Termocupla.c ****     
+ 569:Generated_Source\PSoC5/Termocupla.c ****     for (i = Termocupla_ORDER_TV - 1u; i > 0u; i--)
+ 354              		.loc 1 569 0
+ 355 0026 0824     		movs	r4, #8
+ 356 0028 0AE0     		b	.L27
+ 357              	.LVL60:
+ 358              	.L28:
+ 570:Generated_Source\PSoC5/Termocupla.c ****     {
+ 571:Generated_Source\PSoC5/Termocupla.c ****         voltage = Termocupla_MultShift24((Termocupla_coeffTV[i] + voltage), temperature);
+ 359              		.loc 1 571 0 discriminator 3
+ 360 002a 0AAB     		add	r3, sp, #40
+ 361 002c 03EB8403 		add	r3, r3, r4, lsl #2
+ 362 0030 53F8243C 		ldr	r3, [r3, #-36]
+ 363 0034 2946     		mov	r1, r5
+ 364 0036 1844     		add	r0, r0, r3
+ 365              	.LVL61:
+ 366 0038 FFF7FEFF 		bl	Termocupla_MultShift24
+ 367              	.LVL62:
+ 569:Generated_Source\PSoC5/Termocupla.c ****     {
+ 368              		.loc 1 569 0 discriminator 3
+ 369 003c 013C     		subs	r4, r4, #1
+ 370              	.LVL63:
+ 371 003e E4B2     		uxtb	r4, r4
+ 372              	.LVL64:
+ 373              	.L27:
+ 569:Generated_Source\PSoC5/Termocupla.c ****     {
+ 374              		.loc 1 569 0 is_stmt 0 discriminator 1
+ 375 0040 002C     		cmp	r4, #0
+ 376 0042 F2D1     		bne	.L28
+ 572:Generated_Source\PSoC5/Termocupla.c ****     }
+ 573:Generated_Source\PSoC5/Termocupla.c **** 
+ 574:Generated_Source\PSoC5/Termocupla.c ****     voltage = (int32)((uint32)((uint64)(int32)(voltage + Termocupla_coeffTV[Termocupla_FIRST_EL_MAS
+ 377              		.loc 1 574 0 is_stmt 1
+ 378 0044 C317     		asrs	r3, r0, #31
+ 379 0046 4009     		lsrs	r0, r0, #5
+ 380              	.LVL65:
+ 575:Generated_Source\PSoC5/Termocupla.c ****                                         Termocupla_COEF_SCALE_TV));
+ 576:Generated_Source\PSoC5/Termocupla.c **** 
+ 577:Generated_Source\PSoC5/Termocupla.c ****     return (voltage);
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 18
+
+
+ 578:Generated_Source\PSoC5/Termocupla.c **** }
+ 381              		.loc 1 578 0
+ 382 0048 40EAC360 		orr	r0, r0, r3, lsl #27
+ 383              	.LVL66:
+ 384 004c 0AB0     		add	sp, sp, #40
+ 385              		.cfi_def_cfa_offset 16
+ 386              		@ sp needed
+ 387 004e 70BD     		pop	{r4, r5, r6, pc}
+ 388              	.LVL67:
+ 389              	.L31:
+ 390              		.align	2
+ 391              	.L30:
+ 392 0050 78000000 		.word	.LANCHOR0+120
+ 393              		.cfi_endproc
+ 394              	.LFE2:
+ 395              		.size	Termocupla_GetVoltage, .-Termocupla_GetVoltage
+ 396              		.section	.rodata
+ 397              		.align	2
+ 398              		.set	.LANCHOR0,. + 0
+ 399              	.LC0:
+ 400 0000 00000000 		.word	0
+ 401 0004 00000000 		.word	0
+ 402 0008 B641E6FF 		.word	-1687114
+ 403 000c 0D472800 		.word	2639629
+ 404 0010 24820200 		.word	164388
+ 405 0014 B7446A02 		.word	40518839
+ 406 0018 96B6F0FF 		.word	-1001834
+ 407 001c EF410000 		.word	16879
+ 408 0020 89359BFA 		.word	-90491511
+ 409 0024 B9AC8BFF 		.word	-7623495
+ 410 0028 721FE5FF 		.word	-1761422
+ 411 002c 8444BC0B 		.word	196887684
+ 412 0030 F657EAFC 		.word	-51750922
+ 413 0034 4B912401 		.word	19173707
+ 414 0038 A7F66AF2 		.word	-227871065
+ 415 003c BA327DF5 		.word	-176344390
+ 416 0040 562C78FA 		.word	-92787626
+ 417 0044 EB5B1E08 		.word	136207339
+ 418 0048 831C06EC 		.word	-335143805
+ 419 004c 2EDC770E 		.word	242736174
+ 420 0050 1FA01EFE 		.word	-31547361
+ 421 0054 A16642EC 		.word	-331192671
+ 422 0058 F8EEA8EA 		.word	-358027528
+ 423 005c 00000000 		.word	0
+ 424 0060 CC36F7F7 		.word	-134793524
+ 425 0064 C9ADC210 		.word	281193929
+ 426 0068 00000000 		.word	0
+ 427 006c 00000000 		.word	0
+ 428 0070 09A688FA 		.word	-91707895
+ 429 0074 00000000 		.word	0
+ 430              	.LC1:
+ 431 0078 00000000 		.word	0
+ 432 007c 27500600 		.word	413735
+ 433 0080 AC450100 		.word	83372
+ 434 0084 79E6FDFF 		.word	-137607
+ 435 0088 08A01000 		.word	1089544
+ 436 008c 4BBF67FF 		.word	-9978037
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 19
+
+
+ 437 0090 48C89802 		.word	43567176
+ 438 0094 99994BFA 		.word	-95708775
+ 439 0098 F24E0205 		.word	84037362
+ 440              		.text
+ 441              	.Letext0:
+ 442              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 443              		.section	.debug_info,"",%progbits
+ 444              	.Ldebug_info0:
+ 445 0000 CC020000 		.4byte	0x2cc
+ 446 0004 0400     		.2byte	0x4
+ 447 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 448 000a 04       		.byte	0x4
+ 449 000b 01       		.uleb128 0x1
+ 450 000c E0000000 		.4byte	.LASF31
+ 451 0010 0C       		.byte	0xc
+ 452 0011 06000000 		.4byte	.LASF32
+ 453 0015 5B000000 		.4byte	.LASF33
+ 454 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 455 001d 00000000 		.4byte	0
+ 456 0021 00000000 		.4byte	.Ldebug_line0
+ 457 0025 02       		.uleb128 0x2
+ 458 0026 08       		.byte	0x8
+ 459 0027 07       		.byte	0x7
+ 460 0028 FE010000 		.4byte	.LASF0
+ 461 002c 02       		.uleb128 0x2
+ 462 002d 04       		.byte	0x4
+ 463 002e 07       		.byte	0x7
+ 464 002f DD010000 		.4byte	.LASF1
+ 465 0033 03       		.uleb128 0x3
+ 466 0034 04       		.byte	0x4
+ 467 0035 05       		.byte	0x5
+ 468 0036 696E7400 		.ascii	"int\000"
+ 469 003a 02       		.uleb128 0x2
+ 470 003b 08       		.byte	0x8
+ 471 003c 05       		.byte	0x5
+ 472 003d 2B020000 		.4byte	.LASF2
+ 473 0041 02       		.uleb128 0x2
+ 474 0042 08       		.byte	0x8
+ 475 0043 04       		.byte	0x4
+ 476 0044 AB010000 		.4byte	.LASF3
+ 477 0048 02       		.uleb128 0x2
+ 478 0049 01       		.byte	0x1
+ 479 004a 06       		.byte	0x6
+ 480 004b 84020000 		.4byte	.LASF4
+ 481 004f 02       		.uleb128 0x2
+ 482 0050 01       		.byte	0x1
+ 483 0051 08       		.byte	0x8
+ 484 0052 D2000000 		.4byte	.LASF5
+ 485 0056 02       		.uleb128 0x2
+ 486 0057 02       		.byte	0x2
+ 487 0058 05       		.byte	0x5
+ 488 0059 40020000 		.4byte	.LASF6
+ 489 005d 02       		.uleb128 0x2
+ 490 005e 02       		.byte	0x2
+ 491 005f 07       		.byte	0x7
+ 492 0060 31000000 		.4byte	.LASF7
+ 493 0064 02       		.uleb128 0x2
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 20
+
+
+ 494 0065 04       		.byte	0x4
+ 495 0066 05       		.byte	0x5
+ 496 0067 63020000 		.4byte	.LASF8
+ 497 006b 02       		.uleb128 0x2
+ 498 006c 04       		.byte	0x4
+ 499 006d 07       		.byte	0x7
+ 500 006e 6E010000 		.4byte	.LASF9
+ 501 0072 02       		.uleb128 0x2
+ 502 0073 04       		.byte	0x4
+ 503 0074 07       		.byte	0x7
+ 504 0075 22020000 		.4byte	.LASF10
+ 505 0079 02       		.uleb128 0x2
+ 506 007a 01       		.byte	0x1
+ 507 007b 08       		.byte	0x8
+ 508 007c 6C020000 		.4byte	.LASF11
+ 509 0080 04       		.uleb128 0x4
+ 510 0081 4A020000 		.4byte	.LASF12
+ 511 0085 02       		.byte	0x2
+ 512 0086 E801     		.2byte	0x1e8
+ 513 0088 4F000000 		.4byte	0x4f
+ 514 008c 04       		.uleb128 0x4
+ 515 008d BC010000 		.4byte	.LASF13
+ 516 0091 02       		.byte	0x2
+ 517 0092 EA01     		.2byte	0x1ea
+ 518 0094 6B000000 		.4byte	0x6b
+ 519 0098 04       		.uleb128 0x4
+ 520 0099 B7010000 		.4byte	.LASF14
+ 521 009d 02       		.byte	0x2
+ 522 009e EB01     		.2byte	0x1eb
+ 523 00a0 48000000 		.4byte	0x48
+ 524 00a4 04       		.uleb128 0x4
+ 525 00a5 1C020000 		.4byte	.LASF15
+ 526 00a9 02       		.byte	0x2
+ 527 00aa ED01     		.2byte	0x1ed
+ 528 00ac 64000000 		.4byte	0x64
+ 529 00b0 02       		.uleb128 0x2
+ 530 00b1 04       		.byte	0x4
+ 531 00b2 04       		.byte	0x4
+ 532 00b3 00000000 		.4byte	.LASF16
+ 533 00b7 02       		.uleb128 0x2
+ 534 00b8 08       		.byte	0x8
+ 535 00b9 04       		.byte	0x4
+ 536 00ba A4010000 		.4byte	.LASF17
+ 537 00be 04       		.uleb128 0x4
+ 538 00bf 90020000 		.4byte	.LASF18
+ 539 00c3 02       		.byte	0x2
+ 540 00c4 F301     		.2byte	0x1f3
+ 541 00c6 3A000000 		.4byte	0x3a
+ 542 00ca 04       		.uleb128 0x4
+ 543 00cb 2A000000 		.4byte	.LASF19
+ 544 00cf 02       		.byte	0x2
+ 545 00d0 F401     		.2byte	0x1f4
+ 546 00d2 25000000 		.4byte	0x25
+ 547 00d6 05       		.uleb128 0x5
+ 548 00d7 85010000 		.4byte	.LASF20
+ 549 00db 01       		.byte	0x1
+ 550 00dc 27       		.byte	0x27
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 21
+
+
+ 551 00dd A4000000 		.4byte	0xa4
+ 552 00e1 00000000 		.4byte	.LFB0
+ 553 00e5 36000000 		.4byte	.LFE0-.LFB0
+ 554 00e9 01       		.uleb128 0x1
+ 555 00ea 9C       		.byte	0x9c
+ 556 00eb 1D010000 		.4byte	0x11d
+ 557 00ef 06       		.uleb128 0x6
+ 558 00f0 6F703100 		.ascii	"op1\000"
+ 559 00f4 01       		.byte	0x1
+ 560 00f5 27       		.byte	0x27
+ 561 00f6 A4000000 		.4byte	0xa4
+ 562 00fa 00000000 		.4byte	.LLST0
+ 563 00fe 06       		.uleb128 0x6
+ 564 00ff 6F703200 		.ascii	"op2\000"
+ 565 0103 01       		.byte	0x1
+ 566 0104 27       		.byte	0x27
+ 567 0105 A4000000 		.4byte	0xa4
+ 568 0109 21000000 		.4byte	.LLST1
+ 569 010d 07       		.uleb128 0x7
+ 570 010e 15020000 		.4byte	.LASF23
+ 571 0112 01       		.byte	0x1
+ 572 0113 29       		.byte	0x29
+ 573 0114 BE000000 		.4byte	0xbe
+ 574 0118 42000000 		.4byte	.LLST2
+ 575 011c 00       		.byte	0
+ 576 011d 05       		.uleb128 0x5
+ 577 011e C3010000 		.4byte	.LASF21
+ 578 0122 01       		.byte	0x1
+ 579 0123 4C       		.byte	0x4c
+ 580 0124 A4000000 		.4byte	0xa4
+ 581 0128 00000000 		.4byte	.LFB1
+ 582 012c DC000000 		.4byte	.LFE1-.LFB1
+ 583 0130 01       		.uleb128 0x1
+ 584 0131 9C       		.byte	0x9c
+ 585 0132 F5010000 		.4byte	0x1f5
+ 586 0136 08       		.uleb128 0x8
+ 587 0137 9C010000 		.4byte	.LASF22
+ 588 013b 01       		.byte	0x1
+ 589 013c 4C       		.byte	0x4c
+ 590 013d A4000000 		.4byte	0xa4
+ 591 0141 D3000000 		.4byte	.LLST3
+ 592 0145 09       		.uleb128 0x9
+ 593 0146 71020000 		.4byte	.LASF24
+ 594 014a 01       		.byte	0x1
+ 595 014b BC       		.byte	0xbc
+ 596 014c 10020000 		.4byte	0x210
+ 597 0150 03       		.uleb128 0x3
+ 598 0151 91       		.byte	0x91
+ 599 0152 F87E     		.sleb128 -136
+ 600 0154 0A       		.uleb128 0xa
+ 601 0155 B1000000 		.4byte	.LASF34
+ 602 0159 01       		.byte	0x1
+ 603 015a C7       		.byte	0xc7
+ 604 015b 25020000 		.4byte	0x225
+ 605 015f 0B       		.uleb128 0xb
+ 606 0160 EA010000 		.4byte	.LASF25
+ 607 0164 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 22
+
+
+ 608 0165 C9       		.byte	0xc9
+ 609 0166 3F020000 		.4byte	0x23f
+ 610 016a 03       		.byte	0x3
+ 611 016b 0D       		.byte	0xd
+ 612 016c 0F       		.byte	0xf
+ 613 016d 10       		.byte	0x10
+ 614 016e 0B       		.uleb128 0xb
+ 615 016f 44000000 		.4byte	.LASF26
+ 616 0173 01       		.byte	0x1
+ 617 0174 CA       		.byte	0xca
+ 618 0175 44020000 		.4byte	0x244
+ 619 0179 03       		.byte	0x3
+ 620 017a 07       		.byte	0x7
+ 621 017b 01       		.byte	0x1
+ 622 017c 07       		.byte	0x7
+ 623 017d 07       		.uleb128 0x7
+ 624 017e 80010000 		.4byte	.LASF27
+ 625 0182 01       		.byte	0x1
+ 626 0183 CD       		.byte	0xcd
+ 627 0184 A4000000 		.4byte	0xa4
+ 628 0188 6A010000 		.4byte	.LLST4
+ 629 018c 0C       		.uleb128 0xc
+ 630 018d 6900     		.ascii	"i\000"
+ 631 018f 01       		.byte	0x1
+ 632 0190 CE       		.byte	0xce
+ 633 0191 80000000 		.4byte	0x80
+ 634 0195 D8010000 		.4byte	.LLST5
+ 635 0199 0D       		.uleb128 0xd
+ 636 019a 10000000 		.4byte	.LVL14
+ 637 019e C6020000 		.4byte	0x2c6
+ 638 01a2 BC010000 		.4byte	0x1bc
+ 639 01a6 0E       		.uleb128 0xe
+ 640 01a7 01       		.uleb128 0x1
+ 641 01a8 50       		.byte	0x50
+ 642 01a9 02       		.uleb128 0x2
+ 643 01aa 7D       		.byte	0x7d
+ 644 01ab 00       		.sleb128 0
+ 645 01ac 0E       		.uleb128 0xe
+ 646 01ad 01       		.uleb128 0x1
+ 647 01ae 51       		.byte	0x51
+ 648 01af 05       		.uleb128 0x5
+ 649 01b0 03       		.byte	0x3
+ 650 01b1 00000000 		.4byte	.LANCHOR0
+ 651 01b5 0E       		.uleb128 0xe
+ 652 01b6 01       		.uleb128 0x1
+ 653 01b7 52       		.byte	0x52
+ 654 01b8 02       		.uleb128 0x2
+ 655 01b9 08       		.byte	0x8
+ 656 01ba 78       		.byte	0x78
+ 657 01bb 00       		.byte	0
+ 658 01bc 0D       		.uleb128 0xd
+ 659 01bd 3C000000 		.4byte	.LVL22
+ 660 01c1 D6000000 		.4byte	0xd6
+ 661 01c5 D0010000 		.4byte	0x1d0
+ 662 01c9 0E       		.uleb128 0xe
+ 663 01ca 01       		.uleb128 0x1
+ 664 01cb 51       		.byte	0x51
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 23
+
+
+ 665 01cc 02       		.uleb128 0x2
+ 666 01cd 75       		.byte	0x75
+ 667 01ce 00       		.sleb128 0
+ 668 01cf 00       		.byte	0
+ 669 01d0 0D       		.uleb128 0xd
+ 670 01d1 80000000 		.4byte	.LVL35
+ 671 01d5 D6000000 		.4byte	0xd6
+ 672 01d9 E4010000 		.4byte	0x1e4
+ 673 01dd 0E       		.uleb128 0xe
+ 674 01de 01       		.uleb128 0x1
+ 675 01df 51       		.byte	0x51
+ 676 01e0 02       		.uleb128 0x2
+ 677 01e1 75       		.byte	0x75
+ 678 01e2 00       		.sleb128 0
+ 679 01e3 00       		.byte	0
+ 680 01e4 0F       		.uleb128 0xf
+ 681 01e5 BC000000 		.4byte	.LVL47
+ 682 01e9 D6000000 		.4byte	0xd6
+ 683 01ed 0E       		.uleb128 0xe
+ 684 01ee 01       		.uleb128 0x1
+ 685 01ef 51       		.byte	0x51
+ 686 01f0 02       		.uleb128 0x2
+ 687 01f1 75       		.byte	0x75
+ 688 01f2 00       		.sleb128 0
+ 689 01f3 00       		.byte	0
+ 690 01f4 00       		.byte	0
+ 691 01f5 10       		.uleb128 0x10
+ 692 01f6 0B020000 		.4byte	0x20b
+ 693 01fa 0B020000 		.4byte	0x20b
+ 694 01fe 11       		.uleb128 0x11
+ 695 01ff 72000000 		.4byte	0x72
+ 696 0203 09       		.byte	0x9
+ 697 0204 11       		.uleb128 0x11
+ 698 0205 72000000 		.4byte	0x72
+ 699 0209 02       		.byte	0x2
+ 700 020a 00       		.byte	0
+ 701 020b 12       		.uleb128 0x12
+ 702 020c A4000000 		.4byte	0xa4
+ 703 0210 12       		.uleb128 0x12
+ 704 0211 F5010000 		.4byte	0x1f5
+ 705 0215 10       		.uleb128 0x10
+ 706 0216 0B020000 		.4byte	0x20b
+ 707 021a 25020000 		.4byte	0x225
+ 708 021e 11       		.uleb128 0x11
+ 709 021f 72000000 		.4byte	0x72
+ 710 0223 01       		.byte	0x1
+ 711 0224 00       		.byte	0
+ 712 0225 12       		.uleb128 0x12
+ 713 0226 15020000 		.4byte	0x215
+ 714 022a 10       		.uleb128 0x10
+ 715 022b 3A020000 		.4byte	0x23a
+ 716 022f 3A020000 		.4byte	0x23a
+ 717 0233 11       		.uleb128 0x11
+ 718 0234 72000000 		.4byte	0x72
+ 719 0238 02       		.byte	0x2
+ 720 0239 00       		.byte	0
+ 721 023a 12       		.uleb128 0x12
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 24
+
+
+ 722 023b 98000000 		.4byte	0x98
+ 723 023f 12       		.uleb128 0x12
+ 724 0240 2A020000 		.4byte	0x22a
+ 725 0244 12       		.uleb128 0x12
+ 726 0245 2A020000 		.4byte	0x22a
+ 727 0249 13       		.uleb128 0x13
+ 728 024a 96020000 		.4byte	.LASF28
+ 729 024e 01       		.byte	0x1
+ 730 024f F701     		.2byte	0x1f7
+ 731 0251 A4000000 		.4byte	0xa4
+ 732 0255 00000000 		.4byte	.LFB2
+ 733 0259 54000000 		.4byte	.LFE2-.LFB2
+ 734 025d 01       		.uleb128 0x1
+ 735 025e 9C       		.byte	0x9c
+ 736 025f B1020000 		.4byte	0x2b1
+ 737 0263 14       		.uleb128 0x14
+ 738 0264 C6000000 		.4byte	.LASF29
+ 739 0268 01       		.byte	0x1
+ 740 0269 F701     		.2byte	0x1f7
+ 741 026b A4000000 		.4byte	0xa4
+ 742 026f 6A020000 		.4byte	.LLST6
+ 743 0273 15       		.uleb128 0x15
+ 744 0274 50020000 		.4byte	.LASF30
+ 745 0278 01       		.byte	0x1
+ 746 0279 1E02     		.2byte	0x21e
+ 747 027b C1020000 		.4byte	0x2c1
+ 748 027f 02       		.uleb128 0x2
+ 749 0280 91       		.byte	0x91
+ 750 0281 4C       		.sleb128 -52
+ 751 0282 16       		.uleb128 0x16
+ 752 0283 6900     		.ascii	"i\000"
+ 753 0285 01       		.byte	0x1
+ 754 0286 2902     		.2byte	0x229
+ 755 0288 80000000 		.4byte	0x80
+ 756 028c A9020000 		.4byte	.LLST7
+ 757 0290 17       		.uleb128 0x17
+ 758 0291 9C010000 		.4byte	.LASF22
+ 759 0295 01       		.byte	0x1
+ 760 0296 2A02     		.2byte	0x22a
+ 761 0298 A4000000 		.4byte	0xa4
+ 762 029c DF020000 		.4byte	.LLST8
+ 763 02a0 0F       		.uleb128 0xf
+ 764 02a1 3C000000 		.4byte	.LVL62
+ 765 02a5 D6000000 		.4byte	0xd6
+ 766 02a9 0E       		.uleb128 0xe
+ 767 02aa 01       		.uleb128 0x1
+ 768 02ab 51       		.byte	0x51
+ 769 02ac 02       		.uleb128 0x2
+ 770 02ad 75       		.byte	0x75
+ 771 02ae 00       		.sleb128 0
+ 772 02af 00       		.byte	0
+ 773 02b0 00       		.byte	0
+ 774 02b1 10       		.uleb128 0x10
+ 775 02b2 0B020000 		.4byte	0x20b
+ 776 02b6 C1020000 		.4byte	0x2c1
+ 777 02ba 11       		.uleb128 0x11
+ 778 02bb 72000000 		.4byte	0x72
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 25
+
+
+ 779 02bf 08       		.byte	0x8
+ 780 02c0 00       		.byte	0
+ 781 02c1 12       		.uleb128 0x12
+ 782 02c2 B1020000 		.4byte	0x2b1
+ 783 02c6 18       		.uleb128 0x18
+ 784 02c7 39020000 		.4byte	.LASF35
+ 785 02cb 39020000 		.4byte	.LASF35
+ 786 02cf 00       		.byte	0
+ 787              		.section	.debug_abbrev,"",%progbits
+ 788              	.Ldebug_abbrev0:
+ 789 0000 01       		.uleb128 0x1
+ 790 0001 11       		.uleb128 0x11
+ 791 0002 01       		.byte	0x1
+ 792 0003 25       		.uleb128 0x25
+ 793 0004 0E       		.uleb128 0xe
+ 794 0005 13       		.uleb128 0x13
+ 795 0006 0B       		.uleb128 0xb
+ 796 0007 03       		.uleb128 0x3
+ 797 0008 0E       		.uleb128 0xe
+ 798 0009 1B       		.uleb128 0x1b
+ 799 000a 0E       		.uleb128 0xe
+ 800 000b 55       		.uleb128 0x55
+ 801 000c 17       		.uleb128 0x17
+ 802 000d 11       		.uleb128 0x11
+ 803 000e 01       		.uleb128 0x1
+ 804 000f 10       		.uleb128 0x10
+ 805 0010 17       		.uleb128 0x17
+ 806 0011 00       		.byte	0
+ 807 0012 00       		.byte	0
+ 808 0013 02       		.uleb128 0x2
+ 809 0014 24       		.uleb128 0x24
+ 810 0015 00       		.byte	0
+ 811 0016 0B       		.uleb128 0xb
+ 812 0017 0B       		.uleb128 0xb
+ 813 0018 3E       		.uleb128 0x3e
+ 814 0019 0B       		.uleb128 0xb
+ 815 001a 03       		.uleb128 0x3
+ 816 001b 0E       		.uleb128 0xe
+ 817 001c 00       		.byte	0
+ 818 001d 00       		.byte	0
+ 819 001e 03       		.uleb128 0x3
+ 820 001f 24       		.uleb128 0x24
+ 821 0020 00       		.byte	0
+ 822 0021 0B       		.uleb128 0xb
+ 823 0022 0B       		.uleb128 0xb
+ 824 0023 3E       		.uleb128 0x3e
+ 825 0024 0B       		.uleb128 0xb
+ 826 0025 03       		.uleb128 0x3
+ 827 0026 08       		.uleb128 0x8
+ 828 0027 00       		.byte	0
+ 829 0028 00       		.byte	0
+ 830 0029 04       		.uleb128 0x4
+ 831 002a 16       		.uleb128 0x16
+ 832 002b 00       		.byte	0
+ 833 002c 03       		.uleb128 0x3
+ 834 002d 0E       		.uleb128 0xe
+ 835 002e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 26
+
+
+ 836 002f 0B       		.uleb128 0xb
+ 837 0030 3B       		.uleb128 0x3b
+ 838 0031 05       		.uleb128 0x5
+ 839 0032 49       		.uleb128 0x49
+ 840 0033 13       		.uleb128 0x13
+ 841 0034 00       		.byte	0
+ 842 0035 00       		.byte	0
+ 843 0036 05       		.uleb128 0x5
+ 844 0037 2E       		.uleb128 0x2e
+ 845 0038 01       		.byte	0x1
+ 846 0039 3F       		.uleb128 0x3f
+ 847 003a 19       		.uleb128 0x19
+ 848 003b 03       		.uleb128 0x3
+ 849 003c 0E       		.uleb128 0xe
+ 850 003d 3A       		.uleb128 0x3a
+ 851 003e 0B       		.uleb128 0xb
+ 852 003f 3B       		.uleb128 0x3b
+ 853 0040 0B       		.uleb128 0xb
+ 854 0041 27       		.uleb128 0x27
+ 855 0042 19       		.uleb128 0x19
+ 856 0043 49       		.uleb128 0x49
+ 857 0044 13       		.uleb128 0x13
+ 858 0045 11       		.uleb128 0x11
+ 859 0046 01       		.uleb128 0x1
+ 860 0047 12       		.uleb128 0x12
+ 861 0048 06       		.uleb128 0x6
+ 862 0049 40       		.uleb128 0x40
+ 863 004a 18       		.uleb128 0x18
+ 864 004b 9742     		.uleb128 0x2117
+ 865 004d 19       		.uleb128 0x19
+ 866 004e 01       		.uleb128 0x1
+ 867 004f 13       		.uleb128 0x13
+ 868 0050 00       		.byte	0
+ 869 0051 00       		.byte	0
+ 870 0052 06       		.uleb128 0x6
+ 871 0053 05       		.uleb128 0x5
+ 872 0054 00       		.byte	0
+ 873 0055 03       		.uleb128 0x3
+ 874 0056 08       		.uleb128 0x8
+ 875 0057 3A       		.uleb128 0x3a
+ 876 0058 0B       		.uleb128 0xb
+ 877 0059 3B       		.uleb128 0x3b
+ 878 005a 0B       		.uleb128 0xb
+ 879 005b 49       		.uleb128 0x49
+ 880 005c 13       		.uleb128 0x13
+ 881 005d 02       		.uleb128 0x2
+ 882 005e 17       		.uleb128 0x17
+ 883 005f 00       		.byte	0
+ 884 0060 00       		.byte	0
+ 885 0061 07       		.uleb128 0x7
+ 886 0062 34       		.uleb128 0x34
+ 887 0063 00       		.byte	0
+ 888 0064 03       		.uleb128 0x3
+ 889 0065 0E       		.uleb128 0xe
+ 890 0066 3A       		.uleb128 0x3a
+ 891 0067 0B       		.uleb128 0xb
+ 892 0068 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 27
+
+
+ 893 0069 0B       		.uleb128 0xb
+ 894 006a 49       		.uleb128 0x49
+ 895 006b 13       		.uleb128 0x13
+ 896 006c 02       		.uleb128 0x2
+ 897 006d 17       		.uleb128 0x17
+ 898 006e 00       		.byte	0
+ 899 006f 00       		.byte	0
+ 900 0070 08       		.uleb128 0x8
+ 901 0071 05       		.uleb128 0x5
+ 902 0072 00       		.byte	0
+ 903 0073 03       		.uleb128 0x3
+ 904 0074 0E       		.uleb128 0xe
+ 905 0075 3A       		.uleb128 0x3a
+ 906 0076 0B       		.uleb128 0xb
+ 907 0077 3B       		.uleb128 0x3b
+ 908 0078 0B       		.uleb128 0xb
+ 909 0079 49       		.uleb128 0x49
+ 910 007a 13       		.uleb128 0x13
+ 911 007b 02       		.uleb128 0x2
+ 912 007c 17       		.uleb128 0x17
+ 913 007d 00       		.byte	0
+ 914 007e 00       		.byte	0
+ 915 007f 09       		.uleb128 0x9
+ 916 0080 34       		.uleb128 0x34
+ 917 0081 00       		.byte	0
+ 918 0082 03       		.uleb128 0x3
+ 919 0083 0E       		.uleb128 0xe
+ 920 0084 3A       		.uleb128 0x3a
+ 921 0085 0B       		.uleb128 0xb
+ 922 0086 3B       		.uleb128 0x3b
+ 923 0087 0B       		.uleb128 0xb
+ 924 0088 49       		.uleb128 0x49
+ 925 0089 13       		.uleb128 0x13
+ 926 008a 02       		.uleb128 0x2
+ 927 008b 18       		.uleb128 0x18
+ 928 008c 00       		.byte	0
+ 929 008d 00       		.byte	0
+ 930 008e 0A       		.uleb128 0xa
+ 931 008f 34       		.uleb128 0x34
+ 932 0090 00       		.byte	0
+ 933 0091 03       		.uleb128 0x3
+ 934 0092 0E       		.uleb128 0xe
+ 935 0093 3A       		.uleb128 0x3a
+ 936 0094 0B       		.uleb128 0xb
+ 937 0095 3B       		.uleb128 0x3b
+ 938 0096 0B       		.uleb128 0xb
+ 939 0097 49       		.uleb128 0x49
+ 940 0098 13       		.uleb128 0x13
+ 941 0099 00       		.byte	0
+ 942 009a 00       		.byte	0
+ 943 009b 0B       		.uleb128 0xb
+ 944 009c 34       		.uleb128 0x34
+ 945 009d 00       		.byte	0
+ 946 009e 03       		.uleb128 0x3
+ 947 009f 0E       		.uleb128 0xe
+ 948 00a0 3A       		.uleb128 0x3a
+ 949 00a1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 28
+
+
+ 950 00a2 3B       		.uleb128 0x3b
+ 951 00a3 0B       		.uleb128 0xb
+ 952 00a4 49       		.uleb128 0x49
+ 953 00a5 13       		.uleb128 0x13
+ 954 00a6 1C       		.uleb128 0x1c
+ 955 00a7 0A       		.uleb128 0xa
+ 956 00a8 00       		.byte	0
+ 957 00a9 00       		.byte	0
+ 958 00aa 0C       		.uleb128 0xc
+ 959 00ab 34       		.uleb128 0x34
+ 960 00ac 00       		.byte	0
+ 961 00ad 03       		.uleb128 0x3
+ 962 00ae 08       		.uleb128 0x8
+ 963 00af 3A       		.uleb128 0x3a
+ 964 00b0 0B       		.uleb128 0xb
+ 965 00b1 3B       		.uleb128 0x3b
+ 966 00b2 0B       		.uleb128 0xb
+ 967 00b3 49       		.uleb128 0x49
+ 968 00b4 13       		.uleb128 0x13
+ 969 00b5 02       		.uleb128 0x2
+ 970 00b6 17       		.uleb128 0x17
+ 971 00b7 00       		.byte	0
+ 972 00b8 00       		.byte	0
+ 973 00b9 0D       		.uleb128 0xd
+ 974 00ba 898201   		.uleb128 0x4109
+ 975 00bd 01       		.byte	0x1
+ 976 00be 11       		.uleb128 0x11
+ 977 00bf 01       		.uleb128 0x1
+ 978 00c0 31       		.uleb128 0x31
+ 979 00c1 13       		.uleb128 0x13
+ 980 00c2 01       		.uleb128 0x1
+ 981 00c3 13       		.uleb128 0x13
+ 982 00c4 00       		.byte	0
+ 983 00c5 00       		.byte	0
+ 984 00c6 0E       		.uleb128 0xe
+ 985 00c7 8A8201   		.uleb128 0x410a
+ 986 00ca 00       		.byte	0
+ 987 00cb 02       		.uleb128 0x2
+ 988 00cc 18       		.uleb128 0x18
+ 989 00cd 9142     		.uleb128 0x2111
+ 990 00cf 18       		.uleb128 0x18
+ 991 00d0 00       		.byte	0
+ 992 00d1 00       		.byte	0
+ 993 00d2 0F       		.uleb128 0xf
+ 994 00d3 898201   		.uleb128 0x4109
+ 995 00d6 01       		.byte	0x1
+ 996 00d7 11       		.uleb128 0x11
+ 997 00d8 01       		.uleb128 0x1
+ 998 00d9 31       		.uleb128 0x31
+ 999 00da 13       		.uleb128 0x13
+ 1000 00db 00       		.byte	0
+ 1001 00dc 00       		.byte	0
+ 1002 00dd 10       		.uleb128 0x10
+ 1003 00de 01       		.uleb128 0x1
+ 1004 00df 01       		.byte	0x1
+ 1005 00e0 49       		.uleb128 0x49
+ 1006 00e1 13       		.uleb128 0x13
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 29
+
+
+ 1007 00e2 01       		.uleb128 0x1
+ 1008 00e3 13       		.uleb128 0x13
+ 1009 00e4 00       		.byte	0
+ 1010 00e5 00       		.byte	0
+ 1011 00e6 11       		.uleb128 0x11
+ 1012 00e7 21       		.uleb128 0x21
+ 1013 00e8 00       		.byte	0
+ 1014 00e9 49       		.uleb128 0x49
+ 1015 00ea 13       		.uleb128 0x13
+ 1016 00eb 2F       		.uleb128 0x2f
+ 1017 00ec 0B       		.uleb128 0xb
+ 1018 00ed 00       		.byte	0
+ 1019 00ee 00       		.byte	0
+ 1020 00ef 12       		.uleb128 0x12
+ 1021 00f0 26       		.uleb128 0x26
+ 1022 00f1 00       		.byte	0
+ 1023 00f2 49       		.uleb128 0x49
+ 1024 00f3 13       		.uleb128 0x13
+ 1025 00f4 00       		.byte	0
+ 1026 00f5 00       		.byte	0
+ 1027 00f6 13       		.uleb128 0x13
+ 1028 00f7 2E       		.uleb128 0x2e
+ 1029 00f8 01       		.byte	0x1
+ 1030 00f9 3F       		.uleb128 0x3f
+ 1031 00fa 19       		.uleb128 0x19
+ 1032 00fb 03       		.uleb128 0x3
+ 1033 00fc 0E       		.uleb128 0xe
+ 1034 00fd 3A       		.uleb128 0x3a
+ 1035 00fe 0B       		.uleb128 0xb
+ 1036 00ff 3B       		.uleb128 0x3b
+ 1037 0100 05       		.uleb128 0x5
+ 1038 0101 27       		.uleb128 0x27
+ 1039 0102 19       		.uleb128 0x19
+ 1040 0103 49       		.uleb128 0x49
+ 1041 0104 13       		.uleb128 0x13
+ 1042 0105 11       		.uleb128 0x11
+ 1043 0106 01       		.uleb128 0x1
+ 1044 0107 12       		.uleb128 0x12
+ 1045 0108 06       		.uleb128 0x6
+ 1046 0109 40       		.uleb128 0x40
+ 1047 010a 18       		.uleb128 0x18
+ 1048 010b 9742     		.uleb128 0x2117
+ 1049 010d 19       		.uleb128 0x19
+ 1050 010e 01       		.uleb128 0x1
+ 1051 010f 13       		.uleb128 0x13
+ 1052 0110 00       		.byte	0
+ 1053 0111 00       		.byte	0
+ 1054 0112 14       		.uleb128 0x14
+ 1055 0113 05       		.uleb128 0x5
+ 1056 0114 00       		.byte	0
+ 1057 0115 03       		.uleb128 0x3
+ 1058 0116 0E       		.uleb128 0xe
+ 1059 0117 3A       		.uleb128 0x3a
+ 1060 0118 0B       		.uleb128 0xb
+ 1061 0119 3B       		.uleb128 0x3b
+ 1062 011a 05       		.uleb128 0x5
+ 1063 011b 49       		.uleb128 0x49
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 30
+
+
+ 1064 011c 13       		.uleb128 0x13
+ 1065 011d 02       		.uleb128 0x2
+ 1066 011e 17       		.uleb128 0x17
+ 1067 011f 00       		.byte	0
+ 1068 0120 00       		.byte	0
+ 1069 0121 15       		.uleb128 0x15
+ 1070 0122 34       		.uleb128 0x34
+ 1071 0123 00       		.byte	0
+ 1072 0124 03       		.uleb128 0x3
+ 1073 0125 0E       		.uleb128 0xe
+ 1074 0126 3A       		.uleb128 0x3a
+ 1075 0127 0B       		.uleb128 0xb
+ 1076 0128 3B       		.uleb128 0x3b
+ 1077 0129 05       		.uleb128 0x5
+ 1078 012a 49       		.uleb128 0x49
+ 1079 012b 13       		.uleb128 0x13
+ 1080 012c 02       		.uleb128 0x2
+ 1081 012d 18       		.uleb128 0x18
+ 1082 012e 00       		.byte	0
+ 1083 012f 00       		.byte	0
+ 1084 0130 16       		.uleb128 0x16
+ 1085 0131 34       		.uleb128 0x34
+ 1086 0132 00       		.byte	0
+ 1087 0133 03       		.uleb128 0x3
+ 1088 0134 08       		.uleb128 0x8
+ 1089 0135 3A       		.uleb128 0x3a
+ 1090 0136 0B       		.uleb128 0xb
+ 1091 0137 3B       		.uleb128 0x3b
+ 1092 0138 05       		.uleb128 0x5
+ 1093 0139 49       		.uleb128 0x49
+ 1094 013a 13       		.uleb128 0x13
+ 1095 013b 02       		.uleb128 0x2
+ 1096 013c 17       		.uleb128 0x17
+ 1097 013d 00       		.byte	0
+ 1098 013e 00       		.byte	0
+ 1099 013f 17       		.uleb128 0x17
+ 1100 0140 34       		.uleb128 0x34
+ 1101 0141 00       		.byte	0
+ 1102 0142 03       		.uleb128 0x3
+ 1103 0143 0E       		.uleb128 0xe
+ 1104 0144 3A       		.uleb128 0x3a
+ 1105 0145 0B       		.uleb128 0xb
+ 1106 0146 3B       		.uleb128 0x3b
+ 1107 0147 05       		.uleb128 0x5
+ 1108 0148 49       		.uleb128 0x49
+ 1109 0149 13       		.uleb128 0x13
+ 1110 014a 02       		.uleb128 0x2
+ 1111 014b 17       		.uleb128 0x17
+ 1112 014c 00       		.byte	0
+ 1113 014d 00       		.byte	0
+ 1114 014e 18       		.uleb128 0x18
+ 1115 014f 2E       		.uleb128 0x2e
+ 1116 0150 00       		.byte	0
+ 1117 0151 3F       		.uleb128 0x3f
+ 1118 0152 19       		.uleb128 0x19
+ 1119 0153 3C       		.uleb128 0x3c
+ 1120 0154 19       		.uleb128 0x19
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 31
+
+
+ 1121 0155 6E       		.uleb128 0x6e
+ 1122 0156 0E       		.uleb128 0xe
+ 1123 0157 03       		.uleb128 0x3
+ 1124 0158 0E       		.uleb128 0xe
+ 1125 0159 00       		.byte	0
+ 1126 015a 00       		.byte	0
+ 1127 015b 00       		.byte	0
+ 1128              		.section	.debug_loc,"",%progbits
+ 1129              	.Ldebug_loc0:
+ 1130              	.LLST0:
+ 1131 0000 00000000 		.4byte	.LVL0
+ 1132 0004 12000000 		.4byte	.LVL2
+ 1133 0008 0100     		.2byte	0x1
+ 1134 000a 50       		.byte	0x50
+ 1135 000b 12000000 		.4byte	.LVL2
+ 1136 000f 36000000 		.4byte	.LFE0
+ 1137 0013 0400     		.2byte	0x4
+ 1138 0015 F3       		.byte	0xf3
+ 1139 0016 01       		.uleb128 0x1
+ 1140 0017 50       		.byte	0x50
+ 1141 0018 9F       		.byte	0x9f
+ 1142 0019 00000000 		.4byte	0
+ 1143 001d 00000000 		.4byte	0
+ 1144              	.LLST1:
+ 1145 0021 00000000 		.4byte	.LVL0
+ 1146 0025 14000000 		.4byte	.LVL3
+ 1147 0029 0100     		.2byte	0x1
+ 1148 002b 51       		.byte	0x51
+ 1149 002c 14000000 		.4byte	.LVL3
+ 1150 0030 36000000 		.4byte	.LFE0
+ 1151 0034 0400     		.2byte	0x4
+ 1152 0036 F3       		.byte	0xf3
+ 1153 0037 01       		.uleb128 0x1
+ 1154 0038 51       		.byte	0x51
+ 1155 0039 9F       		.byte	0x9f
+ 1156 003a 00000000 		.4byte	0
+ 1157 003e 00000000 		.4byte	0
+ 1158              	.LLST2:
+ 1159 0042 02000000 		.4byte	.LVL1
+ 1160 0046 14000000 		.4byte	.LVL3
+ 1161 004a 0A00     		.2byte	0xa
+ 1162 004c 9E       		.byte	0x9e
+ 1163 004d 08       		.uleb128 0x8
+ 1164 004e 00000000 		.8byte	0
+ 1164      00000000 
+ 1165 0056 14000000 		.4byte	.LVL3
+ 1166 005a 1E000000 		.4byte	.LVL4
+ 1167 005e 0600     		.2byte	0x6
+ 1168 0060 50       		.byte	0x50
+ 1169 0061 93       		.byte	0x93
+ 1170 0062 04       		.uleb128 0x4
+ 1171 0063 51       		.byte	0x51
+ 1172 0064 93       		.byte	0x93
+ 1173 0065 04       		.uleb128 0x4
+ 1174 0066 1E000000 		.4byte	.LVL4
+ 1175 006a 22000000 		.4byte	.LVL5
+ 1176 006e 1000     		.2byte	0x10
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 32
+
+
+ 1177 0070 F3       		.byte	0xf3
+ 1178 0071 01       		.uleb128 0x1
+ 1179 0072 50       		.byte	0x50
+ 1180 0073 F7       		.byte	0xf7
+ 1181 0074 2C       		.uleb128 0x2c
+ 1182 0075 F7       		.byte	0xf7
+ 1183 0076 25       		.uleb128 0x25
+ 1184 0077 F3       		.byte	0xf3
+ 1185 0078 01       		.uleb128 0x1
+ 1186 0079 51       		.byte	0x51
+ 1187 007a F7       		.byte	0xf7
+ 1188 007b 2C       		.uleb128 0x2c
+ 1189 007c F7       		.byte	0xf7
+ 1190 007d 25       		.uleb128 0x25
+ 1191 007e 1E       		.byte	0x1e
+ 1192 007f 9F       		.byte	0x9f
+ 1193 0080 22000000 		.4byte	.LVL5
+ 1194 0084 24000000 		.4byte	.LVL6
+ 1195 0088 0600     		.2byte	0x6
+ 1196 008a 50       		.byte	0x50
+ 1197 008b 93       		.byte	0x93
+ 1198 008c 04       		.uleb128 0x4
+ 1199 008d 51       		.byte	0x51
+ 1200 008e 93       		.byte	0x93
+ 1201 008f 04       		.uleb128 0x4
+ 1202 0090 28000000 		.4byte	.LVL7
+ 1203 0094 2A000000 		.4byte	.LVL8
+ 1204 0098 0700     		.2byte	0x7
+ 1205 009a 70       		.byte	0x70
+ 1206 009b 00       		.sleb128 0
+ 1207 009c F7       		.byte	0xf7
+ 1208 009d 33       		.uleb128 0x33
+ 1209 009e F7       		.byte	0xf7
+ 1210 009f 25       		.uleb128 0x25
+ 1211 00a0 9F       		.byte	0x9f
+ 1212 00a1 2C000000 		.4byte	.LVL9
+ 1213 00a5 2E000000 		.4byte	.LVL10
+ 1214 00a9 0600     		.2byte	0x6
+ 1215 00ab 50       		.byte	0x50
+ 1216 00ac 93       		.byte	0x93
+ 1217 00ad 04       		.uleb128 0x4
+ 1218 00ae 51       		.byte	0x51
+ 1219 00af 93       		.byte	0x93
+ 1220 00b0 04       		.uleb128 0x4
+ 1221 00b1 2E000000 		.4byte	.LVL10
+ 1222 00b5 32000000 		.4byte	.LVL11
+ 1223 00b9 1000     		.2byte	0x10
+ 1224 00bb F3       		.byte	0xf3
+ 1225 00bc 01       		.uleb128 0x1
+ 1226 00bd 50       		.byte	0x50
+ 1227 00be F7       		.byte	0xf7
+ 1228 00bf 2C       		.uleb128 0x2c
+ 1229 00c0 F7       		.byte	0xf7
+ 1230 00c1 25       		.uleb128 0x25
+ 1231 00c2 F3       		.byte	0xf3
+ 1232 00c3 01       		.uleb128 0x1
+ 1233 00c4 51       		.byte	0x51
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 33
+
+
+ 1234 00c5 F7       		.byte	0xf7
+ 1235 00c6 2C       		.uleb128 0x2c
+ 1236 00c7 F7       		.byte	0xf7
+ 1237 00c8 25       		.uleb128 0x25
+ 1238 00c9 1E       		.byte	0x1e
+ 1239 00ca 9F       		.byte	0x9f
+ 1240 00cb 00000000 		.4byte	0
+ 1241 00cf 00000000 		.4byte	0
+ 1242              	.LLST3:
+ 1243 00d3 00000000 		.4byte	.LVL12
+ 1244 00d7 0C000000 		.4byte	.LVL13
+ 1245 00db 0100     		.2byte	0x1
+ 1246 00dd 50       		.byte	0x50
+ 1247 00de 0C000000 		.4byte	.LVL13
+ 1248 00e2 1C000000 		.4byte	.LVL17
+ 1249 00e6 0100     		.2byte	0x1
+ 1250 00e8 54       		.byte	0x54
+ 1251 00e9 1C000000 		.4byte	.LVL17
+ 1252 00ed 1E000000 		.4byte	.LVL18
+ 1253 00f1 0100     		.2byte	0x1
+ 1254 00f3 55       		.byte	0x55
+ 1255 00f4 1E000000 		.4byte	.LVL18
+ 1256 00f8 20000000 		.4byte	.LVL19
+ 1257 00fc 0100     		.2byte	0x1
+ 1258 00fe 54       		.byte	0x54
+ 1259 00ff 20000000 		.4byte	.LVL19
+ 1260 0103 46000000 		.4byte	.LVL25
+ 1261 0107 0100     		.2byte	0x1
+ 1262 0109 55       		.byte	0x55
+ 1263 010a 4E000000 		.4byte	.LVL27
+ 1264 010e 60000000 		.4byte	.LVL30
+ 1265 0112 0100     		.2byte	0x1
+ 1266 0114 54       		.byte	0x54
+ 1267 0115 60000000 		.4byte	.LVL30
+ 1268 0119 62000000 		.4byte	.LVL31
+ 1269 011d 0100     		.2byte	0x1
+ 1270 011f 55       		.byte	0x55
+ 1271 0120 62000000 		.4byte	.LVL31
+ 1272 0124 64000000 		.4byte	.LVL32
+ 1273 0128 0100     		.2byte	0x1
+ 1274 012a 54       		.byte	0x54
+ 1275 012b 64000000 		.4byte	.LVL32
+ 1276 012f 92000000 		.4byte	.LVL39
+ 1277 0133 0100     		.2byte	0x1
+ 1278 0135 55       		.byte	0x55
+ 1279 0136 92000000 		.4byte	.LVL39
+ 1280 013a 9C000000 		.4byte	.LVL42
+ 1281 013e 0100     		.2byte	0x1
+ 1282 0140 54       		.byte	0x54
+ 1283 0141 9C000000 		.4byte	.LVL42
+ 1284 0145 9E000000 		.4byte	.LVL43
+ 1285 0149 0100     		.2byte	0x1
+ 1286 014b 55       		.byte	0x55
+ 1287 014c 9E000000 		.4byte	.LVL43
+ 1288 0150 A0000000 		.4byte	.LVL44
+ 1289 0154 0100     		.2byte	0x1
+ 1290 0156 54       		.byte	0x54
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 34
+
+
+ 1291 0157 A0000000 		.4byte	.LVL44
+ 1292 015b D0000000 		.4byte	.LVL50
+ 1293 015f 0100     		.2byte	0x1
+ 1294 0161 55       		.byte	0x55
+ 1295 0162 00000000 		.4byte	0
+ 1296 0166 00000000 		.4byte	0
+ 1297              	.LLST4:
+ 1298 016a 10000000 		.4byte	.LVL14
+ 1299 016e 26000000 		.4byte	.LVL20
+ 1300 0172 0200     		.2byte	0x2
+ 1301 0174 30       		.byte	0x30
+ 1302 0175 9F       		.byte	0x9f
+ 1303 0176 26000000 		.4byte	.LVL20
+ 1304 017a 38000000 		.4byte	.LVL21
+ 1305 017e 0100     		.2byte	0x1
+ 1306 0180 50       		.byte	0x50
+ 1307 0181 3C000000 		.4byte	.LVL22
+ 1308 0185 4E000000 		.4byte	.LVL27
+ 1309 0189 0100     		.2byte	0x1
+ 1310 018b 50       		.byte	0x50
+ 1311 018c 4E000000 		.4byte	.LVL27
+ 1312 0190 6A000000 		.4byte	.LVL33
+ 1313 0194 0200     		.2byte	0x2
+ 1314 0196 30       		.byte	0x30
+ 1315 0197 9F       		.byte	0x9f
+ 1316 0198 6A000000 		.4byte	.LVL33
+ 1317 019c 7C000000 		.4byte	.LVL34
+ 1318 01a0 0100     		.2byte	0x1
+ 1319 01a2 50       		.byte	0x50
+ 1320 01a3 80000000 		.4byte	.LVL35
+ 1321 01a7 90000000 		.4byte	.LVL38
+ 1322 01ab 0100     		.2byte	0x1
+ 1323 01ad 50       		.byte	0x50
+ 1324 01ae 92000000 		.4byte	.LVL39
+ 1325 01b2 A6000000 		.4byte	.LVL45
+ 1326 01b6 0200     		.2byte	0x2
+ 1327 01b8 30       		.byte	0x30
+ 1328 01b9 9F       		.byte	0x9f
+ 1329 01ba A6000000 		.4byte	.LVL45
+ 1330 01be B8000000 		.4byte	.LVL46
+ 1331 01c2 0100     		.2byte	0x1
+ 1332 01c4 50       		.byte	0x50
+ 1333 01c5 BC000000 		.4byte	.LVL47
+ 1334 01c9 DC000000 		.4byte	.LFE1
+ 1335 01cd 0100     		.2byte	0x1
+ 1336 01cf 50       		.byte	0x50
+ 1337 01d0 00000000 		.4byte	0
+ 1338 01d4 00000000 		.4byte	0
+ 1339              	.LLST5:
+ 1340 01d8 10000000 		.4byte	.LVL14
+ 1341 01dc 20000000 		.4byte	.LVL19
+ 1342 01e0 0200     		.2byte	0x2
+ 1343 01e2 30       		.byte	0x30
+ 1344 01e3 9F       		.byte	0x9f
+ 1345 01e4 20000000 		.4byte	.LVL19
+ 1346 01e8 26000000 		.4byte	.LVL20
+ 1347 01ec 0200     		.2byte	0x2
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 35
+
+
+ 1348 01ee 39       		.byte	0x39
+ 1349 01ef 9F       		.byte	0x9f
+ 1350 01f0 26000000 		.4byte	.LVL20
+ 1351 01f4 3E000000 		.4byte	.LVL23
+ 1352 01f8 0100     		.2byte	0x1
+ 1353 01fa 54       		.byte	0x54
+ 1354 01fb 40000000 		.4byte	.LVL24
+ 1355 01ff 4E000000 		.4byte	.LVL27
+ 1356 0203 0100     		.2byte	0x1
+ 1357 0205 54       		.byte	0x54
+ 1358 0206 4E000000 		.4byte	.LVL27
+ 1359 020a 64000000 		.4byte	.LVL32
+ 1360 020e 0200     		.2byte	0x2
+ 1361 0210 30       		.byte	0x30
+ 1362 0211 9F       		.byte	0x9f
+ 1363 0212 64000000 		.4byte	.LVL32
+ 1364 0216 6A000000 		.4byte	.LVL33
+ 1365 021a 0200     		.2byte	0x2
+ 1366 021c 39       		.byte	0x39
+ 1367 021d 9F       		.byte	0x9f
+ 1368 021e 6A000000 		.4byte	.LVL33
+ 1369 0222 82000000 		.4byte	.LVL36
+ 1370 0226 0100     		.2byte	0x1
+ 1371 0228 54       		.byte	0x54
+ 1372 0229 84000000 		.4byte	.LVL37
+ 1373 022d 92000000 		.4byte	.LVL39
+ 1374 0231 0100     		.2byte	0x1
+ 1375 0233 54       		.byte	0x54
+ 1376 0234 92000000 		.4byte	.LVL39
+ 1377 0238 A0000000 		.4byte	.LVL44
+ 1378 023c 0200     		.2byte	0x2
+ 1379 023e 30       		.byte	0x30
+ 1380 023f 9F       		.byte	0x9f
+ 1381 0240 A0000000 		.4byte	.LVL44
+ 1382 0244 A6000000 		.4byte	.LVL45
+ 1383 0248 0200     		.2byte	0x2
+ 1384 024a 39       		.byte	0x39
+ 1385 024b 9F       		.byte	0x9f
+ 1386 024c A6000000 		.4byte	.LVL45
+ 1387 0250 BE000000 		.4byte	.LVL48
+ 1388 0254 0100     		.2byte	0x1
+ 1389 0256 54       		.byte	0x54
+ 1390 0257 C0000000 		.4byte	.LVL49
+ 1391 025b D4000000 		.4byte	.LVL51
+ 1392 025f 0100     		.2byte	0x1
+ 1393 0261 54       		.byte	0x54
+ 1394 0262 00000000 		.4byte	0
+ 1395 0266 00000000 		.4byte	0
+ 1396              	.LLST6:
+ 1397 026a 00000000 		.4byte	.LVL52
+ 1398 026e 0C000000 		.4byte	.LVL53
+ 1399 0272 0100     		.2byte	0x1
+ 1400 0274 50       		.byte	0x50
+ 1401 0275 0C000000 		.4byte	.LVL53
+ 1402 0279 1C000000 		.4byte	.LVL55
+ 1403 027d 0100     		.2byte	0x1
+ 1404 027f 56       		.byte	0x56
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 36
+
+
+ 1405 0280 1C000000 		.4byte	.LVL55
+ 1406 0284 22000000 		.4byte	.LVL58
+ 1407 0288 0100     		.2byte	0x1
+ 1408 028a 55       		.byte	0x55
+ 1409 028b 22000000 		.4byte	.LVL58
+ 1410 028f 24000000 		.4byte	.LVL59
+ 1411 0293 0100     		.2byte	0x1
+ 1412 0295 56       		.byte	0x56
+ 1413 0296 24000000 		.4byte	.LVL59
+ 1414 029a 50000000 		.4byte	.LVL67
+ 1415 029e 0100     		.2byte	0x1
+ 1416 02a0 55       		.byte	0x55
+ 1417 02a1 00000000 		.4byte	0
+ 1418 02a5 00000000 		.4byte	0
+ 1419              	.LLST7:
+ 1420 02a9 16000000 		.4byte	.LVL54
+ 1421 02ad 24000000 		.4byte	.LVL59
+ 1422 02b1 0200     		.2byte	0x2
+ 1423 02b3 30       		.byte	0x30
+ 1424 02b4 9F       		.byte	0x9f
+ 1425 02b5 24000000 		.4byte	.LVL59
+ 1426 02b9 2A000000 		.4byte	.LVL60
+ 1427 02bd 0200     		.2byte	0x2
+ 1428 02bf 38       		.byte	0x38
+ 1429 02c0 9F       		.byte	0x9f
+ 1430 02c1 2A000000 		.4byte	.LVL60
+ 1431 02c5 3E000000 		.4byte	.LVL63
+ 1432 02c9 0100     		.2byte	0x1
+ 1433 02cb 54       		.byte	0x54
+ 1434 02cc 40000000 		.4byte	.LVL64
+ 1435 02d0 50000000 		.4byte	.LVL67
+ 1436 02d4 0100     		.2byte	0x1
+ 1437 02d6 54       		.byte	0x54
+ 1438 02d7 00000000 		.4byte	0
+ 1439 02db 00000000 		.4byte	0
+ 1440              	.LLST8:
+ 1441 02df 16000000 		.4byte	.LVL54
+ 1442 02e3 2A000000 		.4byte	.LVL60
+ 1443 02e7 0200     		.2byte	0x2
+ 1444 02e9 30       		.byte	0x30
+ 1445 02ea 9F       		.byte	0x9f
+ 1446 02eb 2A000000 		.4byte	.LVL60
+ 1447 02ef 38000000 		.4byte	.LVL61
+ 1448 02f3 0100     		.2byte	0x1
+ 1449 02f5 50       		.byte	0x50
+ 1450 02f6 3C000000 		.4byte	.LVL62
+ 1451 02fa 48000000 		.4byte	.LVL65
+ 1452 02fe 0100     		.2byte	0x1
+ 1453 0300 50       		.byte	0x50
+ 1454 0301 48000000 		.4byte	.LVL65
+ 1455 0305 4C000000 		.4byte	.LVL66
+ 1456 0309 0800     		.2byte	0x8
+ 1457 030b 73       		.byte	0x73
+ 1458 030c 00       		.sleb128 0
+ 1459 030d 4B       		.byte	0x4b
+ 1460 030e 24       		.byte	0x24
+ 1461 030f 70       		.byte	0x70
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 37
+
+
+ 1462 0310 00       		.sleb128 0
+ 1463 0311 21       		.byte	0x21
+ 1464 0312 9F       		.byte	0x9f
+ 1465 0313 4C000000 		.4byte	.LVL66
+ 1466 0317 54000000 		.4byte	.LFE2
+ 1467 031b 0100     		.2byte	0x1
+ 1468 031d 50       		.byte	0x50
+ 1469 031e 00000000 		.4byte	0
+ 1470 0322 00000000 		.4byte	0
+ 1471              		.section	.debug_aranges,"",%progbits
+ 1472 0000 2C000000 		.4byte	0x2c
+ 1473 0004 0200     		.2byte	0x2
+ 1474 0006 00000000 		.4byte	.Ldebug_info0
+ 1475 000a 04       		.byte	0x4
+ 1476 000b 00       		.byte	0
+ 1477 000c 0000     		.2byte	0
+ 1478 000e 0000     		.2byte	0
+ 1479 0010 00000000 		.4byte	.LFB0
+ 1480 0014 36000000 		.4byte	.LFE0-.LFB0
+ 1481 0018 00000000 		.4byte	.LFB1
+ 1482 001c DC000000 		.4byte	.LFE1-.LFB1
+ 1483 0020 00000000 		.4byte	.LFB2
+ 1484 0024 54000000 		.4byte	.LFE2-.LFB2
+ 1485 0028 00000000 		.4byte	0
+ 1486 002c 00000000 		.4byte	0
+ 1487              		.section	.debug_ranges,"",%progbits
+ 1488              	.Ldebug_ranges0:
+ 1489 0000 00000000 		.4byte	.LFB0
+ 1490 0004 36000000 		.4byte	.LFE0
+ 1491 0008 00000000 		.4byte	.LFB1
+ 1492 000c DC000000 		.4byte	.LFE1
+ 1493 0010 00000000 		.4byte	.LFB2
+ 1494 0014 54000000 		.4byte	.LFE2
+ 1495 0018 00000000 		.4byte	0
+ 1496 001c 00000000 		.4byte	0
+ 1497              		.section	.debug_line,"",%progbits
+ 1498              	.Ldebug_line0:
+ 1499 0000 16010000 		.section	.debug_str,"MS",%progbits,1
+ 1499      02004700 
+ 1499      00000201 
+ 1499      FB0E0D00 
+ 1499      01010101 
+ 1500              	.LASF16:
+ 1501 0000 666C6F61 		.ascii	"float\000"
+ 1501      7400
+ 1502              	.LASF32:
+ 1503 0006 47656E65 		.ascii	"Generated_Source\\PSoC5\\Termocupla.c\000"
+ 1503      72617465 
+ 1503      645F536F 
+ 1503      75726365 
+ 1503      5C50536F 
+ 1504              	.LASF19:
+ 1505 002a 75696E74 		.ascii	"uint64\000"
+ 1505      363400
+ 1506              	.LASF7:
+ 1507 0031 73686F72 		.ascii	"short unsigned int\000"
+ 1507      7420756E 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 38
+
+
+ 1507      7369676E 
+ 1507      65642069 
+ 1507      6E7400
+ 1508              	.LASF26:
+ 1509 0044 5465726D 		.ascii	"Termocupla_coefScaleVT\000"
+ 1509      6F637570 
+ 1509      6C615F63 
+ 1509      6F656653 
+ 1509      63616C65 
+ 1510              	.LASF33:
+ 1511 005b 443A5C47 		.ascii	"D:\\GitHub\\Alumnos\\Sensores-actuadores\\Clase_4_T"
+ 1511      69744875 
+ 1511      625C416C 
+ 1511      756D6E6F 
+ 1511      735C5365 
+ 1512 008a 7261736D 		.ascii	"rasmisores\\1_Termopar\\Termocupla.cydsn\000"
+ 1512      69736F72 
+ 1512      65735C31 
+ 1512      5F546572 
+ 1512      6D6F7061 
+ 1513              	.LASF34:
+ 1514 00b1 5465726D 		.ascii	"Termocupla_voltRange\000"
+ 1514      6F637570 
+ 1514      6C615F76 
+ 1514      6F6C7452 
+ 1514      616E6765 
+ 1515              	.LASF29:
+ 1516 00c6 74656D70 		.ascii	"temperature\000"
+ 1516      65726174 
+ 1516      75726500 
+ 1517              	.LASF5:
+ 1518 00d2 756E7369 		.ascii	"unsigned char\000"
+ 1518      676E6564 
+ 1518      20636861 
+ 1518      7200
+ 1519              	.LASF31:
+ 1520 00e0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1520      43313120 
+ 1520      352E342E 
+ 1520      31203230 
+ 1520      31363036 
+ 1521 0113 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1521      20726576 
+ 1521      6973696F 
+ 1521      6E203233 
+ 1521      37373135 
+ 1522 0146 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1522      66756E63 
+ 1522      74696F6E 
+ 1522      2D736563 
+ 1522      74696F6E 
+ 1523              	.LASF9:
+ 1524 016e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1524      20756E73 
+ 1524      69676E65 
+ 1524      6420696E 
+ 1524      7400
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 39
+
+
+ 1525              	.LASF27:
+ 1526 0180 74656D70 		.ascii	"temp\000"
+ 1526      00
+ 1527              	.LASF20:
+ 1528 0185 5465726D 		.ascii	"Termocupla_MultShift24\000"
+ 1528      6F637570 
+ 1528      6C615F4D 
+ 1528      756C7453 
+ 1528      68696674 
+ 1529              	.LASF22:
+ 1530 019c 766F6C74 		.ascii	"voltage\000"
+ 1530      61676500 
+ 1531              	.LASF17:
+ 1532 01a4 646F7562 		.ascii	"double\000"
+ 1532      6C6500
+ 1533              	.LASF3:
+ 1534 01ab 6C6F6E67 		.ascii	"long double\000"
+ 1534      20646F75 
+ 1534      626C6500 
+ 1535              	.LASF14:
+ 1536 01b7 696E7438 		.ascii	"int8\000"
+ 1536      00
+ 1537              	.LASF13:
+ 1538 01bc 75696E74 		.ascii	"uint32\000"
+ 1538      333200
+ 1539              	.LASF21:
+ 1540 01c3 5465726D 		.ascii	"Termocupla_GetTemperature\000"
+ 1540      6F637570 
+ 1540      6C615F47 
+ 1540      65745465 
+ 1540      6D706572 
+ 1541              	.LASF1:
+ 1542 01dd 756E7369 		.ascii	"unsigned int\000"
+ 1542      676E6564 
+ 1542      20696E74 
+ 1542      00
+ 1543              	.LASF25:
+ 1544 01ea 5465726D 		.ascii	"Termocupla_xScaleVT\000"
+ 1544      6F637570 
+ 1544      6C615F78 
+ 1544      5363616C 
+ 1544      65565400 
+ 1545              	.LASF0:
+ 1546 01fe 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1546      206C6F6E 
+ 1546      6720756E 
+ 1546      7369676E 
+ 1546      65642069 
+ 1547              	.LASF23:
+ 1548 0215 72657375 		.ascii	"result\000"
+ 1548      6C7400
+ 1549              	.LASF15:
+ 1550 021c 696E7433 		.ascii	"int32\000"
+ 1550      3200
+ 1551              	.LASF10:
+ 1552 0222 73697A65 		.ascii	"sizetype\000"
+ 1552      74797065 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccAb5XmU.s 			page 40
+
+
+ 1552      00
+ 1553              	.LASF2:
+ 1554 022b 6C6F6E67 		.ascii	"long long int\000"
+ 1554      206C6F6E 
+ 1554      6720696E 
+ 1554      7400
+ 1555              	.LASF35:
+ 1556 0239 6D656D63 		.ascii	"memcpy\000"
+ 1556      707900
+ 1557              	.LASF6:
+ 1558 0240 73686F72 		.ascii	"short int\000"
+ 1558      7420696E 
+ 1558      7400
+ 1559              	.LASF12:
+ 1560 024a 75696E74 		.ascii	"uint8\000"
+ 1560      3800
+ 1561              	.LASF30:
+ 1562 0250 5465726D 		.ascii	"Termocupla_coeffTV\000"
+ 1562      6F637570 
+ 1562      6C615F63 
+ 1562      6F656666 
+ 1562      545600
+ 1563              	.LASF8:
+ 1564 0263 6C6F6E67 		.ascii	"long int\000"
+ 1564      20696E74 
+ 1564      00
+ 1565              	.LASF11:
+ 1566 026c 63686172 		.ascii	"char\000"
+ 1566      00
+ 1567              	.LASF24:
+ 1568 0271 5465726D 		.ascii	"Termocupla_coeffVT\000"
+ 1568      6F637570 
+ 1568      6C615F63 
+ 1568      6F656666 
+ 1568      565400
+ 1569              	.LASF4:
+ 1570 0284 7369676E 		.ascii	"signed char\000"
+ 1570      65642063 
+ 1570      68617200 
+ 1571              	.LASF18:
+ 1572 0290 696E7436 		.ascii	"int64\000"
+ 1572      3400
+ 1573              	.LASF28:
+ 1574 0296 5465726D 		.ascii	"Termocupla_GetVoltage\000"
+ 1574      6F637570 
+ 1574      6C615F47 
+ 1574      6574566F 
+ 1574      6C746167 
+ 1575              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -3373,6 +3373,7 @@
         <Data key="Port Format" value="4,5" />
       </Group>
     </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

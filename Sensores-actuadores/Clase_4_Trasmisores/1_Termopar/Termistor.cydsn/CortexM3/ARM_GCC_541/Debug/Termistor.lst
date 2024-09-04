@@ -1,0 +1,1058 @@
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Termistor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Termistor_GetResistance,"ax",%progbits
+  20              		.align	2
+  21              		.global	Termistor_GetResistance
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Termistor_GetResistance, %function
+  25              	Termistor_GetResistance:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Termistor.c"
+   1:Generated_Source\PSoC5/Termistor.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Termistor.c **** * File Name: Termistor.c
+   3:Generated_Source\PSoC5/Termistor.c **** * Version 1.20
+   4:Generated_Source\PSoC5/Termistor.c **** *
+   5:Generated_Source\PSoC5/Termistor.c **** * Description:
+   6:Generated_Source\PSoC5/Termistor.c **** *  This file provides the source code to the API for the ThermistorCalc
+   7:Generated_Source\PSoC5/Termistor.c **** *  Component.
+   8:Generated_Source\PSoC5/Termistor.c **** *
+   9:Generated_Source\PSoC5/Termistor.c **** * Note:
+  10:Generated_Source\PSoC5/Termistor.c **** *  None.
+  11:Generated_Source\PSoC5/Termistor.c **** *
+  12:Generated_Source\PSoC5/Termistor.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/Termistor.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC5/Termistor.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC5/Termistor.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC5/Termistor.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/Termistor.c **** *******************************************************************************/
+  18:Generated_Source\PSoC5/Termistor.c **** 
+  19:Generated_Source\PSoC5/Termistor.c **** #include "Termistor.h"
+  20:Generated_Source\PSoC5/Termistor.c **** 
+  21:Generated_Source\PSoC5/Termistor.c **** 
+  22:Generated_Source\PSoC5/Termistor.c **** /*******************************************************************************
+  23:Generated_Source\PSoC5/Termistor.c **** * Function Name: Termistor_GetResistance
+  24:Generated_Source\PSoC5/Termistor.c **** ********************************************************************************
+  25:Generated_Source\PSoC5/Termistor.c **** *
+  26:Generated_Source\PSoC5/Termistor.c **** * Summary:
+  27:Generated_Source\PSoC5/Termistor.c **** *  The digital values of the voltages across the reference resistor and the
+  28:Generated_Source\PSoC5/Termistor.c **** *  thermistor are passed to this function as parameters. The function returns
+  29:Generated_Source\PSoC5/Termistor.c **** *  the resistance, based on the voltage values.
+  30:Generated_Source\PSoC5/Termistor.c **** *
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Termistor.c **** * Parameters:
+  32:Generated_Source\PSoC5/Termistor.c **** *  vReference: the voltage across the reference resistor;
+  33:Generated_Source\PSoC5/Termistor.c **** *  vThermistor: the voltage across the thermistor.
+  34:Generated_Source\PSoC5/Termistor.c **** *  The ratio of these two voltages is used by this function. Therefore, the
+  35:Generated_Source\PSoC5/Termistor.c **** *  units for both parameters must be the same.
+  36:Generated_Source\PSoC5/Termistor.c **** *
+  37:Generated_Source\PSoC5/Termistor.c **** * Return:
+  38:Generated_Source\PSoC5/Termistor.c **** *  The return value is the resistance across the thermistor. The value returned
+  39:Generated_Source\PSoC5/Termistor.c **** *  is the resistance in Ohms.
+  40:Generated_Source\PSoC5/Termistor.c **** *
+  41:Generated_Source\PSoC5/Termistor.c **** *******************************************************************************/
+  42:Generated_Source\PSoC5/Termistor.c **** uint32 Termistor_GetResistance(int16 vReference, int16 vThermistor)
+  43:Generated_Source\PSoC5/Termistor.c ****                                       
+  44:Generated_Source\PSoC5/Termistor.c **** {
+  28              		.loc 1 44 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  45:Generated_Source\PSoC5/Termistor.c ****     int32 resT;
+  46:Generated_Source\PSoC5/Termistor.c ****     int16 temp;
+  47:Generated_Source\PSoC5/Termistor.c **** 
+  48:Generated_Source\PSoC5/Termistor.c ****     /* Calculate thermistor resistance from the voltages */
+  49:Generated_Source\PSoC5/Termistor.c ****     resT = Termistor_REF_RESISTOR * ((int32)vThermistor);
+  34              		.loc 1 49 0
+  35 0000 42F21073 		movw	r3, #10000
+  36 0004 03FB01F1 		mul	r1, r3, r1
+  37              	.LVL1:
+  50:Generated_Source\PSoC5/Termistor.c ****     if (vReference < 0)
+  38              		.loc 1 50 0
+  39 0008 0028     		cmp	r0, #0
+  40              	.LVL2:
+  41 000a 05DA     		bge	.L2
+  51:Generated_Source\PSoC5/Termistor.c ****     {
+  52:Generated_Source\PSoC5/Termistor.c ****         temp = -vReference;
+  42              		.loc 1 52 0
+  43 000c 4342     		negs	r3, r0
+  44              	.LVL3:
+  53:Generated_Source\PSoC5/Termistor.c ****         temp = (int16)((uint16)((uint16)temp >> 1u));
+  45              		.loc 1 53 0
+  46 000e C3F34E03 		ubfx	r3, r3, #1, #15
+  47              	.LVL4:
+  54:Generated_Source\PSoC5/Termistor.c ****         temp = -temp;
+  48              		.loc 1 54 0
+  49 0012 5B42     		negs	r3, r3
+  50              	.LVL5:
+  51 0014 1BB2     		sxth	r3, r3
+  52              	.LVL6:
+  53 0016 01E0     		b	.L3
+  54              	.LVL7:
+  55              	.L2:
+  55:Generated_Source\PSoC5/Termistor.c ****     }
+  56:Generated_Source\PSoC5/Termistor.c ****     else
+  57:Generated_Source\PSoC5/Termistor.c ****     {
+  58:Generated_Source\PSoC5/Termistor.c ****         temp = (int16)((uint16)((uint16)vReference >> 1u));
+  56              		.loc 1 58 0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 3
+
+
+  57 0018 C0F34E03 		ubfx	r3, r0, #1, #15
+  58              	.LVL8:
+  59              	.L3:
+  59:Generated_Source\PSoC5/Termistor.c ****     }
+  60:Generated_Source\PSoC5/Termistor.c ****     resT += temp;
+  60              		.loc 1 60 0
+  61 001c 1944     		add	r1, r1, r3
+  62              	.LVL9:
+  61:Generated_Source\PSoC5/Termistor.c ****     resT /= vReference;
+  62:Generated_Source\PSoC5/Termistor.c **** 
+  63:Generated_Source\PSoC5/Termistor.c ****     /* The ordering of Reference resistor value is specifically designed to keep the result from ov
+  64:Generated_Source\PSoC5/Termistor.c ****     return ((uint32)((uint32)resT << Termistor_REF_RES_SHIFT));
+  65:Generated_Source\PSoC5/Termistor.c **** }
+  63              		.loc 1 65 0
+  64 001e 91FBF0F0 		sdiv	r0, r1, r0
+  65              	.LVL10:
+  66 0022 7047     		bx	lr
+  67              		.cfi_endproc
+  68              	.LFE0:
+  69              		.size	Termistor_GetResistance, .-Termistor_GetResistance
+  70              		.global	__aeabi_ui2d
+  71              		.global	__aeabi_d2f
+  72              		.global	__aeabi_f2d
+  73              		.global	__aeabi_dmul
+  74              		.global	__aeabi_dadd
+  75              		.global	__aeabi_ddiv
+  76              		.global	__aeabi_dsub
+  77              		.global	__aeabi_f2iz
+  78              		.section	.text.Termistor_GetTemperature,"ax",%progbits
+  79              		.align	2
+  80              		.global	Termistor_GetTemperature
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	Termistor_GetTemperature, %function
+  84              	Termistor_GetTemperature:
+  85              	.LFB1:
+  66:Generated_Source\PSoC5/Termistor.c **** 
+  67:Generated_Source\PSoC5/Termistor.c **** 
+  68:Generated_Source\PSoC5/Termistor.c **** /*******************************************************************************
+  69:Generated_Source\PSoC5/Termistor.c **** * Function Name: Termistor_GetTemperature
+  70:Generated_Source\PSoC5/Termistor.c **** ********************************************************************************
+  71:Generated_Source\PSoC5/Termistor.c **** *
+  72:Generated_Source\PSoC5/Termistor.c **** * Summary:
+  73:Generated_Source\PSoC5/Termistor.c **** *  The value of the thermistor resistance is passed to this function as a
+  74:Generated_Source\PSoC5/Termistor.c **** *  parameter. The function returns the temperature, based on the resistance
+  75:Generated_Source\PSoC5/Termistor.c **** *  value. The method used to calculate the temperature is dependent on whether
+  76:Generated_Source\PSoC5/Termistor.c **** *  Equation or LUT was selected in the Customizer.
+  77:Generated_Source\PSoC5/Termistor.c **** *
+  78:Generated_Source\PSoC5/Termistor.c **** * Parameters:
+  79:Generated_Source\PSoC5/Termistor.c **** *  resT: the resistance across the thermistor in Ohms.
+  80:Generated_Source\PSoC5/Termistor.c **** *
+  81:Generated_Source\PSoC5/Termistor.c **** * Return:
+  82:Generated_Source\PSoC5/Termistor.c **** *  The return value is the temperature in 1/100ths of degrees C. For example,
+  83:Generated_Source\PSoC5/Termistor.c **** *  the return value is 2345, when the actual temperature is 23.45 degrees C.
+  84:Generated_Source\PSoC5/Termistor.c **** *
+  85:Generated_Source\PSoC5/Termistor.c **** *******************************************************************************/
+  86:Generated_Source\PSoC5/Termistor.c **** int16 Termistor_GetTemperature(uint32 resT) 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 4
+
+
+  87:Generated_Source\PSoC5/Termistor.c **** {
+  86              		.loc 1 87 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90              	.LVL11:
+  91 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  92              		.cfi_def_cfa_offset 24
+  93              		.cfi_offset 3, -24
+  94              		.cfi_offset 4, -20
+  95              		.cfi_offset 5, -16
+  96              		.cfi_offset 6, -12
+  97              		.cfi_offset 7, -8
+  98              		.cfi_offset 14, -4
+  88:Generated_Source\PSoC5/Termistor.c ****     int16 tempTR;
+  89:Generated_Source\PSoC5/Termistor.c ****     
+  90:Generated_Source\PSoC5/Termistor.c ****     #if (Termistor_IMPLEMENTATION == Termistor_EQUATION_METHOD)
+  91:Generated_Source\PSoC5/Termistor.c **** 
+  92:Generated_Source\PSoC5/Termistor.c ****         float32 stEqn;
+  93:Generated_Source\PSoC5/Termistor.c ****         float32 logrT;
+  94:Generated_Source\PSoC5/Termistor.c **** 
+  95:Generated_Source\PSoC5/Termistor.c ****         /* Calculate thermistor resistance from the voltages */
+  96:Generated_Source\PSoC5/Termistor.c ****         #if(!CY_PSOC3)
+  97:Generated_Source\PSoC5/Termistor.c ****             logrT = (float32)log((float64)resT);
+  99              		.loc 1 97 0
+ 100 0002 FFF7FEFF 		bl	__aeabi_ui2d
+ 101              	.LVL12:
+ 102 0006 FFF7FEFF 		bl	log
+ 103              	.LVL13:
+ 104 000a FFF7FEFF 		bl	__aeabi_d2f
+ 105              	.LVL14:
+  98:Generated_Source\PSoC5/Termistor.c ****         #else
+  99:Generated_Source\PSoC5/Termistor.c ****             logrT = log((float32)resT);
+ 100:Generated_Source\PSoC5/Termistor.c ****         #endif  /* (!CY_PSOC3) */
+ 101:Generated_Source\PSoC5/Termistor.c **** 
+ 102:Generated_Source\PSoC5/Termistor.c ****         /* Calculate temperature from the resistance of thermistor using Steinhart-Hart Equation */
+ 103:Generated_Source\PSoC5/Termistor.c ****         #if(!CY_PSOC3)
+ 104:Generated_Source\PSoC5/Termistor.c ****             stEqn = (float32)(Termistor_THA + (Termistor_THB * logrT) + 
+ 106              		.loc 1 104 0
+ 107 000e FFF7FEFF 		bl	__aeabi_f2d
+ 108              	.LVL15:
+ 109 0012 0646     		mov	r6, r0
+ 110 0014 0F46     		mov	r7, r1
+ 111 0016 1EA3     		adr	r3, .L6
+ 112 0018 D3E90023 		ldrd	r2, [r3]
+ 113 001c FFF7FEFF 		bl	__aeabi_dmul
+ 114              	.LVL16:
+ 115 0020 1DA3     		adr	r3, .L6+8
+ 116 0022 D3E90023 		ldrd	r2, [r3]
+ 117 0026 FFF7FEFF 		bl	__aeabi_dadd
+ 118              	.LVL17:
+ 119 002a 0446     		mov	r4, r0
+ 120 002c 0D46     		mov	r5, r1
+ 105:Generated_Source\PSoC5/Termistor.c ****                              (Termistor_THC * pow((float64)logrT, (float32)3)));
+ 121              		.loc 1 105 0
+ 122 002e 0022     		movs	r2, #0
+ 123 0030 1F4B     		ldr	r3, .L6+32
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 5
+
+
+ 124 0032 3046     		mov	r0, r6
+ 125 0034 3946     		mov	r1, r7
+ 126 0036 FFF7FEFF 		bl	pow
+ 127              	.LVL18:
+ 128 003a 19A3     		adr	r3, .L6+16
+ 129 003c D3E90023 		ldrd	r2, [r3]
+ 130 0040 FFF7FEFF 		bl	__aeabi_dmul
+ 131              	.LVL19:
+ 104:Generated_Source\PSoC5/Termistor.c ****                              (Termistor_THC * pow((float64)logrT, (float32)3)));
+ 132              		.loc 1 104 0
+ 133 0044 0246     		mov	r2, r0
+ 134 0046 0B46     		mov	r3, r1
+ 135 0048 2046     		mov	r0, r4
+ 136 004a 2946     		mov	r1, r5
+ 137 004c FFF7FEFF 		bl	__aeabi_dadd
+ 138              	.LVL20:
+ 139 0050 FFF7FEFF 		bl	__aeabi_d2f
+ 140              	.LVL21:
+ 106:Generated_Source\PSoC5/Termistor.c ****         #else
+ 107:Generated_Source\PSoC5/Termistor.c ****             stEqn = (float32)(Termistor_THA + (Termistor_THB * logrT) + 
+ 108:Generated_Source\PSoC5/Termistor.c ****                              (Termistor_THC * pow(logrT, (float32)3)));
+ 109:Generated_Source\PSoC5/Termistor.c ****         #endif  /* (!CY_PSOC3) */
+ 110:Generated_Source\PSoC5/Termistor.c **** 
+ 111:Generated_Source\PSoC5/Termistor.c ****         tempTR = (int16)((float32)((((1.0 / stEqn) - Termistor_K2C) * (float32)Termistor_SCALE) + 0
+ 141              		.loc 1 111 0
+ 142 0054 FFF7FEFF 		bl	__aeabi_f2d
+ 143              	.LVL22:
+ 144 0058 0246     		mov	r2, r0
+ 145 005a 0B46     		mov	r3, r1
+ 146 005c 0020     		movs	r0, #0
+ 147 005e 1549     		ldr	r1, .L6+36
+ 148 0060 FFF7FEFF 		bl	__aeabi_ddiv
+ 149              	.LVL23:
+ 150 0064 10A3     		adr	r3, .L6+24
+ 151 0066 D3E90023 		ldrd	r2, [r3]
+ 152 006a FFF7FEFF 		bl	__aeabi_dsub
+ 153              	.LVL24:
+ 154 006e 0022     		movs	r2, #0
+ 155 0070 114B     		ldr	r3, .L6+40
+ 156 0072 FFF7FEFF 		bl	__aeabi_dmul
+ 157              	.LVL25:
+ 158 0076 0022     		movs	r2, #0
+ 159 0078 104B     		ldr	r3, .L6+44
+ 160 007a FFF7FEFF 		bl	__aeabi_dadd
+ 161              	.LVL26:
+ 162 007e FFF7FEFF 		bl	__aeabi_d2f
+ 163              	.LVL27:
+ 164 0082 FFF7FEFF 		bl	__aeabi_f2iz
+ 165              	.LVL28:
+ 112:Generated_Source\PSoC5/Termistor.c **** 
+ 113:Generated_Source\PSoC5/Termistor.c ****     #else /* Termistor_IMPLEMENTATION == Termistor_LUT_METHOD */
+ 114:Generated_Source\PSoC5/Termistor.c **** 
+ 115:Generated_Source\PSoC5/Termistor.c ****         uint16 mid;
+ 116:Generated_Source\PSoC5/Termistor.c ****         uint16 first = 0u;
+ 117:Generated_Source\PSoC5/Termistor.c ****         uint16 last = Termistor_LUT_SIZE - 1u;
+ 118:Generated_Source\PSoC5/Termistor.c **** 
+ 119:Generated_Source\PSoC5/Termistor.c ****         /* Calculate temperature from the resistance of thermistor by using the LUT */
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 6
+
+
+ 120:Generated_Source\PSoC5/Termistor.c ****         while (first < last)
+ 121:Generated_Source\PSoC5/Termistor.c ****         {
+ 122:Generated_Source\PSoC5/Termistor.c ****             mid = (first + last) >> 1u;
+ 123:Generated_Source\PSoC5/Termistor.c **** 
+ 124:Generated_Source\PSoC5/Termistor.c ****             if ((0u == mid) || ((Termistor_LUT_SIZE - 1u) == mid) || (resT == Termistor_LUT[mid]))
+ 125:Generated_Source\PSoC5/Termistor.c ****             {
+ 126:Generated_Source\PSoC5/Termistor.c ****                 last = mid;
+ 127:Generated_Source\PSoC5/Termistor.c ****                 break;
+ 128:Generated_Source\PSoC5/Termistor.c ****             }
+ 129:Generated_Source\PSoC5/Termistor.c ****             else if (Termistor_LUT[mid] > resT)
+ 130:Generated_Source\PSoC5/Termistor.c ****             {
+ 131:Generated_Source\PSoC5/Termistor.c ****                 first = mid + 1u;
+ 132:Generated_Source\PSoC5/Termistor.c ****             }
+ 133:Generated_Source\PSoC5/Termistor.c ****             else /* (Termistor_LUT[mid] < resT) */
+ 134:Generated_Source\PSoC5/Termistor.c ****             {
+ 135:Generated_Source\PSoC5/Termistor.c ****                 last = mid - 1u;
+ 136:Generated_Source\PSoC5/Termistor.c ****             }
+ 137:Generated_Source\PSoC5/Termistor.c ****         }
+ 138:Generated_Source\PSoC5/Termistor.c **** 
+ 139:Generated_Source\PSoC5/Termistor.c ****         /* Calculation the closest entry in the LUT */
+ 140:Generated_Source\PSoC5/Termistor.c ****         if ((Termistor_LUT[last] > resT) && (last < (Termistor_LUT_SIZE - 1u)) &&
+ 141:Generated_Source\PSoC5/Termistor.c ****            ((Termistor_LUT[last] - resT) > (resT - Termistor_LUT[last + 1u])))
+ 142:Generated_Source\PSoC5/Termistor.c ****         {
+ 143:Generated_Source\PSoC5/Termistor.c ****             last++;
+ 144:Generated_Source\PSoC5/Termistor.c ****         }
+ 145:Generated_Source\PSoC5/Termistor.c ****         else if ((Termistor_LUT[last] < resT) && (last > 0u) &&
+ 146:Generated_Source\PSoC5/Termistor.c ****                 ((Termistor_LUT[last - 1u] - resT) < (resT - Termistor_LUT[last])))
+ 147:Generated_Source\PSoC5/Termistor.c ****         {
+ 148:Generated_Source\PSoC5/Termistor.c ****             last--;
+ 149:Generated_Source\PSoC5/Termistor.c ****         }
+ 150:Generated_Source\PSoC5/Termistor.c ****         else
+ 151:Generated_Source\PSoC5/Termistor.c ****         {
+ 152:Generated_Source\PSoC5/Termistor.c ****             /* Closest entry in the LUT already found */
+ 153:Generated_Source\PSoC5/Termistor.c ****         }
+ 154:Generated_Source\PSoC5/Termistor.c **** 
+ 155:Generated_Source\PSoC5/Termistor.c ****         tempTR = Termistor_MIN_TEMP + (int16)((uint16)(last * Termistor_ACCURACY));
+ 156:Generated_Source\PSoC5/Termistor.c **** 
+ 157:Generated_Source\PSoC5/Termistor.c ****     #endif /* (Termistor_IMPLEMENTATION == Termistor_EQUATION_METHOD) */
+ 158:Generated_Source\PSoC5/Termistor.c **** 
+ 159:Generated_Source\PSoC5/Termistor.c ****     return (tempTR);
+ 160:Generated_Source\PSoC5/Termistor.c **** }
+ 166              		.loc 1 160 0
+ 167 0086 00B2     		sxth	r0, r0
+ 168 0088 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 169              	.L7:
+ 170 008a 00BFAFF3 		.align	3
+ 170      0080
+ 171              	.L6:
+ 172 0090 6943AA9A 		.word	-1700117655
+ 173 0094 B34D303F 		.word	1060130227
+ 174 0098 D8FD850B 		.word	193330648
+ 175 009c 29994D3F 		.word	1062050089
+ 176 00a0 4D33E444 		.word	1155806029
+ 177 00a4 25658B3E 		.word	1049322789
+ 178 00a8 66666666 		.word	1717986918
+ 179 00ac 66127140 		.word	1081152102
+ 180 00b0 00000840 		.word	1074266112
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 7
+
+
+ 181 00b4 0000F03F 		.word	1072693248
+ 182 00b8 00005940 		.word	1079574528
+ 183 00bc 0000E03F 		.word	1071644672
+ 184              		.cfi_endproc
+ 185              	.LFE1:
+ 186              		.size	Termistor_GetTemperature, .-Termistor_GetTemperature
+ 187              		.text
+ 188              	.Letext0:
+ 189              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 190              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 191              		.section	.debug_info,"",%progbits
+ 192              	.Ldebug_info0:
+ 193 0000 A5010000 		.4byte	0x1a5
+ 194 0004 0400     		.2byte	0x4
+ 195 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 196 000a 04       		.byte	0x4
+ 197 000b 01       		.uleb128 0x1
+ 198 000c 24010000 		.4byte	.LASF29
+ 199 0010 0C       		.byte	0xc
+ 200 0011 D8010000 		.4byte	.LASF30
+ 201 0015 8A000000 		.4byte	.LASF31
+ 202 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 203 001d 00000000 		.4byte	0
+ 204 0021 00000000 		.4byte	.Ldebug_line0
+ 205 0025 02       		.uleb128 0x2
+ 206 0026 04       		.byte	0x4
+ 207 0027 05       		.byte	0x5
+ 208 0028 696E7400 		.ascii	"int\000"
+ 209 002c 03       		.uleb128 0x3
+ 210 002d 04       		.byte	0x4
+ 211 002e 07       		.byte	0x7
+ 212 002f F4000000 		.4byte	.LASF0
+ 213 0033 03       		.uleb128 0x3
+ 214 0034 08       		.byte	0x8
+ 215 0035 05       		.byte	0x5
+ 216 0036 BB010000 		.4byte	.LASF1
+ 217 003a 03       		.uleb128 0x3
+ 218 003b 08       		.byte	0x8
+ 219 003c 04       		.byte	0x4
+ 220 003d 28020000 		.4byte	.LASF2
+ 221 0041 03       		.uleb128 0x3
+ 222 0042 01       		.byte	0x1
+ 223 0043 06       		.byte	0x6
+ 224 0044 34020000 		.4byte	.LASF3
+ 225 0048 03       		.uleb128 0x3
+ 226 0049 01       		.byte	0x1
+ 227 004a 08       		.byte	0x8
+ 228 004b 3A000000 		.4byte	.LASF4
+ 229 004f 03       		.uleb128 0x3
+ 230 0050 02       		.byte	0x2
+ 231 0051 05       		.byte	0x5
+ 232 0052 CE010000 		.4byte	.LASF5
+ 233 0056 03       		.uleb128 0x3
+ 234 0057 02       		.byte	0x2
+ 235 0058 07       		.byte	0x7
+ 236 0059 13000000 		.4byte	.LASF6
+ 237 005d 03       		.uleb128 0x3
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 8
+
+
+ 238 005e 04       		.byte	0x4
+ 239 005f 05       		.byte	0x5
+ 240 0060 1A020000 		.4byte	.LASF7
+ 241 0064 03       		.uleb128 0x3
+ 242 0065 04       		.byte	0x4
+ 243 0066 07       		.byte	0x7
+ 244 0067 66000000 		.4byte	.LASF8
+ 245 006b 03       		.uleb128 0x3
+ 246 006c 08       		.byte	0x8
+ 247 006d 07       		.byte	0x7
+ 248 006e 01010000 		.4byte	.LASF9
+ 249 0072 03       		.uleb128 0x3
+ 250 0073 04       		.byte	0x4
+ 251 0074 07       		.byte	0x7
+ 252 0075 B2010000 		.4byte	.LASF10
+ 253 0079 03       		.uleb128 0x3
+ 254 007a 01       		.byte	0x1
+ 255 007b 08       		.byte	0x8
+ 256 007c C9010000 		.4byte	.LASF11
+ 257 0080 04       		.uleb128 0x4
+ 258 0081 E6000000 		.4byte	.LASF12
+ 259 0085 02       		.byte	0x2
+ 260 0086 E901     		.2byte	0x1e9
+ 261 0088 56000000 		.4byte	0x56
+ 262 008c 04       		.uleb128 0x4
+ 263 008d ED000000 		.4byte	.LASF13
+ 264 0091 02       		.byte	0x2
+ 265 0092 EA01     		.2byte	0x1ea
+ 266 0094 64000000 		.4byte	0x64
+ 267 0098 04       		.uleb128 0x4
+ 268 0099 26000000 		.4byte	.LASF14
+ 269 009d 02       		.byte	0x2
+ 270 009e EC01     		.2byte	0x1ec
+ 271 00a0 4F000000 		.4byte	0x4f
+ 272 00a4 04       		.uleb128 0x4
+ 273 00a5 7D000000 		.4byte	.LASF15
+ 274 00a9 02       		.byte	0x2
+ 275 00aa ED01     		.2byte	0x1ed
+ 276 00ac 5D000000 		.4byte	0x5d
+ 277 00b0 04       		.uleb128 0x4
+ 278 00b1 2C000000 		.4byte	.LASF16
+ 279 00b5 02       		.byte	0x2
+ 280 00b6 EE01     		.2byte	0x1ee
+ 281 00b8 BC000000 		.4byte	0xbc
+ 282 00bc 03       		.uleb128 0x3
+ 283 00bd 04       		.byte	0x4
+ 284 00be 04       		.byte	0x4
+ 285 00bf 34000000 		.4byte	.LASF17
+ 286 00c3 04       		.uleb128 0x4
+ 287 00c4 00000000 		.4byte	.LASF18
+ 288 00c8 02       		.byte	0x2
+ 289 00c9 F201     		.2byte	0x1f2
+ 290 00cb CF000000 		.4byte	0xcf
+ 291 00cf 03       		.uleb128 0x3
+ 292 00d0 08       		.byte	0x8
+ 293 00d1 04       		.byte	0x4
+ 294 00d2 DF000000 		.4byte	.LASF19
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 9
+
+
+ 295 00d6 05       		.uleb128 0x5
+ 296 00d7 4E000000 		.4byte	.LASF24
+ 297 00db 01       		.byte	0x1
+ 298 00dc 2A       		.byte	0x2a
+ 299 00dd 8C000000 		.4byte	0x8c
+ 300 00e1 00000000 		.4byte	.LFB0
+ 301 00e5 24000000 		.4byte	.LFE0-.LFB0
+ 302 00e9 01       		.uleb128 0x1
+ 303 00ea 9C       		.byte	0x9c
+ 304 00eb 2C010000 		.4byte	0x12c
+ 305 00ef 06       		.uleb128 0x6
+ 306 00f0 08000000 		.4byte	.LASF20
+ 307 00f4 01       		.byte	0x1
+ 308 00f5 2A       		.byte	0x2a
+ 309 00f6 98000000 		.4byte	0x98
+ 310 00fa 00000000 		.4byte	.LLST0
+ 311 00fe 06       		.uleb128 0x6
+ 312 00ff 18010000 		.4byte	.LASF21
+ 313 0103 01       		.byte	0x1
+ 314 0104 2A       		.byte	0x2a
+ 315 0105 98000000 		.4byte	0x98
+ 316 0109 21000000 		.4byte	.LLST1
+ 317 010d 07       		.uleb128 0x7
+ 318 010e 23020000 		.4byte	.LASF22
+ 319 0112 01       		.byte	0x1
+ 320 0113 2D       		.byte	0x2d
+ 321 0114 A4000000 		.4byte	0xa4
+ 322 0118 42000000 		.4byte	.LLST2
+ 323 011c 07       		.uleb128 0x7
+ 324 011d 78000000 		.4byte	.LASF23
+ 325 0121 01       		.byte	0x1
+ 326 0122 2E       		.byte	0x2e
+ 327 0123 98000000 		.4byte	0x98
+ 328 0127 70000000 		.4byte	.LLST3
+ 329 012b 00       		.byte	0
+ 330 012c 08       		.uleb128 0x8
+ 331 012d 01020000 		.4byte	.LASF25
+ 332 0131 01       		.byte	0x1
+ 333 0132 56       		.byte	0x56
+ 334 0133 98000000 		.4byte	0x98
+ 335 0137 00000000 		.4byte	.LFB1
+ 336 013b C0000000 		.4byte	.LFE1-.LFB1
+ 337 013f 01       		.uleb128 0x1
+ 338 0140 9C       		.byte	0x9c
+ 339 0141 92010000 		.4byte	0x192
+ 340 0145 06       		.uleb128 0x6
+ 341 0146 23020000 		.4byte	.LASF22
+ 342 014a 01       		.byte	0x1
+ 343 014b 56       		.byte	0x56
+ 344 014c 8C000000 		.4byte	0x8c
+ 345 0150 A7000000 		.4byte	.LLST4
+ 346 0154 09       		.uleb128 0x9
+ 347 0155 83000000 		.4byte	.LASF26
+ 348 0159 01       		.byte	0x1
+ 349 015a 58       		.byte	0x58
+ 350 015b 98000000 		.4byte	0x98
+ 351 015f 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 10
+
+
+ 352 0160 50       		.byte	0x50
+ 353 0161 07       		.uleb128 0x7
+ 354 0162 FB010000 		.4byte	.LASF27
+ 355 0166 01       		.byte	0x1
+ 356 0167 5C       		.byte	0x5c
+ 357 0168 B0000000 		.4byte	0xb0
+ 358 016c C8000000 		.4byte	.LLST5
+ 359 0170 07       		.uleb128 0x7
+ 360 0171 48000000 		.4byte	.LASF28
+ 361 0175 01       		.byte	0x1
+ 362 0176 5D       		.byte	0x5d
+ 363 0177 B0000000 		.4byte	0xb0
+ 364 017b DB000000 		.4byte	.LLST6
+ 365 017f 0A       		.uleb128 0xa
+ 366 0180 0A000000 		.4byte	.LVL13
+ 367 0184 92010000 		.4byte	0x192
+ 368 0188 0A       		.uleb128 0xa
+ 369 0189 3A000000 		.4byte	.LVL18
+ 370 018d 9D010000 		.4byte	0x19d
+ 371 0191 00       		.byte	0
+ 372 0192 0B       		.uleb128 0xb
+ 373 0193 6C6F6700 		.ascii	"log\000"
+ 374 0197 6C6F6700 		.ascii	"log\000"
+ 375 019b 03       		.byte	0x3
+ 376 019c 84       		.byte	0x84
+ 377 019d 0B       		.uleb128 0xb
+ 378 019e 706F7700 		.ascii	"pow\000"
+ 379 01a2 706F7700 		.ascii	"pow\000"
+ 380 01a6 03       		.byte	0x3
+ 381 01a7 86       		.byte	0x86
+ 382 01a8 00       		.byte	0
+ 383              		.section	.debug_abbrev,"",%progbits
+ 384              	.Ldebug_abbrev0:
+ 385 0000 01       		.uleb128 0x1
+ 386 0001 11       		.uleb128 0x11
+ 387 0002 01       		.byte	0x1
+ 388 0003 25       		.uleb128 0x25
+ 389 0004 0E       		.uleb128 0xe
+ 390 0005 13       		.uleb128 0x13
+ 391 0006 0B       		.uleb128 0xb
+ 392 0007 03       		.uleb128 0x3
+ 393 0008 0E       		.uleb128 0xe
+ 394 0009 1B       		.uleb128 0x1b
+ 395 000a 0E       		.uleb128 0xe
+ 396 000b 55       		.uleb128 0x55
+ 397 000c 17       		.uleb128 0x17
+ 398 000d 11       		.uleb128 0x11
+ 399 000e 01       		.uleb128 0x1
+ 400 000f 10       		.uleb128 0x10
+ 401 0010 17       		.uleb128 0x17
+ 402 0011 00       		.byte	0
+ 403 0012 00       		.byte	0
+ 404 0013 02       		.uleb128 0x2
+ 405 0014 24       		.uleb128 0x24
+ 406 0015 00       		.byte	0
+ 407 0016 0B       		.uleb128 0xb
+ 408 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 11
+
+
+ 409 0018 3E       		.uleb128 0x3e
+ 410 0019 0B       		.uleb128 0xb
+ 411 001a 03       		.uleb128 0x3
+ 412 001b 08       		.uleb128 0x8
+ 413 001c 00       		.byte	0
+ 414 001d 00       		.byte	0
+ 415 001e 03       		.uleb128 0x3
+ 416 001f 24       		.uleb128 0x24
+ 417 0020 00       		.byte	0
+ 418 0021 0B       		.uleb128 0xb
+ 419 0022 0B       		.uleb128 0xb
+ 420 0023 3E       		.uleb128 0x3e
+ 421 0024 0B       		.uleb128 0xb
+ 422 0025 03       		.uleb128 0x3
+ 423 0026 0E       		.uleb128 0xe
+ 424 0027 00       		.byte	0
+ 425 0028 00       		.byte	0
+ 426 0029 04       		.uleb128 0x4
+ 427 002a 16       		.uleb128 0x16
+ 428 002b 00       		.byte	0
+ 429 002c 03       		.uleb128 0x3
+ 430 002d 0E       		.uleb128 0xe
+ 431 002e 3A       		.uleb128 0x3a
+ 432 002f 0B       		.uleb128 0xb
+ 433 0030 3B       		.uleb128 0x3b
+ 434 0031 05       		.uleb128 0x5
+ 435 0032 49       		.uleb128 0x49
+ 436 0033 13       		.uleb128 0x13
+ 437 0034 00       		.byte	0
+ 438 0035 00       		.byte	0
+ 439 0036 05       		.uleb128 0x5
+ 440 0037 2E       		.uleb128 0x2e
+ 441 0038 01       		.byte	0x1
+ 442 0039 3F       		.uleb128 0x3f
+ 443 003a 19       		.uleb128 0x19
+ 444 003b 03       		.uleb128 0x3
+ 445 003c 0E       		.uleb128 0xe
+ 446 003d 3A       		.uleb128 0x3a
+ 447 003e 0B       		.uleb128 0xb
+ 448 003f 3B       		.uleb128 0x3b
+ 449 0040 0B       		.uleb128 0xb
+ 450 0041 27       		.uleb128 0x27
+ 451 0042 19       		.uleb128 0x19
+ 452 0043 49       		.uleb128 0x49
+ 453 0044 13       		.uleb128 0x13
+ 454 0045 11       		.uleb128 0x11
+ 455 0046 01       		.uleb128 0x1
+ 456 0047 12       		.uleb128 0x12
+ 457 0048 06       		.uleb128 0x6
+ 458 0049 40       		.uleb128 0x40
+ 459 004a 18       		.uleb128 0x18
+ 460 004b 9742     		.uleb128 0x2117
+ 461 004d 19       		.uleb128 0x19
+ 462 004e 01       		.uleb128 0x1
+ 463 004f 13       		.uleb128 0x13
+ 464 0050 00       		.byte	0
+ 465 0051 00       		.byte	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 12
+
+
+ 466 0052 06       		.uleb128 0x6
+ 467 0053 05       		.uleb128 0x5
+ 468 0054 00       		.byte	0
+ 469 0055 03       		.uleb128 0x3
+ 470 0056 0E       		.uleb128 0xe
+ 471 0057 3A       		.uleb128 0x3a
+ 472 0058 0B       		.uleb128 0xb
+ 473 0059 3B       		.uleb128 0x3b
+ 474 005a 0B       		.uleb128 0xb
+ 475 005b 49       		.uleb128 0x49
+ 476 005c 13       		.uleb128 0x13
+ 477 005d 02       		.uleb128 0x2
+ 478 005e 17       		.uleb128 0x17
+ 479 005f 00       		.byte	0
+ 480 0060 00       		.byte	0
+ 481 0061 07       		.uleb128 0x7
+ 482 0062 34       		.uleb128 0x34
+ 483 0063 00       		.byte	0
+ 484 0064 03       		.uleb128 0x3
+ 485 0065 0E       		.uleb128 0xe
+ 486 0066 3A       		.uleb128 0x3a
+ 487 0067 0B       		.uleb128 0xb
+ 488 0068 3B       		.uleb128 0x3b
+ 489 0069 0B       		.uleb128 0xb
+ 490 006a 49       		.uleb128 0x49
+ 491 006b 13       		.uleb128 0x13
+ 492 006c 02       		.uleb128 0x2
+ 493 006d 17       		.uleb128 0x17
+ 494 006e 00       		.byte	0
+ 495 006f 00       		.byte	0
+ 496 0070 08       		.uleb128 0x8
+ 497 0071 2E       		.uleb128 0x2e
+ 498 0072 01       		.byte	0x1
+ 499 0073 3F       		.uleb128 0x3f
+ 500 0074 19       		.uleb128 0x19
+ 501 0075 03       		.uleb128 0x3
+ 502 0076 0E       		.uleb128 0xe
+ 503 0077 3A       		.uleb128 0x3a
+ 504 0078 0B       		.uleb128 0xb
+ 505 0079 3B       		.uleb128 0x3b
+ 506 007a 0B       		.uleb128 0xb
+ 507 007b 27       		.uleb128 0x27
+ 508 007c 19       		.uleb128 0x19
+ 509 007d 49       		.uleb128 0x49
+ 510 007e 13       		.uleb128 0x13
+ 511 007f 11       		.uleb128 0x11
+ 512 0080 01       		.uleb128 0x1
+ 513 0081 12       		.uleb128 0x12
+ 514 0082 06       		.uleb128 0x6
+ 515 0083 40       		.uleb128 0x40
+ 516 0084 18       		.uleb128 0x18
+ 517 0085 9642     		.uleb128 0x2116
+ 518 0087 19       		.uleb128 0x19
+ 519 0088 01       		.uleb128 0x1
+ 520 0089 13       		.uleb128 0x13
+ 521 008a 00       		.byte	0
+ 522 008b 00       		.byte	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 13
+
+
+ 523 008c 09       		.uleb128 0x9
+ 524 008d 34       		.uleb128 0x34
+ 525 008e 00       		.byte	0
+ 526 008f 03       		.uleb128 0x3
+ 527 0090 0E       		.uleb128 0xe
+ 528 0091 3A       		.uleb128 0x3a
+ 529 0092 0B       		.uleb128 0xb
+ 530 0093 3B       		.uleb128 0x3b
+ 531 0094 0B       		.uleb128 0xb
+ 532 0095 49       		.uleb128 0x49
+ 533 0096 13       		.uleb128 0x13
+ 534 0097 02       		.uleb128 0x2
+ 535 0098 18       		.uleb128 0x18
+ 536 0099 00       		.byte	0
+ 537 009a 00       		.byte	0
+ 538 009b 0A       		.uleb128 0xa
+ 539 009c 898201   		.uleb128 0x4109
+ 540 009f 00       		.byte	0
+ 541 00a0 11       		.uleb128 0x11
+ 542 00a1 01       		.uleb128 0x1
+ 543 00a2 31       		.uleb128 0x31
+ 544 00a3 13       		.uleb128 0x13
+ 545 00a4 00       		.byte	0
+ 546 00a5 00       		.byte	0
+ 547 00a6 0B       		.uleb128 0xb
+ 548 00a7 2E       		.uleb128 0x2e
+ 549 00a8 00       		.byte	0
+ 550 00a9 3F       		.uleb128 0x3f
+ 551 00aa 19       		.uleb128 0x19
+ 552 00ab 3C       		.uleb128 0x3c
+ 553 00ac 19       		.uleb128 0x19
+ 554 00ad 6E       		.uleb128 0x6e
+ 555 00ae 08       		.uleb128 0x8
+ 556 00af 03       		.uleb128 0x3
+ 557 00b0 08       		.uleb128 0x8
+ 558 00b1 3A       		.uleb128 0x3a
+ 559 00b2 0B       		.uleb128 0xb
+ 560 00b3 3B       		.uleb128 0x3b
+ 561 00b4 0B       		.uleb128 0xb
+ 562 00b5 00       		.byte	0
+ 563 00b6 00       		.byte	0
+ 564 00b7 00       		.byte	0
+ 565              		.section	.debug_loc,"",%progbits
+ 566              	.Ldebug_loc0:
+ 567              	.LLST0:
+ 568 0000 00000000 		.4byte	.LVL0
+ 569 0004 0A000000 		.4byte	.LVL2
+ 570 0008 0100     		.2byte	0x1
+ 571 000a 50       		.byte	0x50
+ 572 000b 0A000000 		.4byte	.LVL2
+ 573 000f 24000000 		.4byte	.LFE0
+ 574 0013 0400     		.2byte	0x4
+ 575 0015 F3       		.byte	0xf3
+ 576 0016 01       		.uleb128 0x1
+ 577 0017 50       		.byte	0x50
+ 578 0018 9F       		.byte	0x9f
+ 579 0019 00000000 		.4byte	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 14
+
+
+ 580 001d 00000000 		.4byte	0
+ 581              	.LLST1:
+ 582 0021 00000000 		.4byte	.LVL0
+ 583 0025 08000000 		.4byte	.LVL1
+ 584 0029 0100     		.2byte	0x1
+ 585 002b 51       		.byte	0x51
+ 586 002c 08000000 		.4byte	.LVL1
+ 587 0030 24000000 		.4byte	.LFE0
+ 588 0034 0400     		.2byte	0x4
+ 589 0036 F3       		.byte	0xf3
+ 590 0037 01       		.uleb128 0x1
+ 591 0038 51       		.byte	0x51
+ 592 0039 9F       		.byte	0x9f
+ 593 003a 00000000 		.4byte	0
+ 594 003e 00000000 		.4byte	0
+ 595              	.LLST2:
+ 596 0042 08000000 		.4byte	.LVL1
+ 597 0046 1E000000 		.4byte	.LVL9
+ 598 004a 0100     		.2byte	0x1
+ 599 004c 51       		.byte	0x51
+ 600 004d 1E000000 		.4byte	.LVL9
+ 601 0051 22000000 		.4byte	.LVL10
+ 602 0055 0600     		.2byte	0x6
+ 603 0057 71       		.byte	0x71
+ 604 0058 00       		.sleb128 0
+ 605 0059 70       		.byte	0x70
+ 606 005a 00       		.sleb128 0
+ 607 005b 1B       		.byte	0x1b
+ 608 005c 9F       		.byte	0x9f
+ 609 005d 22000000 		.4byte	.LVL10
+ 610 0061 24000000 		.4byte	.LFE0
+ 611 0065 0100     		.2byte	0x1
+ 612 0067 50       		.byte	0x50
+ 613 0068 00000000 		.4byte	0
+ 614 006c 00000000 		.4byte	0
+ 615              	.LLST3:
+ 616 0070 0E000000 		.4byte	.LVL3
+ 617 0074 14000000 		.4byte	.LVL5
+ 618 0078 0100     		.2byte	0x1
+ 619 007a 53       		.byte	0x53
+ 620 007b 14000000 		.4byte	.LVL5
+ 621 007f 16000000 		.4byte	.LVL6
+ 622 0083 0400     		.2byte	0x4
+ 623 0085 73       		.byte	0x73
+ 624 0086 00       		.sleb128 0
+ 625 0087 1F       		.byte	0x1f
+ 626 0088 9F       		.byte	0x9f
+ 627 0089 16000000 		.4byte	.LVL6
+ 628 008d 18000000 		.4byte	.LVL7
+ 629 0091 0100     		.2byte	0x1
+ 630 0093 53       		.byte	0x53
+ 631 0094 1C000000 		.4byte	.LVL8
+ 632 0098 24000000 		.4byte	.LFE0
+ 633 009c 0100     		.2byte	0x1
+ 634 009e 53       		.byte	0x53
+ 635 009f 00000000 		.4byte	0
+ 636 00a3 00000000 		.4byte	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 15
+
+
+ 637              	.LLST4:
+ 638 00a7 00000000 		.4byte	.LVL11
+ 639 00ab 05000000 		.4byte	.LVL12-1
+ 640 00af 0100     		.2byte	0x1
+ 641 00b1 50       		.byte	0x50
+ 642 00b2 05000000 		.4byte	.LVL12-1
+ 643 00b6 C0000000 		.4byte	.LFE1
+ 644 00ba 0400     		.2byte	0x4
+ 645 00bc F3       		.byte	0xf3
+ 646 00bd 01       		.uleb128 0x1
+ 647 00be 50       		.byte	0x50
+ 648 00bf 9F       		.byte	0x9f
+ 649 00c0 00000000 		.4byte	0
+ 650 00c4 00000000 		.4byte	0
+ 651              	.LLST5:
+ 652 00c8 54000000 		.4byte	.LVL21
+ 653 00cc 57000000 		.4byte	.LVL22-1
+ 654 00d0 0100     		.2byte	0x1
+ 655 00d2 50       		.byte	0x50
+ 656 00d3 00000000 		.4byte	0
+ 657 00d7 00000000 		.4byte	0
+ 658              	.LLST6:
+ 659 00db 0E000000 		.4byte	.LVL14
+ 660 00df 11000000 		.4byte	.LVL15-1
+ 661 00e3 0100     		.2byte	0x1
+ 662 00e5 50       		.byte	0x50
+ 663 00e6 00000000 		.4byte	0
+ 664 00ea 00000000 		.4byte	0
+ 665              		.section	.debug_aranges,"",%progbits
+ 666 0000 24000000 		.4byte	0x24
+ 667 0004 0200     		.2byte	0x2
+ 668 0006 00000000 		.4byte	.Ldebug_info0
+ 669 000a 04       		.byte	0x4
+ 670 000b 00       		.byte	0
+ 671 000c 0000     		.2byte	0
+ 672 000e 0000     		.2byte	0
+ 673 0010 00000000 		.4byte	.LFB0
+ 674 0014 24000000 		.4byte	.LFE0-.LFB0
+ 675 0018 00000000 		.4byte	.LFB1
+ 676 001c C0000000 		.4byte	.LFE1-.LFB1
+ 677 0020 00000000 		.4byte	0
+ 678 0024 00000000 		.4byte	0
+ 679              		.section	.debug_ranges,"",%progbits
+ 680              	.Ldebug_ranges0:
+ 681 0000 00000000 		.4byte	.LFB0
+ 682 0004 24000000 		.4byte	.LFE0
+ 683 0008 00000000 		.4byte	.LFB1
+ 684 000c C0000000 		.4byte	.LFE1
+ 685 0010 00000000 		.4byte	0
+ 686 0014 00000000 		.4byte	0
+ 687              		.section	.debug_line,"",%progbits
+ 688              	.Ldebug_line0:
+ 689 0000 F0000000 		.section	.debug_str,"MS",%progbits,1
+ 689      0200B800 
+ 689      00000201 
+ 689      FB0E0D00 
+ 689      01010101 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 16
+
+
+ 690              	.LASF18:
+ 691 0000 666C6F61 		.ascii	"float64\000"
+ 691      74363400 
+ 692              	.LASF20:
+ 693 0008 76526566 		.ascii	"vReference\000"
+ 693      6572656E 
+ 693      636500
+ 694              	.LASF6:
+ 695 0013 73686F72 		.ascii	"short unsigned int\000"
+ 695      7420756E 
+ 695      7369676E 
+ 695      65642069 
+ 695      6E7400
+ 696              	.LASF14:
+ 697 0026 696E7431 		.ascii	"int16\000"
+ 697      3600
+ 698              	.LASF16:
+ 699 002c 666C6F61 		.ascii	"float32\000"
+ 699      74333200 
+ 700              	.LASF17:
+ 701 0034 666C6F61 		.ascii	"float\000"
+ 701      7400
+ 702              	.LASF4:
+ 703 003a 756E7369 		.ascii	"unsigned char\000"
+ 703      676E6564 
+ 703      20636861 
+ 703      7200
+ 704              	.LASF28:
+ 705 0048 6C6F6772 		.ascii	"logrT\000"
+ 705      5400
+ 706              	.LASF24:
+ 707 004e 5465726D 		.ascii	"Termistor_GetResistance\000"
+ 707      6973746F 
+ 707      725F4765 
+ 707      74526573 
+ 707      69737461 
+ 708              	.LASF8:
+ 709 0066 6C6F6E67 		.ascii	"long unsigned int\000"
+ 709      20756E73 
+ 709      69676E65 
+ 709      6420696E 
+ 709      7400
+ 710              	.LASF23:
+ 711 0078 74656D70 		.ascii	"temp\000"
+ 711      00
+ 712              	.LASF15:
+ 713 007d 696E7433 		.ascii	"int32\000"
+ 713      3200
+ 714              	.LASF26:
+ 715 0083 74656D70 		.ascii	"tempTR\000"
+ 715      545200
+ 716              	.LASF31:
+ 717 008a 443A5C47 		.ascii	"D:\\GitHub\\Alumnos\\Sensores-actuadores\\Clase_4_T"
+ 717      69744875 
+ 717      625C416C 
+ 717      756D6E6F 
+ 717      735C5365 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 17
+
+
+ 718 00b9 7261736D 		.ascii	"rasmisores\\1_Termopar\\Termistor.cydsn\000"
+ 718      69736F72 
+ 718      65735C31 
+ 718      5F546572 
+ 718      6D6F7061 
+ 719              	.LASF19:
+ 720 00df 646F7562 		.ascii	"double\000"
+ 720      6C6500
+ 721              	.LASF12:
+ 722 00e6 75696E74 		.ascii	"uint16\000"
+ 722      313600
+ 723              	.LASF13:
+ 724 00ed 75696E74 		.ascii	"uint32\000"
+ 724      333200
+ 725              	.LASF0:
+ 726 00f4 756E7369 		.ascii	"unsigned int\000"
+ 726      676E6564 
+ 726      20696E74 
+ 726      00
+ 727              	.LASF9:
+ 728 0101 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 728      206C6F6E 
+ 728      6720756E 
+ 728      7369676E 
+ 728      65642069 
+ 729              	.LASF21:
+ 730 0118 76546865 		.ascii	"vThermistor\000"
+ 730      726D6973 
+ 730      746F7200 
+ 731              	.LASF29:
+ 732 0124 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 732      43313120 
+ 732      352E342E 
+ 732      31203230 
+ 732      31363036 
+ 733 0157 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 733      20726576 
+ 733      6973696F 
+ 733      6E203233 
+ 733      37373135 
+ 734 018a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 734      66756E63 
+ 734      74696F6E 
+ 734      2D736563 
+ 734      74696F6E 
+ 735              	.LASF10:
+ 736 01b2 73697A65 		.ascii	"sizetype\000"
+ 736      74797065 
+ 736      00
+ 737              	.LASF1:
+ 738 01bb 6C6F6E67 		.ascii	"long long int\000"
+ 738      206C6F6E 
+ 738      6720696E 
+ 738      7400
+ 739              	.LASF11:
+ 740 01c9 63686172 		.ascii	"char\000"
+ 740      00
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\cc4zIIO4.s 			page 18
+
+
+ 741              	.LASF5:
+ 742 01ce 73686F72 		.ascii	"short int\000"
+ 742      7420696E 
+ 742      7400
+ 743              	.LASF30:
+ 744 01d8 47656E65 		.ascii	"Generated_Source\\PSoC5\\Termistor.c\000"
+ 744      72617465 
+ 744      645F536F 
+ 744      75726365 
+ 744      5C50536F 
+ 745              	.LASF27:
+ 746 01fb 73744571 		.ascii	"stEqn\000"
+ 746      6E00
+ 747              	.LASF25:
+ 748 0201 5465726D 		.ascii	"Termistor_GetTemperature\000"
+ 748      6973746F 
+ 748      725F4765 
+ 748      7454656D 
+ 748      70657261 
+ 749              	.LASF7:
+ 750 021a 6C6F6E67 		.ascii	"long int\000"
+ 750      20696E74 
+ 750      00
+ 751              	.LASF22:
+ 752 0223 72657354 		.ascii	"resT\000"
+ 752      00
+ 753              	.LASF2:
+ 754 0228 6C6F6E67 		.ascii	"long double\000"
+ 754      20646F75 
+ 754      626C6500 
+ 755              	.LASF3:
+ 756 0234 7369676E 		.ascii	"signed char\000"
+ 756      65642063 
+ 756      68617200 
+ 757              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

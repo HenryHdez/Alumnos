@@ -1,0 +1,8 @@
+--------------- Rebuild Started: 09/02/2024 12:21:27 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:50:27: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32 {aka long int}' [-Wformat=]
+         sprintf (palabra, "Temp=%ld.%021d C", entera, decimal);
+                           ^
+main.c:50:27: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32 {aka long int}' [-Wformat=]
+--------------- Rebuild Succeeded: 09/02/2024 12:21:27 ---------------

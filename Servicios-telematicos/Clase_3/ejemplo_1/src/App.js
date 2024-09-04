@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
     <Saludo nombre="Mundo" />
+    
     <div className="App">
       <h1>Mi página</h1>
       <img src={Bob} width="120" height="150"/>
@@ -15,5 +16,6 @@ function App() {
 
   );
 }
+
 
 export default App;

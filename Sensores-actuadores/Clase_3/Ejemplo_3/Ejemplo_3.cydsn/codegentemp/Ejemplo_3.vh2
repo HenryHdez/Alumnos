@@ -2,7 +2,7 @@
 --	Conversion of Ejemplo_3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Aug 19 20:20:27 2024
+--	Tue Aug 20 19:05:50 2024
 --
 
 USE cypress.cypress.all;

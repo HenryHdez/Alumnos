@@ -46,17 +46,17 @@ int main(void)
             LED2_Write((contador >> 1) & 0x01);
             LED3_Write((contador >> 2) & 0x01);
             LED4_Write((contador >> 3) & 0x01);   
-            while(Pin_1_Read() == 0); // Anti-rebote
+            while(Pin_1_Read() == 1); // Anti-rebote
         }*/
         
         /*
         //Ejemplo 4 "Inversión de giro de un motor"
-        if(Pin_1_Read() == 0)
+        if(Pin_1_Read() == 1)
         {
             M1_Write(1); // Adelante
             M2_Write(0);
         }
-        else if(Pin_3_Read() == 0)
+        else if(Pin_3_Read() == 1)
         {
             M1_Write(0); // Atrás
             M2_Write(1);
@@ -65,10 +65,11 @@ int main(void)
         {
             M1_Write(0); // Apagar motor
             M2_Write(0);
-        }*/
+        }
+        */
         
         //Ejemplo 5 "PWM"
-        /*if(Pin_1_Read() == 1)
+        if(Pin_1_Read() == 1)
         {
             niveldebillo = (niveldebillo + 1) % 5;
             switch(niveldebillo)
@@ -81,7 +82,7 @@ int main(void)
             }
             
             while(Pin_1_Read() == 1); // Anti-rebote
-        }*/
+        }
     }
 }
 
