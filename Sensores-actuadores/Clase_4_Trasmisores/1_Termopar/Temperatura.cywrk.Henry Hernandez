@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Temperatura\Termocupla\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Temperatura\Termocupla\TopDesign">
 <ExpandedNodeIds>
 <v>Temperatura</v>
 <v>Temperatura\RTD\TopDesign</v>
@@ -367,6 +367,8 @@
 <name v=".\RTD.cydsn\main.c" />
 <name v=".\Termistor.cydsn\main.c" />
 <name v=".\Termocupla.cydsn\main.c" />
+<name v=".\Termistor.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Termocupla.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -374,7 +376,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1162, 523" SelectedTabbedMdiWindow="ace9d145-9786-411c-8984-bc7321001f33"><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\TopDesign\TopDesign.cysch" Guid="a4c66373-760d-4c2b-9fbf-8add35748f7f" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\RTD.cydwr" Guid="2b72e205-01a0-41e2-98d5-30e991e255ba" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\main.c" Guid="9ce355fd-0d5e-443a-93bc-b4b7524d92db" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\main.c" Guid="ace9d145-9786-411c-8984-bc7321001f33" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termocupla.cydsn\main.c" Guid="ee0b3926-e834-4b03-907e-2f4890563794" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1119, 523" SelectedTabbedMdiWindow="454a1491-c01d-4ad0-accc-440115ce63f8"><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\TopDesign\TopDesign.cysch" Guid="a4c66373-760d-4c2b-9fbf-8add35748f7f" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\RTD.cydwr" Guid="2b72e205-01a0-41e2-98d5-30e991e255ba" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\RTD.cydsn\main.c" Guid="9ce355fd-0d5e-443a-93bc-b4b7524d92db" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\main.c" Guid="ace9d145-9786-411c-8984-bc7321001f33" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termocupla.cydsn\main.c" Guid="ee0b3926-e834-4b03-907e-2f4890563794" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termistor.cydsn\TopDesign\TopDesign.cysch" Guid="1df1fd23-67c4-40a6-85d1-f34480da2c76" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_4_Trasmisores\1_Termopar\Termocupla.cydsn\TopDesign\TopDesign.cysch" Guid="454a1491-c01d-4ad0-accc-440115ce63f8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -14,7 +14,7 @@ const Rutarecta = () => {
   };
 
   const calcularRuta = (start, end) => {
-    const orsApiKey = '5b3ce3597851110001cf6248b397fea7988247afa810d09ea75c800c';
+    const orsApiKey = '5b3ce3597851110001cf62487140c01fee1143f9a3aef575c7645a07';
     const orsUrl = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${orsApiKey}&start=${start.lng},${start.lat}&end=${end.lng},${end.lat}`;
     //Fetch lee el archivo resultado
     fetch(orsUrl)

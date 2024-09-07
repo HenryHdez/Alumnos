@@ -10,7 +10,7 @@ const Estimaciontdeviaje = () => {
   const [tiempo, setTiempo] = useState(null);
 
   const calcularRuta = (start, end) => {
-    const orsApiKey = '5b3ce3597851110001cf6248ab49b95773b34e8d838a1c6fdbdcf7a5';
+    const orsApiKey = '5b3ce3597851110001cf62487140c01fee1143f9a3aef575c7645a07';
     const orsUrl = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${orsApiKey}&start=${start.lng},${start.lat}&end=${end.lng},${end.lat}`;
 
     fetch(orsUrl)
