@@ -1,0 +1,46 @@
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyDmac.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyFlash.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyLib.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CySpc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/UART_1.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_armcc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_compiler.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_gcc.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/core_cm3.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyPm.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydevice.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyfitter.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cypins.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cytypes.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/project.h D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/main.c 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/UART_1.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/Generated_Source/PSoC5/project.h : 
+
+D:/GitHub/Alumnos/Sensores-actuadores/Clase_5/Com_serial.cydsn/main.c : 
+

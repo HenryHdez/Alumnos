@@ -1,0 +1,6 @@
+docker run --name mysql-master1 -p 3307:3306 --network=mysql-cluster -e MYSQL_ROOT_PASSWORD=micontrasena -d mysql:8.0 --server-id=1 --log-bin=mysql-bin
+
+docker run --name mysql-slave1 -p 3308:3306 --network=mysql-cluster -e MYSQL_ROOT_PASSWORD=contraslave -d mysql:8.0
+docker run --name mysql-slave2 -p 3309:3306 --network=mysql-cluster -e MYSQL_ROOT_PASSWORD=contraslave -d mysql:8.0
+
+pip install mysql-connector-python

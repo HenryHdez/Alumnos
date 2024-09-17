@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ac19b171-3292-4194-9831-6e22eb23f795
+C:\Users\Henry Hernandez\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|38298fd5-a325-44bf-aa66-2fceca1d093d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|87c84434-adba-4208-9171-0c1d5ad8b134
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|67ff4a1a-07c8-4c5d-98ac-c6972b6044a1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|11640ee3-170f-425a-b270-8b69b232402f
+D:\GitHub\Alumnos\Sensores-actuadores\Clase_5\Com_serial.cydsn\Com_serial.cyprj|fd86fcaa-4ffd-46df-87aa-a0a6e6c986c8

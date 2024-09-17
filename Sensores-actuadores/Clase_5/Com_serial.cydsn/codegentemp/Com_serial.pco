@@ -1,0 +1,42 @@
+# Com_serial
+# 2024-09-11 00:24:08Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "Rx_1(0)" iocell 0 0
+set_io "Tx_1(0)" iocell 0 1
+set_location "Net_9" 3 4 1 1
+set_location "\UART_1:BUART:counter_load_not\" 2 4 1 1
+set_location "\UART_1:BUART:tx_status_0\" 3 4 0 1
+set_location "\UART_1:BUART:tx_status_2\" 3 4 1 3
+set_location "\UART_1:BUART:rx_counter_load\" 2 5 0 3
+set_location "\UART_1:BUART:rx_postpoll\" 3 5 1 2
+set_location "\UART_1:BUART:rx_status_4\" 2 5 0 1
+set_location "\UART_1:BUART:rx_status_5\" 2 5 1 0
+set_location "\UART_1:BUART:sTX:TxShifter:u0\" 3 4 2
+set_location "\UART_1:BUART:sTX:sCLOCK:TxBitClkGen\" 2 4 2
+set_location "\UART_1:BUART:sTX:TxSts\" 3 4 4
+set_location "\UART_1:BUART:sRX:RxShifter:u0\" 2 5 2
+set_location "\UART_1:BUART:sRX:RxBitCounter\" 3 5 7
+set_location "\UART_1:BUART:sRX:RxSts\" 2 5 4
+set_location "\UART_1:BUART:txn\" 2 4 0 0
+set_location "\UART_1:BUART:tx_state_1\" 2 4 0 1
+set_location "\UART_1:BUART:tx_state_0\" 3 4 0 0
+set_location "\UART_1:BUART:tx_state_2\" 2 4 1 0
+set_location "\UART_1:BUART:tx_bitclk\" 2 4 1 2
+set_location "\UART_1:BUART:tx_ctrl_mark_last\" 3 5 0 3
+set_location "\UART_1:BUART:rx_state_0\" 3 5 0 0
+set_location "\UART_1:BUART:rx_load_fifo\" 3 5 1 1
+set_location "\UART_1:BUART:rx_state_3\" 3 5 0 2
+set_location "\UART_1:BUART:rx_state_2\" 3 5 1 0
+set_location "\UART_1:BUART:rx_bitclk_enable\" 2 5 0 0
+set_location "\UART_1:BUART:rx_state_stop1_reg\" 2 5 0 2
+set_location "\UART_1:BUART:pollcount_1\" 3 4 0 2
+set_location "\UART_1:BUART:pollcount_0\" 3 4 1 2
+set_location "\UART_1:BUART:rx_status_3\" 3 5 0 1
+set_location "\UART_1:BUART:rx_last\" 3 4 1 0

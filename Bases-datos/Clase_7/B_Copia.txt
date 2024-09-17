@@ -1,0 +1,7 @@
+docker exec -it mysql_container /bin/bash
+cd /var/lib/mysql-files/
+ls
+
+docker cp mysql_container:/var/lib/mysql-files/iris.sql C:\Users\usuario\Desktop
+
+docker exec -it mysql_container /bin/bash

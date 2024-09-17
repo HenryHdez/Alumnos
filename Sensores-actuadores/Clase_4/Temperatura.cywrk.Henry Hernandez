@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Temperatura\Termocupla">
+<ExpandedNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD\TopDesign</v>
+<v>Temperatura\RTD\RTD.cydwr\Pins</v>
+<v>Temperatura\RTD\RTD.cydwr\Analog</v>
+<v>Temperatura\RTD\RTD.cydwr\Clocks</v>
+<v>Temperatura\RTD\RTD.cydwr\Interrupts</v>
+<v>Temperatura\RTD\RTD.cydwr\DMA</v>
+<v>Temperatura\RTD\RTD.cydwr\System</v>
+<v>Temperatura\RTD\RTD.cydwr\Directives</v>
+<v>Temperatura\RTD\RTD.cydwr\Flash Security</v>
+<v>Temperatura\RTD\RTD.cydwr\EEPROM</v>
+<v>Temperatura\RTD\Header Files</v>
+<v>Temperatura\RTD\Header Files\cyapicallbacks.h</v>
+<v>Temperatura\RTD\Source Files\main.c</v>
+<v>Temperatura\RTD\Generated_Source\PSoC5</v>
+<v>Temperatura\Termistor\TopDesign</v>
+<v>Temperatura\Termistor\Termistor.cydwr</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Pins</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Analog</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Clocks</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Interrupts</v>
+<v>Temperatura\Termistor\Termistor.cydwr\DMA</v>
+<v>Temperatura\Termistor\Termistor.cydwr\System</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Directives</v>
+<v>Temperatura\Termistor\Termistor.cydwr\Flash Security</v>
+<v>Temperatura\Termistor\Termistor.cydwr\EEPROM</v>
+<v>Temperatura\Termistor\Header Files</v>
+<v>Temperatura\Termistor\Header Files\cyapicallbacks.h</v>
+<v>Temperatura\Termistor\Source Files</v>
+<v>Temperatura\Termistor\Source Files\main.c</v>
+<v>Temperatura\Termistor\Generated_Source</v>
+<v>Temperatura\Termistor\Generated_Source\PSoC5</v>
+<v>Temperatura\Termocupla\TopDesign</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Pins</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Analog</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Clocks</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Interrupts</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\DMA</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\System</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Directives</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\Flash Security</v>
+<v>Temperatura\Termocupla\Termocupla.cydwr\EEPROM</v>
+<v>Temperatura\Termocupla\Header Files</v>
+<v>Temperatura\Termocupla\Header Files\cyapicallbacks.h</v>
+<v>Temperatura\Termocupla\Source Files</v>
+<v>Temperatura\Termocupla\Source Files\main.c</v>
+<v>Temperatura\Termocupla\Generated_Source</v>
+<v>Temperatura\Termocupla\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termocupla</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\TopDesign</v>
+<v>Temperatura\RTD\TopDesign\TopDesign.cysch</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termistor\TopDesign</v>
+<v>Temperatura\Termistor\TopDesign\TopDesign.cysch</v>
+<v>Temperatura\Termocupla</v>
+<v>Temperatura\Termocupla\TopDesign</v>
+<v>Temperatura\Termocupla\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\TopDesign</v>
+<v>Temperatura\RTD\TopDesign\TopDesign.cysch</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termistor\TopDesign</v>
+<v>Temperatura\Termistor\TopDesign\TopDesign.cysch</v>
+<v>Temperatura\Termocupla</v>
+<v>Temperatura\Termocupla\TopDesign</v>
+<v>Temperatura\Termocupla\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\CortexM3</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Ext_CP_Clk.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_theACLK.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADCMux.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC_PM.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\Ref_neg.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\Ref_pos.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\RTD.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\RTD_neg.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\RTD_pos.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\Salida_DAC.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\RTD.elf</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\RTD.hex</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\RTD.map</v>
+<v>Temperatura\RTD\RTD.gpdsc</v>
+<v>Temperatura\RTD\RTD.rpt</v>
+<v>Temperatura\RTD\RTD_timing.html</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termistor\CortexM3</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Ext_CP_Clk.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_theACLK.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\AMux_1.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\Termistor.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\V_Nodo.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\V1.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Listing Files\V2.lst</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Termistor.elf</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Termistor.hex</v>
+<v>Temperatura\Termistor\CortexM3\ARM_GCC_541\Debug\Termistor.map</v>
+<v>Temperatura\Termistor\Termistor.gpdsc</v>
+<v>Temperatura\Termistor\Termistor.rpt</v>
+<v>Temperatura\Termistor\Termistor_timing.html</v>
+<v>Temperatura\Termocupla</v>
+<v>Temperatura\Termocupla\CortexM3</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Ext_CP_Clk.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_theACLK.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\T1.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\T2.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Listing Files\Termocupla.lst</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Termocupla.elf</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Termocupla.hex</v>
+<v>Temperatura\Termocupla\CortexM3\ARM_GCC_541\Debug\Termocupla.map</v>
+<v>Temperatura\Termocupla\Termocupla.gpdsc</v>
+<v>Temperatura\Termocupla\Termocupla.rpt</v>
+<v>Temperatura\Termocupla\Termocupla_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\CortexM3</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_Ext_CP_Clk.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_theACLK.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\ADCMux.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC.lst</v>
+<v>Temperatura\RTD\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC_PM.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\PSoC 5LP Architecture TRM</v>
+<v>Temperatura\RTD\CY8C58LP Family Datasheet</v>
+<v>Temperatura\RTD\System Reference Guides</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termistor\PSoC 5LP Architecture TRM</v>
+<v>Temperatura\Termistor\CY8C58LP Family Datasheet</v>
+<v>Temperatura\Termistor\System Reference Guides</v>
+<v>Temperatura\Termocupla</v>
+<v>Temperatura\Termocupla\PSoC 5LP Architecture TRM</v>
+<v>Temperatura\Termocupla\CY8C58LP Family Datasheet</v>
+<v>Temperatura\Termocupla\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Temperatura</v>
+<v>Temperatura\RTD</v>
+<v>Temperatura\RTD\PSoC 5LP Architecture TRM</v>
+<v>Temperatura\RTD\CY8C58LP Family Datasheet</v>
+<v>Temperatura\RTD\System Reference Guides</v>
+<v>Temperatura\RTD\System Reference Guides\cy_boot_v6_0</v>
+<v>Temperatura\RTD\ADC_DelSig_v3_30.pdf</v>
+<v>Temperatura\RTD\AMux_v1_80.pdf</v>
+<v>Temperatura\RTD\CharLCD_v2_20.pdf</v>
+<v>Temperatura\RTD\cy_pins_v2_20</v>
+<v>Temperatura\RTD\Gnd_v1_0.pdf</v>
+<v>Temperatura\RTD\IDAC8_v2_0.pdf</v>
+<v>Temperatura\RTD\Resistor_v1_0</v>
+<v>Temperatura\RTD\RTDCalc_v1_20.pdf</v>
+<v>Temperatura\Termistor</v>
+<v>Temperatura\Termistor\PSoC 5LP Architecture TRM</v>
+<v>Temperatura\Termistor\CY8C58LP Family Datasheet</v>
+<v>Temperatura\Termistor\System Reference Guides</v>
+<v>Temperatura\Termistor\System Reference Guides\cy_boot_v6_0</v>
+<v>Temperatura\Termistor\ADC_DelSig_v3_30.pdf</v>
+<v>Temperatura\Termistor\AMux_v1_80.pdf</v>
+<v>Temperatura\Termistor\CharLCD_v2_20.pdf</v>
+<v>Temperatura\Termistor\cy_pins_v2_20</v>
+<v>Temperatura\Termistor\Gnd_v1_0.pdf</v>
+<v>Temperatura\Termistor\Power_v1_0.pdf</v>
+<v>Temperatura\Termistor\Resistor_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1244, 523" SelectedTabbedMdiWindow="f0254bec-6f50-4ab1-b8c0-0b5a150c461a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
