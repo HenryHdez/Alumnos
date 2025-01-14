@@ -1,0 +1,7 @@
+D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_1.cydsn\NODO_1.cyprj|6c5a6556-49f3-4f2c-a86e-6de2463b90da
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|11619ca2-903a-4894-bbdf-1ee4e6304158
+C:\Users\Henry Hernandez\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|3e12a706-f646-42e9-9672-31a60f379b0d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d2b706af-b265-4a2d-91b7-fbded470e77c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d5dec61f-c7a8-431b-af26-976428a0220e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3fe1ad91-81ea-4d5d-9af7-aa775e07a79b
+D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_2.cydsn\NODO_2.cyprj|c48c9942-dafe-4fc8-ad56-596fe5acf08a

@@ -1,0 +1,1105 @@
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CAN_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.CAN_SaveConfig,"ax",%progbits
+  20              		.align	2
+  21              		.global	CAN_SaveConfig
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	CAN_SaveConfig, %function
+  25              	CAN_SaveConfig:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\CAN_PM.c"
+   1:Generated_Source\PSoC5/CAN_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/CAN_PM.c **** * File Name: CAN_PM.c
+   3:Generated_Source\PSoC5/CAN_PM.c **** * Version 3.0
+   4:Generated_Source\PSoC5/CAN_PM.c **** *
+   5:Generated_Source\PSoC5/CAN_PM.c **** * Description:
+   6:Generated_Source\PSoC5/CAN_PM.c **** *  This file contains the setup, control and status commands to support
+   7:Generated_Source\PSoC5/CAN_PM.c **** *  component operations in the low power mode.
+   8:Generated_Source\PSoC5/CAN_PM.c **** *
+   9:Generated_Source\PSoC5/CAN_PM.c **** * Note:
+  10:Generated_Source\PSoC5/CAN_PM.c **** *
+  11:Generated_Source\PSoC5/CAN_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/CAN_PM.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/CAN_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/CAN_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/CAN_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/CAN_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/CAN_PM.c **** 
+  18:Generated_Source\PSoC5/CAN_PM.c **** #include "CAN.h"
+  19:Generated_Source\PSoC5/CAN_PM.c **** 
+  20:Generated_Source\PSoC5/CAN_PM.c **** static CAN_BACKUP_STRUCT CAN_backup =
+  21:Generated_Source\PSoC5/CAN_PM.c **** {
+  22:Generated_Source\PSoC5/CAN_PM.c ****     0u,
+  23:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  24:Generated_Source\PSoC5/CAN_PM.c ****         0u,
+  25:Generated_Source\PSoC5/CAN_PM.c ****         CAN_INIT_INTERRUPT_MASK,
+  26:Generated_Source\PSoC5/CAN_PM.c ****         CAN_MODE_MASK,
+  27:Generated_Source\PSoC5/CAN_PM.c ****         (((uint32) ((uint32) CAN_SYNC_EDGE    << CAN_EDGE_MODE_SHIFT))     |
+  28:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_SAMPLING_MODE << CAN_SAMPLE_MODE_SHIFT))   |
+  29:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_SJW   << CAN_CFG_REG_SJW_SHIFT))   |
+  30:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_RESET_TYPE    << CAN_RESET_SHIFT))         |
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 2
+
+
+  31:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_TSEG2 << CAN_CFG_REG_TSEG2_SHIFT)) |
+  32:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_TSEG1 << CAN_CFG_REG_TSEG1_SHIFT)) |
+  33:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_ARBITER       << CAN_ARBITER_SHIFT))       |
+  34:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_BITRATE       << CAN_BITRATE_SHIFT)))
+  35:Generated_Source\PSoC5/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+  36:Generated_Source\PSoC5/CAN_PM.c **** };
+  37:Generated_Source\PSoC5/CAN_PM.c **** 
+  38:Generated_Source\PSoC5/CAN_PM.c **** 
+  39:Generated_Source\PSoC5/CAN_PM.c **** /*******************************************************************************
+  40:Generated_Source\PSoC5/CAN_PM.c **** * Function Name: CAN_SaveConfig
+  41:Generated_Source\PSoC5/CAN_PM.c **** ********************************************************************************
+  42:Generated_Source\PSoC5/CAN_PM.c **** *
+  43:Generated_Source\PSoC5/CAN_PM.c **** * Summary:
+  44:Generated_Source\PSoC5/CAN_PM.c **** *  Save the CAN configuration.
+  45:Generated_Source\PSoC5/CAN_PM.c **** *
+  46:Generated_Source\PSoC5/CAN_PM.c **** * Parameters:
+  47:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+  48:Generated_Source\PSoC5/CAN_PM.c **** *
+  49:Generated_Source\PSoC5/CAN_PM.c **** * Return:
+  50:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+  51:Generated_Source\PSoC5/CAN_PM.c **** *
+  52:Generated_Source\PSoC5/CAN_PM.c **** * Global Variables:
+  53:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_backup - Modified when non-retention registers are saved.
+  54:Generated_Source\PSoC5/CAN_PM.c **** *
+  55:Generated_Source\PSoC5/CAN_PM.c **** * Reentrant:
+  56:Generated_Source\PSoC5/CAN_PM.c **** *  No.
+  57:Generated_Source\PSoC5/CAN_PM.c **** *
+  58:Generated_Source\PSoC5/CAN_PM.c **** *******************************************************************************/
+  59:Generated_Source\PSoC5/CAN_PM.c **** void CAN_SaveConfig(void) 
+  60:Generated_Source\PSoC5/CAN_PM.c **** {
+  28              		.loc 1 60 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  61:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  62:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.intSr = (CY_GET_REG32(CAN_INT_SR_PTR));
+  33              		.loc 1 62 0
+  34 0000 064B     		ldr	r3, .L2
+  35 0002 1A68     		ldr	r2, [r3]
+  36 0004 064B     		ldr	r3, .L2+4
+  37 0006 5A60     		str	r2, [r3, #4]
+  63:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.intEn = (CY_GET_REG32(CAN_INT_EN_PTR));
+  38              		.loc 1 63 0
+  39 0008 064A     		ldr	r2, .L2+8
+  40 000a 1268     		ldr	r2, [r2]
+  41 000c 9A60     		str	r2, [r3, #8]
+  64:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.cmd = (CY_GET_REG32(CAN_CMD_PTR));
+  42              		.loc 1 64 0
+  43 000e 064A     		ldr	r2, .L2+12
+  44 0010 1268     		ldr	r2, [r2]
+  45 0012 DA60     		str	r2, [r3, #12]
+  65:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.cfg = (CY_GET_REG32(CAN_CFG_PTR));
+  46              		.loc 1 65 0
+  47 0014 054A     		ldr	r2, .L2+16
+  48 0016 1268     		ldr	r2, [r2]
+  49 0018 1A61     		str	r2, [r3, #16]
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 3
+
+
+  50 001a 7047     		bx	lr
+  51              	.L3:
+  52              		.align	2
+  53              	.L2:
+  54 001c 00A00040 		.word	1073782784
+  55 0020 00000000 		.word	.LANCHOR0
+  56 0024 04A00040 		.word	1073782788
+  57 0028 10A00040 		.word	1073782800
+  58 002c 14A00040 		.word	1073782804
+  59              		.cfi_endproc
+  60              	.LFE0:
+  61              		.size	CAN_SaveConfig, .-CAN_SaveConfig
+  62              		.section	.text.CAN_RestoreConfig,"ax",%progbits
+  63              		.align	2
+  64              		.global	CAN_RestoreConfig
+  65              		.thumb
+  66              		.thumb_func
+  67              		.type	CAN_RestoreConfig, %function
+  68              	CAN_RestoreConfig:
+  69              	.LFB1:
+  66:Generated_Source\PSoC5/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+  67:Generated_Source\PSoC5/CAN_PM.c **** }
+  68:Generated_Source\PSoC5/CAN_PM.c **** 
+  69:Generated_Source\PSoC5/CAN_PM.c **** 
+  70:Generated_Source\PSoC5/CAN_PM.c **** /*******************************************************************************
+  71:Generated_Source\PSoC5/CAN_PM.c **** * Function Name: CAN_RestoreConfig
+  72:Generated_Source\PSoC5/CAN_PM.c **** ********************************************************************************
+  73:Generated_Source\PSoC5/CAN_PM.c **** *
+  74:Generated_Source\PSoC5/CAN_PM.c **** * Summary:
+  75:Generated_Source\PSoC5/CAN_PM.c **** *  Restore the CAN configuration.
+  76:Generated_Source\PSoC5/CAN_PM.c **** *
+  77:Generated_Source\PSoC5/CAN_PM.c **** * Parameters:
+  78:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+  79:Generated_Source\PSoC5/CAN_PM.c **** *
+  80:Generated_Source\PSoC5/CAN_PM.c **** * Return:
+  81:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+  82:Generated_Source\PSoC5/CAN_PM.c **** *
+  83:Generated_Source\PSoC5/CAN_PM.c **** * Global Variables:
+  84:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_backup - Used when non-retention registers are restored.
+  85:Generated_Source\PSoC5/CAN_PM.c **** *
+  86:Generated_Source\PSoC5/CAN_PM.c **** * Side Effects:
+  87:Generated_Source\PSoC5/CAN_PM.c **** *  If this API is called without first calling SaveConfig then default values
+  88:Generated_Source\PSoC5/CAN_PM.c **** *  from Customizer will be in the following registers: CAN_INT_SR,
+  89:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_INT_EN, CAN_CMD, CAN_CFG.
+  90:Generated_Source\PSoC5/CAN_PM.c **** *
+  91:Generated_Source\PSoC5/CAN_PM.c **** *******************************************************************************/
+  92:Generated_Source\PSoC5/CAN_PM.c **** void CAN_RestoreConfig(void) 
+  93:Generated_Source\PSoC5/CAN_PM.c **** {
+  70              		.loc 1 93 0
+  71              		.cfi_startproc
+  72              		@ args = 0, pretend = 0, frame = 0
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74              		@ link register save eliminated.
+  94:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  95:Generated_Source\PSoC5/CAN_PM.c ****         CY_SET_REG32(CAN_INT_SR_PTR, CAN_backup.intSr);
+  75              		.loc 1 95 0
+  76 0000 064B     		ldr	r3, .L5
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 4
+
+
+  77 0002 5968     		ldr	r1, [r3, #4]
+  78 0004 064A     		ldr	r2, .L5+4
+  79 0006 1160     		str	r1, [r2]
+  96:Generated_Source\PSoC5/CAN_PM.c ****         CY_SET_REG32(CAN_INT_EN_PTR, CAN_backup.intEn);
+  80              		.loc 1 96 0
+  81 0008 9968     		ldr	r1, [r3, #8]
+  82 000a 0432     		adds	r2, r2, #4
+  83 000c 1160     		str	r1, [r2]
+  97:Generated_Source\PSoC5/CAN_PM.c ****         CY_SET_REG32(CAN_CMD_PTR, CAN_backup.cmd);
+  84              		.loc 1 97 0
+  85 000e D968     		ldr	r1, [r3, #12]
+  86 0010 0C32     		adds	r2, r2, #12
+  87 0012 1160     		str	r1, [r2]
+  98:Generated_Source\PSoC5/CAN_PM.c ****         CY_SET_REG32(CAN_CFG_PTR, CAN_backup.cfg);
+  88              		.loc 1 98 0
+  89 0014 1A69     		ldr	r2, [r3, #16]
+  90 0016 034B     		ldr	r3, .L5+8
+  91 0018 1A60     		str	r2, [r3]
+  92 001a 7047     		bx	lr
+  93              	.L6:
+  94              		.align	2
+  95              	.L5:
+  96 001c 00000000 		.word	.LANCHOR0
+  97 0020 00A00040 		.word	1073782784
+  98 0024 14A00040 		.word	1073782804
+  99              		.cfi_endproc
+ 100              	.LFE1:
+ 101              		.size	CAN_RestoreConfig, .-CAN_RestoreConfig
+ 102              		.section	.text.CAN_Sleep,"ax",%progbits
+ 103              		.align	2
+ 104              		.global	CAN_Sleep
+ 105              		.thumb
+ 106              		.thumb_func
+ 107              		.type	CAN_Sleep, %function
+ 108              	CAN_Sleep:
+ 109              	.LFB2:
+  99:Generated_Source\PSoC5/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 100:Generated_Source\PSoC5/CAN_PM.c **** }
+ 101:Generated_Source\PSoC5/CAN_PM.c **** 
+ 102:Generated_Source\PSoC5/CAN_PM.c **** 
+ 103:Generated_Source\PSoC5/CAN_PM.c **** /*******************************************************************************
+ 104:Generated_Source\PSoC5/CAN_PM.c **** * Function Name: CAN_Sleep
+ 105:Generated_Source\PSoC5/CAN_PM.c **** ********************************************************************************
+ 106:Generated_Source\PSoC5/CAN_PM.c **** *
+ 107:Generated_Source\PSoC5/CAN_PM.c **** * Summary:
+ 108:Generated_Source\PSoC5/CAN_PM.c **** *  Prepares CAN Component to go to sleep.
+ 109:Generated_Source\PSoC5/CAN_PM.c **** *
+ 110:Generated_Source\PSoC5/CAN_PM.c **** * Parameters:
+ 111:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+ 112:Generated_Source\PSoC5/CAN_PM.c **** *
+ 113:Generated_Source\PSoC5/CAN_PM.c **** * Return:
+ 114:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+ 115:Generated_Source\PSoC5/CAN_PM.c **** *
+ 116:Generated_Source\PSoC5/CAN_PM.c **** * Global Variables:
+ 117:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_backup - Modified when non-retention registers are saved.
+ 118:Generated_Source\PSoC5/CAN_PM.c **** *
+ 119:Generated_Source\PSoC5/CAN_PM.c **** * Reentrant:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 5
+
+
+ 120:Generated_Source\PSoC5/CAN_PM.c **** *  No.
+ 121:Generated_Source\PSoC5/CAN_PM.c **** *
+ 122:Generated_Source\PSoC5/CAN_PM.c **** *******************************************************************************/
+ 123:Generated_Source\PSoC5/CAN_PM.c **** void CAN_Sleep(void) 
+ 124:Generated_Source\PSoC5/CAN_PM.c **** {
+ 110              		.loc 1 124 0
+ 111              		.cfi_startproc
+ 112              		@ args = 0, pretend = 0, frame = 0
+ 113              		@ frame_needed = 0, uses_anonymous_args = 0
+ 114 0000 08B5     		push	{r3, lr}
+ 115              		.cfi_def_cfa_offset 8
+ 116              		.cfi_offset 3, -8
+ 117              		.cfi_offset 14, -4
+ 125:Generated_Source\PSoC5/CAN_PM.c ****     #if (!(CY_PSOC3 || CY_PSOC5))
+ 126:Generated_Source\PSoC5/CAN_PM.c ****         uint8 i;
+ 127:Generated_Source\PSoC5/CAN_PM.c ****     #endif /* (!(CY_PSOC3 || CY_PSOC5)) */
+ 128:Generated_Source\PSoC5/CAN_PM.c **** 
+ 129:Generated_Source\PSoC5/CAN_PM.c ****     if (0u != (CY_GET_REG32(CAN_CMD_PTR) & CAN_MODE_MASK))
+ 118              		.loc 1 129 0
+ 119 0002 084B     		ldr	r3, .L11
+ 120 0004 1B68     		ldr	r3, [r3]
+ 121 0006 13F0010F 		tst	r3, #1
+ 122 000a 03D0     		beq	.L8
+ 130:Generated_Source\PSoC5/CAN_PM.c ****     {
+ 131:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.enableState = 1u;
+ 123              		.loc 1 131 0
+ 124 000c 0122     		movs	r2, #1
+ 125 000e 064B     		ldr	r3, .L11+4
+ 126 0010 1A70     		strb	r2, [r3]
+ 127 0012 02E0     		b	.L9
+ 128              	.L8:
+ 132:Generated_Source\PSoC5/CAN_PM.c ****     }
+ 133:Generated_Source\PSoC5/CAN_PM.c ****     else /* CAN block is disabled */
+ 134:Generated_Source\PSoC5/CAN_PM.c ****     {
+ 135:Generated_Source\PSoC5/CAN_PM.c ****         CAN_backup.enableState = 0u;
+ 129              		.loc 1 135 0
+ 130 0014 0022     		movs	r2, #0
+ 131 0016 044B     		ldr	r3, .L11+4
+ 132 0018 1A70     		strb	r2, [r3]
+ 133              	.L9:
+ 136:Generated_Source\PSoC5/CAN_PM.c ****     }
+ 137:Generated_Source\PSoC5/CAN_PM.c **** 
+ 138:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 139:Generated_Source\PSoC5/CAN_PM.c ****         CAN_SaveConfig();
+ 134              		.loc 1 139 0
+ 135 001a FFF7FEFF 		bl	CAN_SaveConfig
+ 136              	.LVL0:
+ 140:Generated_Source\PSoC5/CAN_PM.c ****         (void) CAN_Stop();
+ 137              		.loc 1 140 0
+ 138 001e FFF7FEFF 		bl	CAN_Stop
+ 139              	.LVL1:
+ 140 0022 08BD     		pop	{r3, pc}
+ 141              	.L12:
+ 142              		.align	2
+ 143              	.L11:
+ 144 0024 10A00040 		.word	1073782800
+ 145 0028 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 6
+
+
+ 146              		.cfi_endproc
+ 147              	.LFE2:
+ 148              		.size	CAN_Sleep, .-CAN_Sleep
+ 149              		.section	.text.CAN_Wakeup,"ax",%progbits
+ 150              		.align	2
+ 151              		.global	CAN_Wakeup
+ 152              		.thumb
+ 153              		.thumb_func
+ 154              		.type	CAN_Wakeup, %function
+ 155              	CAN_Wakeup:
+ 156              	.LFB3:
+ 141:Generated_Source\PSoC5/CAN_PM.c ****     #else /* CY_PSOC4 */
+ 142:Generated_Source\PSoC5/CAN_PM.c ****         /* Abort respective pending TX message requests */
+ 143:Generated_Source\PSoC5/CAN_PM.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+ 144:Generated_Source\PSoC5/CAN_PM.c ****         {
+ 145:Generated_Source\PSoC5/CAN_PM.c ****             CAN_TX_ABORT_MESSAGE(i);
+ 146:Generated_Source\PSoC5/CAN_PM.c ****         }
+ 147:Generated_Source\PSoC5/CAN_PM.c **** 
+ 148:Generated_Source\PSoC5/CAN_PM.c ****         /* Sets CAN controller to Stop mode */
+ 149:Generated_Source\PSoC5/CAN_PM.c ****         (void) CAN_Stop();
+ 150:Generated_Source\PSoC5/CAN_PM.c **** 
+ 151:Generated_Source\PSoC5/CAN_PM.c ****         /* Clear Global Interrupt enable Flag */
+ 152:Generated_Source\PSoC5/CAN_PM.c ****         (void) CAN_GlobalIntDisable();
+ 153:Generated_Source\PSoC5/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 154:Generated_Source\PSoC5/CAN_PM.c **** }
+ 155:Generated_Source\PSoC5/CAN_PM.c **** 
+ 156:Generated_Source\PSoC5/CAN_PM.c **** 
+ 157:Generated_Source\PSoC5/CAN_PM.c **** /*******************************************************************************
+ 158:Generated_Source\PSoC5/CAN_PM.c **** * Function Name: CAN_Wakeup
+ 159:Generated_Source\PSoC5/CAN_PM.c **** ********************************************************************************
+ 160:Generated_Source\PSoC5/CAN_PM.c **** *
+ 161:Generated_Source\PSoC5/CAN_PM.c **** * Summary:
+ 162:Generated_Source\PSoC5/CAN_PM.c **** *  Prepares CAN Component to wake up.
+ 163:Generated_Source\PSoC5/CAN_PM.c **** *
+ 164:Generated_Source\PSoC5/CAN_PM.c **** * Parameters:
+ 165:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+ 166:Generated_Source\PSoC5/CAN_PM.c **** *
+ 167:Generated_Source\PSoC5/CAN_PM.c **** * Return:
+ 168:Generated_Source\PSoC5/CAN_PM.c **** *  None.
+ 169:Generated_Source\PSoC5/CAN_PM.c **** *
+ 170:Generated_Source\PSoC5/CAN_PM.c **** * Global Variables:
+ 171:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_backup - Used when non-retention registers are restored.
+ 172:Generated_Source\PSoC5/CAN_PM.c **** *
+ 173:Generated_Source\PSoC5/CAN_PM.c **** * Reentrant:
+ 174:Generated_Source\PSoC5/CAN_PM.c **** *  No.
+ 175:Generated_Source\PSoC5/CAN_PM.c **** *
+ 176:Generated_Source\PSoC5/CAN_PM.c **** *******************************************************************************/
+ 177:Generated_Source\PSoC5/CAN_PM.c **** void CAN_Wakeup(void) 
+ 178:Generated_Source\PSoC5/CAN_PM.c **** {
+ 157              		.loc 1 178 0
+ 158              		.cfi_startproc
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161 0000 08B5     		push	{r3, lr}
+ 162              		.cfi_def_cfa_offset 8
+ 163              		.cfi_offset 3, -8
+ 164              		.cfi_offset 14, -4
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 7
+
+
+ 179:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 180:Generated_Source\PSoC5/CAN_PM.c ****         /* Enable CAN block in Active mode */
+ 181:Generated_Source\PSoC5/CAN_PM.c ****         CAN_PM_ACT_CFG_REG |= CAN_ACT_PWR_EN;
+ 165              		.loc 1 181 0
+ 166 0002 0A4A     		ldr	r2, .L16
+ 167 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 168 0006 43F00103 		orr	r3, r3, #1
+ 169 000a 1370     		strb	r3, [r2]
+ 182:Generated_Source\PSoC5/CAN_PM.c ****         /* Enable CAN block in Alternate Active (Standby) mode */
+ 183:Generated_Source\PSoC5/CAN_PM.c ****         CAN_PM_STBY_CFG_REG |= CAN_STBY_PWR_EN;
+ 170              		.loc 1 183 0
+ 171 000c 1032     		adds	r2, r2, #16
+ 172 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 173 0010 43F00103 		orr	r3, r3, #1
+ 174 0014 1370     		strb	r3, [r2]
+ 184:Generated_Source\PSoC5/CAN_PM.c **** 
+ 185:Generated_Source\PSoC5/CAN_PM.c ****         CAN_RestoreConfig();
+ 175              		.loc 1 185 0
+ 176 0016 FFF7FEFF 		bl	CAN_RestoreConfig
+ 177              	.LVL2:
+ 186:Generated_Source\PSoC5/CAN_PM.c **** 
+ 187:Generated_Source\PSoC5/CAN_PM.c ****         /* Reconfigure Rx and Tx Buffers control registers */
+ 188:Generated_Source\PSoC5/CAN_PM.c ****         (void) CAN_RxTxBuffersConfig();
+ 178              		.loc 1 188 0
+ 179 001a FFF7FEFF 		bl	CAN_RxTxBuffersConfig
+ 180              	.LVL3:
+ 189:Generated_Source\PSoC5/CAN_PM.c **** 
+ 190:Generated_Source\PSoC5/CAN_PM.c ****         if (CAN_backup.enableState != 0u)
+ 181              		.loc 1 190 0
+ 182 001e 044B     		ldr	r3, .L16+4
+ 183 0020 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 184 0022 0BB1     		cbz	r3, .L13
+ 191:Generated_Source\PSoC5/CAN_PM.c ****         {
+ 192:Generated_Source\PSoC5/CAN_PM.c ****             /* Enable component's operation */
+ 193:Generated_Source\PSoC5/CAN_PM.c ****             (void) CAN_Enable();
+ 185              		.loc 1 193 0
+ 186 0024 FFF7FEFF 		bl	CAN_Enable
+ 187              	.LVL4:
+ 188              	.L13:
+ 189 0028 08BD     		pop	{r3, pc}
+ 190              	.L17:
+ 191 002a 00BF     		.align	2
+ 192              	.L16:
+ 193 002c A6430040 		.word	1073759142
+ 194 0030 00000000 		.word	.LANCHOR0
+ 195              		.cfi_endproc
+ 196              	.LFE3:
+ 197              		.size	CAN_Wakeup, .-CAN_Wakeup
+ 198              		.data
+ 199              		.align	2
+ 200              		.set	.LANCHOR0,. + 0
+ 201              		.type	CAN_backup, %object
+ 202              		.size	CAN_backup, 20
+ 203              	CAN_backup:
+ 204 0000 00       		.byte	0
+ 205 0001 000000   		.space	3
+ 206 0004 00000000 		.word	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 8
+
+
+ 207 0008 01120000 		.word	4609
+ 208 000c 01000000 		.word	1
+ 209 0010 24040200 		.word	132132
+ 210              		.text
+ 211              	.Letext0:
+ 212              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 213              		.file 3 "Generated_Source\\PSoC5\\CAN.h"
+ 214              		.section	.debug_info,"",%progbits
+ 215              	.Ldebug_info0:
+ 216 0000 CF010000 		.4byte	0x1cf
+ 217 0004 0400     		.2byte	0x4
+ 218 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 219 000a 04       		.byte	0x4
+ 220 000b 01       		.uleb128 0x1
+ 221 000c 81000000 		.4byte	.LASF30
+ 222 0010 0C       		.byte	0xc
+ 223 0011 F2010000 		.4byte	.LASF31
+ 224 0015 00000000 		.4byte	.LASF32
+ 225 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 226 001d 00000000 		.4byte	0
+ 227 0021 00000000 		.4byte	.Ldebug_line0
+ 228 0025 02       		.uleb128 0x2
+ 229 0026 01       		.byte	0x1
+ 230 0027 06       		.byte	0x6
+ 231 0028 33020000 		.4byte	.LASF0
+ 232 002c 02       		.uleb128 0x2
+ 233 002d 01       		.byte	0x1
+ 234 002e 08       		.byte	0x8
+ 235 002f 6F010000 		.4byte	.LASF1
+ 236 0033 02       		.uleb128 0x2
+ 237 0034 02       		.byte	0x2
+ 238 0035 05       		.byte	0x5
+ 239 0036 E8010000 		.4byte	.LASF2
+ 240 003a 02       		.uleb128 0x2
+ 241 003b 02       		.byte	0x2
+ 242 003c 07       		.byte	0x7
+ 243 003d 52000000 		.4byte	.LASF3
+ 244 0041 02       		.uleb128 0x2
+ 245 0042 04       		.byte	0x4
+ 246 0043 05       		.byte	0x5
+ 247 0044 12020000 		.4byte	.LASF4
+ 248 0048 02       		.uleb128 0x2
+ 249 0049 04       		.byte	0x4
+ 250 004a 07       		.byte	0x7
+ 251 004b 1A010000 		.4byte	.LASF5
+ 252 004f 02       		.uleb128 0x2
+ 253 0050 08       		.byte	0x8
+ 254 0051 05       		.byte	0x5
+ 255 0052 AA010000 		.4byte	.LASF6
+ 256 0056 02       		.uleb128 0x2
+ 257 0057 08       		.byte	0x8
+ 258 0058 07       		.byte	0x7
+ 259 0059 8A010000 		.4byte	.LASF7
+ 260 005d 03       		.uleb128 0x3
+ 261 005e 04       		.byte	0x4
+ 262 005f 05       		.byte	0x5
+ 263 0060 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 9
+
+
+ 264 0064 02       		.uleb128 0x2
+ 265 0065 04       		.byte	0x4
+ 266 0066 07       		.byte	0x7
+ 267 0067 7D010000 		.4byte	.LASF8
+ 268 006b 04       		.uleb128 0x4
+ 269 006c 2C010000 		.4byte	.LASF9
+ 270 0070 02       		.byte	0x2
+ 271 0071 E401     		.2byte	0x1e4
+ 272 0073 2C000000 		.4byte	0x2c
+ 273 0077 04       		.uleb128 0x4
+ 274 0078 56010000 		.4byte	.LASF10
+ 275 007c 02       		.byte	0x2
+ 276 007d E501     		.2byte	0x1e5
+ 277 007f 3A000000 		.4byte	0x3a
+ 278 0083 04       		.uleb128 0x4
+ 279 0084 68010000 		.4byte	.LASF11
+ 280 0088 02       		.byte	0x2
+ 281 0089 E601     		.2byte	0x1e6
+ 282 008b 48000000 		.4byte	0x48
+ 283 008f 02       		.uleb128 0x2
+ 284 0090 04       		.byte	0x4
+ 285 0091 04       		.byte	0x4
+ 286 0092 65000000 		.4byte	.LASF12
+ 287 0096 02       		.uleb128 0x2
+ 288 0097 08       		.byte	0x8
+ 289 0098 04       		.byte	0x4
+ 290 0099 3D010000 		.4byte	.LASF13
+ 291 009d 02       		.uleb128 0x2
+ 292 009e 01       		.byte	0x1
+ 293 009f 08       		.byte	0x8
+ 294 00a0 BE010000 		.4byte	.LASF14
+ 295 00a4 04       		.uleb128 0x4
+ 296 00a5 0F010000 		.4byte	.LASF15
+ 297 00a9 02       		.byte	0x2
+ 298 00aa 8E02     		.2byte	0x28e
+ 299 00ac B0000000 		.4byte	0xb0
+ 300 00b0 05       		.uleb128 0x5
+ 301 00b1 6B000000 		.4byte	0x6b
+ 302 00b5 04       		.uleb128 0x4
+ 303 00b6 32000000 		.4byte	.LASF16
+ 304 00ba 02       		.byte	0x2
+ 305 00bb 9002     		.2byte	0x290
+ 306 00bd C1000000 		.4byte	0xc1
+ 307 00c1 05       		.uleb128 0x5
+ 308 00c2 83000000 		.4byte	0x83
+ 309 00c6 02       		.uleb128 0x2
+ 310 00c7 08       		.byte	0x8
+ 311 00c8 04       		.byte	0x4
+ 312 00c9 27020000 		.4byte	.LASF17
+ 313 00cd 02       		.uleb128 0x2
+ 314 00ce 04       		.byte	0x4
+ 315 00cf 07       		.byte	0x7
+ 316 00d0 A1010000 		.4byte	.LASF18
+ 317 00d4 06       		.uleb128 0x6
+ 318 00d5 14       		.byte	0x14
+ 319 00d6 03       		.byte	0x3
+ 320 00d7 B4       		.byte	0xb4
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 10
+
+
+ 321 00d8 19010000 		.4byte	0x119
+ 322 00dc 07       		.uleb128 0x7
+ 323 00dd 1B020000 		.4byte	.LASF19
+ 324 00e1 03       		.byte	0x3
+ 325 00e2 B6       		.byte	0xb6
+ 326 00e3 6B000000 		.4byte	0x6b
+ 327 00e7 00       		.byte	0
+ 328 00e8 07       		.uleb128 0x7
+ 329 00e9 B8010000 		.4byte	.LASF20
+ 330 00ed 03       		.byte	0x3
+ 331 00ee B8       		.byte	0xb8
+ 332 00ef 83000000 		.4byte	0x83
+ 333 00f3 04       		.byte	0x4
+ 334 00f4 07       		.uleb128 0x7
+ 335 00f5 14010000 		.4byte	.LASF21
+ 336 00f9 03       		.byte	0x3
+ 337 00fa B9       		.byte	0xb9
+ 338 00fb 83000000 		.4byte	0x83
+ 339 00ff 08       		.byte	0x8
+ 340 0100 08       		.uleb128 0x8
+ 341 0101 636D6400 		.ascii	"cmd\000"
+ 342 0105 03       		.byte	0x3
+ 343 0106 BA       		.byte	0xba
+ 344 0107 83000000 		.4byte	0x83
+ 345 010b 0C       		.byte	0xc
+ 346 010c 08       		.uleb128 0x8
+ 347 010d 63666700 		.ascii	"cfg\000"
+ 348 0111 03       		.byte	0x3
+ 349 0112 BB       		.byte	0xbb
+ 350 0113 83000000 		.4byte	0x83
+ 351 0117 10       		.byte	0x10
+ 352 0118 00       		.byte	0
+ 353 0119 09       		.uleb128 0x9
+ 354 011a D6010000 		.4byte	.LASF22
+ 355 011e 03       		.byte	0x3
+ 356 011f BD       		.byte	0xbd
+ 357 0120 D4000000 		.4byte	0xd4
+ 358 0124 0A       		.uleb128 0xa
+ 359 0125 38000000 		.4byte	.LASF23
+ 360 0129 01       		.byte	0x1
+ 361 012a 3B       		.byte	0x3b
+ 362 012b 00000000 		.4byte	.LFB0
+ 363 012f 30000000 		.4byte	.LFE0-.LFB0
+ 364 0133 01       		.uleb128 0x1
+ 365 0134 9C       		.byte	0x9c
+ 366 0135 0A       		.uleb128 0xa
+ 367 0136 44010000 		.4byte	.LASF24
+ 368 013a 01       		.byte	0x1
+ 369 013b 5C       		.byte	0x5c
+ 370 013c 00000000 		.4byte	.LFB1
+ 371 0140 28000000 		.4byte	.LFE1-.LFB1
+ 372 0144 01       		.uleb128 0x1
+ 373 0145 9C       		.byte	0x9c
+ 374 0146 0B       		.uleb128 0xb
+ 375 0147 CC010000 		.4byte	.LASF25
+ 376 014b 01       		.byte	0x1
+ 377 014c 7B       		.byte	0x7b
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 11
+
+
+ 378 014d 00000000 		.4byte	.LFB2
+ 379 0151 2C000000 		.4byte	.LFE2-.LFB2
+ 380 0155 01       		.uleb128 0x1
+ 381 0156 9C       		.byte	0x9c
+ 382 0157 6E010000 		.4byte	0x16e
+ 383 015b 0C       		.uleb128 0xc
+ 384 015c 1E000000 		.4byte	.LVL0
+ 385 0160 24010000 		.4byte	0x124
+ 386 0164 0C       		.uleb128 0xc
+ 387 0165 22000000 		.4byte	.LVL1
+ 388 0169 B0010000 		.4byte	0x1b0
+ 389 016d 00       		.byte	0
+ 390 016e 0B       		.uleb128 0xb
+ 391 016f 5D010000 		.4byte	.LASF26
+ 392 0173 01       		.byte	0x1
+ 393 0174 B1       		.byte	0xb1
+ 394 0175 00000000 		.4byte	.LFB3
+ 395 0179 34000000 		.4byte	.LFE3-.LFB3
+ 396 017d 01       		.uleb128 0x1
+ 397 017e 9C       		.byte	0x9c
+ 398 017f 9F010000 		.4byte	0x19f
+ 399 0183 0C       		.uleb128 0xc
+ 400 0184 1A000000 		.4byte	.LVL2
+ 401 0188 35010000 		.4byte	0x135
+ 402 018c 0C       		.uleb128 0xc
+ 403 018d 1E000000 		.4byte	.LVL3
+ 404 0191 BB010000 		.4byte	0x1bb
+ 405 0195 0C       		.uleb128 0xc
+ 406 0196 28000000 		.4byte	.LVL4
+ 407 019a C7010000 		.4byte	0x1c7
+ 408 019e 00       		.byte	0
+ 409 019f 0D       		.uleb128 0xd
+ 410 01a0 32010000 		.4byte	.LASF33
+ 411 01a4 01       		.byte	0x1
+ 412 01a5 14       		.byte	0x14
+ 413 01a6 19010000 		.4byte	0x119
+ 414 01aa 05       		.uleb128 0x5
+ 415 01ab 03       		.byte	0x3
+ 416 01ac 00000000 		.4byte	CAN_backup
+ 417 01b0 0E       		.uleb128 0xe
+ 418 01b1 C3010000 		.4byte	.LASF27
+ 419 01b5 C3010000 		.4byte	.LASF27
+ 420 01b9 03       		.byte	0x3
+ 421 01ba C6       		.byte	0xc6
+ 422 01bb 0F       		.uleb128 0xf
+ 423 01bc 6B000000 		.4byte	.LASF28
+ 424 01c0 6B000000 		.4byte	.LASF28
+ 425 01c4 03       		.byte	0x3
+ 426 01c5 1701     		.2byte	0x117
+ 427 01c7 0E       		.uleb128 0xe
+ 428 01c8 47000000 		.4byte	.LASF29
+ 429 01cc 47000000 		.4byte	.LASF29
+ 430 01d0 03       		.byte	0x3
+ 431 01d1 C7       		.byte	0xc7
+ 432 01d2 00       		.byte	0
+ 433              		.section	.debug_abbrev,"",%progbits
+ 434              	.Ldebug_abbrev0:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 12
+
+
+ 435 0000 01       		.uleb128 0x1
+ 436 0001 11       		.uleb128 0x11
+ 437 0002 01       		.byte	0x1
+ 438 0003 25       		.uleb128 0x25
+ 439 0004 0E       		.uleb128 0xe
+ 440 0005 13       		.uleb128 0x13
+ 441 0006 0B       		.uleb128 0xb
+ 442 0007 03       		.uleb128 0x3
+ 443 0008 0E       		.uleb128 0xe
+ 444 0009 1B       		.uleb128 0x1b
+ 445 000a 0E       		.uleb128 0xe
+ 446 000b 55       		.uleb128 0x55
+ 447 000c 17       		.uleb128 0x17
+ 448 000d 11       		.uleb128 0x11
+ 449 000e 01       		.uleb128 0x1
+ 450 000f 10       		.uleb128 0x10
+ 451 0010 17       		.uleb128 0x17
+ 452 0011 00       		.byte	0
+ 453 0012 00       		.byte	0
+ 454 0013 02       		.uleb128 0x2
+ 455 0014 24       		.uleb128 0x24
+ 456 0015 00       		.byte	0
+ 457 0016 0B       		.uleb128 0xb
+ 458 0017 0B       		.uleb128 0xb
+ 459 0018 3E       		.uleb128 0x3e
+ 460 0019 0B       		.uleb128 0xb
+ 461 001a 03       		.uleb128 0x3
+ 462 001b 0E       		.uleb128 0xe
+ 463 001c 00       		.byte	0
+ 464 001d 00       		.byte	0
+ 465 001e 03       		.uleb128 0x3
+ 466 001f 24       		.uleb128 0x24
+ 467 0020 00       		.byte	0
+ 468 0021 0B       		.uleb128 0xb
+ 469 0022 0B       		.uleb128 0xb
+ 470 0023 3E       		.uleb128 0x3e
+ 471 0024 0B       		.uleb128 0xb
+ 472 0025 03       		.uleb128 0x3
+ 473 0026 08       		.uleb128 0x8
+ 474 0027 00       		.byte	0
+ 475 0028 00       		.byte	0
+ 476 0029 04       		.uleb128 0x4
+ 477 002a 16       		.uleb128 0x16
+ 478 002b 00       		.byte	0
+ 479 002c 03       		.uleb128 0x3
+ 480 002d 0E       		.uleb128 0xe
+ 481 002e 3A       		.uleb128 0x3a
+ 482 002f 0B       		.uleb128 0xb
+ 483 0030 3B       		.uleb128 0x3b
+ 484 0031 05       		.uleb128 0x5
+ 485 0032 49       		.uleb128 0x49
+ 486 0033 13       		.uleb128 0x13
+ 487 0034 00       		.byte	0
+ 488 0035 00       		.byte	0
+ 489 0036 05       		.uleb128 0x5
+ 490 0037 35       		.uleb128 0x35
+ 491 0038 00       		.byte	0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 13
+
+
+ 492 0039 49       		.uleb128 0x49
+ 493 003a 13       		.uleb128 0x13
+ 494 003b 00       		.byte	0
+ 495 003c 00       		.byte	0
+ 496 003d 06       		.uleb128 0x6
+ 497 003e 13       		.uleb128 0x13
+ 498 003f 01       		.byte	0x1
+ 499 0040 0B       		.uleb128 0xb
+ 500 0041 0B       		.uleb128 0xb
+ 501 0042 3A       		.uleb128 0x3a
+ 502 0043 0B       		.uleb128 0xb
+ 503 0044 3B       		.uleb128 0x3b
+ 504 0045 0B       		.uleb128 0xb
+ 505 0046 01       		.uleb128 0x1
+ 506 0047 13       		.uleb128 0x13
+ 507 0048 00       		.byte	0
+ 508 0049 00       		.byte	0
+ 509 004a 07       		.uleb128 0x7
+ 510 004b 0D       		.uleb128 0xd
+ 511 004c 00       		.byte	0
+ 512 004d 03       		.uleb128 0x3
+ 513 004e 0E       		.uleb128 0xe
+ 514 004f 3A       		.uleb128 0x3a
+ 515 0050 0B       		.uleb128 0xb
+ 516 0051 3B       		.uleb128 0x3b
+ 517 0052 0B       		.uleb128 0xb
+ 518 0053 49       		.uleb128 0x49
+ 519 0054 13       		.uleb128 0x13
+ 520 0055 38       		.uleb128 0x38
+ 521 0056 0B       		.uleb128 0xb
+ 522 0057 00       		.byte	0
+ 523 0058 00       		.byte	0
+ 524 0059 08       		.uleb128 0x8
+ 525 005a 0D       		.uleb128 0xd
+ 526 005b 00       		.byte	0
+ 527 005c 03       		.uleb128 0x3
+ 528 005d 08       		.uleb128 0x8
+ 529 005e 3A       		.uleb128 0x3a
+ 530 005f 0B       		.uleb128 0xb
+ 531 0060 3B       		.uleb128 0x3b
+ 532 0061 0B       		.uleb128 0xb
+ 533 0062 49       		.uleb128 0x49
+ 534 0063 13       		.uleb128 0x13
+ 535 0064 38       		.uleb128 0x38
+ 536 0065 0B       		.uleb128 0xb
+ 537 0066 00       		.byte	0
+ 538 0067 00       		.byte	0
+ 539 0068 09       		.uleb128 0x9
+ 540 0069 16       		.uleb128 0x16
+ 541 006a 00       		.byte	0
+ 542 006b 03       		.uleb128 0x3
+ 543 006c 0E       		.uleb128 0xe
+ 544 006d 3A       		.uleb128 0x3a
+ 545 006e 0B       		.uleb128 0xb
+ 546 006f 3B       		.uleb128 0x3b
+ 547 0070 0B       		.uleb128 0xb
+ 548 0071 49       		.uleb128 0x49
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 14
+
+
+ 549 0072 13       		.uleb128 0x13
+ 550 0073 00       		.byte	0
+ 551 0074 00       		.byte	0
+ 552 0075 0A       		.uleb128 0xa
+ 553 0076 2E       		.uleb128 0x2e
+ 554 0077 00       		.byte	0
+ 555 0078 3F       		.uleb128 0x3f
+ 556 0079 19       		.uleb128 0x19
+ 557 007a 03       		.uleb128 0x3
+ 558 007b 0E       		.uleb128 0xe
+ 559 007c 3A       		.uleb128 0x3a
+ 560 007d 0B       		.uleb128 0xb
+ 561 007e 3B       		.uleb128 0x3b
+ 562 007f 0B       		.uleb128 0xb
+ 563 0080 27       		.uleb128 0x27
+ 564 0081 19       		.uleb128 0x19
+ 565 0082 11       		.uleb128 0x11
+ 566 0083 01       		.uleb128 0x1
+ 567 0084 12       		.uleb128 0x12
+ 568 0085 06       		.uleb128 0x6
+ 569 0086 40       		.uleb128 0x40
+ 570 0087 18       		.uleb128 0x18
+ 571 0088 9742     		.uleb128 0x2117
+ 572 008a 19       		.uleb128 0x19
+ 573 008b 00       		.byte	0
+ 574 008c 00       		.byte	0
+ 575 008d 0B       		.uleb128 0xb
+ 576 008e 2E       		.uleb128 0x2e
+ 577 008f 01       		.byte	0x1
+ 578 0090 3F       		.uleb128 0x3f
+ 579 0091 19       		.uleb128 0x19
+ 580 0092 03       		.uleb128 0x3
+ 581 0093 0E       		.uleb128 0xe
+ 582 0094 3A       		.uleb128 0x3a
+ 583 0095 0B       		.uleb128 0xb
+ 584 0096 3B       		.uleb128 0x3b
+ 585 0097 0B       		.uleb128 0xb
+ 586 0098 27       		.uleb128 0x27
+ 587 0099 19       		.uleb128 0x19
+ 588 009a 11       		.uleb128 0x11
+ 589 009b 01       		.uleb128 0x1
+ 590 009c 12       		.uleb128 0x12
+ 591 009d 06       		.uleb128 0x6
+ 592 009e 40       		.uleb128 0x40
+ 593 009f 18       		.uleb128 0x18
+ 594 00a0 9742     		.uleb128 0x2117
+ 595 00a2 19       		.uleb128 0x19
+ 596 00a3 01       		.uleb128 0x1
+ 597 00a4 13       		.uleb128 0x13
+ 598 00a5 00       		.byte	0
+ 599 00a6 00       		.byte	0
+ 600 00a7 0C       		.uleb128 0xc
+ 601 00a8 898201   		.uleb128 0x4109
+ 602 00ab 00       		.byte	0
+ 603 00ac 11       		.uleb128 0x11
+ 604 00ad 01       		.uleb128 0x1
+ 605 00ae 31       		.uleb128 0x31
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 15
+
+
+ 606 00af 13       		.uleb128 0x13
+ 607 00b0 00       		.byte	0
+ 608 00b1 00       		.byte	0
+ 609 00b2 0D       		.uleb128 0xd
+ 610 00b3 34       		.uleb128 0x34
+ 611 00b4 00       		.byte	0
+ 612 00b5 03       		.uleb128 0x3
+ 613 00b6 0E       		.uleb128 0xe
+ 614 00b7 3A       		.uleb128 0x3a
+ 615 00b8 0B       		.uleb128 0xb
+ 616 00b9 3B       		.uleb128 0x3b
+ 617 00ba 0B       		.uleb128 0xb
+ 618 00bb 49       		.uleb128 0x49
+ 619 00bc 13       		.uleb128 0x13
+ 620 00bd 02       		.uleb128 0x2
+ 621 00be 18       		.uleb128 0x18
+ 622 00bf 00       		.byte	0
+ 623 00c0 00       		.byte	0
+ 624 00c1 0E       		.uleb128 0xe
+ 625 00c2 2E       		.uleb128 0x2e
+ 626 00c3 00       		.byte	0
+ 627 00c4 3F       		.uleb128 0x3f
+ 628 00c5 19       		.uleb128 0x19
+ 629 00c6 3C       		.uleb128 0x3c
+ 630 00c7 19       		.uleb128 0x19
+ 631 00c8 6E       		.uleb128 0x6e
+ 632 00c9 0E       		.uleb128 0xe
+ 633 00ca 03       		.uleb128 0x3
+ 634 00cb 0E       		.uleb128 0xe
+ 635 00cc 3A       		.uleb128 0x3a
+ 636 00cd 0B       		.uleb128 0xb
+ 637 00ce 3B       		.uleb128 0x3b
+ 638 00cf 0B       		.uleb128 0xb
+ 639 00d0 00       		.byte	0
+ 640 00d1 00       		.byte	0
+ 641 00d2 0F       		.uleb128 0xf
+ 642 00d3 2E       		.uleb128 0x2e
+ 643 00d4 00       		.byte	0
+ 644 00d5 3F       		.uleb128 0x3f
+ 645 00d6 19       		.uleb128 0x19
+ 646 00d7 3C       		.uleb128 0x3c
+ 647 00d8 19       		.uleb128 0x19
+ 648 00d9 6E       		.uleb128 0x6e
+ 649 00da 0E       		.uleb128 0xe
+ 650 00db 03       		.uleb128 0x3
+ 651 00dc 0E       		.uleb128 0xe
+ 652 00dd 3A       		.uleb128 0x3a
+ 653 00de 0B       		.uleb128 0xb
+ 654 00df 3B       		.uleb128 0x3b
+ 655 00e0 05       		.uleb128 0x5
+ 656 00e1 00       		.byte	0
+ 657 00e2 00       		.byte	0
+ 658 00e3 00       		.byte	0
+ 659              		.section	.debug_aranges,"",%progbits
+ 660 0000 34000000 		.4byte	0x34
+ 661 0004 0200     		.2byte	0x2
+ 662 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 16
+
+
+ 663 000a 04       		.byte	0x4
+ 664 000b 00       		.byte	0
+ 665 000c 0000     		.2byte	0
+ 666 000e 0000     		.2byte	0
+ 667 0010 00000000 		.4byte	.LFB0
+ 668 0014 30000000 		.4byte	.LFE0-.LFB0
+ 669 0018 00000000 		.4byte	.LFB1
+ 670 001c 28000000 		.4byte	.LFE1-.LFB1
+ 671 0020 00000000 		.4byte	.LFB2
+ 672 0024 2C000000 		.4byte	.LFE2-.LFB2
+ 673 0028 00000000 		.4byte	.LFB3
+ 674 002c 34000000 		.4byte	.LFE3-.LFB3
+ 675 0030 00000000 		.4byte	0
+ 676 0034 00000000 		.4byte	0
+ 677              		.section	.debug_ranges,"",%progbits
+ 678              	.Ldebug_ranges0:
+ 679 0000 00000000 		.4byte	.LFB0
+ 680 0004 30000000 		.4byte	.LFE0
+ 681 0008 00000000 		.4byte	.LFB1
+ 682 000c 28000000 		.4byte	.LFE1
+ 683 0010 00000000 		.4byte	.LFB2
+ 684 0014 2C000000 		.4byte	.LFE2
+ 685 0018 00000000 		.4byte	.LFB3
+ 686 001c 34000000 		.4byte	.LFE3
+ 687 0020 00000000 		.4byte	0
+ 688 0024 00000000 		.4byte	0
+ 689              		.section	.debug_line,"",%progbits
+ 690              	.Ldebug_line0:
+ 691 0000 A4000000 		.section	.debug_str,"MS",%progbits,1
+ 691      02004C00 
+ 691      00000201 
+ 691      FB0E0D00 
+ 691      01010101 
+ 692              	.LASF32:
+ 693 0000 433A5C55 		.ascii	"C:\\Users\\Henry Hernandez\\Desktop\\CAN\\NODO_1.cy"
+ 693      73657273 
+ 693      5C48656E 
+ 693      72792048 
+ 693      65726E61 
+ 694 002e 64736E00 		.ascii	"dsn\000"
+ 695              	.LASF16:
+ 696 0032 72656733 		.ascii	"reg32\000"
+ 696      3200
+ 697              	.LASF23:
+ 698 0038 43414E5F 		.ascii	"CAN_SaveConfig\000"
+ 698      53617665 
+ 698      436F6E66 
+ 698      696700
+ 699              	.LASF29:
+ 700 0047 43414E5F 		.ascii	"CAN_Enable\000"
+ 700      456E6162 
+ 700      6C6500
+ 701              	.LASF3:
+ 702 0052 73686F72 		.ascii	"short unsigned int\000"
+ 702      7420756E 
+ 702      7369676E 
+ 702      65642069 
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 17
+
+
+ 702      6E7400
+ 703              	.LASF12:
+ 704 0065 666C6F61 		.ascii	"float\000"
+ 704      7400
+ 705              	.LASF28:
+ 706 006b 43414E5F 		.ascii	"CAN_RxTxBuffersConfig\000"
+ 706      52785478 
+ 706      42756666 
+ 706      65727343 
+ 706      6F6E6669 
+ 707              	.LASF30:
+ 708 0081 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 708      43313120 
+ 708      352E342E 
+ 708      31203230 
+ 708      31363036 
+ 709 00b4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 709      20726576 
+ 709      6973696F 
+ 709      6E203233 
+ 709      37373135 
+ 710 00e7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 710      66756E63 
+ 710      74696F6E 
+ 710      2D736563 
+ 710      74696F6E 
+ 711              	.LASF15:
+ 712 010f 72656738 		.ascii	"reg8\000"
+ 712      00
+ 713              	.LASF21:
+ 714 0114 696E7445 		.ascii	"intEn\000"
+ 714      6E00
+ 715              	.LASF5:
+ 716 011a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 716      20756E73 
+ 716      69676E65 
+ 716      6420696E 
+ 716      7400
+ 717              	.LASF9:
+ 718 012c 75696E74 		.ascii	"uint8\000"
+ 718      3800
+ 719              	.LASF33:
+ 720 0132 43414E5F 		.ascii	"CAN_backup\000"
+ 720      6261636B 
+ 720      757000
+ 721              	.LASF13:
+ 722 013d 646F7562 		.ascii	"double\000"
+ 722      6C6500
+ 723              	.LASF24:
+ 724 0144 43414E5F 		.ascii	"CAN_RestoreConfig\000"
+ 724      52657374 
+ 724      6F726543 
+ 724      6F6E6669 
+ 724      6700
+ 725              	.LASF10:
+ 726 0156 75696E74 		.ascii	"uint16\000"
+ 726      313600
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 18
+
+
+ 727              	.LASF26:
+ 728 015d 43414E5F 		.ascii	"CAN_Wakeup\000"
+ 728      57616B65 
+ 728      757000
+ 729              	.LASF11:
+ 730 0168 75696E74 		.ascii	"uint32\000"
+ 730      333200
+ 731              	.LASF1:
+ 732 016f 756E7369 		.ascii	"unsigned char\000"
+ 732      676E6564 
+ 732      20636861 
+ 732      7200
+ 733              	.LASF8:
+ 734 017d 756E7369 		.ascii	"unsigned int\000"
+ 734      676E6564 
+ 734      20696E74 
+ 734      00
+ 735              	.LASF7:
+ 736 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 736      206C6F6E 
+ 736      6720756E 
+ 736      7369676E 
+ 736      65642069 
+ 737              	.LASF18:
+ 738 01a1 73697A65 		.ascii	"sizetype\000"
+ 738      74797065 
+ 738      00
+ 739              	.LASF6:
+ 740 01aa 6C6F6E67 		.ascii	"long long int\000"
+ 740      206C6F6E 
+ 740      6720696E 
+ 740      7400
+ 741              	.LASF20:
+ 742 01b8 696E7453 		.ascii	"intSr\000"
+ 742      7200
+ 743              	.LASF14:
+ 744 01be 63686172 		.ascii	"char\000"
+ 744      00
+ 745              	.LASF27:
+ 746 01c3 43414E5F 		.ascii	"CAN_Stop\000"
+ 746      53746F70 
+ 746      00
+ 747              	.LASF25:
+ 748 01cc 43414E5F 		.ascii	"CAN_Sleep\000"
+ 748      536C6565 
+ 748      7000
+ 749              	.LASF22:
+ 750 01d6 43414E5F 		.ascii	"CAN_BACKUP_STRUCT\000"
+ 750      4241434B 
+ 750      55505F53 
+ 750      54525543 
+ 750      5400
+ 751              	.LASF2:
+ 752 01e8 73686F72 		.ascii	"short int\000"
+ 752      7420696E 
+ 752      7400
+ 753              	.LASF31:
+ARM GAS  C:\Users\HENRYH~1\AppData\Local\Temp\ccxPHGyV.s 			page 19
+
+
+ 754 01f2 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_PM.c\000"
+ 754      72617465 
+ 754      645F536F 
+ 754      75726365 
+ 754      5C50536F 
+ 755              	.LASF4:
+ 756 0212 6C6F6E67 		.ascii	"long int\000"
+ 756      20696E74 
+ 756      00
+ 757              	.LASF19:
+ 758 021b 656E6162 		.ascii	"enableState\000"
+ 758      6C655374 
+ 758      61746500 
+ 759              	.LASF17:
+ 760 0227 6C6F6E67 		.ascii	"long double\000"
+ 760      20646F75 
+ 760      626C6500 
+ 761              	.LASF0:
+ 762 0233 7369676E 		.ascii	"signed char\000"
+ 762      65642063 
+ 762      68617200 
+ 763              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

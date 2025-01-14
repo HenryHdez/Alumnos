@@ -1,0 +1,2321 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"PUERTO_CAN_1_TX_RX_func.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.PUERTO_CAN_1_SendMsg,"ax",%progbits
+  20              		.align	2
+  21              		.global	PUERTO_CAN_1_SendMsg
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	PUERTO_CAN_1_SendMsg, %function
+  25              	PUERTO_CAN_1_SendMsg:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\PUERTO_CAN_1_TX_RX_func.c"
+   1:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * File Name: PUERTO_CAN_1_TX_RX_func.c
+   3:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Version 3.0
+   4:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+   5:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Description:
+   6:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  There are functions process "Full" Receive and Transmit mailboxes:
+   7:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *     - PUERTO_CAN_1_SendMsg0-7();
+   8:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *     - PUERTO_CAN_1_ReceiveMsg0-15();
+   9:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  Transmission of message, and receive routine for "Basic" mailboxes:
+  10:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *     - PUERTO_CAN_1_SendMsg();
+  11:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *     - PUERTO_CAN_1_TxCancel();
+  12:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *     - PUERTO_CAN_1_ReceiveMsg();
+  13:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  14:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  Note:
+  15:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *   None
+  16:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  17:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** ********************************************************************************
+  18:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *******************************************************************************/
+  23:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  24:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #include "PUERTO_CAN_1.h"
+  25:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #include "cyapicallbacks.h"
+  26:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  27:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /* `#START TX_RX_FUNCTION` */
+  28:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  29:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /* `#END` */
+  30:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 2
+
+
+  31:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  32:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /*******************************************************************************
+  33:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * FUNCTION NAME:   PUERTO_CAN_1_SendMsg
+  34:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** ********************************************************************************
+  35:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  36:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Summary:
+  37:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  This function is Send Message from one of Basic mailboxes. The function loops
+  38:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  through the transmit message buffer designed as Basic CAN mailboxes for the
+  39:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  first free available and sends from it. The number of retries is limited.
+  40:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  41:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Parameters:
+  42:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  message: The pointer to a structure that contains all required data to send
+  43:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *           messages.
+  44:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  45:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Return:
+  46:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  Indication if message has been sent.
+  47:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *   Define                             Description
+  48:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *    CYRET_SUCCESS                      The function passed successfully
+  49:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *    PUERTO_CAN_1_FAIL              The function failed
+  50:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+  51:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *******************************************************************************/
+  52:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** uint8 PUERTO_CAN_1_SendMsg(const PUERTO_CAN_1_TX_MSG *message) 
+  53:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** {
+  28              		.loc 1 53 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  34              		.cfi_def_cfa_offset 20
+  35              		.cfi_offset 4, -20
+  36              		.cfi_offset 5, -16
+  37              		.cfi_offset 6, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40              	.LVL1:
+  54:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 i, j, shift;
+  55:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 retry = 0u;
+  56:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 result = PUERTO_CAN_1_FAIL;
+  41              		.loc 1 56 0
+  42 0002 0121     		movs	r1, #1
+  55:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 result = PUERTO_CAN_1_FAIL;
+  43              		.loc 1 55 0
+  44 0004 0026     		movs	r6, #0
+  57:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint32 regTemp;
+  58:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  59:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     while (retry < PUERTO_CAN_1_RETRY_NUMBER)
+  45              		.loc 1 59 0
+  46 0006 5DE0     		b	.L2
+  47              	.LVL2:
+  48              	.L16:
+  60:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+  61:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
+  62:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         for (i = 0u; i < PUERTO_CAN_1_NUMBER_OF_TX_MAILBOXES; i++)
+  63:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+  64:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             /* Find Basic TX mailboxes */
+  65:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_MAILBOX_TYPE & shift) == 0u)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 3
+
+
+  49              		.loc 1 65 0
+  50 0008 17F0010F 		tst	r7, #1
+  51 000c 4DD1     		bne	.L3
+  66:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+  67:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* Find free mailbox */
+  68:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #if (CY_PSOC3 || CY_PSOC5)
+  69:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     if ((PUERTO_CAN_1_BUF_SR_REG.byte[2] & shift) == 0u)
+  52              		.loc 1 69 0
+  53 000e 2F4B     		ldr	r3, .L22
+  54 0010 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+  55 0012 3B42     		tst	r3, r7
+  56 0014 49D1     		bne	.L3
+  57              	.LVL3:
+  70:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #else  /* CY_PSOC4 */
+  71:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     if ((PUERTO_CAN_1_BUF_SR_REG &
+  72:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         (uint32) ((uint32) shift << PUERTO_CAN_1_TWO_BYTE_OFFSET)) == 0u)
+  73:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
+  74:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     {
+  75:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         regTemp = 0u;
+  76:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  77:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         /* Set message parameters */
+  78:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         if (message->rtr != PUERTO_CAN_1_STANDARD_MESSAGE)
+  58              		.loc 1 78 0
+  59 0016 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
+  60 0018 0BB1     		cbz	r3, .L4
+  79:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+  80:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             regTemp = PUERTO_CAN_1_TX_RTR_MASK;    /* RTR message Enable */
+  61              		.loc 1 80 0
+  62 001a 4FF40013 		mov	r3, #2097152
+  63              	.L4:
+  64              	.LVL4:
+  81:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+  82:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  83:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         if (message->ide == PUERTO_CAN_1_STANDARD_MESSAGE)
+  65              		.loc 1 83 0
+  66 001e 4179     		ldrb	r1, [r0, #5]	@ zero_extendqisi2
+  67              	.LVL5:
+  68 0020 31B9     		cbnz	r1, .L5
+  84:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+  85:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             PUERTO_CAN_1_SET_TX_ID_STANDARD_MSG(i, message->id);
+  69              		.loc 1 85 0
+  70 0022 2B49     		ldr	r1, .L22+4
+  71 0024 01EB0211 		add	r1, r1, r2, lsl #4
+  72 0028 0468     		ldr	r4, [r0]
+  73 002a 6405     		lsls	r4, r4, #21
+  74 002c 4C60     		str	r4, [r1, #4]
+  75 002e 07E0     		b	.L6
+  76              	.L5:
+  86:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+  87:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         else
+  88:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+  89:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             regTemp |= PUERTO_CAN_1_TX_IDE_MASK;
+  77              		.loc 1 89 0
+  78 0030 43F48013 		orr	r3, r3, #1048576
+  79              	.LVL6:
+  90:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             PUERTO_CAN_1_SET_TX_ID_EXTENDED_MSG(i, message->id);
+  80              		.loc 1 90 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 4
+
+
+  81 0034 2649     		ldr	r1, .L22+4
+  82 0036 01EB0211 		add	r1, r1, r2, lsl #4
+  83 003a 0468     		ldr	r4, [r0]
+  84 003c E400     		lsls	r4, r4, #3
+  85 003e 4C60     		str	r4, [r1, #4]
+  86              	.L6:
+  91:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+  92:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+  93:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         if (message->dlc < PUERTO_CAN_1_TX_DLC_MAX_VALUE)
+  87              		.loc 1 93 0
+  88 0040 90F806E0 		ldrb	lr, [r0, #6]	@ zero_extendqisi2
+  89 0044 BEF1070F 		cmp	lr, #7
+  90 0048 02D8     		bhi	.L7
+  94:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+  95:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             regTemp |= ((uint32) message->dlc) << PUERTO_CAN_1_TWO_BYTE_OFFSET;
+  91              		.loc 1 95 0
+  92 004a 43EA0E4E 		orr	lr, r3, lr, lsl #16
+  93              	.LVL7:
+  94 004e 01E0     		b	.L8
+  95              	.LVL8:
+  96              	.L7:
+  96:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+  97:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         else
+  98:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+  99:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             regTemp |= PUERTO_CAN_1_TX_DLC_UPPER_VALUE;
+  97              		.loc 1 99 0
+  98 0050 43F4002E 		orr	lr, r3, #524288
+  99              	.LVL9:
+ 100              	.L8:
+ 100:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+ 101:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 102:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         if (message->irq != PUERTO_CAN_1_TRANSMIT_INT_DISABLE)
+ 101              		.loc 1 102 0
+ 102 0054 C379     		ldrb	r3, [r0, #7]	@ zero_extendqisi2
+ 103 0056 0BB1     		cbz	r3, .L9
+ 103:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+ 104:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             regTemp |= PUERTO_CAN_1_TX_INT_ENABLE_MASK;    /* Transmit Interrupt En
+ 104              		.loc 1 104 0
+ 105 0058 4EF0040E 		orr	lr, lr, #4
+ 106              	.LVL10:
+ 107              	.L9:
+ 105:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+ 106:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 107:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         for (j = 0u; (j < message->dlc) && (j < PUERTO_CAN_1_TX_DLC_MAX_VALUE); j++
+ 108              		.loc 1 107 0
+ 109 005c 0023     		movs	r3, #0
+ 110 005e 0FE0     		b	.L10
+ 111              	.LVL11:
+ 112              	.L14:
+ 108:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+ 109:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             #if (CY_PSOC3 || CY_PSOC5)
+ 110:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 PUERTO_CAN_1_TX_DATA_BYTE(i, j) = message->msg->byte[j];
+ 113              		.loc 1 110 0
+ 114 0060 1B49     		ldr	r1, .L22+4
+ 115 0062 01EB0214 		add	r4, r1, r2, lsl #4
+ 116 0066 032B     		cmp	r3, #3
+ 117 0068 02D9     		bls	.L11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 5
+
+
+ 118              		.loc 1 110 0 is_stmt 0 discriminator 1
+ 119 006a C3F10B01 		rsb	r1, r3, #11
+ 120 006e 01E0     		b	.L12
+ 121              	.L11:
+ 122              		.loc 1 110 0 discriminator 2
+ 123 0070 C3F10301 		rsb	r1, r3, #3
+ 124              	.L12:
+ 125              		.loc 1 110 0 discriminator 4
+ 126 0074 8568     		ldr	r5, [r0, #8]
+ 127 0076 ED5C     		ldrb	r5, [r5, r3]	@ zero_extendqisi2
+ 128 0078 2144     		add	r1, r1, r4
+ 129 007a 0D72     		strb	r5, [r1, #8]
+ 107:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+ 130              		.loc 1 107 0 is_stmt 1 discriminator 4
+ 131 007c 0133     		adds	r3, r3, #1
+ 132              	.LVL12:
+ 133 007e DBB2     		uxtb	r3, r3
+ 134              	.LVL13:
+ 135              	.L10:
+ 107:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+ 136              		.loc 1 107 0 is_stmt 0 discriminator 2
+ 137 0080 8179     		ldrb	r1, [r0, #6]	@ zero_extendqisi2
+ 138 0082 8B42     		cmp	r3, r1
+ 139 0084 01D2     		bcs	.L13
+ 107:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         {
+ 140              		.loc 1 107 0 discriminator 3
+ 141 0086 072B     		cmp	r3, #7
+ 142 0088 EAD9     		bls	.L14
+ 143              	.L13:
+ 111:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             #else /* CY_PSOC4 */
+ 112:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 PUERTO_CAN_1_TX_DATA_BYTE(i, j, message->msg->byte[j]);
+ 113:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 114:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         }
+ 115:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 116:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         /* Disable isr */
+ 117:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     CyIntDisable(PUERTO_CAN_1_ISR_NUMBER);
+ 144              		.loc 1 117 0 is_stmt 1
+ 145 008a 4FF48034 		mov	r4, #65536
+ 146 008e 114B     		ldr	r3, .L22+8
+ 147              	.LVL14:
+ 148 0090 1C60     		str	r4, [r3]
+ 118:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 119:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         /* WPN[23] and WPN[3] set to 1 for write to CAN Control reg */
+ 120:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(i), (regTemp | PUERTO_CAN_1_TX_WPN_SET
+ 149              		.loc 1 120 0
+ 150 0092 1101     		lsls	r1, r2, #4
+ 151 0094 0E4D     		ldr	r5, .L22+4
+ 152 0096 4EF40003 		orr	r3, lr, #8388608
+ 153 009a 43F00803 		orr	r3, r3, #8
+ 154 009e 4B51     		str	r3, [r1, r5]
+ 121:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 122:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
+ 123:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(i), PUERTO_CAN_1_SEND_MESSAGE);
+ 155              		.loc 1 123 0
+ 156 00a0 0123     		movs	r3, #1
+ 157 00a2 4B51     		str	r3, [r1, r5]
+ 124:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         #else /* CY_PSOC4 */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 6
+
+
+ 125:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             if (message->sst != PUERTO_CAN_1_STANDARD_MESSAGE)
+ 126:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             {
+ 127:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 /* Single Shot Transmission */
+ 128:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 PUERTO_CAN_1_TX_CMD_REG(i) |= PUERTO_CAN_1_SEND_MESSAGE |
+ 129:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 PUERTO_CAN_1_TX_ABORT_MASK;
+ 130:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             }
+ 131:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             else
+ 132:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             {
+ 133:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                                 PUERTO_CAN_1_TX_CMD_REG(i) |= PUERTO_CAN_1_SEND_MESSAGE;
+ 134:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                             }
+ 135:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 136:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 137:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         /* Enable isr */
+ 138:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     CyIntEnable(PUERTO_CAN_1_ISR_NUMBER);
+ 158              		.loc 1 138 0
+ 159 00a4 0C4B     		ldr	r3, .L22+12
+ 160 00a6 1C60     		str	r4, [r3]
+ 161              	.LVL15:
+ 139:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 140:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                         result = CYRET_SUCCESS;
+ 162              		.loc 1 140 0
+ 163 00a8 0021     		movs	r1, #0
+ 164              	.LVL16:
+ 165              	.L3:
+ 141:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     }
+ 142:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 143:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             shift <<= 1u;
+ 166              		.loc 1 143 0
+ 167 00aa 7B00     		lsls	r3, r7, #1
+ 168 00ac DFB2     		uxtb	r7, r3
+ 169              	.LVL17:
+ 144:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
+ 170              		.loc 1 144 0
+ 171 00ae 31B1     		cbz	r1, .L15
+  62:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+ 172              		.loc 1 62 0 discriminator 2
+ 173 00b0 0132     		adds	r2, r2, #1
+ 174              	.LVL18:
+ 175 00b2 D2B2     		uxtb	r2, r2
+ 176              	.LVL19:
+ 177 00b4 01E0     		b	.L18
+ 178              	.LVL20:
+ 179              	.L20:
+ 180 00b6 0127     		movs	r7, #1
+ 181 00b8 0022     		movs	r2, #0
+ 182              	.L18:
+ 183              	.LVL21:
+  62:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+ 184              		.loc 1 62 0 is_stmt 0 discriminator 1
+ 185 00ba 072A     		cmp	r2, #7
+ 186 00bc A4D9     		bls	.L16
+ 187              	.L15:
+ 145:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 146:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 break;
+ 147:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 148:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         }
+ 149:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         if (result == CYRET_SUCCESS)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 7
+
+
+ 188              		.loc 1 149 0 is_stmt 1
+ 189 00be 19B1     		cbz	r1, .L17
+ 150:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+ 151:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             break;
+ 152:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         }
+ 153:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         else
+ 154:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+ 155:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             retry++;
+ 190              		.loc 1 155 0
+ 191 00c0 0136     		adds	r6, r6, #1
+ 192              	.LVL22:
+ 193 00c2 F6B2     		uxtb	r6, r6
+ 194              	.LVL23:
+ 195              	.L2:
+  59:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 196              		.loc 1 59 0
+ 197 00c4 022E     		cmp	r6, #2
+ 198 00c6 F6D9     		bls	.L20
+ 199              	.L17:
+ 156:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         }
+ 157:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 158:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 159:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     return (result);
+ 160:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** }
+ 200              		.loc 1 160 0
+ 201 00c8 0846     		mov	r0, r1
+ 202              	.LVL24:
+ 203 00ca F0BD     		pop	{r4, r5, r6, r7, pc}
+ 204              	.LVL25:
+ 205              	.L23:
+ 206              		.align	2
+ 207              	.L22:
+ 208 00cc 08A00040 		.word	1073782792
+ 209 00d0 20A00040 		.word	1073782816
+ 210 00d4 80E100E0 		.word	-536813184
+ 211 00d8 00E100E0 		.word	-536813312
+ 212              		.cfi_endproc
+ 213              	.LFE0:
+ 214              		.size	PUERTO_CAN_1_SendMsg, .-PUERTO_CAN_1_SendMsg
+ 215              		.section	.text.PUERTO_CAN_1_TxCancel,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	PUERTO_CAN_1_TxCancel
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	PUERTO_CAN_1_TxCancel, %function
+ 221              	PUERTO_CAN_1_TxCancel:
+ 222              	.LFB1:
+ 161:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 162:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 163:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /*******************************************************************************
+ 164:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * FUNCTION NAME:   PUERTO_CAN_1_TxCancel
+ 165:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** ********************************************************************************
+ 166:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 167:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Summary:
+ 168:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
+ 169:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  transmitted. Values between 0 and 7 are valid.
+ 170:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 8
+
+
+ 171:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Parameters:
+ 172:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  bufferId: The mailbox number.
+ 173:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 174:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Return:
+ 175:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  None.
+ 176:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 177:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *******************************************************************************/
+ 178:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** void PUERTO_CAN_1_TxCancel(uint8 bufferId) 
+ 179:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** {
+ 223              		.loc 1 179 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
+ 228              	.LVL26:
+ 180:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     if (bufferId < PUERTO_CAN_1_NUMBER_OF_TX_MAILBOXES)
+ 229              		.loc 1 180 0
+ 230 0000 0728     		cmp	r0, #7
+ 231 0002 07D8     		bhi	.L24
+ 181:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 182:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         PUERTO_CAN_1_TX_ABORT_MESSAGE(bufferId);
+ 232              		.loc 1 182 0
+ 233 0004 0001     		lsls	r0, r0, #4
+ 234              	.LVL27:
+ 235 0006 044A     		ldr	r2, .L26
+ 236 0008 835C     		ldrb	r3, [r0, r2]	@ zero_extendqisi2
+ 237 000a 03F0FC03 		and	r3, r3, #252
+ 238 000e 43F00203 		orr	r3, r3, #2
+ 239 0012 8354     		strb	r3, [r0, r2]
+ 240              	.L24:
+ 241 0014 7047     		bx	lr
+ 242              	.L27:
+ 243 0016 00BF     		.align	2
+ 244              	.L26:
+ 245 0018 20A00040 		.word	1073782816
+ 246              		.cfi_endproc
+ 247              	.LFE1:
+ 248              		.size	PUERTO_CAN_1_TxCancel, .-PUERTO_CAN_1_TxCancel
+ 249              		.section	.text.PUERTO_CAN_1_SendMsg0,"ax",%progbits
+ 250              		.align	2
+ 251              		.global	PUERTO_CAN_1_SendMsg0
+ 252              		.thumb
+ 253              		.thumb_func
+ 254              		.type	PUERTO_CAN_1_SendMsg0, %function
+ 255              	PUERTO_CAN_1_SendMsg0:
+ 256              	.LFB2:
+ 183:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 184:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** }
+ 185:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 186:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 187:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX0_FUNC_ENABLE)
+ 188:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 189:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg0
+ 190:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 191:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 192:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 193:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 0. The function checks
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 9
+
+
+ 194:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 0 doesn't already have un-transmitted messages waiting for
+ 195:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 196:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 197:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 198:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 199:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 200:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 201:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 202:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 203:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 204:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 205:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 206:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 207:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 208:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg0(void) 
+ 209:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 257              		.loc 1 209 0
+ 258              		.cfi_startproc
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261              		@ link register save eliminated.
+ 262              	.LVL28:
+ 210:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 211:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 212:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 213:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[0u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 263              		.loc 1 213 0
+ 264 0000 064B     		ldr	r3, .L31
+ 265 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 266 0004 13F0010F 		tst	r3, #1
+ 267 0008 06D1     		bne	.L30
+ 214:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 215:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(0u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 216:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 217:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 218:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 219:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 220:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 221:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 222:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_0_TRASMITTED` */
+ 223:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 224:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 225:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 226:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_0_CALLBACK
+ 227:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_0_Callback();
+ 228:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_0_CALLBACK */
+ 229:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 230:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(0u),
+ 268              		.loc 1 230 0
+ 269 000a 044A     		ldr	r2, .L31
+ 270 000c 1368     		ldr	r3, [r2]
+ 271 000e 43F00103 		orr	r3, r3, #1
+ 272 0012 1360     		str	r3, [r2]
+ 210:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 273              		.loc 1 210 0
+ 274 0014 0020     		movs	r0, #0
+ 275 0016 7047     		bx	lr
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 10
+
+
+ 276              	.L30:
+ 218:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 277              		.loc 1 218 0
+ 278 0018 0120     		movs	r0, #1
+ 279              	.LVL29:
+ 231:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(0u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 232:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 233:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 234:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 235:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 280              		.loc 1 235 0
+ 281 001a 7047     		bx	lr
+ 282              	.L32:
+ 283              		.align	2
+ 284              	.L31:
+ 285 001c 20A00040 		.word	1073782816
+ 286              		.cfi_endproc
+ 287              	.LFE2:
+ 288              		.size	PUERTO_CAN_1_SendMsg0, .-PUERTO_CAN_1_SendMsg0
+ 289              		.section	.text.PUERTO_CAN_1_ReceiveMsg,"ax",%progbits
+ 290              		.align	2
+ 291              		.global	PUERTO_CAN_1_ReceiveMsg
+ 292              		.thumb
+ 293              		.thumb_func
+ 294              		.type	PUERTO_CAN_1_ReceiveMsg, %function
+ 295              	PUERTO_CAN_1_ReceiveMsg:
+ 296              	.LFB3:
+ 236:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX0_FUNC_ENABLE */
+ 237:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 238:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 239:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX1_FUNC_ENABLE)
+ 240:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 241:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg1
+ 242:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 243:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 244:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 245:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 1. The function checks
+ 246:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 1 doesn't already have un-transmitted messages waiting for
+ 247:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 248:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 249:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 250:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 251:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 252:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 253:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 254:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 255:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 256:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 257:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 258:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 259:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 260:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg1(void) 
+ 261:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 262:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 263:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 264:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 265:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[1u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 11
+
+
+ 266:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 267:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(1u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 268:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 269:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 270:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 271:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 272:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 273:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 274:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_1_TRASMITTED` */
+ 275:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 276:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 277:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 278:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_1_CALLBACK
+ 279:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_1_Callback();
+ 280:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_1_CALLBACK */
+ 281:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 282:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(1u),
+ 283:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(1u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 284:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 285:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 286:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 287:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 288:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX1_FUNC_ENABLE */
+ 289:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 290:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 291:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX2_FUNC_ENABLE)
+ 292:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 293:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg2
+ 294:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 295:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 296:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 297:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
+ 298:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
+ 299:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 300:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 301:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 302:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 303:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 304:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 305:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 306:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 307:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 308:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 309:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 310:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 311:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 312:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg2(void) 
+ 313:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 314:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 315:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 316:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 317:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[2u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 318:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 319:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(2u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 320:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 321:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 322:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 12
+
+
+ 323:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 324:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 325:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 326:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
+ 327:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 328:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 329:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 330:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_2_CALLBACK
+ 331:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_2_Callback();
+ 332:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_2_CALLBACK */
+ 333:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 334:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(2u),
+ 335:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(2u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 336:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 337:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 338:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 339:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 340:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX2_FUNC_ENABLE */
+ 341:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 342:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 343:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX3_FUNC_ENABLE)
+ 344:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 345:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg3
+ 346:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 347:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 348:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 349:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
+ 350:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
+ 351:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 352:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 353:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 354:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 355:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 356:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 357:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 358:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 359:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 360:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 361:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 362:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 363:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 364:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg3(void) 
+ 365:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 366:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 367:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 368:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 369:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[3u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 370:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 371:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(3u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 372:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 373:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 374:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 375:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 376:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 377:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 378:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
+ 379:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 13
+
+
+ 380:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 381:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 382:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_3_CALLBACK
+ 383:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_3_Callback();
+ 384:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_3_CALLBACK */
+ 385:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 386:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(3u),
+ 387:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(3u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 388:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 389:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 390:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 391:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 392:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX3_FUNC_ENABLE */
+ 393:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 394:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 395:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX4_FUNC_ENABLE)
+ 396:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 397:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg4
+ 398:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 399:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 400:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 401:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
+ 402:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
+ 403:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 404:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 405:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 406:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 407:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 408:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 409:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 410:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 411:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 412:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 413:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 414:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 415:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 416:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg4(void) 
+ 417:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 418:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 419:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 420:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 421:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[4u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 422:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 423:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(4u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 424:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 425:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 426:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 427:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 428:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 429:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 430:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
+ 431:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 432:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 433:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 434:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_4_CALLBACK
+ 435:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_4_Callback();
+ 436:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_4_CALLBACK */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 14
+
+
+ 437:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 438:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(4u),
+ 439:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(4u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 440:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 441:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 442:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 443:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 444:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX4_FUNC_ENABLE */
+ 445:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 446:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 447:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX5_FUNC_ENABLE)
+ 448:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 449:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg5
+ 450:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 451:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 452:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 453:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 5. The function checks
+ 454:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 5 doesn't already have un-transmitted messages waiting for
+ 455:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 456:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 457:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 458:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 459:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 460:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 461:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 462:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 463:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 464:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 465:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 466:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 467:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 468:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg5(void) 
+ 469:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 470:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 471:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 472:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 473:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[5u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 474:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 475:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(5u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 476:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 477:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 478:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 479:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 480:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 481:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 482:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_5_TRASMITTED` */
+ 483:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 484:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 485:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 486:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_5_CALLBACK
+ 487:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_5_Callback();
+ 488:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_5_CALLBACK */
+ 489:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 490:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(5u),
+ 491:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(5u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 492:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 493:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 15
+
+
+ 494:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 495:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 496:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX5_FUNC_ENABLE */
+ 497:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 498:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 499:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX6_FUNC_ENABLE)
+ 500:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 501:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg6
+ 502:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 503:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 504:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 505:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
+ 506:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
+ 507:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 508:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 509:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 510:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 511:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 512:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 513:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 514:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 515:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 516:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 517:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 518:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 519:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 520:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg6(void) 
+ 521:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 522:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 523:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 524:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 525:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[6u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 526:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 527:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(6u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 528:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 529:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 530:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 531:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 532:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 533:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 534:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
+ 535:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 536:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 537:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 538:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_6_CALLBACK
+ 539:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_6_Callback();
+ 540:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_6_CALLBACK */
+ 541:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 542:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(6u),
+ 543:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(6u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 544:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 545:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 546:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 547:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 548:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX6_FUNC_ENABLE */
+ 549:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 550:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 16
+
+
+ 551:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_TX7_FUNC_ENABLE)
+ 552:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 553:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_SendMsg7)
+ 554:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 555:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 556:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 557:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
+ 558:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
+ 559:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 560:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 561:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 562:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 563:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 564:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 565:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 566:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 567:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *   Define                             Description
+ 568:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 569:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *    PUERTO_CAN_1_FAIL              The function failed
+ 570:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 571:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 572:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     uint8 PUERTO_CAN_1_SendMsg7(void) 
+ 573:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 574:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 575:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 576:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 577:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX[7u].txcmd.byte[0u] & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 578:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 579:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             if ((PUERTO_CAN_1_TX_CMD_REG(7u) & PUERTO_CAN_1_TX_REQUEST_PENDING) != 0u)
+ 580:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 581:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 582:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 result = PUERTO_CAN_1_FAIL;
+ 583:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 584:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             else
+ 585:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             {
+ 586:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
+ 587:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 588:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 /* `#END` */
+ 589:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 590:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #ifdef PUERTO_CAN_1_SEND_MSG_7_CALLBACK
+ 591:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                     PUERTO_CAN_1_SendMsg_7_Callback();
+ 592:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 #endif /* PUERTO_CAN_1_SEND_MSG_7_CALLBACK */
+ 593:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 594:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_SET_REG32(PUERTO_CAN_1_TX_CMD_PTR(7u),
+ 595:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 CY_GET_REG32(PUERTO_CAN_1_TX_CMD_PTR(7u)) | PUERTO_CAN_1_SEND_MESSAGE);
+ 596:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             }
+ 597:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 598:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         return (result);
+ 599:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     }
+ 600:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #endif /* PUERTO_CAN_1_TX7_FUNC_ENABLE */
+ 601:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 602:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 603:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** /*******************************************************************************
+ 604:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * FUNCTION NAME:   PUERTO_CAN_1_ReceiveMsg
+ 605:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** ********************************************************************************
+ 606:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 607:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Summary:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 17
+
+
+ 608:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
+ 609:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
+ 610:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
+ 611:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 612:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Parameters:
+ 613:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
+ 614:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 615:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Return:
+ 616:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  None.
+ 617:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 618:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** * Reentrant:
+ 619:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *  Depends on the Customer code.
+ 620:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *
+ 621:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** *******************************************************************************/
+ 622:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** void PUERTO_CAN_1_ReceiveMsg(uint8 rxMailbox) 
+ 623:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** {
+ 297              		.loc 1 623 0
+ 298              		.cfi_startproc
+ 299              		@ args = 0, pretend = 0, frame = 0
+ 300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 301              		@ link register save eliminated.
+ 302              	.LVL30:
+ 624:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 625:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         if ((PUERTO_CAN_1_RX[rxMailbox].rxcmd.byte[0u] & PUERTO_CAN_1_RX_ACK_MSG) != 0u)
+ 303              		.loc 1 625 0
+ 304 0000 4001     		lsls	r0, r0, #5
+ 305              	.LVL31:
+ 306 0002 054B     		ldr	r3, .L35
+ 307 0004 C25C     		ldrb	r2, [r0, r3]	@ zero_extendqisi2
+ 308 0006 12F0010F 		tst	r2, #1
+ 309 000a 03D0     		beq	.L33
+ 626:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     #else  /* CY_PSOC4 */
+ 627:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         if ((PUERTO_CAN_1_RX_CMD_REG(rxMailbox) & PUERTO_CAN_1_RX_ACK_MSG) != 0u)
+ 628:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 629:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         {
+ 630:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
+ 631:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 632:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             /* `#END` */
+ 633:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 634:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             #ifdef PUERTO_CAN_1_RECEIVE_MSG_CALLBACK
+ 635:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 PUERTO_CAN_1_ReceiveMsg_Callback();
+ 636:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             #endif /* PUERTO_CAN_1_RECEIVE_MSG_CALLBACK */
+ 637:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 638:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
+ 639:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 PUERTO_CAN_1_RX[rxMailbox].rxcmd.byte[0u] |= PUERTO_CAN_1_RX_ACK_MSG;
+ 310              		.loc 1 639 0
+ 311 000c C25C     		ldrb	r2, [r0, r3]	@ zero_extendqisi2
+ 312 000e 42F00102 		orr	r2, r2, #1
+ 313 0012 C254     		strb	r2, [r0, r3]
+ 314              	.L33:
+ 315 0014 7047     		bx	lr
+ 316              	.L36:
+ 317 0016 00BF     		.align	2
+ 318              	.L35:
+ 319 0018 A0A00040 		.word	1073782944
+ 320              		.cfi_endproc
+ 321              	.LFE3:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 18
+
+
+ 322              		.size	PUERTO_CAN_1_ReceiveMsg, .-PUERTO_CAN_1_ReceiveMsg
+ 323              		.section	.text.PUERTO_CAN_1_ReceiveMsg0,"ax",%progbits
+ 324              		.align	2
+ 325              		.global	PUERTO_CAN_1_ReceiveMsg0
+ 326              		.thumb
+ 327              		.thumb_func
+ 328              		.type	PUERTO_CAN_1_ReceiveMsg0, %function
+ 329              	PUERTO_CAN_1_ReceiveMsg0:
+ 330              	.LFB4:
+ 640:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             #else  /* CY_PSOC4 */
+ 641:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****                 PUERTO_CAN_1_RX_CMD_REG(rxMailbox) |= PUERTO_CAN_1_RX_ACK_MSG;
+ 642:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 643:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         }
+ 644:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** }
+ 645:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 646:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 647:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** #if (PUERTO_CAN_1_RX0_FUNC_ENABLE)
+ 648:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     /*******************************************************************************
+ 649:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * FUNCTION NAME:   PUERTO_CAN_1_ReceiveMsg0
+ 650:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     ********************************************************************************
+ 651:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 652:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Summary:
+ 653:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
+ 654:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
+ 655:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  designed as Full.
+ 656:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 657:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Parameters:
+ 658:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 659:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 660:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Return:
+ 661:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  None.
+ 662:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 663:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     * Reentrant:
+ 664:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *  Depends on the Customer code.
+ 665:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *
+ 666:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     *******************************************************************************/
+ 667:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     void PUERTO_CAN_1_ReceiveMsg0(void) 
+ 668:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****     {
+ 331              		.loc 1 668 0
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		@ link register save eliminated.
+ 669:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         /* `#START MESSAGE_0_RECEIVED` */
+ 670:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 671:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         /* `#END` */
+ 672:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 673:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #ifdef PUERTO_CAN_1_RECEIVE_MSG_0_CALLBACK
+ 674:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****             PUERTO_CAN_1_ReceiveMsg_0_Callback();
+ 675:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         #endif /* PUERTO_CAN_1_RECEIVE_MSG_0_CALLBACK */
+ 676:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c **** 
+ 677:Generated_Source\PSoC5/PUERTO_CAN_1_TX_RX_func.c ****         PUERTO_CAN_1_RX[0u].rxcmd.byte[0u] |= PUERTO_CAN_1_RX_ACK_MSG;
+ 336              		.loc 1 677 0
+ 337 0000 024A     		ldr	r2, .L38
+ 338 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 339 0004 43F00103 		orr	r3, r3, #1
+ 340 0008 1370     		strb	r3, [r2]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 19
+
+
+ 341 000a 7047     		bx	lr
+ 342              	.L39:
+ 343              		.align	2
+ 344              	.L38:
+ 345 000c A0A00040 		.word	1073782944
+ 346              		.cfi_endproc
+ 347              	.LFE4:
+ 348              		.size	PUERTO_CAN_1_ReceiveMsg0, .-PUERTO_CAN_1_ReceiveMsg0
+ 349              		.text
+ 350              	.Letext0:
+ 351              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 352              		.file 3 "Generated_Source\\PSoC5\\PUERTO_CAN_1.h"
+ 353              		.section	.debug_info,"",%progbits
+ 354              	.Ldebug_info0:
+ 355 0000 71030000 		.4byte	0x371
+ 356 0004 0400     		.2byte	0x4
+ 357 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 358 000a 04       		.byte	0x4
+ 359 000b 01       		.uleb128 0x1
+ 360 000c 8A010000 		.4byte	.LASF46
+ 361 0010 0C       		.byte	0xc
+ 362 0011 36020000 		.4byte	.LASF47
+ 363 0015 E3000000 		.4byte	.LASF48
+ 364 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 365 001d 00000000 		.4byte	0
+ 366 0021 00000000 		.4byte	.Ldebug_line0
+ 367 0025 02       		.uleb128 0x2
+ 368 0026 01       		.byte	0x1
+ 369 0027 06       		.byte	0x6
+ 370 0028 E1020000 		.4byte	.LASF0
+ 371 002c 02       		.uleb128 0x2
+ 372 002d 01       		.byte	0x1
+ 373 002e 08       		.byte	0x8
+ 374 002f 98000000 		.4byte	.LASF1
+ 375 0033 02       		.uleb128 0x2
+ 376 0034 02       		.byte	0x2
+ 377 0035 05       		.byte	0x5
+ 378 0036 31010000 		.4byte	.LASF2
+ 379 003a 02       		.uleb128 0x2
+ 380 003b 02       		.byte	0x2
+ 381 003c 07       		.byte	0x7
+ 382 003d 44000000 		.4byte	.LASF3
+ 383 0041 02       		.uleb128 0x2
+ 384 0042 04       		.byte	0x4
+ 385 0043 05       		.byte	0x5
+ 386 0044 B5020000 		.4byte	.LASF4
+ 387 0048 02       		.uleb128 0x2
+ 388 0049 04       		.byte	0x4
+ 389 004a 07       		.byte	0x7
+ 390 004b B7000000 		.4byte	.LASF5
+ 391 004f 02       		.uleb128 0x2
+ 392 0050 08       		.byte	0x8
+ 393 0051 05       		.byte	0x5
+ 394 0052 28020000 		.4byte	.LASF6
+ 395 0056 02       		.uleb128 0x2
+ 396 0057 08       		.byte	0x8
+ 397 0058 07       		.byte	0x7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 20
+
+
+ 398 0059 48010000 		.4byte	.LASF7
+ 399 005d 03       		.uleb128 0x3
+ 400 005e 04       		.byte	0x4
+ 401 005f 05       		.byte	0x5
+ 402 0060 696E7400 		.ascii	"int\000"
+ 403 0064 02       		.uleb128 0x2
+ 404 0065 04       		.byte	0x4
+ 405 0066 07       		.byte	0x7
+ 406 0067 3B010000 		.4byte	.LASF8
+ 407 006b 04       		.uleb128 0x4
+ 408 006c C9000000 		.4byte	.LASF9
+ 409 0070 02       		.byte	0x2
+ 410 0071 E401     		.2byte	0x1e4
+ 411 0073 2C000000 		.4byte	0x2c
+ 412 0077 04       		.uleb128 0x4
+ 413 0078 2A010000 		.4byte	.LASF10
+ 414 007c 02       		.byte	0x2
+ 415 007d E601     		.2byte	0x1e6
+ 416 007f 48000000 		.4byte	0x48
+ 417 0083 02       		.uleb128 0x2
+ 418 0084 04       		.byte	0x4
+ 419 0085 04       		.byte	0x4
+ 420 0086 92000000 		.4byte	.LASF11
+ 421 008a 02       		.uleb128 0x2
+ 422 008b 08       		.byte	0x8
+ 423 008c 04       		.byte	0x4
+ 424 008d D4000000 		.4byte	.LASF12
+ 425 0091 02       		.uleb128 0x2
+ 426 0092 01       		.byte	0x1
+ 427 0093 08       		.byte	0x8
+ 428 0094 5D000000 		.4byte	.LASF13
+ 429 0098 04       		.uleb128 0x4
+ 430 0099 B2000000 		.4byte	.LASF14
+ 431 009d 02       		.byte	0x2
+ 432 009e 8E02     		.2byte	0x28e
+ 433 00a0 A4000000 		.4byte	0xa4
+ 434 00a4 05       		.uleb128 0x5
+ 435 00a5 6B000000 		.4byte	0x6b
+ 436 00a9 04       		.uleb128 0x4
+ 437 00aa A6000000 		.4byte	.LASF15
+ 438 00ae 02       		.byte	0x2
+ 439 00af 9002     		.2byte	0x290
+ 440 00b1 B5000000 		.4byte	0xb5
+ 441 00b5 05       		.uleb128 0x5
+ 442 00b6 77000000 		.4byte	0x77
+ 443 00ba 02       		.uleb128 0x2
+ 444 00bb 08       		.byte	0x8
+ 445 00bc 04       		.byte	0x4
+ 446 00bd D5020000 		.4byte	.LASF16
+ 447 00c1 02       		.uleb128 0x2
+ 448 00c2 04       		.byte	0x4
+ 449 00c3 07       		.byte	0x7
+ 450 00c4 18020000 		.4byte	.LASF17
+ 451 00c8 06       		.uleb128 0x6
+ 452 00c9 08       		.byte	0x8
+ 453 00ca 03       		.byte	0x3
+ 454 00cb 6F       		.byte	0x6f
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 21
+
+
+ 455 00cc DD000000 		.4byte	0xdd
+ 456 00d0 07       		.uleb128 0x7
+ 457 00d1 7F000000 		.4byte	.LASF19
+ 458 00d5 03       		.byte	0x3
+ 459 00d6 71       		.byte	0x71
+ 460 00d7 DD000000 		.4byte	0xdd
+ 461 00db 00       		.byte	0
+ 462 00dc 00       		.byte	0
+ 463 00dd 08       		.uleb128 0x8
+ 464 00de 6B000000 		.4byte	0x6b
+ 465 00e2 ED000000 		.4byte	0xed
+ 466 00e6 09       		.uleb128 0x9
+ 467 00e7 C1000000 		.4byte	0xc1
+ 468 00eb 07       		.byte	0x7
+ 469 00ec 00       		.byte	0
+ 470 00ed 0A       		.uleb128 0xa
+ 471 00ee 0D030000 		.4byte	.LASF18
+ 472 00f2 03       		.byte	0x3
+ 473 00f3 72       		.byte	0x72
+ 474 00f4 C8000000 		.4byte	0xc8
+ 475 00f8 06       		.uleb128 0x6
+ 476 00f9 08       		.byte	0x8
+ 477 00fa 03       		.byte	0x3
+ 478 00fb 75       		.byte	0x75
+ 479 00fc 0D010000 		.4byte	0x10d
+ 480 0100 07       		.uleb128 0x7
+ 481 0101 7F000000 		.4byte	.LASF19
+ 482 0105 03       		.byte	0x3
+ 483 0106 77       		.byte	0x77
+ 484 0107 1D010000 		.4byte	0x11d
+ 485 010b 00       		.byte	0
+ 486 010c 00       		.byte	0
+ 487 010d 08       		.uleb128 0x8
+ 488 010e 98000000 		.4byte	0x98
+ 489 0112 1D010000 		.4byte	0x11d
+ 490 0116 09       		.uleb128 0x9
+ 491 0117 C1000000 		.4byte	0xc1
+ 492 011b 07       		.byte	0x7
+ 493 011c 00       		.byte	0
+ 494 011d 05       		.uleb128 0x5
+ 495 011e 0D010000 		.4byte	0x10d
+ 496 0122 0A       		.uleb128 0xa
+ 497 0123 87020000 		.4byte	.LASF20
+ 498 0127 03       		.byte	0x3
+ 499 0128 78       		.byte	0x78
+ 500 0129 F8000000 		.4byte	0xf8
+ 501 012d 06       		.uleb128 0x6
+ 502 012e 04       		.byte	0x4
+ 503 012f 03       		.byte	0x3
+ 504 0130 7B       		.byte	0x7b
+ 505 0131 42010000 		.4byte	0x142
+ 506 0135 07       		.uleb128 0x7
+ 507 0136 7F000000 		.4byte	.LASF19
+ 508 013a 03       		.byte	0x3
+ 509 013b 7D       		.byte	0x7d
+ 510 013c 52010000 		.4byte	0x152
+ 511 0140 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 22
+
+
+ 512 0141 00       		.byte	0
+ 513 0142 08       		.uleb128 0x8
+ 514 0143 98000000 		.4byte	0x98
+ 515 0147 52010000 		.4byte	0x152
+ 516 014b 09       		.uleb128 0x9
+ 517 014c C1000000 		.4byte	0xc1
+ 518 0150 03       		.byte	0x3
+ 519 0151 00       		.byte	0
+ 520 0152 05       		.uleb128 0x5
+ 521 0153 42010000 		.4byte	0x142
+ 522 0157 0A       		.uleb128 0xa
+ 523 0158 13000000 		.4byte	.LASF21
+ 524 015c 03       		.byte	0x3
+ 525 015d 7E       		.byte	0x7e
+ 526 015e 2D010000 		.4byte	0x12d
+ 527 0162 06       		.uleb128 0x6
+ 528 0163 0C       		.byte	0xc
+ 529 0164 03       		.byte	0x3
+ 530 0165 81       		.byte	0x81
+ 531 0166 B2010000 		.4byte	0x1b2
+ 532 016a 0B       		.uleb128 0xb
+ 533 016b 696400   		.ascii	"id\000"
+ 534 016e 03       		.byte	0x3
+ 535 016f 83       		.byte	0x83
+ 536 0170 77000000 		.4byte	0x77
+ 537 0174 00       		.byte	0
+ 538 0175 0B       		.uleb128 0xb
+ 539 0176 72747200 		.ascii	"rtr\000"
+ 540 017a 03       		.byte	0x3
+ 541 017b 84       		.byte	0x84
+ 542 017c 6B000000 		.4byte	0x6b
+ 543 0180 04       		.byte	0x4
+ 544 0181 0B       		.uleb128 0xb
+ 545 0182 69646500 		.ascii	"ide\000"
+ 546 0186 03       		.byte	0x3
+ 547 0187 85       		.byte	0x85
+ 548 0188 6B000000 		.4byte	0x6b
+ 549 018c 05       		.byte	0x5
+ 550 018d 0B       		.uleb128 0xb
+ 551 018e 646C6300 		.ascii	"dlc\000"
+ 552 0192 03       		.byte	0x3
+ 553 0193 86       		.byte	0x86
+ 554 0194 6B000000 		.4byte	0x6b
+ 555 0198 06       		.byte	0x6
+ 556 0199 0B       		.uleb128 0xb
+ 557 019a 69727100 		.ascii	"irq\000"
+ 558 019e 03       		.byte	0x3
+ 559 019f 87       		.byte	0x87
+ 560 01a0 6B000000 		.4byte	0x6b
+ 561 01a4 07       		.byte	0x7
+ 562 01a5 0B       		.uleb128 0xb
+ 563 01a6 6D736700 		.ascii	"msg\000"
+ 564 01aa 03       		.byte	0x3
+ 565 01ab 8B       		.byte	0x8b
+ 566 01ac B2010000 		.4byte	0x1b2
+ 567 01b0 08       		.byte	0x8
+ 568 01b1 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 23
+
+
+ 569 01b2 0C       		.uleb128 0xc
+ 570 01b3 04       		.byte	0x4
+ 571 01b4 ED000000 		.4byte	0xed
+ 572 01b8 0A       		.uleb128 0xa
+ 573 01b9 6B000000 		.4byte	.LASF22
+ 574 01bd 03       		.byte	0x3
+ 575 01be 8C       		.byte	0x8c
+ 576 01bf 62010000 		.4byte	0x162
+ 577 01c3 06       		.uleb128 0x6
+ 578 01c4 20       		.byte	0x20
+ 579 01c5 03       		.byte	0x3
+ 580 01c6 A0       		.byte	0xa0
+ 581 01c7 20020000 		.4byte	0x220
+ 582 01cb 07       		.uleb128 0x7
+ 583 01cc 84010000 		.4byte	.LASF23
+ 584 01d0 03       		.byte	0x3
+ 585 01d1 A2       		.byte	0xa2
+ 586 01d2 57010000 		.4byte	0x157
+ 587 01d6 00       		.byte	0
+ 588 01d7 07       		.uleb128 0x7
+ 589 01d8 CF000000 		.4byte	.LASF24
+ 590 01dc 03       		.byte	0x3
+ 591 01dd A3       		.byte	0xa3
+ 592 01de 57010000 		.4byte	0x157
+ 593 01e2 04       		.byte	0x4
+ 594 01e3 07       		.uleb128 0x7
+ 595 01e4 84000000 		.4byte	.LASF25
+ 596 01e8 03       		.byte	0x3
+ 597 01e9 A4       		.byte	0xa4
+ 598 01ea 22010000 		.4byte	0x122
+ 599 01ee 08       		.byte	0x8
+ 600 01ef 07       		.uleb128 0x7
+ 601 01f0 27000000 		.4byte	.LASF26
+ 602 01f4 03       		.byte	0x3
+ 603 01f5 A5       		.byte	0xa5
+ 604 01f6 57010000 		.4byte	0x157
+ 605 01fa 10       		.byte	0x10
+ 606 01fb 07       		.uleb128 0x7
+ 607 01fc 66010000 		.4byte	.LASF27
+ 608 0200 03       		.byte	0x3
+ 609 0201 A6       		.byte	0xa6
+ 610 0202 57010000 		.4byte	0x157
+ 611 0206 14       		.byte	0x14
+ 612 0207 07       		.uleb128 0x7
+ 613 0208 21020000 		.4byte	.LASF28
+ 614 020c 03       		.byte	0x3
+ 615 020d A7       		.byte	0xa7
+ 616 020e 57010000 		.4byte	0x157
+ 617 0212 18       		.byte	0x18
+ 618 0213 07       		.uleb128 0x7
+ 619 0214 8B000000 		.4byte	.LASF29
+ 620 0218 03       		.byte	0x3
+ 621 0219 A8       		.byte	0xa8
+ 622 021a 57010000 		.4byte	0x157
+ 623 021e 1C       		.byte	0x1c
+ 624 021f 00       		.byte	0
+ 625 0220 0A       		.uleb128 0xa
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 24
+
+
+ 626 0221 2D000000 		.4byte	.LASF30
+ 627 0225 03       		.byte	0x3
+ 628 0226 A9       		.byte	0xa9
+ 629 0227 C3010000 		.4byte	0x1c3
+ 630 022b 06       		.uleb128 0x6
+ 631 022c 10       		.byte	0x10
+ 632 022d 03       		.byte	0x3
+ 633 022e AC       		.byte	0xac
+ 634 022f 58020000 		.4byte	0x258
+ 635 0233 07       		.uleb128 0x7
+ 636 0234 57000000 		.4byte	.LASF31
+ 637 0238 03       		.byte	0x3
+ 638 0239 AE       		.byte	0xae
+ 639 023a 57010000 		.4byte	0x157
+ 640 023e 00       		.byte	0
+ 641 023f 07       		.uleb128 0x7
+ 642 0240 0E000000 		.4byte	.LASF32
+ 643 0244 03       		.byte	0x3
+ 644 0245 AF       		.byte	0xaf
+ 645 0246 57010000 		.4byte	0x157
+ 646 024a 04       		.byte	0x4
+ 647 024b 07       		.uleb128 0x7
+ 648 024c ED020000 		.4byte	.LASF33
+ 649 0250 03       		.byte	0x3
+ 650 0251 B0       		.byte	0xb0
+ 651 0252 22010000 		.4byte	0x122
+ 652 0256 08       		.byte	0x8
+ 653 0257 00       		.byte	0
+ 654 0258 0A       		.uleb128 0xa
+ 655 0259 BE020000 		.4byte	.LASF34
+ 656 025d 03       		.byte	0x3
+ 657 025e B1       		.byte	0xb1
+ 658 025f 2B020000 		.4byte	0x22b
+ 659 0263 0D       		.uleb128 0xd
+ 660 0264 29030000 		.4byte	.LASF41
+ 661 0268 01       		.byte	0x1
+ 662 0269 34       		.byte	0x34
+ 663 026a 6B000000 		.4byte	0x6b
+ 664 026e 00000000 		.4byte	.LFB0
+ 665 0272 DC000000 		.4byte	.LFE0-.LFB0
+ 666 0276 01       		.uleb128 0x1
+ 667 0277 9C       		.byte	0x9c
+ 668 0278 E2020000 		.4byte	0x2e2
+ 669 027c 0E       		.uleb128 0xe
+ 670 027d 00000000 		.4byte	.LASF39
+ 671 0281 01       		.byte	0x1
+ 672 0282 34       		.byte	0x34
+ 673 0283 E2020000 		.4byte	0x2e2
+ 674 0287 00000000 		.4byte	.LLST0
+ 675 028b 0F       		.uleb128 0xf
+ 676 028c 6900     		.ascii	"i\000"
+ 677 028e 01       		.byte	0x1
+ 678 028f 36       		.byte	0x36
+ 679 0290 6B000000 		.4byte	0x6b
+ 680 0294 21000000 		.4byte	.LLST1
+ 681 0298 0F       		.uleb128 0xf
+ 682 0299 6A00     		.ascii	"j\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 25
+
+
+ 683 029b 01       		.byte	0x1
+ 684 029c 36       		.byte	0x36
+ 685 029d 6B000000 		.4byte	0x6b
+ 686 02a1 4A000000 		.4byte	.LLST2
+ 687 02a5 10       		.uleb128 0x10
+ 688 02a6 08000000 		.4byte	.LASF35
+ 689 02aa 01       		.byte	0x1
+ 690 02ab 36       		.byte	0x36
+ 691 02ac 6B000000 		.4byte	0x6b
+ 692 02b0 74000000 		.4byte	.LLST3
+ 693 02b4 10       		.uleb128 0x10
+ 694 02b5 AC000000 		.4byte	.LASF36
+ 695 02b9 01       		.byte	0x1
+ 696 02ba 37       		.byte	0x37
+ 697 02bb 6B000000 		.4byte	0x6b
+ 698 02bf 92000000 		.4byte	.LLST4
+ 699 02c3 10       		.uleb128 0x10
+ 700 02c4 5F010000 		.4byte	.LASF37
+ 701 02c8 01       		.byte	0x1
+ 702 02c9 38       		.byte	0x38
+ 703 02ca 6B000000 		.4byte	0x6b
+ 704 02ce BC000000 		.4byte	.LLST5
+ 705 02d2 10       		.uleb128 0x10
+ 706 02d3 DB000000 		.4byte	.LASF38
+ 707 02d7 01       		.byte	0x1
+ 708 02d8 39       		.byte	0x39
+ 709 02d9 77000000 		.4byte	0x77
+ 710 02dd F2000000 		.4byte	.LLST6
+ 711 02e1 00       		.byte	0
+ 712 02e2 0C       		.uleb128 0xc
+ 713 02e3 04       		.byte	0x4
+ 714 02e4 E8020000 		.4byte	0x2e8
+ 715 02e8 11       		.uleb128 0x11
+ 716 02e9 B8010000 		.4byte	0x1b8
+ 717 02ed 12       		.uleb128 0x12
+ 718 02ee 9F020000 		.4byte	.LASF43
+ 719 02f2 01       		.byte	0x1
+ 720 02f3 B2       		.byte	0xb2
+ 721 02f4 00000000 		.4byte	.LFB1
+ 722 02f8 1C000000 		.4byte	.LFE1-.LFB1
+ 723 02fc 01       		.uleb128 0x1
+ 724 02fd 9C       		.byte	0x9c
+ 725 02fe 12030000 		.4byte	0x312
+ 726 0302 0E       		.uleb128 0xe
+ 727 0303 62000000 		.4byte	.LASF40
+ 728 0307 01       		.byte	0x1
+ 729 0308 B2       		.byte	0xb2
+ 730 0309 6B000000 		.4byte	0x6b
+ 731 030d 32010000 		.4byte	.LLST7
+ 732 0311 00       		.byte	0
+ 733 0312 0D       		.uleb128 0xd
+ 734 0313 71020000 		.4byte	.LASF42
+ 735 0317 01       		.byte	0x1
+ 736 0318 D0       		.byte	0xd0
+ 737 0319 6B000000 		.4byte	0x6b
+ 738 031d 00000000 		.4byte	.LFB2
+ 739 0321 20000000 		.4byte	.LFE2-.LFB2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 26
+
+
+ 740 0325 01       		.uleb128 0x1
+ 741 0326 9C       		.byte	0x9c
+ 742 0327 3B030000 		.4byte	0x33b
+ 743 032b 10       		.uleb128 0x10
+ 744 032c 5F010000 		.4byte	.LASF37
+ 745 0330 01       		.byte	0x1
+ 746 0331 D2       		.byte	0xd2
+ 747 0332 6B000000 		.4byte	0x6b
+ 748 0336 53010000 		.4byte	.LLST8
+ 749 033a 00       		.byte	0
+ 750 033b 13       		.uleb128 0x13
+ 751 033c 6C010000 		.4byte	.LASF44
+ 752 0340 01       		.byte	0x1
+ 753 0341 6E02     		.2byte	0x26e
+ 754 0343 00000000 		.4byte	.LFB3
+ 755 0347 1C000000 		.4byte	.LFE3-.LFB3
+ 756 034b 01       		.uleb128 0x1
+ 757 034c 9C       		.byte	0x9c
+ 758 034d 62030000 		.4byte	0x362
+ 759 0351 14       		.uleb128 0x14
+ 760 0352 67020000 		.4byte	.LASF45
+ 761 0356 01       		.byte	0x1
+ 762 0357 6E02     		.2byte	0x26e
+ 763 0359 6B000000 		.4byte	0x6b
+ 764 035d 72010000 		.4byte	.LLST9
+ 765 0361 00       		.byte	0
+ 766 0362 15       		.uleb128 0x15
+ 767 0363 F4020000 		.4byte	.LASF49
+ 768 0367 01       		.byte	0x1
+ 769 0368 9B02     		.2byte	0x29b
+ 770 036a 00000000 		.4byte	.LFB4
+ 771 036e 10000000 		.4byte	.LFE4-.LFB4
+ 772 0372 01       		.uleb128 0x1
+ 773 0373 9C       		.byte	0x9c
+ 774 0374 00       		.byte	0
+ 775              		.section	.debug_abbrev,"",%progbits
+ 776              	.Ldebug_abbrev0:
+ 777 0000 01       		.uleb128 0x1
+ 778 0001 11       		.uleb128 0x11
+ 779 0002 01       		.byte	0x1
+ 780 0003 25       		.uleb128 0x25
+ 781 0004 0E       		.uleb128 0xe
+ 782 0005 13       		.uleb128 0x13
+ 783 0006 0B       		.uleb128 0xb
+ 784 0007 03       		.uleb128 0x3
+ 785 0008 0E       		.uleb128 0xe
+ 786 0009 1B       		.uleb128 0x1b
+ 787 000a 0E       		.uleb128 0xe
+ 788 000b 55       		.uleb128 0x55
+ 789 000c 17       		.uleb128 0x17
+ 790 000d 11       		.uleb128 0x11
+ 791 000e 01       		.uleb128 0x1
+ 792 000f 10       		.uleb128 0x10
+ 793 0010 17       		.uleb128 0x17
+ 794 0011 00       		.byte	0
+ 795 0012 00       		.byte	0
+ 796 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 27
+
+
+ 797 0014 24       		.uleb128 0x24
+ 798 0015 00       		.byte	0
+ 799 0016 0B       		.uleb128 0xb
+ 800 0017 0B       		.uleb128 0xb
+ 801 0018 3E       		.uleb128 0x3e
+ 802 0019 0B       		.uleb128 0xb
+ 803 001a 03       		.uleb128 0x3
+ 804 001b 0E       		.uleb128 0xe
+ 805 001c 00       		.byte	0
+ 806 001d 00       		.byte	0
+ 807 001e 03       		.uleb128 0x3
+ 808 001f 24       		.uleb128 0x24
+ 809 0020 00       		.byte	0
+ 810 0021 0B       		.uleb128 0xb
+ 811 0022 0B       		.uleb128 0xb
+ 812 0023 3E       		.uleb128 0x3e
+ 813 0024 0B       		.uleb128 0xb
+ 814 0025 03       		.uleb128 0x3
+ 815 0026 08       		.uleb128 0x8
+ 816 0027 00       		.byte	0
+ 817 0028 00       		.byte	0
+ 818 0029 04       		.uleb128 0x4
+ 819 002a 16       		.uleb128 0x16
+ 820 002b 00       		.byte	0
+ 821 002c 03       		.uleb128 0x3
+ 822 002d 0E       		.uleb128 0xe
+ 823 002e 3A       		.uleb128 0x3a
+ 824 002f 0B       		.uleb128 0xb
+ 825 0030 3B       		.uleb128 0x3b
+ 826 0031 05       		.uleb128 0x5
+ 827 0032 49       		.uleb128 0x49
+ 828 0033 13       		.uleb128 0x13
+ 829 0034 00       		.byte	0
+ 830 0035 00       		.byte	0
+ 831 0036 05       		.uleb128 0x5
+ 832 0037 35       		.uleb128 0x35
+ 833 0038 00       		.byte	0
+ 834 0039 49       		.uleb128 0x49
+ 835 003a 13       		.uleb128 0x13
+ 836 003b 00       		.byte	0
+ 837 003c 00       		.byte	0
+ 838 003d 06       		.uleb128 0x6
+ 839 003e 13       		.uleb128 0x13
+ 840 003f 01       		.byte	0x1
+ 841 0040 0B       		.uleb128 0xb
+ 842 0041 0B       		.uleb128 0xb
+ 843 0042 3A       		.uleb128 0x3a
+ 844 0043 0B       		.uleb128 0xb
+ 845 0044 3B       		.uleb128 0x3b
+ 846 0045 0B       		.uleb128 0xb
+ 847 0046 01       		.uleb128 0x1
+ 848 0047 13       		.uleb128 0x13
+ 849 0048 00       		.byte	0
+ 850 0049 00       		.byte	0
+ 851 004a 07       		.uleb128 0x7
+ 852 004b 0D       		.uleb128 0xd
+ 853 004c 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 28
+
+
+ 854 004d 03       		.uleb128 0x3
+ 855 004e 0E       		.uleb128 0xe
+ 856 004f 3A       		.uleb128 0x3a
+ 857 0050 0B       		.uleb128 0xb
+ 858 0051 3B       		.uleb128 0x3b
+ 859 0052 0B       		.uleb128 0xb
+ 860 0053 49       		.uleb128 0x49
+ 861 0054 13       		.uleb128 0x13
+ 862 0055 38       		.uleb128 0x38
+ 863 0056 0B       		.uleb128 0xb
+ 864 0057 00       		.byte	0
+ 865 0058 00       		.byte	0
+ 866 0059 08       		.uleb128 0x8
+ 867 005a 01       		.uleb128 0x1
+ 868 005b 01       		.byte	0x1
+ 869 005c 49       		.uleb128 0x49
+ 870 005d 13       		.uleb128 0x13
+ 871 005e 01       		.uleb128 0x1
+ 872 005f 13       		.uleb128 0x13
+ 873 0060 00       		.byte	0
+ 874 0061 00       		.byte	0
+ 875 0062 09       		.uleb128 0x9
+ 876 0063 21       		.uleb128 0x21
+ 877 0064 00       		.byte	0
+ 878 0065 49       		.uleb128 0x49
+ 879 0066 13       		.uleb128 0x13
+ 880 0067 2F       		.uleb128 0x2f
+ 881 0068 0B       		.uleb128 0xb
+ 882 0069 00       		.byte	0
+ 883 006a 00       		.byte	0
+ 884 006b 0A       		.uleb128 0xa
+ 885 006c 16       		.uleb128 0x16
+ 886 006d 00       		.byte	0
+ 887 006e 03       		.uleb128 0x3
+ 888 006f 0E       		.uleb128 0xe
+ 889 0070 3A       		.uleb128 0x3a
+ 890 0071 0B       		.uleb128 0xb
+ 891 0072 3B       		.uleb128 0x3b
+ 892 0073 0B       		.uleb128 0xb
+ 893 0074 49       		.uleb128 0x49
+ 894 0075 13       		.uleb128 0x13
+ 895 0076 00       		.byte	0
+ 896 0077 00       		.byte	0
+ 897 0078 0B       		.uleb128 0xb
+ 898 0079 0D       		.uleb128 0xd
+ 899 007a 00       		.byte	0
+ 900 007b 03       		.uleb128 0x3
+ 901 007c 08       		.uleb128 0x8
+ 902 007d 3A       		.uleb128 0x3a
+ 903 007e 0B       		.uleb128 0xb
+ 904 007f 3B       		.uleb128 0x3b
+ 905 0080 0B       		.uleb128 0xb
+ 906 0081 49       		.uleb128 0x49
+ 907 0082 13       		.uleb128 0x13
+ 908 0083 38       		.uleb128 0x38
+ 909 0084 0B       		.uleb128 0xb
+ 910 0085 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 29
+
+
+ 911 0086 00       		.byte	0
+ 912 0087 0C       		.uleb128 0xc
+ 913 0088 0F       		.uleb128 0xf
+ 914 0089 00       		.byte	0
+ 915 008a 0B       		.uleb128 0xb
+ 916 008b 0B       		.uleb128 0xb
+ 917 008c 49       		.uleb128 0x49
+ 918 008d 13       		.uleb128 0x13
+ 919 008e 00       		.byte	0
+ 920 008f 00       		.byte	0
+ 921 0090 0D       		.uleb128 0xd
+ 922 0091 2E       		.uleb128 0x2e
+ 923 0092 01       		.byte	0x1
+ 924 0093 3F       		.uleb128 0x3f
+ 925 0094 19       		.uleb128 0x19
+ 926 0095 03       		.uleb128 0x3
+ 927 0096 0E       		.uleb128 0xe
+ 928 0097 3A       		.uleb128 0x3a
+ 929 0098 0B       		.uleb128 0xb
+ 930 0099 3B       		.uleb128 0x3b
+ 931 009a 0B       		.uleb128 0xb
+ 932 009b 27       		.uleb128 0x27
+ 933 009c 19       		.uleb128 0x19
+ 934 009d 49       		.uleb128 0x49
+ 935 009e 13       		.uleb128 0x13
+ 936 009f 11       		.uleb128 0x11
+ 937 00a0 01       		.uleb128 0x1
+ 938 00a1 12       		.uleb128 0x12
+ 939 00a2 06       		.uleb128 0x6
+ 940 00a3 40       		.uleb128 0x40
+ 941 00a4 18       		.uleb128 0x18
+ 942 00a5 9742     		.uleb128 0x2117
+ 943 00a7 19       		.uleb128 0x19
+ 944 00a8 01       		.uleb128 0x1
+ 945 00a9 13       		.uleb128 0x13
+ 946 00aa 00       		.byte	0
+ 947 00ab 00       		.byte	0
+ 948 00ac 0E       		.uleb128 0xe
+ 949 00ad 05       		.uleb128 0x5
+ 950 00ae 00       		.byte	0
+ 951 00af 03       		.uleb128 0x3
+ 952 00b0 0E       		.uleb128 0xe
+ 953 00b1 3A       		.uleb128 0x3a
+ 954 00b2 0B       		.uleb128 0xb
+ 955 00b3 3B       		.uleb128 0x3b
+ 956 00b4 0B       		.uleb128 0xb
+ 957 00b5 49       		.uleb128 0x49
+ 958 00b6 13       		.uleb128 0x13
+ 959 00b7 02       		.uleb128 0x2
+ 960 00b8 17       		.uleb128 0x17
+ 961 00b9 00       		.byte	0
+ 962 00ba 00       		.byte	0
+ 963 00bb 0F       		.uleb128 0xf
+ 964 00bc 34       		.uleb128 0x34
+ 965 00bd 00       		.byte	0
+ 966 00be 03       		.uleb128 0x3
+ 967 00bf 08       		.uleb128 0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 30
+
+
+ 968 00c0 3A       		.uleb128 0x3a
+ 969 00c1 0B       		.uleb128 0xb
+ 970 00c2 3B       		.uleb128 0x3b
+ 971 00c3 0B       		.uleb128 0xb
+ 972 00c4 49       		.uleb128 0x49
+ 973 00c5 13       		.uleb128 0x13
+ 974 00c6 02       		.uleb128 0x2
+ 975 00c7 17       		.uleb128 0x17
+ 976 00c8 00       		.byte	0
+ 977 00c9 00       		.byte	0
+ 978 00ca 10       		.uleb128 0x10
+ 979 00cb 34       		.uleb128 0x34
+ 980 00cc 00       		.byte	0
+ 981 00cd 03       		.uleb128 0x3
+ 982 00ce 0E       		.uleb128 0xe
+ 983 00cf 3A       		.uleb128 0x3a
+ 984 00d0 0B       		.uleb128 0xb
+ 985 00d1 3B       		.uleb128 0x3b
+ 986 00d2 0B       		.uleb128 0xb
+ 987 00d3 49       		.uleb128 0x49
+ 988 00d4 13       		.uleb128 0x13
+ 989 00d5 02       		.uleb128 0x2
+ 990 00d6 17       		.uleb128 0x17
+ 991 00d7 00       		.byte	0
+ 992 00d8 00       		.byte	0
+ 993 00d9 11       		.uleb128 0x11
+ 994 00da 26       		.uleb128 0x26
+ 995 00db 00       		.byte	0
+ 996 00dc 49       		.uleb128 0x49
+ 997 00dd 13       		.uleb128 0x13
+ 998 00de 00       		.byte	0
+ 999 00df 00       		.byte	0
+ 1000 00e0 12       		.uleb128 0x12
+ 1001 00e1 2E       		.uleb128 0x2e
+ 1002 00e2 01       		.byte	0x1
+ 1003 00e3 3F       		.uleb128 0x3f
+ 1004 00e4 19       		.uleb128 0x19
+ 1005 00e5 03       		.uleb128 0x3
+ 1006 00e6 0E       		.uleb128 0xe
+ 1007 00e7 3A       		.uleb128 0x3a
+ 1008 00e8 0B       		.uleb128 0xb
+ 1009 00e9 3B       		.uleb128 0x3b
+ 1010 00ea 0B       		.uleb128 0xb
+ 1011 00eb 27       		.uleb128 0x27
+ 1012 00ec 19       		.uleb128 0x19
+ 1013 00ed 11       		.uleb128 0x11
+ 1014 00ee 01       		.uleb128 0x1
+ 1015 00ef 12       		.uleb128 0x12
+ 1016 00f0 06       		.uleb128 0x6
+ 1017 00f1 40       		.uleb128 0x40
+ 1018 00f2 18       		.uleb128 0x18
+ 1019 00f3 9742     		.uleb128 0x2117
+ 1020 00f5 19       		.uleb128 0x19
+ 1021 00f6 01       		.uleb128 0x1
+ 1022 00f7 13       		.uleb128 0x13
+ 1023 00f8 00       		.byte	0
+ 1024 00f9 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 31
+
+
+ 1025 00fa 13       		.uleb128 0x13
+ 1026 00fb 2E       		.uleb128 0x2e
+ 1027 00fc 01       		.byte	0x1
+ 1028 00fd 3F       		.uleb128 0x3f
+ 1029 00fe 19       		.uleb128 0x19
+ 1030 00ff 03       		.uleb128 0x3
+ 1031 0100 0E       		.uleb128 0xe
+ 1032 0101 3A       		.uleb128 0x3a
+ 1033 0102 0B       		.uleb128 0xb
+ 1034 0103 3B       		.uleb128 0x3b
+ 1035 0104 05       		.uleb128 0x5
+ 1036 0105 27       		.uleb128 0x27
+ 1037 0106 19       		.uleb128 0x19
+ 1038 0107 11       		.uleb128 0x11
+ 1039 0108 01       		.uleb128 0x1
+ 1040 0109 12       		.uleb128 0x12
+ 1041 010a 06       		.uleb128 0x6
+ 1042 010b 40       		.uleb128 0x40
+ 1043 010c 18       		.uleb128 0x18
+ 1044 010d 9742     		.uleb128 0x2117
+ 1045 010f 19       		.uleb128 0x19
+ 1046 0110 01       		.uleb128 0x1
+ 1047 0111 13       		.uleb128 0x13
+ 1048 0112 00       		.byte	0
+ 1049 0113 00       		.byte	0
+ 1050 0114 14       		.uleb128 0x14
+ 1051 0115 05       		.uleb128 0x5
+ 1052 0116 00       		.byte	0
+ 1053 0117 03       		.uleb128 0x3
+ 1054 0118 0E       		.uleb128 0xe
+ 1055 0119 3A       		.uleb128 0x3a
+ 1056 011a 0B       		.uleb128 0xb
+ 1057 011b 3B       		.uleb128 0x3b
+ 1058 011c 05       		.uleb128 0x5
+ 1059 011d 49       		.uleb128 0x49
+ 1060 011e 13       		.uleb128 0x13
+ 1061 011f 02       		.uleb128 0x2
+ 1062 0120 17       		.uleb128 0x17
+ 1063 0121 00       		.byte	0
+ 1064 0122 00       		.byte	0
+ 1065 0123 15       		.uleb128 0x15
+ 1066 0124 2E       		.uleb128 0x2e
+ 1067 0125 00       		.byte	0
+ 1068 0126 3F       		.uleb128 0x3f
+ 1069 0127 19       		.uleb128 0x19
+ 1070 0128 03       		.uleb128 0x3
+ 1071 0129 0E       		.uleb128 0xe
+ 1072 012a 3A       		.uleb128 0x3a
+ 1073 012b 0B       		.uleb128 0xb
+ 1074 012c 3B       		.uleb128 0x3b
+ 1075 012d 05       		.uleb128 0x5
+ 1076 012e 27       		.uleb128 0x27
+ 1077 012f 19       		.uleb128 0x19
+ 1078 0130 11       		.uleb128 0x11
+ 1079 0131 01       		.uleb128 0x1
+ 1080 0132 12       		.uleb128 0x12
+ 1081 0133 06       		.uleb128 0x6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 32
+
+
+ 1082 0134 40       		.uleb128 0x40
+ 1083 0135 18       		.uleb128 0x18
+ 1084 0136 9742     		.uleb128 0x2117
+ 1085 0138 19       		.uleb128 0x19
+ 1086 0139 00       		.byte	0
+ 1087 013a 00       		.byte	0
+ 1088 013b 00       		.byte	0
+ 1089              		.section	.debug_loc,"",%progbits
+ 1090              	.Ldebug_loc0:
+ 1091              	.LLST0:
+ 1092 0000 00000000 		.4byte	.LVL0
+ 1093 0004 CA000000 		.4byte	.LVL24
+ 1094 0008 0100     		.2byte	0x1
+ 1095 000a 50       		.byte	0x50
+ 1096 000b CA000000 		.4byte	.LVL24
+ 1097 000f DC000000 		.4byte	.LFE0
+ 1098 0013 0400     		.2byte	0x4
+ 1099 0015 F3       		.byte	0xf3
+ 1100 0016 01       		.uleb128 0x1
+ 1101 0017 50       		.byte	0x50
+ 1102 0018 9F       		.byte	0x9f
+ 1103 0019 00000000 		.4byte	0
+ 1104 001d 00000000 		.4byte	0
+ 1105              	.LLST1:
+ 1106 0021 08000000 		.4byte	.LVL2
+ 1107 0025 B2000000 		.4byte	.LVL18
+ 1108 0029 0100     		.2byte	0x1
+ 1109 002b 52       		.byte	0x52
+ 1110 002c B4000000 		.4byte	.LVL19
+ 1111 0030 B6000000 		.4byte	.LVL20
+ 1112 0034 0100     		.2byte	0x1
+ 1113 0036 52       		.byte	0x52
+ 1114 0037 BA000000 		.4byte	.LVL21
+ 1115 003b C4000000 		.4byte	.LVL23
+ 1116 003f 0100     		.2byte	0x1
+ 1117 0041 52       		.byte	0x52
+ 1118 0042 00000000 		.4byte	0
+ 1119 0046 00000000 		.4byte	0
+ 1120              	.LLST2:
+ 1121 004a 5C000000 		.4byte	.LVL10
+ 1122 004e 60000000 		.4byte	.LVL11
+ 1123 0052 0200     		.2byte	0x2
+ 1124 0054 30       		.byte	0x30
+ 1125 0055 9F       		.byte	0x9f
+ 1126 0056 60000000 		.4byte	.LVL11
+ 1127 005a 7E000000 		.4byte	.LVL12
+ 1128 005e 0100     		.2byte	0x1
+ 1129 0060 53       		.byte	0x53
+ 1130 0061 80000000 		.4byte	.LVL13
+ 1131 0065 90000000 		.4byte	.LVL14
+ 1132 0069 0100     		.2byte	0x1
+ 1133 006b 53       		.byte	0x53
+ 1134 006c 00000000 		.4byte	0
+ 1135 0070 00000000 		.4byte	0
+ 1136              	.LLST3:
+ 1137 0074 08000000 		.4byte	.LVL2
+ 1138 0078 B6000000 		.4byte	.LVL20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 33
+
+
+ 1139 007c 0100     		.2byte	0x1
+ 1140 007e 57       		.byte	0x57
+ 1141 007f BA000000 		.4byte	.LVL21
+ 1142 0083 C4000000 		.4byte	.LVL23
+ 1143 0087 0100     		.2byte	0x1
+ 1144 0089 57       		.byte	0x57
+ 1145 008a 00000000 		.4byte	0
+ 1146 008e 00000000 		.4byte	0
+ 1147              	.LLST4:
+ 1148 0092 02000000 		.4byte	.LVL1
+ 1149 0096 08000000 		.4byte	.LVL2
+ 1150 009a 0200     		.2byte	0x2
+ 1151 009c 30       		.byte	0x30
+ 1152 009d 9F       		.byte	0x9f
+ 1153 009e 08000000 		.4byte	.LVL2
+ 1154 00a2 C2000000 		.4byte	.LVL22
+ 1155 00a6 0100     		.2byte	0x1
+ 1156 00a8 56       		.byte	0x56
+ 1157 00a9 C4000000 		.4byte	.LVL23
+ 1158 00ad CC000000 		.4byte	.LVL25
+ 1159 00b1 0100     		.2byte	0x1
+ 1160 00b3 56       		.byte	0x56
+ 1161 00b4 00000000 		.4byte	0
+ 1162 00b8 00000000 		.4byte	0
+ 1163              	.LLST5:
+ 1164 00bc 02000000 		.4byte	.LVL1
+ 1165 00c0 08000000 		.4byte	.LVL2
+ 1166 00c4 0200     		.2byte	0x2
+ 1167 00c6 31       		.byte	0x31
+ 1168 00c7 9F       		.byte	0x9f
+ 1169 00c8 08000000 		.4byte	.LVL2
+ 1170 00cc 20000000 		.4byte	.LVL5
+ 1171 00d0 0100     		.2byte	0x1
+ 1172 00d2 51       		.byte	0x51
+ 1173 00d3 A8000000 		.4byte	.LVL15
+ 1174 00d7 AA000000 		.4byte	.LVL16
+ 1175 00db 0200     		.2byte	0x2
+ 1176 00dd 30       		.byte	0x30
+ 1177 00de 9F       		.byte	0x9f
+ 1178 00df AA000000 		.4byte	.LVL16
+ 1179 00e3 DC000000 		.4byte	.LFE0
+ 1180 00e7 0100     		.2byte	0x1
+ 1181 00e9 51       		.byte	0x51
+ 1182 00ea 00000000 		.4byte	0
+ 1183 00ee 00000000 		.4byte	0
+ 1184              	.LLST6:
+ 1185 00f2 16000000 		.4byte	.LVL3
+ 1186 00f6 1E000000 		.4byte	.LVL4
+ 1187 00fa 0200     		.2byte	0x2
+ 1188 00fc 30       		.byte	0x30
+ 1189 00fd 9F       		.byte	0x9f
+ 1190 00fe 1E000000 		.4byte	.LVL4
+ 1191 0102 4E000000 		.4byte	.LVL7
+ 1192 0106 0100     		.2byte	0x1
+ 1193 0108 53       		.byte	0x53
+ 1194 0109 4E000000 		.4byte	.LVL7
+ 1195 010d 50000000 		.4byte	.LVL8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 34
+
+
+ 1196 0111 0100     		.2byte	0x1
+ 1197 0113 5E       		.byte	0x5e
+ 1198 0114 50000000 		.4byte	.LVL8
+ 1199 0118 54000000 		.4byte	.LVL9
+ 1200 011c 0100     		.2byte	0x1
+ 1201 011e 53       		.byte	0x53
+ 1202 011f 54000000 		.4byte	.LVL9
+ 1203 0123 AA000000 		.4byte	.LVL16
+ 1204 0127 0100     		.2byte	0x1
+ 1205 0129 5E       		.byte	0x5e
+ 1206 012a 00000000 		.4byte	0
+ 1207 012e 00000000 		.4byte	0
+ 1208              	.LLST7:
+ 1209 0132 00000000 		.4byte	.LVL26
+ 1210 0136 06000000 		.4byte	.LVL27
+ 1211 013a 0100     		.2byte	0x1
+ 1212 013c 50       		.byte	0x50
+ 1213 013d 06000000 		.4byte	.LVL27
+ 1214 0141 1C000000 		.4byte	.LFE1
+ 1215 0145 0400     		.2byte	0x4
+ 1216 0147 F3       		.byte	0xf3
+ 1217 0148 01       		.uleb128 0x1
+ 1218 0149 50       		.byte	0x50
+ 1219 014a 9F       		.byte	0x9f
+ 1220 014b 00000000 		.4byte	0
+ 1221 014f 00000000 		.4byte	0
+ 1222              	.LLST8:
+ 1223 0153 00000000 		.4byte	.LVL28
+ 1224 0157 1A000000 		.4byte	.LVL29
+ 1225 015b 0200     		.2byte	0x2
+ 1226 015d 30       		.byte	0x30
+ 1227 015e 9F       		.byte	0x9f
+ 1228 015f 1A000000 		.4byte	.LVL29
+ 1229 0163 20000000 		.4byte	.LFE2
+ 1230 0167 0100     		.2byte	0x1
+ 1231 0169 50       		.byte	0x50
+ 1232 016a 00000000 		.4byte	0
+ 1233 016e 00000000 		.4byte	0
+ 1234              	.LLST9:
+ 1235 0172 00000000 		.4byte	.LVL30
+ 1236 0176 02000000 		.4byte	.LVL31
+ 1237 017a 0100     		.2byte	0x1
+ 1238 017c 50       		.byte	0x50
+ 1239 017d 02000000 		.4byte	.LVL31
+ 1240 0181 1C000000 		.4byte	.LFE3
+ 1241 0185 0400     		.2byte	0x4
+ 1242 0187 F3       		.byte	0xf3
+ 1243 0188 01       		.uleb128 0x1
+ 1244 0189 50       		.byte	0x50
+ 1245 018a 9F       		.byte	0x9f
+ 1246 018b 00000000 		.4byte	0
+ 1247 018f 00000000 		.4byte	0
+ 1248              		.section	.debug_aranges,"",%progbits
+ 1249 0000 3C000000 		.4byte	0x3c
+ 1250 0004 0200     		.2byte	0x2
+ 1251 0006 00000000 		.4byte	.Ldebug_info0
+ 1252 000a 04       		.byte	0x4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 35
+
+
+ 1253 000b 00       		.byte	0
+ 1254 000c 0000     		.2byte	0
+ 1255 000e 0000     		.2byte	0
+ 1256 0010 00000000 		.4byte	.LFB0
+ 1257 0014 DC000000 		.4byte	.LFE0-.LFB0
+ 1258 0018 00000000 		.4byte	.LFB1
+ 1259 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 1260 0020 00000000 		.4byte	.LFB2
+ 1261 0024 20000000 		.4byte	.LFE2-.LFB2
+ 1262 0028 00000000 		.4byte	.LFB3
+ 1263 002c 1C000000 		.4byte	.LFE3-.LFB3
+ 1264 0030 00000000 		.4byte	.LFB4
+ 1265 0034 10000000 		.4byte	.LFE4-.LFB4
+ 1266 0038 00000000 		.4byte	0
+ 1267 003c 00000000 		.4byte	0
+ 1268              		.section	.debug_ranges,"",%progbits
+ 1269              	.Ldebug_ranges0:
+ 1270 0000 00000000 		.4byte	.LFB0
+ 1271 0004 DC000000 		.4byte	.LFE0
+ 1272 0008 00000000 		.4byte	.LFB1
+ 1273 000c 1C000000 		.4byte	.LFE1
+ 1274 0010 00000000 		.4byte	.LFB2
+ 1275 0014 20000000 		.4byte	.LFE2
+ 1276 0018 00000000 		.4byte	.LFB3
+ 1277 001c 1C000000 		.4byte	.LFE3
+ 1278 0020 00000000 		.4byte	.LFB4
+ 1279 0024 10000000 		.4byte	.LFE4
+ 1280 0028 00000000 		.4byte	0
+ 1281 002c 00000000 		.4byte	0
+ 1282              		.section	.debug_line,"",%progbits
+ 1283              	.Ldebug_line0:
+ 1284 0000 2C010000 		.section	.debug_str,"MS",%progbits,1
+ 1284      02006600 
+ 1284      00000201 
+ 1284      FB0E0D00 
+ 1284      01010101 
+ 1285              	.LASF39:
+ 1286 0000 6D657373 		.ascii	"message\000"
+ 1286      61676500 
+ 1287              	.LASF35:
+ 1288 0008 73686966 		.ascii	"shift\000"
+ 1288      7400
+ 1289              	.LASF32:
+ 1290 000e 74786964 		.ascii	"txid\000"
+ 1290      00
+ 1291              	.LASF21:
+ 1292 0013 50554552 		.ascii	"PUERTO_CAN_1_REG_32\000"
+ 1292      544F5F43 
+ 1292      414E5F31 
+ 1292      5F524547 
+ 1292      5F333200 
+ 1293              	.LASF26:
+ 1294 0027 7278616D 		.ascii	"rxamr\000"
+ 1294      7200
+ 1295              	.LASF30:
+ 1296 002d 50554552 		.ascii	"PUERTO_CAN_1_RX_STRUCT\000"
+ 1296      544F5F43 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 36
+
+
+ 1296      414E5F31 
+ 1296      5F52585F 
+ 1296      53545255 
+ 1297              	.LASF3:
+ 1298 0044 73686F72 		.ascii	"short unsigned int\000"
+ 1298      7420756E 
+ 1298      7369676E 
+ 1298      65642069 
+ 1298      6E7400
+ 1299              	.LASF31:
+ 1300 0057 7478636D 		.ascii	"txcmd\000"
+ 1300      6400
+ 1301              	.LASF13:
+ 1302 005d 63686172 		.ascii	"char\000"
+ 1302      00
+ 1303              	.LASF40:
+ 1304 0062 62756666 		.ascii	"bufferId\000"
+ 1304      65724964 
+ 1304      00
+ 1305              	.LASF22:
+ 1306 006b 50554552 		.ascii	"PUERTO_CAN_1_TX_MSG\000"
+ 1306      544F5F43 
+ 1306      414E5F31 
+ 1306      5F54585F 
+ 1306      4D534700 
+ 1307              	.LASF19:
+ 1308 007f 62797465 		.ascii	"byte\000"
+ 1308      00
+ 1309              	.LASF25:
+ 1310 0084 72786461 		.ascii	"rxdata\000"
+ 1310      746100
+ 1311              	.LASF29:
+ 1312 008b 72786163 		.ascii	"rxacrd\000"
+ 1312      726400
+ 1313              	.LASF11:
+ 1314 0092 666C6F61 		.ascii	"float\000"
+ 1314      7400
+ 1315              	.LASF1:
+ 1316 0098 756E7369 		.ascii	"unsigned char\000"
+ 1316      676E6564 
+ 1316      20636861 
+ 1316      7200
+ 1317              	.LASF15:
+ 1318 00a6 72656733 		.ascii	"reg32\000"
+ 1318      3200
+ 1319              	.LASF36:
+ 1320 00ac 72657472 		.ascii	"retry\000"
+ 1320      7900
+ 1321              	.LASF14:
+ 1322 00b2 72656738 		.ascii	"reg8\000"
+ 1322      00
+ 1323              	.LASF5:
+ 1324 00b7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1324      20756E73 
+ 1324      69676E65 
+ 1324      6420696E 
+ 1324      7400
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 37
+
+
+ 1325              	.LASF9:
+ 1326 00c9 75696E74 		.ascii	"uint8\000"
+ 1326      3800
+ 1327              	.LASF24:
+ 1328 00cf 72786964 		.ascii	"rxid\000"
+ 1328      00
+ 1329              	.LASF12:
+ 1330 00d4 646F7562 		.ascii	"double\000"
+ 1330      6C6500
+ 1331              	.LASF38:
+ 1332 00db 72656754 		.ascii	"regTemp\000"
+ 1332      656D7000 
+ 1333              	.LASF48:
+ 1334 00e3 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\PSoC Creator\\"
+ 1334      73657273 
+ 1334      5C48656E 
+ 1334      72792041 
+ 1334      6C626572 
+ 1335 0111 456A656D 		.ascii	"Ejemplo_CAN\\NODO_1.cydsn\000"
+ 1335      706C6F5F 
+ 1335      43414E5C 
+ 1335      4E4F444F 
+ 1335      5F312E63 
+ 1336              	.LASF10:
+ 1337 012a 75696E74 		.ascii	"uint32\000"
+ 1337      333200
+ 1338              	.LASF2:
+ 1339 0131 73686F72 		.ascii	"short int\000"
+ 1339      7420696E 
+ 1339      7400
+ 1340              	.LASF8:
+ 1341 013b 756E7369 		.ascii	"unsigned int\000"
+ 1341      676E6564 
+ 1341      20696E74 
+ 1341      00
+ 1342              	.LASF7:
+ 1343 0148 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1343      206C6F6E 
+ 1343      6720756E 
+ 1343      7369676E 
+ 1343      65642069 
+ 1344              	.LASF37:
+ 1345 015f 72657375 		.ascii	"result\000"
+ 1345      6C7400
+ 1346              	.LASF27:
+ 1347 0166 72786163 		.ascii	"rxacr\000"
+ 1347      7200
+ 1348              	.LASF44:
+ 1349 016c 50554552 		.ascii	"PUERTO_CAN_1_ReceiveMsg\000"
+ 1349      544F5F43 
+ 1349      414E5F31 
+ 1349      5F526563 
+ 1349      65697665 
+ 1350              	.LASF23:
+ 1351 0184 7278636D 		.ascii	"rxcmd\000"
+ 1351      6400
+ 1352              	.LASF46:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 38
+
+
+ 1353 018a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1353      43313120 
+ 1353      352E342E 
+ 1353      31203230 
+ 1353      31363036 
+ 1354 01bd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1354      20726576 
+ 1354      6973696F 
+ 1354      6E203233 
+ 1354      37373135 
+ 1355 01f0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1355      66756E63 
+ 1355      74696F6E 
+ 1355      2D736563 
+ 1355      74696F6E 
+ 1356              	.LASF17:
+ 1357 0218 73697A65 		.ascii	"sizetype\000"
+ 1357      74797065 
+ 1357      00
+ 1358              	.LASF28:
+ 1359 0221 7278616D 		.ascii	"rxamrd\000"
+ 1359      726400
+ 1360              	.LASF6:
+ 1361 0228 6C6F6E67 		.ascii	"long long int\000"
+ 1361      206C6F6E 
+ 1361      6720696E 
+ 1361      7400
+ 1362              	.LASF47:
+ 1363 0236 47656E65 		.ascii	"Generated_Source\\PSoC5\\PUERTO_CAN_1_TX_RX_func.c\000"
+ 1363      72617465 
+ 1363      645F536F 
+ 1363      75726365 
+ 1363      5C50536F 
+ 1364              	.LASF45:
+ 1365 0267 72784D61 		.ascii	"rxMailbox\000"
+ 1365      696C626F 
+ 1365      7800
+ 1366              	.LASF42:
+ 1367 0271 50554552 		.ascii	"PUERTO_CAN_1_SendMsg0\000"
+ 1367      544F5F43 
+ 1367      414E5F31 
+ 1367      5F53656E 
+ 1367      644D7367 
+ 1368              	.LASF20:
+ 1369 0287 50554552 		.ascii	"PUERTO_CAN_1_DATA_BYTES\000"
+ 1369      544F5F43 
+ 1369      414E5F31 
+ 1369      5F444154 
+ 1369      415F4259 
+ 1370              	.LASF43:
+ 1371 029f 50554552 		.ascii	"PUERTO_CAN_1_TxCancel\000"
+ 1371      544F5F43 
+ 1371      414E5F31 
+ 1371      5F547843 
+ 1371      616E6365 
+ 1372              	.LASF4:
+ 1373 02b5 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRGKPBk.s 			page 39
+
+
+ 1373      20696E74 
+ 1373      00
+ 1374              	.LASF34:
+ 1375 02be 50554552 		.ascii	"PUERTO_CAN_1_TX_STRUCT\000"
+ 1375      544F5F43 
+ 1375      414E5F31 
+ 1375      5F54585F 
+ 1375      53545255 
+ 1376              	.LASF16:
+ 1377 02d5 6C6F6E67 		.ascii	"long double\000"
+ 1377      20646F75 
+ 1377      626C6500 
+ 1378              	.LASF0:
+ 1379 02e1 7369676E 		.ascii	"signed char\000"
+ 1379      65642063 
+ 1379      68617200 
+ 1380              	.LASF33:
+ 1381 02ed 74786461 		.ascii	"txdata\000"
+ 1381      746100
+ 1382              	.LASF49:
+ 1383 02f4 50554552 		.ascii	"PUERTO_CAN_1_ReceiveMsg0\000"
+ 1383      544F5F43 
+ 1383      414E5F31 
+ 1383      5F526563 
+ 1383      65697665 
+ 1384              	.LASF18:
+ 1385 030d 50554552 		.ascii	"PUERTO_CAN_1_DATA_BYTES_MSG\000"
+ 1385      544F5F43 
+ 1385      414E5F31 
+ 1385      5F444154 
+ 1385      415F4259 
+ 1386              	.LASF41:
+ 1387 0329 50554552 		.ascii	"PUERTO_CAN_1_SendMsg\000"
+ 1387      544F5F43 
+ 1387      414E5F31 
+ 1387      5F53656E 
+ 1387      644D7367 
+ 1388              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,38 @@
+net ClockBlock_BUS_CLK
+	term   ":clockblockcell.clk_bus_glb"
+	switch ":clockblockcell.clk_bus_glb==>:interrupt_16.clock"
+	term   ":interrupt_16.clock"
+end ClockBlock_BUS_CLK
+net Net_11
+	term   ":ioport12:pin4.fb"
+	switch ":ioport12:pin4.fb==>Stub-:dsiswitch_top@[DSI=(0,5)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,5)][side=top]:dsihc_top:v18"
+	switch "OStub-:dsiswitch_top@[DSI=(0,5)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,5)][side=top]:dsihc_top:v18"
+	switch ":dsiswitch_top@[DSI=(0,5)][side=top]:dsihc_top:18,13"
+	switch ":hvswitch@[UDB=(0,4)][side=left]:hseg_13_b"
+	switch ":hvswitch@[UDB=(0,3)][side=left]:hseg_13_b"
+	switch ":hvswitch@[UDB=(0,2)][side=left]:hseg_13_b"
+	switch ":hvswitch@[UDB=(0,1)][side=left]:hseg_13_b"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:hseg_13_b"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:122,13_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v122+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v124+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v126"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v122+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v124+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v126==>:cancell.can_rx"
+	term   ":cancell.can_rx"
+end Net_11
+net Net_12
+	term   ":cancell.can_tx"
+	switch ":cancell.can_tx==>Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v24+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v26"
+	switch "OStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v24+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v26"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:24,18"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:121,18_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v117+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v119+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v121"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v117+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v119+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v121==>:ioport12:inputs2_mux.in_3"
+	switch ":ioport12:inputs2_mux.pin5__pin_input==>:ioport12:pin5.pin_input"
+	term   ":ioport12:pin5.pin_input"
+end Net_12
+net Net_8
+	term   ":cancell.interrupt"
+	switch ":cancell.interrupt==>Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v28+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v30"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v28+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v30==>:interrupt_idmux_16.in_0"
+	switch ":interrupt_idmux_16.interrupt_idmux_16__out==>:interrupt_16.interrupt"
+	term   ":interrupt_16.interrupt"
+end Net_8
