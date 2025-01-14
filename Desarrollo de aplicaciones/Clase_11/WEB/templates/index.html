@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Flask App</title>
+</head>
+<body>
+    <h1>Seleccione un archivo para analizar</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv, .tab">
+        <button type="submit">Analizar</button>
+    </form>
+</body>
+</html>
