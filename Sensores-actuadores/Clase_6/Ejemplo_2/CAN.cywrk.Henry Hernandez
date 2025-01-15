@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CAN\NODO_2\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CAN\NODO_2">
 <ExpandedNodeIds>
 <v>CAN</v>
 <v>CAN\NODO_1</v>
@@ -32,7 +32,6 @@
 <v>CAN\NODO_1\Source Files\main.c</v>
 <v>CAN\NODO_1\Generated_Source\PSoC5</v>
 <v>CAN\NODO_1\Generated_Source\PSoC5\CAN</v>
-<v>CAN\NODO_2</v>
 <v>CAN\NODO_2\TopDesign</v>
 <v>CAN\NODO_2\NODO_2.cydwr</v>
 <v>CAN\NODO_2\NODO_2.cydwr\Pins</v>
@@ -62,24 +61,6 @@
 <v>CAN\NODO_1\Source Files\main.c</v>
 <v>CAN\NODO_1\Generated_Source</v>
 <v>CAN\NODO_2</v>
-<v>CAN\NODO_2\TopDesign</v>
-<v>CAN\NODO_2\NODO_2.cydwr</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Pins</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Analog</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Clocks</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Interrupts</v>
-<v>CAN\NODO_2\NODO_2.cydwr\DMA</v>
-<v>CAN\NODO_2\NODO_2.cydwr\System</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Directives</v>
-<v>CAN\NODO_2\NODO_2.cydwr\Flash Security</v>
-<v>CAN\NODO_2\NODO_2.cydwr\EEPROM</v>
-<v>CAN\NODO_2\Header Files</v>
-<v>CAN\NODO_2\Header Files\cyapicallbacks.h</v>
-<v>CAN\NODO_2\Source Files</v>
-<v>CAN\NODO_2\Source Files\main.c</v>
-<v>CAN\NODO_2\Generated_Source</v>
-<v>CAN\NODO_2\Generated_Source\PSoC5</v>
-<v>CAN\NODO_2\Generated_Source\PSoC5\CAN</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -196,8 +177,6 @@
 <v>CAN\NODO_1\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>CAN\NODO_1\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
 <v>CAN\NODO_1\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>CAN\NODO_1\CortexM3\ARM_GCC_541\Debug\Listing Files\RX.lst</v>
-<v>CAN\NODO_1\CortexM3\ARM_GCC_541\Debug\Listing Files\TX.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -272,7 +251,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="934, 523" SelectedTabbedMdiWindow="81739803-756d-4369-9092-828f8c3baced"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_1.cydsn\main.c" Guid="81739803-756d-4369-9092-828f8c3baced" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_1.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="ab0c7e0b-6429-4fed-9654-0780d68f2aab" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_2.cydsn\main.c" Guid="71789908-e20f-4f28-b41e-4c5259b0976d" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_2.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="3f83e977-437b-43ef-b493-ceaa212ebd6e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="870, 487" SelectedTabbedMdiWindow="ab0c7e0b-6429-4fed-9654-0780d68f2aab"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f0254bec-6f50-4ab1-b8c0-0b5a150c461a" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_1.cydsn\main.c" Guid="81739803-756d-4369-9092-828f8c3baced" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_1.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="ab0c7e0b-6429-4fed-9654-0780d68f2aab" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_2.cydsn\main.c" Guid="71789908-e20f-4f28-b41e-4c5259b0976d" /><DocumentWindow Key="D:\GitHub\Alumnos\Sensores-actuadores\Clase_6\Ejemplo_2\NODO_2.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="3f83e977-437b-43ef-b493-ceaa212ebd6e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
