@@ -4,11 +4,11 @@
     "description": "Este es un API usando express",
     "main": "servidor.js",
     "scripts": {
-      "start": "node servidor.js"
+        "start": "node servidor.js"
     },
     "dependencies": {
-      "express": "^4.17.1",
-      "mysql2": "^2.2.5"
+        "api": "file:",
+        "express": "^4.17.1",
+        "mysql2": "^2.2.5"
     }
-  }
-  
+}
