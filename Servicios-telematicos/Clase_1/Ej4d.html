@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar y Ocultar Texto</title>
+</head>
+<body>
+
+    <h1>Mostrar y Ocultar Texto</h1>
+    <p id="texto" style="display: none;">Este es un texto oculto.</p>
+    <button onclick="toggleTexto()">Mostrar / Ocultar</button>
+
+    <script>
+        function toggleTexto() {
+            let elemento = document.getElementById("texto");
+            if (elemento.style.display === "none") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
