@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones en JavaScript</title>
+</head>
+<body>
+
+    <h1>Conversión de Números y Fechas en JavaScript</h1>
+
+    <!-- Formulario para ingresar un número -->
+    <form id="formularioNumero">
+        <label for="numero">Ingresa un número:</label>
+        <input type="text" id="numero" name="numero">
+        <button type="button" onclick="convertirNumero()">Convertir</button>
+    </form>
+    <p id="resultadoNumero"></p>
+
+    <!-- Formulario para ingresar una fecha -->
+    <form id="formularioFecha">
+        <label for="fecha">Ingresa una fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+        <button type="button" onclick="convertirFecha()">Convertir</button>
+    </form>
+    <p id="resultadoFecha"></p>
+
+    <script>
+        // Función para convertir el número ingresado
+        function convertirNumero() {
+            let numeroIngresado = document.getElementById("numero").value;
+            
+            // Convertir a número
+            let numeroConvertido = Number(numeroIngresado);
+
+            // Verificar si es un número válido
+            if (isNaN(numeroConvertido)) {
+                document.getElementById("resultadoNumero").innerHTML = "Por favor, ingresa un número válido.";
+            } else {
+                // Mostrar el número convertido y operaciones
+                document.getElementById("resultadoNumero").innerHTML = 
+                    "Número ingresado: " + numeroConvertido + "<br>" +
+                    "Doble: " + (numeroConvertido * 2) + "<br>" +
+                    "Mitad: " + (numeroConvertido / 2) + "<br>" +
+                    "Redondeado: " + Math.round(numeroConvertido);
+            }
+        }
+
+        // Función para convertir la fecha ingresada
+        function convertirFecha() {
+            let fechaIngresada = document.getElementById("fecha").value;
+            
+            // Convertir la fecha en un objeto Date
+            let fechaConvertida = new Date(fechaIngresada);
+
+            // Verificar si la fecha es válida
+            if (isNaN(fechaConvertida.getTime())) {
+                document.getElementById("resultadoFecha").innerHTML = "Por favor, ingresa una fecha válida.";
+            } else {
+                // Formatear la fecha
+                let opcionesFormato = { year: 'numeric', month: 'long', day: 'numeric' };
+                let fechaFormateada = fechaConvertida.toLocaleDateString('es-ES', opcionesFormato);
+
+                // Mostrar resultados
+                document.getElementById("resultadoFecha").innerHTML = 
+                    "Fecha ingresada: " + fechaFormateada + "<br>" +
+                    "Año: " + fechaConvertida.getFullYear() + "<br>" +
+                    "Mes: " + (fechaConvertida.getMonth() + 1) + "<br>" +
+                    "Día: " + fechaConvertida.getDate();
+            }
+        }
+    </script>
+
+</body>
+</html>

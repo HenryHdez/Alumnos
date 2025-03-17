@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Variables y Control de Flujo en JavaScript</title>
+</head>
+<body>
+
+    <h1>Ejemplo de Variables y Control de Flujo en JavaScript</h1>
+
+    <!-- Botón para ejecutar los ejemplos en la consola -->
+    <button onclick="ejecutarEjemplos()">Ejecutar Ejemplos</button>
+
+    <script>
+        function ejecutarEjemplos() {
+            console.log("==== Tipos de Variables ====");
+
+            // 1️⃣ Declaración de variables en JavaScript
+
+            // var (Ámbito global o de función, se puede redeclarar)
+            var nombre = "Juan";
+            console.log("Var nombre:", nombre);
+
+            // let (Ámbito de bloque, no se puede redeclarar en el mismo ámbito)
+            let edad = 25;
+            edad = 30; // Se puede reasignar
+            console.log("Let edad:", edad);
+
+            // const (No se puede reasignar)
+            const pais = "Colombia";
+            console.log("Const país:", pais);
+            
+            // Intentar reasignar una constante dará un error:
+            // pais = "México"; ❌ Esto generará un error
+
+            console.log("\n==== Tipos de Datos ====");
+            let numero = 42;         // Número
+            let texto = "Hola";      // Cadena de texto
+            let booleano = true;     // Booleano
+            let arreglo = [1, 2, 3]; // Arreglo
+            let objeto = { nombre: "Ana", edad: 22 }; // Objeto
+
+            console.log("Número:", numero);
+            console.log("Texto:", texto);
+            console.log("Booleano:", booleano);
+            console.log("Arreglo:", arreglo);
+            console.log("Objeto:", objeto);
+
+            console.log("\n==== Estructuras de Control de Flujo ====");
+
+            // 2️⃣ Condicional if-else
+            let temperatura = 30;
+            if (temperatura > 25) {
+                console.log("Hace calor");
+            } else {
+                console.log("El clima es agradable");
+            }
+
+            // 3️⃣ Switch case
+            let dia = "lunes";
+            switch (dia) {
+                case "lunes":
+                    console.log("Es inicio de semana");
+                    break;
+                case "viernes":
+                    console.log("Es casi fin de semana");
+                    break;
+                default:
+                    console.log("Es un día normal");
+            }
+
+            console.log("\n==== Bucles ====");
+
+            // 4️⃣ Bucle for
+            for (let i = 0; i < 5; i++) {
+                console.log("Iteración:", i);
+            }
+
+            // 5️⃣ Bucle while
+            let contador = 0;
+            while (contador < 3) {
+                console.log("Contador en while:", contador);
+                contador++;
+            }
+
+            // 6️⃣ Bucle do-while
+            let numeroWhile = 0;
+            do {
+                console.log("Número en do-while:", numeroWhile);
+                numeroWhile++;
+            } while (numeroWhile < 3);
+
+            console.log("\n==== Funciones en JavaScript ====");
+
+            // 7️⃣ Función tradicional
+            function saludar(nombre) {
+                return "Hola, " + nombre;
+            }
+            console.log(saludar("Carlos"));
+
+            // 8️⃣ Función de flecha
+            const multiplicar = (a, b) => a * b;
+            console.log("Multiplicación:", multiplicar(5, 3));
+        }
+    </script>
+
+</body>
+</html>
