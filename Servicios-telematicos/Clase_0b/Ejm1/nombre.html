@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guardar Nombre</title>
+</head>
+<body>
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button onclick="guardarNombre()">Guardar</button>
+  <p id="saludo"></p>
+
+  <script>
+    function guardarNombre() {
+      const nombre = document.getElementById("nombre").value;
+      //Almacenar elemento
+      localStorage.setItem("etiqueta", nombre);
+      mostrarNombre();
+    }
+
+    function mostrarNombre() {
+      const nombre = localStorage.getItem("etiqueta");
+      if (nombre) {
+        //Recuerde que los `(Backticks) asocian variables con el texto.
+        document.getElementById("saludo").innerText = `Hola, ${nombre}`;
+      }
+    }
+
+    // Mostrar al cargar la página
+    window.onload = mostrarNombre;
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!--
+localStorage guarda los datos en el navegador web, en una base de datos interna del navegador, 
+asociada al dominio de la página (como tupagina.com o localhost).
+Guardar (clave, valor):
+localStorage.setItem("usuario", "Henry");
+Leer datos:
+let dato = localStorage.getItem("clave");
+Borrar:
+localStorage.removeItem("clave");
+Borrar todo:
+localStorage.clear();
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Persistente</title>
+</head>
+<body>
+  <h2>Contador: <span id="contador">0</span></h2>
+  <button onclick="incrementar()">+1</button>
+  <button onclick="reiniciar()">Reiniciar</button>
+
+  <script>
+    let contador = localStorage.getItem("contador") || 0;
+    document.getElementById("contador").textContent = contador;
+
+    function incrementar() {
+      contador++;
+      document.getElementById("contador").textContent = contador;
+      localStorage.setItem("contador", contador);
+    }
+
+    function reiniciar() {
+      contador = 0;
+      document.getElementById("contador").textContent = contador;
+      localStorage.setItem("contador", contador);
+    }
+  </script>
+</body>
+</html>

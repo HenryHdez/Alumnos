@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exportar JSON</title>
+</head>
+<body>
+  <h2>Exportar datos como JSON</h2>
+
+  <button onclick="guardarDatos()">Guardar en localStorage</button>
+  <button onclick="exportarJSON()">Descargar archivo .json</button>
+
+  <script>
+    function guardarDatos() {
+      const tareas = [
+        { id: 1, descripcion: "Estudiar JavaScript", completado: false },
+        { id: 2, descripcion: "Hacer ejercicio", completado: true }
+      ];
+      //JSON.stringify Convierte un objeto JavaScript (o array) en un texto en formato JSON (string).
+      localStorage.setItem("misTareas", JSON.stringify(tareas));
+      alert("Tareas guardadas en localStorage");
+    }
+
+    function exportarJSON() {
+      const data = localStorage.getItem("misTareas");
+
+      if (!data) {
+        alert("No hay datos en localStorage");
+        return;
+      }
+    /*
+        Blob significa Binary Large Object (objeto binario grande).
+        En JavaScript, un Blob es una representación de datos binarios 
+        crudos que se usan para manipular archivos directamente en el navegador 
+        (como textos, imágenes, PDFs, audios, etc.).
+    */
+      // Crear un blob con el contenido JSON
+      const blob = new Blob([data], { type: "application/json" });
+      // Crear un enlace de descarga
+      const enlace = document.createElement("a");
+      enlace.href = URL.createObjectURL(blob);
+      enlace.download = "tareas.json";
+      // Simular un clic
+      enlace.click();
+      // Liberar el objeto
+      URL.revokeObjectURL(enlace.href);
+    }
+  </script>
+</body>
+</html>

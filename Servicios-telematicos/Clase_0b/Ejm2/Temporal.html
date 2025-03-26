@@ -1,0 +1,59 @@
+<!--
+sessionStorage permite guardar datos temporalmente en el 
+navegador durante una sola sesión del usuario (una pestaña abierta).
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>sessionStorage Demo</title>
+</head>
+<body>
+  <h2>Bienvenido</h2>
+
+  <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+  <button onclick="guardarNombre()">Guardar nombre</button>
+  <button onclick="borrarNombre()">Borrar nombre</button>
+  <button onclick="verificarNombre()">¿Está guardado?</button>
+
+  <p id="mensaje"></p>
+
+  <script>
+    function guardarNombre() {
+      const nombre = document.getElementById("nombre").value;
+      if (nombre.trim() !== "") {
+        //Almacenar mientras la pestañe este activa
+        sessionStorage.setItem("usuario", nombre);
+        mostrarMensaje();
+      } else {
+        alert("Por favor ingresa un nombre válido.");
+      }
+    }
+
+    function borrarNombre() {
+      sessionStorage.removeItem("usuario");
+      document.getElementById("mensaje").innerText = "El nombre ha sido eliminado de la sesión.";
+    }
+
+    function verificarNombre() {
+      const nombre = sessionStorage.getItem("usuario");
+      if (nombre) {
+        alert(`¡Sí! El nombre "${nombre}" sigue guardado en sessionStorage.`);
+      } else {
+        alert("No hay ningún nombre guardado en sessionStorage.");
+      }
+    }
+
+    function mostrarMensaje() {
+      const nombre = sessionStorage.getItem("usuario");
+      if (nombre) {
+        document.getElementById("mensaje").innerText = `Hola, ${nombre}! Bienvenido a la sesión.`;
+      }
+    }
+
+    // Mostrar el mensaje automáticamente al recargar
+    window.onload = mostrarMensaje;
+  </script>
+</body>
+</html>
+
