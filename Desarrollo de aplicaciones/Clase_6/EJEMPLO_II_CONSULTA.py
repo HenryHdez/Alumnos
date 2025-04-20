@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Importar librería del conector de mysql"""
-import mysql.connector as mysql
+import pymysql as mysql
 """Crear variables con los parámetros de acceso a la BD"""
 ORIGEN="localhost"
 USUARIO="root"

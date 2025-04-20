@@ -13,7 +13,7 @@ function App() {
   //<GuardarMapa></GuardarMapa>
   return (
     <div>
-      <GuardarMapa></GuardarMapa>
+      <BasicMap></BasicMap>
     </div>
   );
 }

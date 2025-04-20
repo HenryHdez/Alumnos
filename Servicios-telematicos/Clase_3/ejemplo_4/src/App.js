@@ -11,8 +11,7 @@ function App() {
   //<Slider/>
   return (
     <div className="App">
-      <Formulario onSubmit={setDatosFormulario} />
-      <Visualizacion datos={datosFormulario} />
+      <Slider/>
     </div>
   );
 }
