@@ -1,0 +1,11 @@
+# Ej5
+# 2025-07-11 03:39:23Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_io "Salida(0)" iocell 15 1
+set_location "\VDAC:viDAC8\" vidaccell -1 -1 3

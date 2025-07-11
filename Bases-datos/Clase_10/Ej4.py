@@ -9,7 +9,7 @@ iris = load_iris()
 X = iris.data[:, :2]
 
 # Entrenar el modelo de clustering con KMeans
-kmeans = KMeans(n_clusters=10, random_state=42)
+kmeans = KMeans(n_clusters=3, random_state=42)
 kmeans.fit(X)
 
 # Obtener los centroides y las etiquetas de cada punto

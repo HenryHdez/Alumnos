@@ -1,0 +1,7 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "\VDAC:viDAC8\" vidaccell -1 -1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+# Note: port 15 is the logical name for port 8
+set_io "Salida(0)" iocell 15 1

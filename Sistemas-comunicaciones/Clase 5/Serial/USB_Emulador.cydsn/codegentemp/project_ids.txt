@@ -1,0 +1,9 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|42c5ad1a-f3d3-49be-ba13-fd57f3a5a2b4
+C:\Users\Henry\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|baf8d598-821f-4629-9fc3-079f3a362acc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|86137748-1333-4872-9389-786363ad0ac4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a23c35bd-014f-4cc3-9aa6-9016e8823008
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6e114911-f454-44a5-b638-2524e31481f4
+C:\Users\Henry\Documents\PSoC Creator\Serial\Emisor.cydsn\Emisor.cyprj|03d55185-0d1a-4fbf-82c2-b04e5e615309
+C:\Users\Henry\Documents\PSoC Creator\Serial\Receptor.cydsn\Receptor.cyprj|d8ce3e33-82a0-4d14-ac0c-390a0d2dfde3
+C:\Users\Henry\Documents\PSoC Creator\Serial\Receptor_Int.cydsn\Receptor_Int.cyprj|34001dbc-a4b0-4fc2-a622-03c7d7bff109
+C:\Users\Henry\Documents\PSoC Creator\Serial\USB_Emulador.cydsn\USB_Emulador.cyprj|d52530d6-66d5-4ffb-88cf-ca66006e09f4

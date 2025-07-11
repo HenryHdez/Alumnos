@@ -1,0 +1,989 @@
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_dmul
+  21              		.global	__aeabi_ddiv
+  22              		.global	__aeabi_d2f
+  23              		.global	__aeabi_f2d
+  24              		.section	.text.main,"ax",%progbits
+  25              		.align	2
+  26              		.global	main
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	main, %function
+  30              	main:
+  31              	.LFB64:
+  32              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** //Manejo de arreglos
+   3:main.c        **** #include <stdio.h>
+   4:main.c        **** 
+   5:main.c        **** int main(void)
+   6:main.c        **** {
+  33              		.loc 1 6 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 16
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+  37 0000 30B5     		push	{r4, r5, lr}
+  38              		.cfi_def_cfa_offset 12
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 85B0     		sub	sp, sp, #20
+  43              		.cfi_def_cfa_offset 32
+   7:main.c        ****     uint16 Valor_ADC;
+   8:main.c        ****     float voltaje;
+   9:main.c        ****     char buffer[16]; 
+  10:main.c        ****     CyGlobalIntEnable;
+  44              		.loc 1 10 0
+  45              		.syntax unified
+  46              	@ 10 "main.c" 1
+  47 0004 62B6     		CPSIE   i
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 2
+
+
+  48              	@ 0 "" 2
+  11:main.c        ****     // Inicialización de periféricos
+  12:main.c        ****     ADC_Start();
+  49              		.loc 1 12 0
+  50              		.thumb
+  51              		.syntax unified
+  52 0006 FFF7FEFF 		bl	ADC_Start
+  53              	.LVL0:
+  13:main.c        ****     ADC_StartConvert();
+  54              		.loc 1 13 0
+  55 000a FFF7FEFF 		bl	ADC_StartConvert
+  56              	.LVL1:
+  14:main.c        ****     LCD_Start();
+  57              		.loc 1 14 0
+  58 000e FFF7FEFF 		bl	LCD_Start
+  59              	.LVL2:
+  60              	.L2:
+  15:main.c        **** 
+  16:main.c        ****     for(;;)
+  17:main.c        ****     {
+  18:main.c        ****         //Esperar y convertir
+  19:main.c        ****         ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);   
+  61              		.loc 1 19 0 discriminator 1
+  62 0012 0020     		movs	r0, #0
+  63 0014 FFF7FEFF 		bl	ADC_IsEndConversion
+  64              	.LVL3:
+  20:main.c        ****         Valor_ADC = ADC_GetResult16();              
+  65              		.loc 1 20 0 discriminator 1
+  66 0018 FFF7FEFF 		bl	ADC_GetResult16
+  67              	.LVL4:
+  68 001c 84B2     		uxth	r4, r0
+  69              	.LVL5:
+  21:main.c        ****         
+  22:main.c        ****         // Manejo de valores
+  23:main.c        ****         voltaje = (Valor_ADC * 5.0) / 4095.0;
+  70              		.loc 1 23 0 discriminator 1
+  71 001e 2046     		mov	r0, r4
+  72 0020 FFF7FEFF 		bl	__aeabi_i2d
+  73              	.LVL6:
+  74 0024 0022     		movs	r2, #0
+  75 0026 1A4B     		ldr	r3, .L4+8
+  76 0028 FFF7FEFF 		bl	__aeabi_dmul
+  77              	.LVL7:
+  78 002c 16A3     		adr	r3, .L4
+  79 002e D3E90023 		ldrd	r2, [r3]
+  80 0032 FFF7FEFF 		bl	__aeabi_ddiv
+  81              	.LVL8:
+  82 0036 FFF7FEFF 		bl	__aeabi_d2f
+  83              	.LVL9:
+  84 003a 0546     		mov	r5, r0
+  85              	.LVL10:
+  24:main.c        ****         LCD_Position(0, 0);
+  86              		.loc 1 24 0 discriminator 1
+  87 003c 0021     		movs	r1, #0
+  88 003e 0846     		mov	r0, r1
+  89              	.LVL11:
+  90 0040 FFF7FEFF 		bl	LCD_Position
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 3
+
+
+  91              	.LVL12:
+  25:main.c        ****         LCD_PrintString("ADC:         ");
+  92              		.loc 1 25 0 discriminator 1
+  93 0044 1348     		ldr	r0, .L4+12
+  94 0046 FFF7FEFF 		bl	LCD_PrintString
+  95              	.LVL13:
+  26:main.c        ****         LCD_Position(0, 5);
+  96              		.loc 1 26 0 discriminator 1
+  97 004a 0521     		movs	r1, #5
+  98 004c 0020     		movs	r0, #0
+  99 004e FFF7FEFF 		bl	LCD_Position
+ 100              	.LVL14:
+  27:main.c        ****         LCD_PrintDecUint16(Valor_ADC);
+ 101              		.loc 1 27 0 discriminator 1
+ 102 0052 2046     		mov	r0, r4
+ 103 0054 FFF7FEFF 		bl	LCD_PrintU32Number
+ 104              	.LVL15:
+  28:main.c        ****         //Llenar el buffer y poner 2 digitos
+  29:main.c        ****         sprintf(buffer, "V: %.2f V     ", voltaje); 
+ 105              		.loc 1 29 0 discriminator 1
+ 106 0058 2846     		mov	r0, r5
+ 107 005a FFF7FEFF 		bl	__aeabi_f2d
+ 108              	.LVL16:
+ 109 005e 0246     		mov	r2, r0
+ 110 0060 0B46     		mov	r3, r1
+ 111 0062 0D49     		ldr	r1, .L4+16
+ 112 0064 6846     		mov	r0, sp
+ 113 0066 FFF7FEFF 		bl	sprintf
+ 114              	.LVL17:
+  30:main.c        ****         LCD_Position(1, 0);
+ 115              		.loc 1 30 0 discriminator 1
+ 116 006a 0021     		movs	r1, #0
+ 117 006c 0120     		movs	r0, #1
+ 118 006e FFF7FEFF 		bl	LCD_Position
+ 119              	.LVL18:
+  31:main.c        ****         LCD_PrintString(buffer);
+ 120              		.loc 1 31 0 discriminator 1
+ 121 0072 6846     		mov	r0, sp
+ 122 0074 FFF7FEFF 		bl	LCD_PrintString
+ 123              	.LVL19:
+  32:main.c        **** 
+  33:main.c        ****         CyDelay(500); 
+ 124              		.loc 1 33 0 discriminator 1
+ 125 0078 4FF4FA70 		mov	r0, #500
+ 126 007c FFF7FEFF 		bl	CyDelay
+ 127              	.LVL20:
+ 128 0080 C7E7     		b	.L2
+ 129              	.L5:
+ 130 0082 00BFAFF3 		.align	3
+ 130      0080
+ 131              	.L4:
+ 132 0088 00000000 		.word	0
+ 133 008c 00FEAF40 		.word	1085275648
+ 134 0090 00001440 		.word	1075052544
+ 135 0094 00000000 		.word	.LC0
+ 136 0098 10000000 		.word	.LC1
+ 137              		.cfi_endproc
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 4
+
+
+ 138              	.LFE64:
+ 139              		.size	main, .-main
+ 140              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 141              		.align	2
+ 142              	.LC0:
+ 143 0000 4144433A 		.ascii	"ADC:         \000"
+ 143      20202020 
+ 143      20202020 
+ 143      2000
+ 144 000e 0000     		.space	2
+ 145              	.LC1:
+ 146 0010 563A2025 		.ascii	"V: %.2f V     \000"
+ 146      2E326620 
+ 146      56202020 
+ 146      202000
+ 147              		.text
+ 148              	.Letext0:
+ 149              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 150              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 151              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 152              		.file 5 "Generated_Source\\PSoC5/ADC.h"
+ 153              		.file 6 "Generated_Source\\PSoC5/LCD.h"
+ 154              		.file 7 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 155              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 156              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
+ 157              		.section	.debug_info,"",%progbits
+ 158              	.Ldebug_info0:
+ 159 0000 6C020000 		.4byte	0x26c
+ 160 0004 0400     		.2byte	0x4
+ 161 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 162 000a 04       		.byte	0x4
+ 163 000b 01       		.uleb128 0x1
+ 164 000c 39000000 		.4byte	.LASF30
+ 165 0010 0C       		.byte	0xc
+ 166 0011 B7010000 		.4byte	.LASF31
+ 167 0015 C3010000 		.4byte	.LASF32
+ 168 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 169 001d 00000000 		.4byte	0
+ 170 0021 00000000 		.4byte	.Ldebug_line0
+ 171 0025 02       		.uleb128 0x2
+ 172 0026 01       		.byte	0x1
+ 173 0027 06       		.byte	0x6
+ 174 0028 1D020000 		.4byte	.LASF0
+ 175 002c 02       		.uleb128 0x2
+ 176 002d 01       		.byte	0x1
+ 177 002e 08       		.byte	0x8
+ 178 002f 2B000000 		.4byte	.LASF1
+ 179 0033 02       		.uleb128 0x2
+ 180 0034 02       		.byte	0x2
+ 181 0035 05       		.byte	0x5
+ 182 0036 F7010000 		.4byte	.LASF2
+ 183 003a 02       		.uleb128 0x2
+ 184 003b 02       		.byte	0x2
+ 185 003c 07       		.byte	0x7
+ 186 003d EC000000 		.4byte	.LASF3
+ 187 0041 03       		.uleb128 0x3
+ 188 0042 00000000 		.4byte	.LASF9
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 5
+
+
+ 189 0046 02       		.byte	0x2
+ 190 0047 3F       		.byte	0x3f
+ 191 0048 4C000000 		.4byte	0x4c
+ 192 004c 02       		.uleb128 0x2
+ 193 004d 04       		.byte	0x4
+ 194 004e 05       		.byte	0x5
+ 195 004f 08020000 		.4byte	.LASF4
+ 196 0053 02       		.uleb128 0x2
+ 197 0054 04       		.byte	0x4
+ 198 0055 07       		.byte	0x7
+ 199 0056 1C010000 		.4byte	.LASF5
+ 200 005a 02       		.uleb128 0x2
+ 201 005b 08       		.byte	0x8
+ 202 005c 05       		.byte	0x5
+ 203 005d A9010000 		.4byte	.LASF6
+ 204 0061 02       		.uleb128 0x2
+ 205 0062 08       		.byte	0x8
+ 206 0063 07       		.byte	0x7
+ 207 0064 57010000 		.4byte	.LASF7
+ 208 0068 04       		.uleb128 0x4
+ 209 0069 04       		.byte	0x4
+ 210 006a 05       		.byte	0x5
+ 211 006b 696E7400 		.ascii	"int\000"
+ 212 006f 02       		.uleb128 0x2
+ 213 0070 04       		.byte	0x4
+ 214 0071 07       		.byte	0x7
+ 215 0072 4A010000 		.4byte	.LASF8
+ 216 0076 03       		.uleb128 0x3
+ 217 0077 98010000 		.4byte	.LASF10
+ 218 007b 03       		.byte	0x3
+ 219 007c 2C       		.byte	0x2c
+ 220 007d 41000000 		.4byte	0x41
+ 221 0081 05       		.uleb128 0x5
+ 222 0082 43010000 		.4byte	.LASF11
+ 223 0086 04       		.byte	0x4
+ 224 0087 E901     		.2byte	0x1e9
+ 225 0089 3A000000 		.4byte	0x3a
+ 226 008d 02       		.uleb128 0x2
+ 227 008e 04       		.byte	0x4
+ 228 008f 04       		.byte	0x4
+ 229 0090 1B000000 		.4byte	.LASF12
+ 230 0094 02       		.uleb128 0x2
+ 231 0095 08       		.byte	0x8
+ 232 0096 04       		.byte	0x4
+ 233 0097 0A000000 		.4byte	.LASF13
+ 234 009b 02       		.uleb128 0x2
+ 235 009c 01       		.byte	0x1
+ 236 009d 08       		.byte	0x8
+ 237 009e BE010000 		.4byte	.LASF14
+ 238 00a2 02       		.uleb128 0x2
+ 239 00a3 04       		.byte	0x4
+ 240 00a4 07       		.byte	0x7
+ 241 00a5 A0010000 		.4byte	.LASF15
+ 242 00a9 02       		.uleb128 0x2
+ 243 00aa 08       		.byte	0x8
+ 244 00ab 04       		.byte	0x4
+ 245 00ac 11020000 		.4byte	.LASF16
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 6
+
+
+ 246 00b0 06       		.uleb128 0x6
+ 247 00b1 2E010000 		.4byte	.LASF33
+ 248 00b5 01       		.byte	0x1
+ 249 00b6 05       		.byte	0x5
+ 250 00b7 68000000 		.4byte	0x68
+ 251 00bb 00000000 		.4byte	.LFB64
+ 252 00bf 9C000000 		.4byte	.LFE64-.LFB64
+ 253 00c3 01       		.uleb128 0x1
+ 254 00c4 9C       		.byte	0x9c
+ 255 00c5 E0010000 		.4byte	0x1e0
+ 256 00c9 07       		.uleb128 0x7
+ 257 00ca 11000000 		.4byte	.LASF17
+ 258 00ce 01       		.byte	0x1
+ 259 00cf 07       		.byte	0x7
+ 260 00d0 81000000 		.4byte	0x81
+ 261 00d4 01       		.uleb128 0x1
+ 262 00d5 54       		.byte	0x54
+ 263 00d6 08       		.uleb128 0x8
+ 264 00d7 39020000 		.4byte	.LASF18
+ 265 00db 01       		.byte	0x1
+ 266 00dc 08       		.byte	0x8
+ 267 00dd 8D000000 		.4byte	0x8d
+ 268 00e1 00000000 		.4byte	.LLST0
+ 269 00e5 07       		.uleb128 0x7
+ 270 00e6 01020000 		.4byte	.LASF19
+ 271 00ea 01       		.byte	0x1
+ 272 00eb 09       		.byte	0x9
+ 273 00ec E0010000 		.4byte	0x1e0
+ 274 00f0 02       		.uleb128 0x2
+ 275 00f1 91       		.byte	0x91
+ 276 00f2 60       		.sleb128 -32
+ 277 00f3 09       		.uleb128 0x9
+ 278 00f4 0A000000 		.4byte	.LVL0
+ 279 00f8 01020000 		.4byte	0x201
+ 280 00fc 09       		.uleb128 0x9
+ 281 00fd 0E000000 		.4byte	.LVL1
+ 282 0101 0C020000 		.4byte	0x20c
+ 283 0105 09       		.uleb128 0x9
+ 284 0106 12000000 		.4byte	.LVL2
+ 285 010a 17020000 		.4byte	0x217
+ 286 010e 0A       		.uleb128 0xa
+ 287 010f 18000000 		.4byte	.LVL3
+ 288 0113 22020000 		.4byte	0x222
+ 289 0117 21010000 		.4byte	0x121
+ 290 011b 0B       		.uleb128 0xb
+ 291 011c 01       		.uleb128 0x1
+ 292 011d 50       		.byte	0x50
+ 293 011e 01       		.uleb128 0x1
+ 294 011f 30       		.byte	0x30
+ 295 0120 00       		.byte	0
+ 296 0121 09       		.uleb128 0x9
+ 297 0122 1C000000 		.4byte	.LVL4
+ 298 0126 2D020000 		.4byte	0x22d
+ 299 012a 0A       		.uleb128 0xa
+ 300 012b 44000000 		.4byte	.LVL12
+ 301 012f 38020000 		.4byte	0x238
+ 302 0133 42010000 		.4byte	0x142
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 7
+
+
+ 303 0137 0B       		.uleb128 0xb
+ 304 0138 01       		.uleb128 0x1
+ 305 0139 50       		.byte	0x50
+ 306 013a 01       		.uleb128 0x1
+ 307 013b 30       		.byte	0x30
+ 308 013c 0B       		.uleb128 0xb
+ 309 013d 01       		.uleb128 0x1
+ 310 013e 51       		.byte	0x51
+ 311 013f 01       		.uleb128 0x1
+ 312 0140 30       		.byte	0x30
+ 313 0141 00       		.byte	0
+ 314 0142 0A       		.uleb128 0xa
+ 315 0143 4A000000 		.4byte	.LVL13
+ 316 0147 43020000 		.4byte	0x243
+ 317 014b 59010000 		.4byte	0x159
+ 318 014f 0B       		.uleb128 0xb
+ 319 0150 01       		.uleb128 0x1
+ 320 0151 50       		.byte	0x50
+ 321 0152 05       		.uleb128 0x5
+ 322 0153 03       		.byte	0x3
+ 323 0154 00000000 		.4byte	.LC0
+ 324 0158 00       		.byte	0
+ 325 0159 0A       		.uleb128 0xa
+ 326 015a 52000000 		.4byte	.LVL14
+ 327 015e 38020000 		.4byte	0x238
+ 328 0162 71010000 		.4byte	0x171
+ 329 0166 0B       		.uleb128 0xb
+ 330 0167 01       		.uleb128 0x1
+ 331 0168 50       		.byte	0x50
+ 332 0169 01       		.uleb128 0x1
+ 333 016a 30       		.byte	0x30
+ 334 016b 0B       		.uleb128 0xb
+ 335 016c 01       		.uleb128 0x1
+ 336 016d 51       		.byte	0x51
+ 337 016e 01       		.uleb128 0x1
+ 338 016f 35       		.byte	0x35
+ 339 0170 00       		.byte	0
+ 340 0171 0A       		.uleb128 0xa
+ 341 0172 58000000 		.4byte	.LVL15
+ 342 0176 4E020000 		.4byte	0x24e
+ 343 017a 85010000 		.4byte	0x185
+ 344 017e 0B       		.uleb128 0xb
+ 345 017f 01       		.uleb128 0x1
+ 346 0180 50       		.byte	0x50
+ 347 0181 02       		.uleb128 0x2
+ 348 0182 74       		.byte	0x74
+ 349 0183 00       		.sleb128 0
+ 350 0184 00       		.byte	0
+ 351 0185 0A       		.uleb128 0xa
+ 352 0186 6A000000 		.4byte	.LVL17
+ 353 018a 59020000 		.4byte	0x259
+ 354 018e A2010000 		.4byte	0x1a2
+ 355 0192 0B       		.uleb128 0xb
+ 356 0193 01       		.uleb128 0x1
+ 357 0194 50       		.byte	0x50
+ 358 0195 02       		.uleb128 0x2
+ 359 0196 7D       		.byte	0x7d
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 8
+
+
+ 360 0197 00       		.sleb128 0
+ 361 0198 0B       		.uleb128 0xb
+ 362 0199 01       		.uleb128 0x1
+ 363 019a 51       		.byte	0x51
+ 364 019b 05       		.uleb128 0x5
+ 365 019c 03       		.byte	0x3
+ 366 019d 10000000 		.4byte	.LC1
+ 367 01a1 00       		.byte	0
+ 368 01a2 0A       		.uleb128 0xa
+ 369 01a3 72000000 		.4byte	.LVL18
+ 370 01a7 38020000 		.4byte	0x238
+ 371 01ab BA010000 		.4byte	0x1ba
+ 372 01af 0B       		.uleb128 0xb
+ 373 01b0 01       		.uleb128 0x1
+ 374 01b1 50       		.byte	0x50
+ 375 01b2 01       		.uleb128 0x1
+ 376 01b3 31       		.byte	0x31
+ 377 01b4 0B       		.uleb128 0xb
+ 378 01b5 01       		.uleb128 0x1
+ 379 01b6 51       		.byte	0x51
+ 380 01b7 01       		.uleb128 0x1
+ 381 01b8 30       		.byte	0x30
+ 382 01b9 00       		.byte	0
+ 383 01ba 0A       		.uleb128 0xa
+ 384 01bb 78000000 		.4byte	.LVL19
+ 385 01bf 43020000 		.4byte	0x243
+ 386 01c3 CE010000 		.4byte	0x1ce
+ 387 01c7 0B       		.uleb128 0xb
+ 388 01c8 01       		.uleb128 0x1
+ 389 01c9 50       		.byte	0x50
+ 390 01ca 02       		.uleb128 0x2
+ 391 01cb 7D       		.byte	0x7d
+ 392 01cc 00       		.sleb128 0
+ 393 01cd 00       		.byte	0
+ 394 01ce 0C       		.uleb128 0xc
+ 395 01cf 80000000 		.4byte	.LVL20
+ 396 01d3 64020000 		.4byte	0x264
+ 397 01d7 0B       		.uleb128 0xb
+ 398 01d8 01       		.uleb128 0x1
+ 399 01d9 50       		.byte	0x50
+ 400 01da 03       		.uleb128 0x3
+ 401 01db 0A       		.byte	0xa
+ 402 01dc F401     		.2byte	0x1f4
+ 403 01de 00       		.byte	0
+ 404 01df 00       		.byte	0
+ 405 01e0 0D       		.uleb128 0xd
+ 406 01e1 9B000000 		.4byte	0x9b
+ 407 01e5 F0010000 		.4byte	0x1f0
+ 408 01e9 0E       		.uleb128 0xe
+ 409 01ea A2000000 		.4byte	0xa2
+ 410 01ee 0F       		.byte	0xf
+ 411 01ef 00       		.byte	0
+ 412 01f0 0F       		.uleb128 0xf
+ 413 01f1 0F010000 		.4byte	.LASF34
+ 414 01f5 09       		.byte	0x9
+ 415 01f6 1207     		.2byte	0x712
+ 416 01f8 FC010000 		.4byte	0x1fc
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 9
+
+
+ 417 01fc 10       		.uleb128 0x10
+ 418 01fd 76000000 		.4byte	0x76
+ 419 0201 11       		.uleb128 0x11
+ 420 0202 8E010000 		.4byte	.LASF20
+ 421 0206 8E010000 		.4byte	.LASF20
+ 422 020a 05       		.byte	0x5
+ 423 020b 34       		.byte	0x34
+ 424 020c 11       		.uleb128 0x11
+ 425 020d C7000000 		.4byte	.LASF21
+ 426 0211 C7000000 		.4byte	.LASF21
+ 427 0215 05       		.byte	0x5
+ 428 0216 D1       		.byte	0xd1
+ 429 0217 11       		.uleb128 0x11
+ 430 0218 21000000 		.4byte	.LASF22
+ 431 021c 21000000 		.4byte	.LASF22
+ 432 0220 06       		.byte	0x6
+ 433 0221 38       		.byte	0x38
+ 434 0222 11       		.uleb128 0x11
+ 435 0223 D8000000 		.4byte	.LASF23
+ 436 0227 D8000000 		.4byte	.LASF23
+ 437 022b 05       		.byte	0x5
+ 438 022c 39       		.byte	0x39
+ 439 022d 11       		.uleb128 0x11
+ 440 022e FF000000 		.4byte	.LASF24
+ 441 0232 FF000000 		.4byte	.LASF24
+ 442 0236 05       		.byte	0x5
+ 443 0237 3B       		.byte	0x3b
+ 444 0238 11       		.uleb128 0x11
+ 445 0239 6E010000 		.4byte	.LASF25
+ 446 023d 6E010000 		.4byte	.LASF25
+ 447 0241 06       		.byte	0x6
+ 448 0242 3D       		.byte	0x3d
+ 449 0243 11       		.uleb128 0x11
+ 450 0244 33010000 		.4byte	.LASF26
+ 451 0248 33010000 		.4byte	.LASF26
+ 452 024c 06       		.byte	0x6
+ 453 024d 3C       		.byte	0x3c
+ 454 024e 11       		.uleb128 0x11
+ 455 024f 7B010000 		.4byte	.LASF27
+ 456 0253 7B010000 		.4byte	.LASF27
+ 457 0257 06       		.byte	0x6
+ 458 0258 61       		.byte	0x61
+ 459 0259 11       		.uleb128 0x11
+ 460 025a 29020000 		.4byte	.LASF28
+ 461 025e 29020000 		.4byte	.LASF28
+ 462 0262 07       		.byte	0x7
+ 463 0263 E7       		.byte	0xe7
+ 464 0264 11       		.uleb128 0x11
+ 465 0265 31020000 		.4byte	.LASF29
+ 466 0269 31020000 		.4byte	.LASF29
+ 467 026d 08       		.byte	0x8
+ 468 026e 76       		.byte	0x76
+ 469 026f 00       		.byte	0
+ 470              		.section	.debug_abbrev,"",%progbits
+ 471              	.Ldebug_abbrev0:
+ 472 0000 01       		.uleb128 0x1
+ 473 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 10
+
+
+ 474 0002 01       		.byte	0x1
+ 475 0003 25       		.uleb128 0x25
+ 476 0004 0E       		.uleb128 0xe
+ 477 0005 13       		.uleb128 0x13
+ 478 0006 0B       		.uleb128 0xb
+ 479 0007 03       		.uleb128 0x3
+ 480 0008 0E       		.uleb128 0xe
+ 481 0009 1B       		.uleb128 0x1b
+ 482 000a 0E       		.uleb128 0xe
+ 483 000b 55       		.uleb128 0x55
+ 484 000c 17       		.uleb128 0x17
+ 485 000d 11       		.uleb128 0x11
+ 486 000e 01       		.uleb128 0x1
+ 487 000f 10       		.uleb128 0x10
+ 488 0010 17       		.uleb128 0x17
+ 489 0011 00       		.byte	0
+ 490 0012 00       		.byte	0
+ 491 0013 02       		.uleb128 0x2
+ 492 0014 24       		.uleb128 0x24
+ 493 0015 00       		.byte	0
+ 494 0016 0B       		.uleb128 0xb
+ 495 0017 0B       		.uleb128 0xb
+ 496 0018 3E       		.uleb128 0x3e
+ 497 0019 0B       		.uleb128 0xb
+ 498 001a 03       		.uleb128 0x3
+ 499 001b 0E       		.uleb128 0xe
+ 500 001c 00       		.byte	0
+ 501 001d 00       		.byte	0
+ 502 001e 03       		.uleb128 0x3
+ 503 001f 16       		.uleb128 0x16
+ 504 0020 00       		.byte	0
+ 505 0021 03       		.uleb128 0x3
+ 506 0022 0E       		.uleb128 0xe
+ 507 0023 3A       		.uleb128 0x3a
+ 508 0024 0B       		.uleb128 0xb
+ 509 0025 3B       		.uleb128 0x3b
+ 510 0026 0B       		.uleb128 0xb
+ 511 0027 49       		.uleb128 0x49
+ 512 0028 13       		.uleb128 0x13
+ 513 0029 00       		.byte	0
+ 514 002a 00       		.byte	0
+ 515 002b 04       		.uleb128 0x4
+ 516 002c 24       		.uleb128 0x24
+ 517 002d 00       		.byte	0
+ 518 002e 0B       		.uleb128 0xb
+ 519 002f 0B       		.uleb128 0xb
+ 520 0030 3E       		.uleb128 0x3e
+ 521 0031 0B       		.uleb128 0xb
+ 522 0032 03       		.uleb128 0x3
+ 523 0033 08       		.uleb128 0x8
+ 524 0034 00       		.byte	0
+ 525 0035 00       		.byte	0
+ 526 0036 05       		.uleb128 0x5
+ 527 0037 16       		.uleb128 0x16
+ 528 0038 00       		.byte	0
+ 529 0039 03       		.uleb128 0x3
+ 530 003a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 11
+
+
+ 531 003b 3A       		.uleb128 0x3a
+ 532 003c 0B       		.uleb128 0xb
+ 533 003d 3B       		.uleb128 0x3b
+ 534 003e 05       		.uleb128 0x5
+ 535 003f 49       		.uleb128 0x49
+ 536 0040 13       		.uleb128 0x13
+ 537 0041 00       		.byte	0
+ 538 0042 00       		.byte	0
+ 539 0043 06       		.uleb128 0x6
+ 540 0044 2E       		.uleb128 0x2e
+ 541 0045 01       		.byte	0x1
+ 542 0046 3F       		.uleb128 0x3f
+ 543 0047 19       		.uleb128 0x19
+ 544 0048 03       		.uleb128 0x3
+ 545 0049 0E       		.uleb128 0xe
+ 546 004a 3A       		.uleb128 0x3a
+ 547 004b 0B       		.uleb128 0xb
+ 548 004c 3B       		.uleb128 0x3b
+ 549 004d 0B       		.uleb128 0xb
+ 550 004e 27       		.uleb128 0x27
+ 551 004f 19       		.uleb128 0x19
+ 552 0050 49       		.uleb128 0x49
+ 553 0051 13       		.uleb128 0x13
+ 554 0052 8701     		.uleb128 0x87
+ 555 0054 19       		.uleb128 0x19
+ 556 0055 11       		.uleb128 0x11
+ 557 0056 01       		.uleb128 0x1
+ 558 0057 12       		.uleb128 0x12
+ 559 0058 06       		.uleb128 0x6
+ 560 0059 40       		.uleb128 0x40
+ 561 005a 18       		.uleb128 0x18
+ 562 005b 9642     		.uleb128 0x2116
+ 563 005d 19       		.uleb128 0x19
+ 564 005e 01       		.uleb128 0x1
+ 565 005f 13       		.uleb128 0x13
+ 566 0060 00       		.byte	0
+ 567 0061 00       		.byte	0
+ 568 0062 07       		.uleb128 0x7
+ 569 0063 34       		.uleb128 0x34
+ 570 0064 00       		.byte	0
+ 571 0065 03       		.uleb128 0x3
+ 572 0066 0E       		.uleb128 0xe
+ 573 0067 3A       		.uleb128 0x3a
+ 574 0068 0B       		.uleb128 0xb
+ 575 0069 3B       		.uleb128 0x3b
+ 576 006a 0B       		.uleb128 0xb
+ 577 006b 49       		.uleb128 0x49
+ 578 006c 13       		.uleb128 0x13
+ 579 006d 02       		.uleb128 0x2
+ 580 006e 18       		.uleb128 0x18
+ 581 006f 00       		.byte	0
+ 582 0070 00       		.byte	0
+ 583 0071 08       		.uleb128 0x8
+ 584 0072 34       		.uleb128 0x34
+ 585 0073 00       		.byte	0
+ 586 0074 03       		.uleb128 0x3
+ 587 0075 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 12
+
+
+ 588 0076 3A       		.uleb128 0x3a
+ 589 0077 0B       		.uleb128 0xb
+ 590 0078 3B       		.uleb128 0x3b
+ 591 0079 0B       		.uleb128 0xb
+ 592 007a 49       		.uleb128 0x49
+ 593 007b 13       		.uleb128 0x13
+ 594 007c 02       		.uleb128 0x2
+ 595 007d 17       		.uleb128 0x17
+ 596 007e 00       		.byte	0
+ 597 007f 00       		.byte	0
+ 598 0080 09       		.uleb128 0x9
+ 599 0081 898201   		.uleb128 0x4109
+ 600 0084 00       		.byte	0
+ 601 0085 11       		.uleb128 0x11
+ 602 0086 01       		.uleb128 0x1
+ 603 0087 31       		.uleb128 0x31
+ 604 0088 13       		.uleb128 0x13
+ 605 0089 00       		.byte	0
+ 606 008a 00       		.byte	0
+ 607 008b 0A       		.uleb128 0xa
+ 608 008c 898201   		.uleb128 0x4109
+ 609 008f 01       		.byte	0x1
+ 610 0090 11       		.uleb128 0x11
+ 611 0091 01       		.uleb128 0x1
+ 612 0092 31       		.uleb128 0x31
+ 613 0093 13       		.uleb128 0x13
+ 614 0094 01       		.uleb128 0x1
+ 615 0095 13       		.uleb128 0x13
+ 616 0096 00       		.byte	0
+ 617 0097 00       		.byte	0
+ 618 0098 0B       		.uleb128 0xb
+ 619 0099 8A8201   		.uleb128 0x410a
+ 620 009c 00       		.byte	0
+ 621 009d 02       		.uleb128 0x2
+ 622 009e 18       		.uleb128 0x18
+ 623 009f 9142     		.uleb128 0x2111
+ 624 00a1 18       		.uleb128 0x18
+ 625 00a2 00       		.byte	0
+ 626 00a3 00       		.byte	0
+ 627 00a4 0C       		.uleb128 0xc
+ 628 00a5 898201   		.uleb128 0x4109
+ 629 00a8 01       		.byte	0x1
+ 630 00a9 11       		.uleb128 0x11
+ 631 00aa 01       		.uleb128 0x1
+ 632 00ab 31       		.uleb128 0x31
+ 633 00ac 13       		.uleb128 0x13
+ 634 00ad 00       		.byte	0
+ 635 00ae 00       		.byte	0
+ 636 00af 0D       		.uleb128 0xd
+ 637 00b0 01       		.uleb128 0x1
+ 638 00b1 01       		.byte	0x1
+ 639 00b2 49       		.uleb128 0x49
+ 640 00b3 13       		.uleb128 0x13
+ 641 00b4 01       		.uleb128 0x1
+ 642 00b5 13       		.uleb128 0x13
+ 643 00b6 00       		.byte	0
+ 644 00b7 00       		.byte	0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 13
+
+
+ 645 00b8 0E       		.uleb128 0xe
+ 646 00b9 21       		.uleb128 0x21
+ 647 00ba 00       		.byte	0
+ 648 00bb 49       		.uleb128 0x49
+ 649 00bc 13       		.uleb128 0x13
+ 650 00bd 2F       		.uleb128 0x2f
+ 651 00be 0B       		.uleb128 0xb
+ 652 00bf 00       		.byte	0
+ 653 00c0 00       		.byte	0
+ 654 00c1 0F       		.uleb128 0xf
+ 655 00c2 34       		.uleb128 0x34
+ 656 00c3 00       		.byte	0
+ 657 00c4 03       		.uleb128 0x3
+ 658 00c5 0E       		.uleb128 0xe
+ 659 00c6 3A       		.uleb128 0x3a
+ 660 00c7 0B       		.uleb128 0xb
+ 661 00c8 3B       		.uleb128 0x3b
+ 662 00c9 05       		.uleb128 0x5
+ 663 00ca 49       		.uleb128 0x49
+ 664 00cb 13       		.uleb128 0x13
+ 665 00cc 3F       		.uleb128 0x3f
+ 666 00cd 19       		.uleb128 0x19
+ 667 00ce 3C       		.uleb128 0x3c
+ 668 00cf 19       		.uleb128 0x19
+ 669 00d0 00       		.byte	0
+ 670 00d1 00       		.byte	0
+ 671 00d2 10       		.uleb128 0x10
+ 672 00d3 35       		.uleb128 0x35
+ 673 00d4 00       		.byte	0
+ 674 00d5 49       		.uleb128 0x49
+ 675 00d6 13       		.uleb128 0x13
+ 676 00d7 00       		.byte	0
+ 677 00d8 00       		.byte	0
+ 678 00d9 11       		.uleb128 0x11
+ 679 00da 2E       		.uleb128 0x2e
+ 680 00db 00       		.byte	0
+ 681 00dc 3F       		.uleb128 0x3f
+ 682 00dd 19       		.uleb128 0x19
+ 683 00de 3C       		.uleb128 0x3c
+ 684 00df 19       		.uleb128 0x19
+ 685 00e0 6E       		.uleb128 0x6e
+ 686 00e1 0E       		.uleb128 0xe
+ 687 00e2 03       		.uleb128 0x3
+ 688 00e3 0E       		.uleb128 0xe
+ 689 00e4 3A       		.uleb128 0x3a
+ 690 00e5 0B       		.uleb128 0xb
+ 691 00e6 3B       		.uleb128 0x3b
+ 692 00e7 0B       		.uleb128 0xb
+ 693 00e8 00       		.byte	0
+ 694 00e9 00       		.byte	0
+ 695 00ea 00       		.byte	0
+ 696              		.section	.debug_loc,"",%progbits
+ 697              	.Ldebug_loc0:
+ 698              	.LLST0:
+ 699 0000 3C000000 		.4byte	.LVL10
+ 700 0004 40000000 		.4byte	.LVL11
+ 701 0008 0100     		.2byte	0x1
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 14
+
+
+ 702 000a 50       		.byte	0x50
+ 703 000b 40000000 		.4byte	.LVL11
+ 704 000f 9C000000 		.4byte	.LFE64
+ 705 0013 0100     		.2byte	0x1
+ 706 0015 55       		.byte	0x55
+ 707 0016 00000000 		.4byte	0
+ 708 001a 00000000 		.4byte	0
+ 709              		.section	.debug_aranges,"",%progbits
+ 710 0000 1C000000 		.4byte	0x1c
+ 711 0004 0200     		.2byte	0x2
+ 712 0006 00000000 		.4byte	.Ldebug_info0
+ 713 000a 04       		.byte	0x4
+ 714 000b 00       		.byte	0
+ 715 000c 0000     		.2byte	0
+ 716 000e 0000     		.2byte	0
+ 717 0010 00000000 		.4byte	.LFB64
+ 718 0014 9C000000 		.4byte	.LFE64-.LFB64
+ 719 0018 00000000 		.4byte	0
+ 720 001c 00000000 		.4byte	0
+ 721              		.section	.debug_ranges,"",%progbits
+ 722              	.Ldebug_ranges0:
+ 723 0000 00000000 		.4byte	.LFB64
+ 724 0004 9C000000 		.4byte	.LFE64
+ 725 0008 00000000 		.4byte	0
+ 726 000c 00000000 		.4byte	0
+ 727              		.section	.debug_line,"",%progbits
+ 728              	.Ldebug_line0:
+ 729 0000 2A020000 		.section	.debug_str,"MS",%progbits,1
+ 729      0200DC01 
+ 729      00000201 
+ 729      FB0E0D00 
+ 729      01010101 
+ 730              	.LASF9:
+ 731 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 731      7433325F 
+ 731      7400
+ 732              	.LASF13:
+ 733 000a 646F7562 		.ascii	"double\000"
+ 733      6C6500
+ 734              	.LASF17:
+ 735 0011 56616C6F 		.ascii	"Valor_ADC\000"
+ 735      725F4144 
+ 735      4300
+ 736              	.LASF12:
+ 737 001b 666C6F61 		.ascii	"float\000"
+ 737      7400
+ 738              	.LASF22:
+ 739 0021 4C43445F 		.ascii	"LCD_Start\000"
+ 739      53746172 
+ 739      7400
+ 740              	.LASF1:
+ 741 002b 756E7369 		.ascii	"unsigned char\000"
+ 741      676E6564 
+ 741      20636861 
+ 741      7200
+ 742              	.LASF30:
+ 743 0039 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 15
+
+
+ 743      43313120 
+ 743      352E342E 
+ 743      31203230 
+ 743      31363036 
+ 744 006c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 744      20726576 
+ 744      6973696F 
+ 744      6E203233 
+ 744      37373135 
+ 745 009f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 745      66756E63 
+ 745      74696F6E 
+ 745      2D736563 
+ 745      74696F6E 
+ 746              	.LASF21:
+ 747 00c7 4144435F 		.ascii	"ADC_StartConvert\000"
+ 747      53746172 
+ 747      74436F6E 
+ 747      76657274 
+ 747      00
+ 748              	.LASF23:
+ 749 00d8 4144435F 		.ascii	"ADC_IsEndConversion\000"
+ 749      4973456E 
+ 749      64436F6E 
+ 749      76657273 
+ 749      696F6E00 
+ 750              	.LASF3:
+ 751 00ec 73686F72 		.ascii	"short unsigned int\000"
+ 751      7420756E 
+ 751      7369676E 
+ 751      65642069 
+ 751      6E7400
+ 752              	.LASF24:
+ 753 00ff 4144435F 		.ascii	"ADC_GetResult16\000"
+ 753      47657452 
+ 753      6573756C 
+ 753      74313600 
+ 754              	.LASF34:
+ 755 010f 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 755      52784275 
+ 755      66666572 
+ 755      00
+ 756              	.LASF5:
+ 757 011c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 757      20756E73 
+ 757      69676E65 
+ 757      6420696E 
+ 757      7400
+ 758              	.LASF33:
+ 759 012e 6D61696E 		.ascii	"main\000"
+ 759      00
+ 760              	.LASF26:
+ 761 0133 4C43445F 		.ascii	"LCD_PrintString\000"
+ 761      5072696E 
+ 761      74537472 
+ 761      696E6700 
+ 762              	.LASF11:
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 16
+
+
+ 763 0143 75696E74 		.ascii	"uint16\000"
+ 763      313600
+ 764              	.LASF8:
+ 765 014a 756E7369 		.ascii	"unsigned int\000"
+ 765      676E6564 
+ 765      20696E74 
+ 765      00
+ 766              	.LASF7:
+ 767 0157 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 767      206C6F6E 
+ 767      6720756E 
+ 767      7369676E 
+ 767      65642069 
+ 768              	.LASF25:
+ 769 016e 4C43445F 		.ascii	"LCD_Position\000"
+ 769      506F7369 
+ 769      74696F6E 
+ 769      00
+ 770              	.LASF27:
+ 771 017b 4C43445F 		.ascii	"LCD_PrintU32Number\000"
+ 771      5072696E 
+ 771      74553332 
+ 771      4E756D62 
+ 771      657200
+ 772              	.LASF20:
+ 773 018e 4144435F 		.ascii	"ADC_Start\000"
+ 773      53746172 
+ 773      7400
+ 774              	.LASF10:
+ 775 0198 696E7433 		.ascii	"int32_t\000"
+ 775      325F7400 
+ 776              	.LASF15:
+ 777 01a0 73697A65 		.ascii	"sizetype\000"
+ 777      74797065 
+ 777      00
+ 778              	.LASF6:
+ 779 01a9 6C6F6E67 		.ascii	"long long int\000"
+ 779      206C6F6E 
+ 779      6720696E 
+ 779      7400
+ 780              	.LASF31:
+ 781 01b7 6D61696E 		.ascii	"main.c\000"
+ 781      2E6300
+ 782              	.LASF14:
+ 783 01be 63686172 		.ascii	"char\000"
+ 783      00
+ 784              	.LASF32:
+ 785 01c3 433A5C55 		.ascii	"C:\\Users\\Henry\\Documents\\PSoC Creator\\Ej1\\Ej3"
+ 785      73657273 
+ 785      5C48656E 
+ 785      72795C44 
+ 785      6F63756D 
+ 786 01f0 2E637964 		.ascii	".cydsn\000"
+ 786      736E00
+ 787              	.LASF2:
+ 788 01f7 73686F72 		.ascii	"short int\000"
+ 788      7420696E 
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccfAXkGp.s 			page 17
+
+
+ 788      7400
+ 789              	.LASF19:
+ 790 0201 62756666 		.ascii	"buffer\000"
+ 790      657200
+ 791              	.LASF4:
+ 792 0208 6C6F6E67 		.ascii	"long int\000"
+ 792      20696E74 
+ 792      00
+ 793              	.LASF16:
+ 794 0211 6C6F6E67 		.ascii	"long double\000"
+ 794      20646F75 
+ 794      626C6500 
+ 795              	.LASF0:
+ 796 021d 7369676E 		.ascii	"signed char\000"
+ 796      65642063 
+ 796      68617200 
+ 797              	.LASF28:
+ 798 0229 73707269 		.ascii	"sprintf\000"
+ 798      6E746600 
+ 799              	.LASF29:
+ 800 0231 43794465 		.ascii	"CyDelay\000"
+ 800      6C617900 
+ 801              	.LASF18:
+ 802 0239 766F6C74 		.ascii	"voltaje\000"
+ 802      616A6500 
+ 803              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

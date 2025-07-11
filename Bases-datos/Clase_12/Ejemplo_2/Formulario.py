@@ -11,6 +11,7 @@ class Aplicacion(QtWidgets.QMainWindow, Formulario):
         self.radioButton.clicked.connect(self.RB)
         self.radioButton_2.clicked.connect(self.RB)
         self.radioButton_3.clicked.connect(self.RB)
+
     def RB(self):
         self.plainTextEdit.clear()          #Borrar plainText
         if(self.radioButton.isChecked()):

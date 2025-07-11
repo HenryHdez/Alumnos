@@ -16,6 +16,8 @@ class Aplicacion(QtWidgets.QMainWindow, Formulario):
         df = pd.DataFrame(datos)
         tabla_html = df.to_html() #Crear versión HTML del df
         self.textBrowser.setHtml(tabla_html)
+        df.to_csv('resultados.csv', sep=',', index=True, header=True)
+
 
 if __name__=="__main__":
     app = QtWidgets.QApplication(sys.argv)

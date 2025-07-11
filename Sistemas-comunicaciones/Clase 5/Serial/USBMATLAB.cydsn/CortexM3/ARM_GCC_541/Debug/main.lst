@@ -1,0 +1,1042 @@
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** //Define Librerias
+   2:main.c        **** #include "project.h"
+   3:main.c        **** #include "stdio.h"
+   4:main.c        **** //Tamaño del buffer
+   5:main.c        **** #define BUFFER_LEN     64u 
+   6:main.c        **** 
+   7:main.c        **** int main(void)
+   8:main.c        **** {
+  28              		.loc 1 8 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 88
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 96B0     		sub	sp, sp, #88
+  37              		.cfi_def_cfa_offset 96
+  38              	.LVL0:
+   9:main.c        ****     //Variables para manejar el Buffer
+  10:main.c        ****     uint16 Cuenta;
+  11:main.c        ****     uint8 buffer[BUFFER_LEN];
+  12:main.c        ****     char8 Texto[20];
+  13:main.c        ****     int contador=0;
+  14:main.c        ****     //Habilita las interrupciones
+  15:main.c        ****     CyGlobalIntEnable;
+  39              		.loc 1 15 0
+  40              		.syntax unified
+  41              	@ 15 "main.c" 1
+  42 0004 62B6     		CPSIE   i
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 2
+
+
+  43              	@ 0 "" 2
+  16:main.c        **** 
+  17:main.c        ****     //Estos tres parámetros van en grupo
+  18:main.c        ****     //Se encargan de que el computador detecte el USB-Serial
+  19:main.c        ****     USB_Start(0u, USB_3V_OPERATION);
+  44              		.loc 1 19 0
+  45              		.thumb
+  46              		.syntax unified
+  47 0006 0021     		movs	r1, #0
+  48 0008 0846     		mov	r0, r1
+  49 000a FFF7FEFF 		bl	USB_Start
+  50              	.LVL1:
+  51              	.L2:
+  20:main.c        ****     while(!USB_GetConfiguration());
+  52              		.loc 1 20 0 discriminator 1
+  53 000e FFF7FEFF 		bl	USB_GetConfiguration
+  54              	.LVL2:
+  55 0012 0028     		cmp	r0, #0
+  56 0014 FBD0     		beq	.L2
+  21:main.c        ****     USB_CDC_Init();
+  57              		.loc 1 21 0
+  58 0016 FFF7FEFF 		bl	USB_CDC_Init
+  59              	.LVL3:
+  22:main.c        **** 
+  23:main.c        ****     /* Iniciar LCD */
+  24:main.c        ****     LCD_Start();
+  60              		.loc 1 24 0
+  61 001a FFF7FEFF 		bl	LCD_Start
+  62              	.LVL4:
+  25:main.c        ****     LCD_Position(0,0);
+  63              		.loc 1 25 0
+  64 001e 0021     		movs	r1, #0
+  65 0020 0846     		mov	r0, r1
+  66 0022 FFF7FEFF 		bl	LCD_Position
+  67              	.LVL5:
+  26:main.c        ****     LCD_PrintString("USB MATLAB");
+  68              		.loc 1 26 0
+  69 0026 1248     		ldr	r0, .L8
+  70 0028 FFF7FEFF 		bl	LCD_PrintString
+  71              	.LVL6:
+  13:main.c        ****     //Habilita las interrupciones
+  72              		.loc 1 13 0
+  73 002c 0024     		movs	r4, #0
+  74              	.LVL7:
+  75              	.L3:
+  27:main.c        **** 
+  28:main.c        ****     for(;;){
+  29:main.c        ****         /* Coloquen aqui su aplicación */
+  30:main.c        ****         //Recibe Algo
+  31:main.c        ****         if(USB_DataIsReady() != 0u){
+  76              		.loc 1 31 0
+  77 002e FFF7FEFF 		bl	USB_DataIsReady
+  78              	.LVL8:
+  79 0032 0028     		cmp	r0, #0
+  80 0034 FBD0     		beq	.L3
+  32:main.c        ****             Cuenta = USB_GetAll(buffer);
+  81              		.loc 1 32 0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 3
+
+
+  82 0036 06A8     		add	r0, sp, #24
+  83 0038 FFF7FEFF 		bl	USB_GetAll
+  84              	.LVL9:
+  33:main.c        **** 
+  34:main.c        ****             if(buffer[0] == 'g'){
+  85              		.loc 1 34 0
+  86 003c 9DF81830 		ldrb	r3, [sp, #24]	@ zero_extendqisi2
+  87 0040 672B     		cmp	r3, #103
+  88 0042 0BD1     		bne	.L4
+  35:main.c        ****                 // Enviar el valor del contador como string con salto de línea
+  36:main.c        ****                 sprintf(Texto, "%i\r", contador);  // Formato correcto para MATLAB
+  89              		.loc 1 36 0
+  90 0044 2246     		mov	r2, r4
+  91 0046 0B49     		ldr	r1, .L8+4
+  92 0048 01A8     		add	r0, sp, #4
+  93 004a FFF7FEFF 		bl	sprintf
+  94              	.LVL10:
+  37:main.c        ****                 USB_PutString(Texto);              // Envía el string completo
+  95              		.loc 1 37 0
+  96 004e 01A8     		add	r0, sp, #4
+  97 0050 FFF7FEFF 		bl	USB_PutString
+  98              	.LVL11:
+  38:main.c        **** 
+  39:main.c        ****                 contador++;
+  99              		.loc 1 39 0
+ 100 0054 0134     		adds	r4, r4, #1
+ 101              	.LVL12:
+  40:main.c        ****                 if(contador >= 255){
+ 102              		.loc 1 40 0
+ 103 0056 FE2C     		cmp	r4, #254
+ 104 0058 00DD     		ble	.L4
+  41:main.c        ****                     contador = 0;
+ 105              		.loc 1 41 0
+ 106 005a 0024     		movs	r4, #0
+ 107              	.LVL13:
+ 108              	.L4:
+  42:main.c        ****                 }
+  43:main.c        ****             }
+  44:main.c        **** 
+  45:main.c        ****             // Escribe en la LCD el carácter recibido (solo el primero)
+  46:main.c        ****             LCD_Position(1,0);
+ 109              		.loc 1 46 0
+ 110 005c 0021     		movs	r1, #0
+ 111 005e 0120     		movs	r0, #1
+ 112 0060 FFF7FEFF 		bl	LCD_Position
+ 113              	.LVL14:
+  47:main.c        ****             LCD_PutChar(buffer[0]);
+ 114              		.loc 1 47 0
+ 115 0064 9DF81800 		ldrb	r0, [sp, #24]	@ zero_extendqisi2
+ 116 0068 FFF7FEFF 		bl	LCD_PutChar
+ 117              	.LVL15:
+ 118 006c DFE7     		b	.L3
+ 119              	.L9:
+ 120 006e 00BF     		.align	2
+ 121              	.L8:
+ 122 0070 00000000 		.word	.LC0
+ 123 0074 0C000000 		.word	.LC1
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 4
+
+
+ 124              		.cfi_endproc
+ 125              	.LFE64:
+ 126              		.size	main, .-main
+ 127              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 128              		.align	2
+ 129              	.LC0:
+ 130 0000 55534220 		.ascii	"USB MATLAB\000"
+ 130      4D41544C 
+ 130      414200
+ 131 000b 00       		.space	1
+ 132              	.LC1:
+ 133 000c 25690D00 		.ascii	"%i\015\000"
+ 134              		.text
+ 135              	.Letext0:
+ 136              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 137              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 138              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 139              		.file 5 "Generated_Source\\PSoC5/USB.h"
+ 140              		.file 6 "Generated_Source\\PSoC5/USB_cdc.h"
+ 141              		.file 7 "Generated_Source\\PSoC5/LCD.h"
+ 142              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 143              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
+ 144              		.section	.debug_info,"",%progbits
+ 145              	.Ldebug_info0:
+ 146 0000 9D020000 		.4byte	0x29d
+ 147 0004 0400     		.2byte	0x4
+ 148 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 149 000a 04       		.byte	0x4
+ 150 000b 01       		.uleb128 0x1
+ 151 000c 44000000 		.4byte	.LASF33
+ 152 0010 0C       		.byte	0xc
+ 153 0011 AD010000 		.4byte	.LASF34
+ 154 0015 04020000 		.4byte	.LASF35
+ 155 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 156 001d 00000000 		.4byte	0
+ 157 0021 00000000 		.4byte	.Ldebug_line0
+ 158 0025 02       		.uleb128 0x2
+ 159 0026 01       		.byte	0x1
+ 160 0027 06       		.byte	0x6
+ 161 0028 4D020000 		.4byte	.LASF0
+ 162 002c 02       		.uleb128 0x2
+ 163 002d 01       		.byte	0x1
+ 164 002e 08       		.byte	0x8
+ 165 002f 36000000 		.4byte	.LASF1
+ 166 0033 02       		.uleb128 0x2
+ 167 0034 02       		.byte	0x2
+ 168 0035 05       		.byte	0x5
+ 169 0036 D9010000 		.4byte	.LASF2
+ 170 003a 02       		.uleb128 0x2
+ 171 003b 02       		.byte	0x2
+ 172 003c 07       		.byte	0x7
+ 173 003d F7000000 		.4byte	.LASF3
+ 174 0041 03       		.uleb128 0x3
+ 175 0042 05000000 		.4byte	.LASF9
+ 176 0046 02       		.byte	0x2
+ 177 0047 3F       		.byte	0x3f
+ 178 0048 4C000000 		.4byte	0x4c
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 5
+
+
+ 179 004c 02       		.uleb128 0x2
+ 180 004d 04       		.byte	0x4
+ 181 004e 05       		.byte	0x5
+ 182 004f FB010000 		.4byte	.LASF4
+ 183 0053 02       		.uleb128 0x2
+ 184 0054 04       		.byte	0x4
+ 185 0055 07       		.byte	0x7
+ 186 0056 E5000000 		.4byte	.LASF5
+ 187 005a 02       		.uleb128 0x2
+ 188 005b 08       		.byte	0x8
+ 189 005c 05       		.byte	0x5
+ 190 005d 9F010000 		.4byte	.LASF6
+ 191 0061 02       		.uleb128 0x2
+ 192 0062 08       		.byte	0x8
+ 193 0063 07       		.byte	0x7
+ 194 0064 5E010000 		.4byte	.LASF7
+ 195 0068 04       		.uleb128 0x4
+ 196 0069 04       		.byte	0x4
+ 197 006a 05       		.byte	0x5
+ 198 006b 696E7400 		.ascii	"int\000"
+ 199 006f 02       		.uleb128 0x2
+ 200 0070 04       		.byte	0x4
+ 201 0071 07       		.byte	0x7
+ 202 0072 51010000 		.4byte	.LASF8
+ 203 0076 03       		.uleb128 0x3
+ 204 0077 8E010000 		.4byte	.LASF10
+ 205 007b 03       		.byte	0x3
+ 206 007c 2C       		.byte	0x2c
+ 207 007d 41000000 		.4byte	0x41
+ 208 0081 05       		.uleb128 0x5
+ 209 0082 EA010000 		.4byte	.LASF11
+ 210 0086 04       		.byte	0x4
+ 211 0087 E801     		.2byte	0x1e8
+ 212 0089 2C000000 		.4byte	0x2c
+ 213 008d 05       		.uleb128 0x5
+ 214 008e 3B010000 		.4byte	.LASF12
+ 215 0092 04       		.byte	0x4
+ 216 0093 E901     		.2byte	0x1e9
+ 217 0095 3A000000 		.4byte	0x3a
+ 218 0099 02       		.uleb128 0x2
+ 219 009a 04       		.byte	0x4
+ 220 009b 04       		.byte	0x4
+ 221 009c 26000000 		.4byte	.LASF13
+ 222 00a0 02       		.uleb128 0x2
+ 223 00a1 08       		.byte	0x8
+ 224 00a2 04       		.byte	0x4
+ 225 00a3 1E010000 		.4byte	.LASF14
+ 226 00a7 05       		.uleb128 0x5
+ 227 00a8 D2000000 		.4byte	.LASF15
+ 228 00ac 04       		.byte	0x4
+ 229 00ad F901     		.2byte	0x1f9
+ 230 00af B3000000 		.4byte	0xb3
+ 231 00b3 02       		.uleb128 0x2
+ 232 00b4 01       		.byte	0x1
+ 233 00b5 08       		.byte	0x8
+ 234 00b6 00000000 		.4byte	.LASF16
+ 235 00ba 02       		.uleb128 0x2
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 6
+
+
+ 236 00bb 08       		.byte	0x8
+ 237 00bc 04       		.byte	0x4
+ 238 00bd 41020000 		.4byte	.LASF17
+ 239 00c1 02       		.uleb128 0x2
+ 240 00c2 04       		.byte	0x4
+ 241 00c3 07       		.byte	0x7
+ 242 00c4 96010000 		.4byte	.LASF18
+ 243 00c8 06       		.uleb128 0x6
+ 244 00c9 4C010000 		.4byte	.LASF36
+ 245 00cd 01       		.byte	0x1
+ 246 00ce 07       		.byte	0x7
+ 247 00cf 68000000 		.4byte	0x68
+ 248 00d3 00000000 		.4byte	.LFB64
+ 249 00d7 78000000 		.4byte	.LFE64-.LFB64
+ 250 00db 01       		.uleb128 0x1
+ 251 00dc 9C       		.byte	0x9c
+ 252 00dd F4010000 		.4byte	0x1f4
+ 253 00e1 07       		.uleb128 0x7
+ 254 00e2 17010000 		.4byte	.LASF37
+ 255 00e6 01       		.byte	0x1
+ 256 00e7 0A       		.byte	0xa
+ 257 00e8 8D000000 		.4byte	0x8d
+ 258 00ec 08       		.uleb128 0x8
+ 259 00ed E3010000 		.4byte	.LASF19
+ 260 00f1 01       		.byte	0x1
+ 261 00f2 0B       		.byte	0xb
+ 262 00f3 F4010000 		.4byte	0x1f4
+ 263 00f7 03       		.uleb128 0x3
+ 264 00f8 91       		.byte	0x91
+ 265 00f9 B87F     		.sleb128 -72
+ 266 00fb 08       		.uleb128 0x8
+ 267 00fc 25010000 		.4byte	.LASF20
+ 268 0100 01       		.byte	0x1
+ 269 0101 0C       		.byte	0xc
+ 270 0102 04020000 		.4byte	0x204
+ 271 0106 03       		.uleb128 0x3
+ 272 0107 91       		.byte	0x91
+ 273 0108 A47F     		.sleb128 -92
+ 274 010a 09       		.uleb128 0x9
+ 275 010b 1D000000 		.4byte	.LASF21
+ 276 010f 01       		.byte	0x1
+ 277 0110 0D       		.byte	0xd
+ 278 0111 68000000 		.4byte	0x68
+ 279 0115 00000000 		.4byte	.LLST0
+ 280 0119 0A       		.uleb128 0xa
+ 281 011a 0E000000 		.4byte	.LVL1
+ 282 011e 25020000 		.4byte	0x225
+ 283 0122 31010000 		.4byte	0x131
+ 284 0126 0B       		.uleb128 0xb
+ 285 0127 01       		.uleb128 0x1
+ 286 0128 50       		.byte	0x50
+ 287 0129 01       		.uleb128 0x1
+ 288 012a 30       		.byte	0x30
+ 289 012b 0B       		.uleb128 0xb
+ 290 012c 01       		.uleb128 0x1
+ 291 012d 51       		.byte	0x51
+ 292 012e 01       		.uleb128 0x1
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 7
+
+
+ 293 012f 30       		.byte	0x30
+ 294 0130 00       		.byte	0
+ 295 0131 0C       		.uleb128 0xc
+ 296 0132 12000000 		.4byte	.LVL2
+ 297 0136 31020000 		.4byte	0x231
+ 298 013a 0C       		.uleb128 0xc
+ 299 013b 1A000000 		.4byte	.LVL3
+ 300 013f 3D020000 		.4byte	0x23d
+ 301 0143 0C       		.uleb128 0xc
+ 302 0144 1E000000 		.4byte	.LVL4
+ 303 0148 48020000 		.4byte	0x248
+ 304 014c 0A       		.uleb128 0xa
+ 305 014d 26000000 		.4byte	.LVL5
+ 306 0151 53020000 		.4byte	0x253
+ 307 0155 64010000 		.4byte	0x164
+ 308 0159 0B       		.uleb128 0xb
+ 309 015a 01       		.uleb128 0x1
+ 310 015b 50       		.byte	0x50
+ 311 015c 01       		.uleb128 0x1
+ 312 015d 30       		.byte	0x30
+ 313 015e 0B       		.uleb128 0xb
+ 314 015f 01       		.uleb128 0x1
+ 315 0160 51       		.byte	0x51
+ 316 0161 01       		.uleb128 0x1
+ 317 0162 30       		.byte	0x30
+ 318 0163 00       		.byte	0
+ 319 0164 0A       		.uleb128 0xa
+ 320 0165 2C000000 		.4byte	.LVL6
+ 321 0169 5E020000 		.4byte	0x25e
+ 322 016d 7B010000 		.4byte	0x17b
+ 323 0171 0B       		.uleb128 0xb
+ 324 0172 01       		.uleb128 0x1
+ 325 0173 50       		.byte	0x50
+ 326 0174 05       		.uleb128 0x5
+ 327 0175 03       		.byte	0x3
+ 328 0176 00000000 		.4byte	.LC0
+ 329 017a 00       		.byte	0
+ 330 017b 0C       		.uleb128 0xc
+ 331 017c 32000000 		.4byte	.LVL8
+ 332 0180 69020000 		.4byte	0x269
+ 333 0184 0A       		.uleb128 0xa
+ 334 0185 3C000000 		.4byte	.LVL9
+ 335 0189 74020000 		.4byte	0x274
+ 336 018d 99010000 		.4byte	0x199
+ 337 0191 0B       		.uleb128 0xb
+ 338 0192 01       		.uleb128 0x1
+ 339 0193 50       		.byte	0x50
+ 340 0194 03       		.uleb128 0x3
+ 341 0195 91       		.byte	0x91
+ 342 0196 B87F     		.sleb128 -72
+ 343 0198 00       		.byte	0
+ 344 0199 0A       		.uleb128 0xa
+ 345 019a 4E000000 		.4byte	.LVL10
+ 346 019e 7F020000 		.4byte	0x27f
+ 347 01a2 BD010000 		.4byte	0x1bd
+ 348 01a6 0B       		.uleb128 0xb
+ 349 01a7 01       		.uleb128 0x1
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 8
+
+
+ 350 01a8 50       		.byte	0x50
+ 351 01a9 03       		.uleb128 0x3
+ 352 01aa 91       		.byte	0x91
+ 353 01ab A47F     		.sleb128 -92
+ 354 01ad 0B       		.uleb128 0xb
+ 355 01ae 01       		.uleb128 0x1
+ 356 01af 51       		.byte	0x51
+ 357 01b0 05       		.uleb128 0x5
+ 358 01b1 03       		.byte	0x3
+ 359 01b2 0C000000 		.4byte	.LC1
+ 360 01b6 0B       		.uleb128 0xb
+ 361 01b7 01       		.uleb128 0x1
+ 362 01b8 52       		.byte	0x52
+ 363 01b9 02       		.uleb128 0x2
+ 364 01ba 74       		.byte	0x74
+ 365 01bb 00       		.sleb128 0
+ 366 01bc 00       		.byte	0
+ 367 01bd 0A       		.uleb128 0xa
+ 368 01be 54000000 		.4byte	.LVL11
+ 369 01c2 8A020000 		.4byte	0x28a
+ 370 01c6 D2010000 		.4byte	0x1d2
+ 371 01ca 0B       		.uleb128 0xb
+ 372 01cb 01       		.uleb128 0x1
+ 373 01cc 50       		.byte	0x50
+ 374 01cd 03       		.uleb128 0x3
+ 375 01ce 91       		.byte	0x91
+ 376 01cf A47F     		.sleb128 -92
+ 377 01d1 00       		.byte	0
+ 378 01d2 0A       		.uleb128 0xa
+ 379 01d3 64000000 		.4byte	.LVL14
+ 380 01d7 53020000 		.4byte	0x253
+ 381 01db EA010000 		.4byte	0x1ea
+ 382 01df 0B       		.uleb128 0xb
+ 383 01e0 01       		.uleb128 0x1
+ 384 01e1 50       		.byte	0x50
+ 385 01e2 01       		.uleb128 0x1
+ 386 01e3 31       		.byte	0x31
+ 387 01e4 0B       		.uleb128 0xb
+ 388 01e5 01       		.uleb128 0x1
+ 389 01e6 51       		.byte	0x51
+ 390 01e7 01       		.uleb128 0x1
+ 391 01e8 30       		.byte	0x30
+ 392 01e9 00       		.byte	0
+ 393 01ea 0C       		.uleb128 0xc
+ 394 01eb 6C000000 		.4byte	.LVL15
+ 395 01ef 95020000 		.4byte	0x295
+ 396 01f3 00       		.byte	0
+ 397 01f4 0D       		.uleb128 0xd
+ 398 01f5 81000000 		.4byte	0x81
+ 399 01f9 04020000 		.4byte	0x204
+ 400 01fd 0E       		.uleb128 0xe
+ 401 01fe C1000000 		.4byte	0xc1
+ 402 0202 3F       		.byte	0x3f
+ 403 0203 00       		.byte	0
+ 404 0204 0D       		.uleb128 0xd
+ 405 0205 A7000000 		.4byte	0xa7
+ 406 0209 14020000 		.4byte	0x214
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 9
+
+
+ 407 020d 0E       		.uleb128 0xe
+ 408 020e C1000000 		.4byte	0xc1
+ 409 0212 13       		.byte	0x13
+ 410 0213 00       		.byte	0
+ 411 0214 0F       		.uleb128 0xf
+ 412 0215 0A010000 		.4byte	.LASF38
+ 413 0219 09       		.byte	0x9
+ 414 021a 1207     		.2byte	0x712
+ 415 021c 20020000 		.4byte	0x220
+ 416 0220 10       		.uleb128 0x10
+ 417 0221 76000000 		.4byte	0x76
+ 418 0225 11       		.uleb128 0x11
+ 419 0226 42010000 		.4byte	.LASF22
+ 420 022a 42010000 		.4byte	.LASF22
+ 421 022e 05       		.byte	0x5
+ 422 022f 2A01     		.2byte	0x12a
+ 423 0231 11       		.uleb128 0x11
+ 424 0232 B4010000 		.4byte	.LASF23
+ 425 0236 B4010000 		.4byte	.LASF23
+ 426 023a 05       		.byte	0x5
+ 427 023b 2D01     		.2byte	0x12d
+ 428 023d 12       		.uleb128 0x12
+ 429 023e D8000000 		.4byte	.LASF24
+ 430 0242 D8000000 		.4byte	.LASF24
+ 431 0246 06       		.byte	0x6
+ 432 0247 22       		.byte	0x22
+ 433 0248 12       		.uleb128 0x12
+ 434 0249 2C000000 		.4byte	.LASF25
+ 435 024d 2C000000 		.4byte	.LASF25
+ 436 0251 07       		.byte	0x7
+ 437 0252 38       		.byte	0x38
+ 438 0253 12       		.uleb128 0x12
+ 439 0254 75010000 		.4byte	.LASF26
+ 440 0258 75010000 		.4byte	.LASF26
+ 441 025c 07       		.byte	0x7
+ 442 025d 3D       		.byte	0x3d
+ 443 025e 12       		.uleb128 0x12
+ 444 025f 2B010000 		.4byte	.LASF27
+ 445 0263 2B010000 		.4byte	.LASF27
+ 446 0267 07       		.byte	0x7
+ 447 0268 3C       		.byte	0x3c
+ 448 0269 12       		.uleb128 0x12
+ 449 026a C9010000 		.4byte	.LASF28
+ 450 026e C9010000 		.4byte	.LASF28
+ 451 0272 06       		.byte	0x6
+ 452 0273 29       		.byte	0x29
+ 453 0274 12       		.uleb128 0x12
+ 454 0275 F0010000 		.4byte	.LASF29
+ 455 0279 F0010000 		.4byte	.LASF29
+ 456 027d 06       		.byte	0x6
+ 457 027e 2B       		.byte	0x2b
+ 458 027f 12       		.uleb128 0x12
+ 459 0280 59020000 		.4byte	.LASF30
+ 460 0284 59020000 		.4byte	.LASF30
+ 461 0288 08       		.byte	0x8
+ 462 0289 E7       		.byte	0xe7
+ 463 028a 12       		.uleb128 0x12
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 10
+
+
+ 464 028b 0F000000 		.4byte	.LASF31
+ 465 028f 0F000000 		.4byte	.LASF31
+ 466 0293 06       		.byte	0x6
+ 467 0294 24       		.byte	0x24
+ 468 0295 12       		.uleb128 0x12
+ 469 0296 82010000 		.4byte	.LASF32
+ 470 029a 82010000 		.4byte	.LASF32
+ 471 029e 07       		.byte	0x7
+ 472 029f 3E       		.byte	0x3e
+ 473 02a0 00       		.byte	0
+ 474              		.section	.debug_abbrev,"",%progbits
+ 475              	.Ldebug_abbrev0:
+ 476 0000 01       		.uleb128 0x1
+ 477 0001 11       		.uleb128 0x11
+ 478 0002 01       		.byte	0x1
+ 479 0003 25       		.uleb128 0x25
+ 480 0004 0E       		.uleb128 0xe
+ 481 0005 13       		.uleb128 0x13
+ 482 0006 0B       		.uleb128 0xb
+ 483 0007 03       		.uleb128 0x3
+ 484 0008 0E       		.uleb128 0xe
+ 485 0009 1B       		.uleb128 0x1b
+ 486 000a 0E       		.uleb128 0xe
+ 487 000b 55       		.uleb128 0x55
+ 488 000c 17       		.uleb128 0x17
+ 489 000d 11       		.uleb128 0x11
+ 490 000e 01       		.uleb128 0x1
+ 491 000f 10       		.uleb128 0x10
+ 492 0010 17       		.uleb128 0x17
+ 493 0011 00       		.byte	0
+ 494 0012 00       		.byte	0
+ 495 0013 02       		.uleb128 0x2
+ 496 0014 24       		.uleb128 0x24
+ 497 0015 00       		.byte	0
+ 498 0016 0B       		.uleb128 0xb
+ 499 0017 0B       		.uleb128 0xb
+ 500 0018 3E       		.uleb128 0x3e
+ 501 0019 0B       		.uleb128 0xb
+ 502 001a 03       		.uleb128 0x3
+ 503 001b 0E       		.uleb128 0xe
+ 504 001c 00       		.byte	0
+ 505 001d 00       		.byte	0
+ 506 001e 03       		.uleb128 0x3
+ 507 001f 16       		.uleb128 0x16
+ 508 0020 00       		.byte	0
+ 509 0021 03       		.uleb128 0x3
+ 510 0022 0E       		.uleb128 0xe
+ 511 0023 3A       		.uleb128 0x3a
+ 512 0024 0B       		.uleb128 0xb
+ 513 0025 3B       		.uleb128 0x3b
+ 514 0026 0B       		.uleb128 0xb
+ 515 0027 49       		.uleb128 0x49
+ 516 0028 13       		.uleb128 0x13
+ 517 0029 00       		.byte	0
+ 518 002a 00       		.byte	0
+ 519 002b 04       		.uleb128 0x4
+ 520 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 11
+
+
+ 521 002d 00       		.byte	0
+ 522 002e 0B       		.uleb128 0xb
+ 523 002f 0B       		.uleb128 0xb
+ 524 0030 3E       		.uleb128 0x3e
+ 525 0031 0B       		.uleb128 0xb
+ 526 0032 03       		.uleb128 0x3
+ 527 0033 08       		.uleb128 0x8
+ 528 0034 00       		.byte	0
+ 529 0035 00       		.byte	0
+ 530 0036 05       		.uleb128 0x5
+ 531 0037 16       		.uleb128 0x16
+ 532 0038 00       		.byte	0
+ 533 0039 03       		.uleb128 0x3
+ 534 003a 0E       		.uleb128 0xe
+ 535 003b 3A       		.uleb128 0x3a
+ 536 003c 0B       		.uleb128 0xb
+ 537 003d 3B       		.uleb128 0x3b
+ 538 003e 05       		.uleb128 0x5
+ 539 003f 49       		.uleb128 0x49
+ 540 0040 13       		.uleb128 0x13
+ 541 0041 00       		.byte	0
+ 542 0042 00       		.byte	0
+ 543 0043 06       		.uleb128 0x6
+ 544 0044 2E       		.uleb128 0x2e
+ 545 0045 01       		.byte	0x1
+ 546 0046 3F       		.uleb128 0x3f
+ 547 0047 19       		.uleb128 0x19
+ 548 0048 03       		.uleb128 0x3
+ 549 0049 0E       		.uleb128 0xe
+ 550 004a 3A       		.uleb128 0x3a
+ 551 004b 0B       		.uleb128 0xb
+ 552 004c 3B       		.uleb128 0x3b
+ 553 004d 0B       		.uleb128 0xb
+ 554 004e 27       		.uleb128 0x27
+ 555 004f 19       		.uleb128 0x19
+ 556 0050 49       		.uleb128 0x49
+ 557 0051 13       		.uleb128 0x13
+ 558 0052 8701     		.uleb128 0x87
+ 559 0054 19       		.uleb128 0x19
+ 560 0055 11       		.uleb128 0x11
+ 561 0056 01       		.uleb128 0x1
+ 562 0057 12       		.uleb128 0x12
+ 563 0058 06       		.uleb128 0x6
+ 564 0059 40       		.uleb128 0x40
+ 565 005a 18       		.uleb128 0x18
+ 566 005b 9742     		.uleb128 0x2117
+ 567 005d 19       		.uleb128 0x19
+ 568 005e 01       		.uleb128 0x1
+ 569 005f 13       		.uleb128 0x13
+ 570 0060 00       		.byte	0
+ 571 0061 00       		.byte	0
+ 572 0062 07       		.uleb128 0x7
+ 573 0063 34       		.uleb128 0x34
+ 574 0064 00       		.byte	0
+ 575 0065 03       		.uleb128 0x3
+ 576 0066 0E       		.uleb128 0xe
+ 577 0067 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 12
+
+
+ 578 0068 0B       		.uleb128 0xb
+ 579 0069 3B       		.uleb128 0x3b
+ 580 006a 0B       		.uleb128 0xb
+ 581 006b 49       		.uleb128 0x49
+ 582 006c 13       		.uleb128 0x13
+ 583 006d 00       		.byte	0
+ 584 006e 00       		.byte	0
+ 585 006f 08       		.uleb128 0x8
+ 586 0070 34       		.uleb128 0x34
+ 587 0071 00       		.byte	0
+ 588 0072 03       		.uleb128 0x3
+ 589 0073 0E       		.uleb128 0xe
+ 590 0074 3A       		.uleb128 0x3a
+ 591 0075 0B       		.uleb128 0xb
+ 592 0076 3B       		.uleb128 0x3b
+ 593 0077 0B       		.uleb128 0xb
+ 594 0078 49       		.uleb128 0x49
+ 595 0079 13       		.uleb128 0x13
+ 596 007a 02       		.uleb128 0x2
+ 597 007b 18       		.uleb128 0x18
+ 598 007c 00       		.byte	0
+ 599 007d 00       		.byte	0
+ 600 007e 09       		.uleb128 0x9
+ 601 007f 34       		.uleb128 0x34
+ 602 0080 00       		.byte	0
+ 603 0081 03       		.uleb128 0x3
+ 604 0082 0E       		.uleb128 0xe
+ 605 0083 3A       		.uleb128 0x3a
+ 606 0084 0B       		.uleb128 0xb
+ 607 0085 3B       		.uleb128 0x3b
+ 608 0086 0B       		.uleb128 0xb
+ 609 0087 49       		.uleb128 0x49
+ 610 0088 13       		.uleb128 0x13
+ 611 0089 02       		.uleb128 0x2
+ 612 008a 17       		.uleb128 0x17
+ 613 008b 00       		.byte	0
+ 614 008c 00       		.byte	0
+ 615 008d 0A       		.uleb128 0xa
+ 616 008e 898201   		.uleb128 0x4109
+ 617 0091 01       		.byte	0x1
+ 618 0092 11       		.uleb128 0x11
+ 619 0093 01       		.uleb128 0x1
+ 620 0094 31       		.uleb128 0x31
+ 621 0095 13       		.uleb128 0x13
+ 622 0096 01       		.uleb128 0x1
+ 623 0097 13       		.uleb128 0x13
+ 624 0098 00       		.byte	0
+ 625 0099 00       		.byte	0
+ 626 009a 0B       		.uleb128 0xb
+ 627 009b 8A8201   		.uleb128 0x410a
+ 628 009e 00       		.byte	0
+ 629 009f 02       		.uleb128 0x2
+ 630 00a0 18       		.uleb128 0x18
+ 631 00a1 9142     		.uleb128 0x2111
+ 632 00a3 18       		.uleb128 0x18
+ 633 00a4 00       		.byte	0
+ 634 00a5 00       		.byte	0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 13
+
+
+ 635 00a6 0C       		.uleb128 0xc
+ 636 00a7 898201   		.uleb128 0x4109
+ 637 00aa 00       		.byte	0
+ 638 00ab 11       		.uleb128 0x11
+ 639 00ac 01       		.uleb128 0x1
+ 640 00ad 31       		.uleb128 0x31
+ 641 00ae 13       		.uleb128 0x13
+ 642 00af 00       		.byte	0
+ 643 00b0 00       		.byte	0
+ 644 00b1 0D       		.uleb128 0xd
+ 645 00b2 01       		.uleb128 0x1
+ 646 00b3 01       		.byte	0x1
+ 647 00b4 49       		.uleb128 0x49
+ 648 00b5 13       		.uleb128 0x13
+ 649 00b6 01       		.uleb128 0x1
+ 650 00b7 13       		.uleb128 0x13
+ 651 00b8 00       		.byte	0
+ 652 00b9 00       		.byte	0
+ 653 00ba 0E       		.uleb128 0xe
+ 654 00bb 21       		.uleb128 0x21
+ 655 00bc 00       		.byte	0
+ 656 00bd 49       		.uleb128 0x49
+ 657 00be 13       		.uleb128 0x13
+ 658 00bf 2F       		.uleb128 0x2f
+ 659 00c0 0B       		.uleb128 0xb
+ 660 00c1 00       		.byte	0
+ 661 00c2 00       		.byte	0
+ 662 00c3 0F       		.uleb128 0xf
+ 663 00c4 34       		.uleb128 0x34
+ 664 00c5 00       		.byte	0
+ 665 00c6 03       		.uleb128 0x3
+ 666 00c7 0E       		.uleb128 0xe
+ 667 00c8 3A       		.uleb128 0x3a
+ 668 00c9 0B       		.uleb128 0xb
+ 669 00ca 3B       		.uleb128 0x3b
+ 670 00cb 05       		.uleb128 0x5
+ 671 00cc 49       		.uleb128 0x49
+ 672 00cd 13       		.uleb128 0x13
+ 673 00ce 3F       		.uleb128 0x3f
+ 674 00cf 19       		.uleb128 0x19
+ 675 00d0 3C       		.uleb128 0x3c
+ 676 00d1 19       		.uleb128 0x19
+ 677 00d2 00       		.byte	0
+ 678 00d3 00       		.byte	0
+ 679 00d4 10       		.uleb128 0x10
+ 680 00d5 35       		.uleb128 0x35
+ 681 00d6 00       		.byte	0
+ 682 00d7 49       		.uleb128 0x49
+ 683 00d8 13       		.uleb128 0x13
+ 684 00d9 00       		.byte	0
+ 685 00da 00       		.byte	0
+ 686 00db 11       		.uleb128 0x11
+ 687 00dc 2E       		.uleb128 0x2e
+ 688 00dd 00       		.byte	0
+ 689 00de 3F       		.uleb128 0x3f
+ 690 00df 19       		.uleb128 0x19
+ 691 00e0 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 14
+
+
+ 692 00e1 19       		.uleb128 0x19
+ 693 00e2 6E       		.uleb128 0x6e
+ 694 00e3 0E       		.uleb128 0xe
+ 695 00e4 03       		.uleb128 0x3
+ 696 00e5 0E       		.uleb128 0xe
+ 697 00e6 3A       		.uleb128 0x3a
+ 698 00e7 0B       		.uleb128 0xb
+ 699 00e8 3B       		.uleb128 0x3b
+ 700 00e9 05       		.uleb128 0x5
+ 701 00ea 00       		.byte	0
+ 702 00eb 00       		.byte	0
+ 703 00ec 12       		.uleb128 0x12
+ 704 00ed 2E       		.uleb128 0x2e
+ 705 00ee 00       		.byte	0
+ 706 00ef 3F       		.uleb128 0x3f
+ 707 00f0 19       		.uleb128 0x19
+ 708 00f1 3C       		.uleb128 0x3c
+ 709 00f2 19       		.uleb128 0x19
+ 710 00f3 6E       		.uleb128 0x6e
+ 711 00f4 0E       		.uleb128 0xe
+ 712 00f5 03       		.uleb128 0x3
+ 713 00f6 0E       		.uleb128 0xe
+ 714 00f7 3A       		.uleb128 0x3a
+ 715 00f8 0B       		.uleb128 0xb
+ 716 00f9 3B       		.uleb128 0x3b
+ 717 00fa 0B       		.uleb128 0xb
+ 718 00fb 00       		.byte	0
+ 719 00fc 00       		.byte	0
+ 720 00fd 00       		.byte	0
+ 721              		.section	.debug_loc,"",%progbits
+ 722              	.Ldebug_loc0:
+ 723              	.LLST0:
+ 724 0000 04000000 		.4byte	.LVL0
+ 725 0004 2E000000 		.4byte	.LVL7
+ 726 0008 0200     		.2byte	0x2
+ 727 000a 30       		.byte	0x30
+ 728 000b 9F       		.byte	0x9f
+ 729 000c 2E000000 		.4byte	.LVL7
+ 730 0010 78000000 		.4byte	.LFE64
+ 731 0014 0100     		.2byte	0x1
+ 732 0016 54       		.byte	0x54
+ 733 0017 00000000 		.4byte	0
+ 734 001b 00000000 		.4byte	0
+ 735              		.section	.debug_aranges,"",%progbits
+ 736 0000 1C000000 		.4byte	0x1c
+ 737 0004 0200     		.2byte	0x2
+ 738 0006 00000000 		.4byte	.Ldebug_info0
+ 739 000a 04       		.byte	0x4
+ 740 000b 00       		.byte	0
+ 741 000c 0000     		.2byte	0
+ 742 000e 0000     		.2byte	0
+ 743 0010 00000000 		.4byte	.LFB64
+ 744 0014 78000000 		.4byte	.LFE64-.LFB64
+ 745 0018 00000000 		.4byte	0
+ 746 001c 00000000 		.4byte	0
+ 747              		.section	.debug_ranges,"",%progbits
+ 748              	.Ldebug_ranges0:
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 15
+
+
+ 749 0000 00000000 		.4byte	.LFB64
+ 750 0004 78000000 		.4byte	.LFE64
+ 751 0008 00000000 		.4byte	0
+ 752 000c 00000000 		.4byte	0
+ 753              		.section	.debug_line,"",%progbits
+ 754              	.Ldebug_line0:
+ 755 0000 0B020000 		.section	.debug_str,"MS",%progbits,1
+ 755      0200DE01 
+ 755      00000201 
+ 755      FB0E0D00 
+ 755      01010101 
+ 756              	.LASF16:
+ 757 0000 63686172 		.ascii	"char\000"
+ 757      00
+ 758              	.LASF9:
+ 759 0005 5F5F696E 		.ascii	"__int32_t\000"
+ 759      7433325F 
+ 759      7400
+ 760              	.LASF31:
+ 761 000f 5553425F 		.ascii	"USB_PutString\000"
+ 761      50757453 
+ 761      7472696E 
+ 761      6700
+ 762              	.LASF21:
+ 763 001d 636F6E74 		.ascii	"contador\000"
+ 763      61646F72 
+ 763      00
+ 764              	.LASF13:
+ 765 0026 666C6F61 		.ascii	"float\000"
+ 765      7400
+ 766              	.LASF25:
+ 767 002c 4C43445F 		.ascii	"LCD_Start\000"
+ 767      53746172 
+ 767      7400
+ 768              	.LASF1:
+ 769 0036 756E7369 		.ascii	"unsigned char\000"
+ 769      676E6564 
+ 769      20636861 
+ 769      7200
+ 770              	.LASF33:
+ 771 0044 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 771      43313120 
+ 771      352E342E 
+ 771      31203230 
+ 771      31363036 
+ 772 0077 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 772      20726576 
+ 772      6973696F 
+ 772      6E203233 
+ 772      37373135 
+ 773 00aa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 773      66756E63 
+ 773      74696F6E 
+ 773      2D736563 
+ 773      74696F6E 
+ 774              	.LASF15:
+ 775 00d2 63686172 		.ascii	"char8\000"
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 16
+
+
+ 775      3800
+ 776              	.LASF24:
+ 777 00d8 5553425F 		.ascii	"USB_CDC_Init\000"
+ 777      4344435F 
+ 777      496E6974 
+ 777      00
+ 778              	.LASF5:
+ 779 00e5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 779      20756E73 
+ 779      69676E65 
+ 779      6420696E 
+ 779      7400
+ 780              	.LASF3:
+ 781 00f7 73686F72 		.ascii	"short unsigned int\000"
+ 781      7420756E 
+ 781      7369676E 
+ 781      65642069 
+ 781      6E7400
+ 782              	.LASF38:
+ 783 010a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 783      52784275 
+ 783      66666572 
+ 783      00
+ 784              	.LASF37:
+ 785 0117 4375656E 		.ascii	"Cuenta\000"
+ 785      746100
+ 786              	.LASF14:
+ 787 011e 646F7562 		.ascii	"double\000"
+ 787      6C6500
+ 788              	.LASF20:
+ 789 0125 54657874 		.ascii	"Texto\000"
+ 789      6F00
+ 790              	.LASF27:
+ 791 012b 4C43445F 		.ascii	"LCD_PrintString\000"
+ 791      5072696E 
+ 791      74537472 
+ 791      696E6700 
+ 792              	.LASF12:
+ 793 013b 75696E74 		.ascii	"uint16\000"
+ 793      313600
+ 794              	.LASF22:
+ 795 0142 5553425F 		.ascii	"USB_Start\000"
+ 795      53746172 
+ 795      7400
+ 796              	.LASF36:
+ 797 014c 6D61696E 		.ascii	"main\000"
+ 797      00
+ 798              	.LASF8:
+ 799 0151 756E7369 		.ascii	"unsigned int\000"
+ 799      676E6564 
+ 799      20696E74 
+ 799      00
+ 800              	.LASF7:
+ 801 015e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 801      206C6F6E 
+ 801      6720756E 
+ 801      7369676E 
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 17
+
+
+ 801      65642069 
+ 802              	.LASF26:
+ 803 0175 4C43445F 		.ascii	"LCD_Position\000"
+ 803      506F7369 
+ 803      74696F6E 
+ 803      00
+ 804              	.LASF32:
+ 805 0182 4C43445F 		.ascii	"LCD_PutChar\000"
+ 805      50757443 
+ 805      68617200 
+ 806              	.LASF10:
+ 807 018e 696E7433 		.ascii	"int32_t\000"
+ 807      325F7400 
+ 808              	.LASF18:
+ 809 0196 73697A65 		.ascii	"sizetype\000"
+ 809      74797065 
+ 809      00
+ 810              	.LASF6:
+ 811 019f 6C6F6E67 		.ascii	"long long int\000"
+ 811      206C6F6E 
+ 811      6720696E 
+ 811      7400
+ 812              	.LASF34:
+ 813 01ad 6D61696E 		.ascii	"main.c\000"
+ 813      2E6300
+ 814              	.LASF23:
+ 815 01b4 5553425F 		.ascii	"USB_GetConfiguration\000"
+ 815      47657443 
+ 815      6F6E6669 
+ 815      67757261 
+ 815      74696F6E 
+ 816              	.LASF28:
+ 817 01c9 5553425F 		.ascii	"USB_DataIsReady\000"
+ 817      44617461 
+ 817      49735265 
+ 817      61647900 
+ 818              	.LASF2:
+ 819 01d9 73686F72 		.ascii	"short int\000"
+ 819      7420696E 
+ 819      7400
+ 820              	.LASF19:
+ 821 01e3 62756666 		.ascii	"buffer\000"
+ 821      657200
+ 822              	.LASF11:
+ 823 01ea 75696E74 		.ascii	"uint8\000"
+ 823      3800
+ 824              	.LASF29:
+ 825 01f0 5553425F 		.ascii	"USB_GetAll\000"
+ 825      47657441 
+ 825      6C6C00
+ 826              	.LASF4:
+ 827 01fb 6C6F6E67 		.ascii	"long int\000"
+ 827      20696E74 
+ 827      00
+ 828              	.LASF35:
+ 829 0204 433A5C55 		.ascii	"C:\\Users\\Henry\\Documents\\PSoC Creator\\Serial\\"
+ 829      73657273 
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccBeAIBh.s 			page 18
+
+
+ 829      5C48656E 
+ 829      72795C44 
+ 829      6F63756D 
+ 830 0231 5553424D 		.ascii	"USBMATLAB.cydsn\000"
+ 830      41544C41 
+ 830      422E6379 
+ 830      64736E00 
+ 831              	.LASF17:
+ 832 0241 6C6F6E67 		.ascii	"long double\000"
+ 832      20646F75 
+ 832      626C6500 
+ 833              	.LASF0:
+ 834 024d 7369676E 		.ascii	"signed char\000"
+ 834      65642063 
+ 834      68617200 
+ 835              	.LASF30:
+ 836 0259 73707269 		.ascii	"sprintf\000"
+ 836      6E746600 
+ 837              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

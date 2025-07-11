@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Serial\USBMATLAB\Generated_Source">
+<ExpandedNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor\TopDesign</v>
+<v>Serial\Emisor\Emisor.cydwr</v>
+<v>Serial\Emisor\Emisor.cydwr\Pins</v>
+<v>Serial\Emisor\Emisor.cydwr\Analog</v>
+<v>Serial\Emisor\Emisor.cydwr\Clocks</v>
+<v>Serial\Emisor\Emisor.cydwr\Interrupts</v>
+<v>Serial\Emisor\Emisor.cydwr\DMA</v>
+<v>Serial\Emisor\Emisor.cydwr\System</v>
+<v>Serial\Emisor\Emisor.cydwr\Directives</v>
+<v>Serial\Emisor\Emisor.cydwr\Flash Security</v>
+<v>Serial\Emisor\Emisor.cydwr\EEPROM</v>
+<v>Serial\Emisor\Header Files</v>
+<v>Serial\Emisor\Header Files\cyapicallbacks.h</v>
+<v>Serial\Emisor\Source Files</v>
+<v>Serial\Emisor\Source Files\main.c</v>
+<v>Serial\Emisor\Generated_Source\PSoC5</v>
+<v>Serial\Receptor\TopDesign</v>
+<v>Serial\Receptor\Receptor.cydwr</v>
+<v>Serial\Receptor\Receptor.cydwr\Pins</v>
+<v>Serial\Receptor\Receptor.cydwr\Analog</v>
+<v>Serial\Receptor\Receptor.cydwr\Clocks</v>
+<v>Serial\Receptor\Receptor.cydwr\Interrupts</v>
+<v>Serial\Receptor\Receptor.cydwr\DMA</v>
+<v>Serial\Receptor\Receptor.cydwr\System</v>
+<v>Serial\Receptor\Receptor.cydwr\Directives</v>
+<v>Serial\Receptor\Receptor.cydwr\Flash Security</v>
+<v>Serial\Receptor\Receptor.cydwr\EEPROM</v>
+<v>Serial\Receptor\Header Files</v>
+<v>Serial\Receptor\Header Files\cyapicallbacks.h</v>
+<v>Serial\Receptor\Source Files</v>
+<v>Serial\Receptor\Source Files\main.c</v>
+<v>Serial\Receptor\Generated_Source\PSoC5</v>
+<v>Serial\Receptor_Int\TopDesign</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Pins</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Analog</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Clocks</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Interrupts</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\DMA</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\System</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Directives</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\Flash Security</v>
+<v>Serial\Receptor_Int\Receptor_Int.cydwr\EEPROM</v>
+<v>Serial\Receptor_Int\Header Files</v>
+<v>Serial\Receptor_Int\Header Files\cyapicallbacks.h</v>
+<v>Serial\Receptor_Int\Source Files</v>
+<v>Serial\Receptor_Int\Source Files\main.c</v>
+<v>Serial\Receptor_Int\Generated_Source</v>
+<v>Serial\Receptor_Int\Generated_Source\PSoC5</v>
+<v>Serial\USB_Emulador\TopDesign</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Pins</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Analog</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Clocks</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Interrupts</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\DMA</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\System</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Directives</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\Flash Security</v>
+<v>Serial\USB_Emulador\USB_Emulador.cydwr\EEPROM</v>
+<v>Serial\USB_Emulador\Header Files</v>
+<v>Serial\USB_Emulador\Header Files\cyapicallbacks.h</v>
+<v>Serial\USB_Emulador\Source Files</v>
+<v>Serial\USB_Emulador\Source Files\main.c</v>
+<v>Serial\USB_Emulador\Generated_Source</v>
+<v>Serial\USB_Emulador\Generated_Source\PSoC5</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\TopDesign</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Pins</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Analog</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Clocks</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Interrupts</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\DMA</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\System</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Directives</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Flash Security</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\EEPROM</v>
+<v>Serial\USBMATLAB\Header Files</v>
+<v>Serial\USBMATLAB\Header Files\cyapicallbacks.h</v>
+<v>Serial\USBMATLAB\Source Files</v>
+<v>Serial\USBMATLAB\Source Files\main.c</v>
+<v>Serial\USBMATLAB\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\TopDesign</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Pins</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Analog</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Clocks</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Interrupts</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\DMA</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\System</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Directives</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\Flash Security</v>
+<v>Serial\USBMATLAB\USBMATLAB.cydwr\EEPROM</v>
+<v>Serial\USBMATLAB\Header Files</v>
+<v>Serial\USBMATLAB\Header Files\cyapicallbacks.h</v>
+<v>Serial\USBMATLAB\Source Files</v>
+<v>Serial\USBMATLAB\Source Files\main.c</v>
+<v>Serial\USBMATLAB\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\TopDesign</v>
+<v>Serial\Emisor\TopDesign\TopDesign.cysch</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\TopDesign</v>
+<v>Serial\Receptor\TopDesign\TopDesign.cysch</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\Receptor_Int\TopDesign</v>
+<v>Serial\Receptor_Int\TopDesign\TopDesign.cysch</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USB_Emulador\TopDesign</v>
+<v>Serial\USB_Emulador\TopDesign\TopDesign.cysch</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\TopDesign</v>
+<v>Serial\USBMATLAB\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\TopDesign</v>
+<v>Serial\Emisor\TopDesign\TopDesign.cysch</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\TopDesign</v>
+<v>Serial\Receptor\TopDesign\TopDesign.cysch</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\Receptor_Int\TopDesign</v>
+<v>Serial\Receptor_Int\TopDesign\TopDesign.cysch</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USB_Emulador\TopDesign</v>
+<v>Serial\USB_Emulador\TopDesign\TopDesign.cysch</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\TopDesign</v>
+<v>Serial\USBMATLAB\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\CortexM3</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_BOOT.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_INT.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_IntClock.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_PM.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.elf</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.hex</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.map</v>
+<v>Serial\Emisor\Emisor.gpdsc</v>
+<v>Serial\Emisor\Emisor.rpt</v>
+<v>Serial\Emisor\Emisor_timing.html</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\CortexM3</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_BOOT.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_INT.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_IntClock.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_PM.lst</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Receptor.elf</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Receptor.hex</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541\Debug\Receptor.map</v>
+<v>Serial\Receptor\Receptor.gpdsc</v>
+<v>Serial\Receptor\Receptor.rpt</v>
+<v>Serial\Receptor\Receptor_timing.html</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\Receptor_Int\CortexM3</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Interrupcion.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_BOOT.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_INT.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_IntClock.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Listing Files\Receptor_PM.lst</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Receptor_Int.elf</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Receptor_Int.hex</v>
+<v>Serial\Receptor_Int\CortexM3\ARM_GCC_541\Debug\Receptor_Int.map</v>
+<v>Serial\Receptor_Int\Receptor_Int.gpdsc</v>
+<v>Serial\Receptor_Int\Receptor_Int.rpt</v>
+<v>Serial\Receptor_Int\Receptor_Int_timing.html</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USB_Emulador\CortexM3</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_audio.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_boot.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cdc.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cls.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_descr.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dm.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dp.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_drv.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_episr.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_hid.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_midi.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_msc.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_pm.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_std.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_vnd.lst</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\USB_Emulador.elf</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\USB_Emulador.hex</v>
+<v>Serial\USB_Emulador\CortexM3\ARM_GCC_541\Debug\USB_Emulador.map</v>
+<v>Serial\USB_Emulador\USB_Emulador.gpdsc</v>
+<v>Serial\USB_Emulador\USB_Emulador.rpt</v>
+<v>Serial\USB_Emulador\USB_Emulador_timing.html</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\CortexM3</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_audio.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_boot.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cdc.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cls.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_descr.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dm.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dp.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_drv.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_episr.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_hid.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_midi.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_msc.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_pm.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_std.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_vnd.lst</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\USBMATLAB.elf</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\USBMATLAB.hex</v>
+<v>Serial\USBMATLAB\CortexM3\ARM_GCC_541\Debug\USBMATLAB.map</v>
+<v>Serial\USBMATLAB\USBMATLAB.gpdsc</v>
+<v>Serial\USBMATLAB\USBMATLAB.rpt</v>
+<v>Serial\USBMATLAB\USBMATLAB_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\CortexM3</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_BOOT.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_INT.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_IntClock.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\Emisor_PM.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.elf</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.hex</v>
+<v>Serial\Emisor\CortexM3\ARM_GCC_541\Debug\Emisor.map</v>
+<v>Serial\Emisor\Emisor.gpdsc</v>
+<v>Serial\Emisor\Emisor.rpt</v>
+<v>Serial\Emisor\Emisor_timing.html</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\CortexM3</v>
+<v>Serial\Receptor\CortexM3\ARM_GCC_541</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\PSoC 5LP Architecture TRM</v>
+<v>Serial\Emisor\CY8C58LP Family Datasheet</v>
+<v>Serial\Emisor\System Reference Guides</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\PSoC 5LP Architecture TRM</v>
+<v>Serial\Receptor\CY8C58LP Family Datasheet</v>
+<v>Serial\Receptor\System Reference Guides</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\Receptor_Int\PSoC 5LP Architecture TRM</v>
+<v>Serial\Receptor_Int\CY8C58LP Family Datasheet</v>
+<v>Serial\Receptor_Int\System Reference Guides</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USB_Emulador\PSoC 5LP Architecture TRM</v>
+<v>Serial\USB_Emulador\CY8C58LP Family Datasheet</v>
+<v>Serial\USB_Emulador\System Reference Guides</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\PSoC 5LP Architecture TRM</v>
+<v>Serial\USBMATLAB\CY8C58LP Family Datasheet</v>
+<v>Serial\USBMATLAB\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Serial</v>
+<v>Serial\Emisor</v>
+<v>Serial\Emisor\PSoC 5LP Architecture TRM</v>
+<v>Serial\Emisor\CY8C58LP Family Datasheet</v>
+<v>Serial\Emisor\System Reference Guides</v>
+<v>Serial\Receptor</v>
+<v>Serial\Receptor\PSoC 5LP Architecture TRM</v>
+<v>Serial\Receptor\CY8C58LP Family Datasheet</v>
+<v>Serial\Receptor\System Reference Guides</v>
+<v>Serial\Receptor_Int</v>
+<v>Serial\Receptor_Int\PSoC 5LP Architecture TRM</v>
+<v>Serial\Receptor_Int\CY8C58LP Family Datasheet</v>
+<v>Serial\Receptor_Int\System Reference Guides</v>
+<v>Serial\USB_Emulador</v>
+<v>Serial\USB_Emulador\PSoC 5LP Architecture TRM</v>
+<v>Serial\USB_Emulador\CY8C58LP Family Datasheet</v>
+<v>Serial\USB_Emulador\System Reference Guides</v>
+<v>Serial\USBMATLAB</v>
+<v>Serial\USBMATLAB\PSoC 5LP Architecture TRM</v>
+<v>Serial\USBMATLAB\CY8C58LP Family Datasheet</v>
+<v>Serial\USBMATLAB\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1309, 487" SelectedTabbedMdiWindow="63665f1d-4f5c-4a06-998d-a0f303122457"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63665f1d-4f5c-4a06-998d-a0f303122457" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

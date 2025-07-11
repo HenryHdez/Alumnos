@@ -1,0 +1,946 @@
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_dmul
+  21              		.global	__aeabi_d2f
+  22              		.global	__aeabi_f2d
+  23              		.global	__aeabi_dadd
+  24              		.global	__aeabi_d2uiz
+  25              		.section	.text.generarTablaSeno,"ax",%progbits
+  26              		.align	2
+  27              		.global	generarTablaSeno
+  28              		.thumb
+  29              		.thumb_func
+  30              		.type	generarTablaSeno, %function
+  31              	generarTablaSeno:
+  32              	.LFB63:
+  33              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** #include <math.h>
+   3:main.c        **** 
+   4:main.c        **** #define PI 3.14159265
+   5:main.c        **** #define N 64               
+   6:main.c        **** #define DELAY_US 100       
+   7:main.c        **** uint8 senoTabla[N];        
+   8:main.c        **** 
+   9:main.c        **** void generarTablaSeno(void){
+  34              		.loc 1 9 0
+  35              		.cfi_startproc
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38 0000 10B5     		push	{r4, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42              	.LVL0:
+  43              	.LBB2:
+  10:main.c        ****     for(int i = 0; i < N; i++){
+  44              		.loc 1 10 0
+  45 0002 0024     		movs	r4, #0
+  46 0004 20E0     		b	.L2
+  47              	.LVL1:
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 2
+
+
+  48              	.L3:
+  49              	.LBB3:
+  11:main.c        ****         float angulo = (2.0 * PI * i) / N;
+  50              		.loc 1 11 0 discriminator 3
+  51 0006 2046     		mov	r0, r4
+  52 0008 FFF7FEFF 		bl	__aeabi_i2d
+  53              	.LVL2:
+  54 000c 10A3     		adr	r3, .L5
+  55 000e D3E90023 		ldrd	r2, [r3]
+  56 0012 FFF7FEFF 		bl	__aeabi_dmul
+  57              	.LVL3:
+  58 0016 0022     		movs	r2, #0
+  59 0018 114B     		ldr	r3, .L5+16
+  60 001a FFF7FEFF 		bl	__aeabi_dmul
+  61              	.LVL4:
+  62 001e FFF7FEFF 		bl	__aeabi_d2f
+  63              	.LVL5:
+  12:main.c        ****         senoTabla[i] = (uint8)(127.5 * sin(angulo) + 127.5);}
+  64              		.loc 1 12 0 discriminator 3
+  65 0022 FFF7FEFF 		bl	__aeabi_f2d
+  66              	.LVL6:
+  67 0026 FFF7FEFF 		bl	sin
+  68              	.LVL7:
+  69 002a 0BA3     		adr	r3, .L5+8
+  70 002c D3E90023 		ldrd	r2, [r3]
+  71 0030 FFF7FEFF 		bl	__aeabi_dmul
+  72              	.LVL8:
+  73 0034 08A3     		adr	r3, .L5+8
+  74 0036 D3E90023 		ldrd	r2, [r3]
+  75 003a FFF7FEFF 		bl	__aeabi_dadd
+  76              	.LVL9:
+  77 003e FFF7FEFF 		bl	__aeabi_d2uiz
+  78              	.LVL10:
+  79 0042 084B     		ldr	r3, .L5+20
+  80 0044 1855     		strb	r0, [r3, r4]
+  81              	.LBE3:
+  10:main.c        ****     for(int i = 0; i < N; i++){
+  82              		.loc 1 10 0 discriminator 3
+  83 0046 0134     		adds	r4, r4, #1
+  84              	.LVL11:
+  85              	.L2:
+  10:main.c        ****     for(int i = 0; i < N; i++){
+  86              		.loc 1 10 0 is_stmt 0 discriminator 1
+  87 0048 3F2C     		cmp	r4, #63
+  88 004a DCDD     		ble	.L3
+  89              	.LBE2:
+  13:main.c        **** }
+  90              		.loc 1 13 0 is_stmt 1
+  91 004c 10BD     		pop	{r4, pc}
+  92              	.LVL12:
+  93              	.L6:
+  94 004e 00BF     		.align	3
+  95              	.L5:
+  96 0050 F1D4C853 		.word	1405670641
+  97 0054 FB211940 		.word	1075388923
+  98 0058 00000000 		.word	0
+  99 005c 00E05F40 		.word	1080025088
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 3
+
+
+ 100 0060 0000903F 		.word	1066401792
+ 101 0064 00000000 		.word	senoTabla
+ 102              		.cfi_endproc
+ 103              	.LFE63:
+ 104              		.size	generarTablaSeno, .-generarTablaSeno
+ 105              		.section	.text.main,"ax",%progbits
+ 106              		.align	2
+ 107              		.global	main
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.type	main, %function
+ 111              	main:
+ 112              	.LFB64:
+  14:main.c        **** 
+  15:main.c        **** int main(void)
+  16:main.c        **** {
+ 113              		.loc 1 16 0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117 0000 10B5     		push	{r4, lr}
+ 118              		.cfi_def_cfa_offset 8
+ 119              		.cfi_offset 4, -8
+ 120              		.cfi_offset 14, -4
+  17:main.c        ****     CyGlobalIntEnable;
+ 121              		.loc 1 17 0
+ 122              		.syntax unified
+ 123              	@ 17 "main.c" 1
+ 124 0002 62B6     		CPSIE   i
+ 125              	@ 0 "" 2
+  18:main.c        ****     generarTablaSeno();
+ 126              		.loc 1 18 0
+ 127              		.thumb
+ 128              		.syntax unified
+ 129 0004 FFF7FEFF 		bl	generarTablaSeno
+ 130              	.LVL13:
+  19:main.c        ****     VDAC_Start();  
+ 131              		.loc 1 19 0
+ 132 0008 FFF7FEFF 		bl	VDAC_Start
+ 133              	.LVL14:
+ 134              	.L10:
+ 135              	.LBB4:
+  20:main.c        ****     for(;;){
+  21:main.c        ****         for(int i = 0; i < N; i++){
+ 136              		.loc 1 21 0
+ 137 000c 0024     		movs	r4, #0
+ 138 000e 07E0     		b	.L8
+ 139              	.LVL15:
+ 140              	.L9:
+  22:main.c        ****             VDAC_SetValue(senoTabla[i]); 
+ 141              		.loc 1 22 0 discriminator 3
+ 142 0010 054B     		ldr	r3, .L12
+ 143 0012 185D     		ldrb	r0, [r3, r4]	@ zero_extendqisi2
+ 144 0014 FFF7FEFF 		bl	VDAC_SetValue
+ 145              	.LVL16:
+  23:main.c        ****             CyDelayUs(DELAY_US);          
+ 146              		.loc 1 23 0 discriminator 3
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 4
+
+
+ 147 0018 6420     		movs	r0, #100
+ 148 001a FFF7FEFF 		bl	CyDelayUs
+ 149              	.LVL17:
+  21:main.c        ****             VDAC_SetValue(senoTabla[i]); 
+ 150              		.loc 1 21 0 discriminator 3
+ 151 001e 0134     		adds	r4, r4, #1
+ 152              	.LVL18:
+ 153              	.L8:
+  21:main.c        ****             VDAC_SetValue(senoTabla[i]); 
+ 154              		.loc 1 21 0 is_stmt 0 discriminator 1
+ 155 0020 3F2C     		cmp	r4, #63
+ 156 0022 F5DD     		ble	.L9
+ 157 0024 F2E7     		b	.L10
+ 158              	.L13:
+ 159 0026 00BF     		.align	2
+ 160              	.L12:
+ 161 0028 00000000 		.word	senoTabla
+ 162              	.LBE4:
+ 163              		.cfi_endproc
+ 164              	.LFE64:
+ 165              		.size	main, .-main
+ 166              		.comm	senoTabla,64,4
+ 167              		.text
+ 168              	.Letext0:
+ 169              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 170              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 171              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 172              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 173              		.file 6 "Generated_Source\\PSoC5/VDAC.h"
+ 174              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 175              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 176              		.section	.debug_info,"",%progbits
+ 177              	.Ldebug_info0:
+ 178 0000 BA010000 		.4byte	0x1ba
+ 179 0004 0400     		.2byte	0x4
+ 180 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 181 000a 04       		.byte	0x4
+ 182 000b 01       		.uleb128 0x1
+ 183 000c 3A000000 		.4byte	.LASF23
+ 184 0010 0C       		.byte	0xc
+ 185 0011 53010000 		.4byte	.LASF24
+ 186 0015 AF010000 		.4byte	.LASF25
+ 187 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 188 001d 00000000 		.4byte	0
+ 189 0021 00000000 		.4byte	.Ldebug_line0
+ 190 0025 02       		.uleb128 0x2
+ 191 0026 01       		.byte	0x1
+ 192 0027 06       		.byte	0x6
+ 193 0028 9C010000 		.4byte	.LASF0
+ 194 002c 02       		.uleb128 0x2
+ 195 002d 01       		.byte	0x1
+ 196 002e 08       		.byte	0x8
+ 197 002f 2C000000 		.4byte	.LASF1
+ 198 0033 02       		.uleb128 0x2
+ 199 0034 02       		.byte	0x2
+ 200 0035 05       		.byte	0x5
+ 201 0036 77010000 		.4byte	.LASF2
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 5
+
+
+ 202 003a 02       		.uleb128 0x2
+ 203 003b 02       		.byte	0x2
+ 204 003c 07       		.byte	0x7
+ 205 003d DA000000 		.4byte	.LASF3
+ 206 0041 03       		.uleb128 0x3
+ 207 0042 11000000 		.4byte	.LASF9
+ 208 0046 02       		.byte	0x2
+ 209 0047 3F       		.byte	0x3f
+ 210 0048 4C000000 		.4byte	0x4c
+ 211 004c 02       		.uleb128 0x2
+ 212 004d 04       		.byte	0x4
+ 213 004e 05       		.byte	0x5
+ 214 004f 87010000 		.4byte	.LASF4
+ 215 0053 02       		.uleb128 0x2
+ 216 0054 04       		.byte	0x4
+ 217 0055 07       		.byte	0x7
+ 218 0056 C8000000 		.4byte	.LASF5
+ 219 005a 02       		.uleb128 0x2
+ 220 005b 08       		.byte	0x8
+ 221 005c 05       		.byte	0x5
+ 222 005d 45010000 		.4byte	.LASF6
+ 223 0061 02       		.uleb128 0x2
+ 224 0062 08       		.byte	0x8
+ 225 0063 07       		.byte	0x7
+ 226 0064 1D010000 		.4byte	.LASF7
+ 227 0068 04       		.uleb128 0x4
+ 228 0069 04       		.byte	0x4
+ 229 006a 05       		.byte	0x5
+ 230 006b 696E7400 		.ascii	"int\000"
+ 231 006f 02       		.uleb128 0x2
+ 232 0070 04       		.byte	0x4
+ 233 0071 07       		.byte	0x7
+ 234 0072 10010000 		.4byte	.LASF8
+ 235 0076 03       		.uleb128 0x3
+ 236 0077 34010000 		.4byte	.LASF10
+ 237 007b 03       		.byte	0x3
+ 238 007c 2C       		.byte	0x2c
+ 239 007d 41000000 		.4byte	0x41
+ 240 0081 05       		.uleb128 0x5
+ 241 0082 81010000 		.4byte	.LASF11
+ 242 0086 04       		.byte	0x4
+ 243 0087 E801     		.2byte	0x1e8
+ 244 0089 2C000000 		.4byte	0x2c
+ 245 008d 02       		.uleb128 0x2
+ 246 008e 04       		.byte	0x4
+ 247 008f 04       		.byte	0x4
+ 248 0090 26000000 		.4byte	.LASF12
+ 249 0094 02       		.uleb128 0x2
+ 250 0095 08       		.byte	0x8
+ 251 0096 04       		.byte	0x4
+ 252 0097 FA000000 		.4byte	.LASF13
+ 253 009b 02       		.uleb128 0x2
+ 254 009c 01       		.byte	0x1
+ 255 009d 08       		.byte	0x8
+ 256 009e 5A010000 		.4byte	.LASF14
+ 257 00a2 02       		.uleb128 0x2
+ 258 00a3 04       		.byte	0x4
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 6
+
+
+ 259 00a4 07       		.byte	0x7
+ 260 00a5 3C010000 		.4byte	.LASF15
+ 261 00a9 02       		.uleb128 0x2
+ 262 00aa 08       		.byte	0x8
+ 263 00ab 04       		.byte	0x4
+ 264 00ac 90010000 		.4byte	.LASF16
+ 265 00b0 06       		.uleb128 0x6
+ 266 00b1 00000000 		.4byte	.LASF26
+ 267 00b5 01       		.byte	0x1
+ 268 00b6 09       		.byte	0x9
+ 269 00b7 00000000 		.4byte	.LFB63
+ 270 00bb 68000000 		.4byte	.LFE63-.LFB63
+ 271 00bf 01       		.uleb128 0x1
+ 272 00c0 9C       		.byte	0x9c
+ 273 00c1 FF000000 		.4byte	0xff
+ 274 00c5 07       		.uleb128 0x7
+ 275 00c6 02000000 		.4byte	.LBB2
+ 276 00ca 4A000000 		.4byte	.LBE2-.LBB2
+ 277 00ce 08       		.uleb128 0x8
+ 278 00cf 6900     		.ascii	"i\000"
+ 279 00d1 01       		.byte	0x1
+ 280 00d2 0A       		.byte	0xa
+ 281 00d3 68000000 		.4byte	0x68
+ 282 00d7 00000000 		.4byte	.LLST0
+ 283 00db 07       		.uleb128 0x7
+ 284 00dc 06000000 		.4byte	.LBB3
+ 285 00e0 40000000 		.4byte	.LBE3-.LBB3
+ 286 00e4 09       		.uleb128 0x9
+ 287 00e5 A8010000 		.4byte	.LASF17
+ 288 00e9 01       		.byte	0x1
+ 289 00ea 0B       		.byte	0xb
+ 290 00eb 8D000000 		.4byte	0x8d
+ 291 00ef 1F000000 		.4byte	.LLST1
+ 292 00f3 0A       		.uleb128 0xa
+ 293 00f4 2A000000 		.4byte	.LVL7
+ 294 00f8 91010000 		.4byte	0x191
+ 295 00fc 00       		.byte	0
+ 296 00fd 00       		.byte	0
+ 297 00fe 00       		.byte	0
+ 298 00ff 0B       		.uleb128 0xb
+ 299 0100 01010000 		.4byte	.LASF27
+ 300 0104 01       		.byte	0x1
+ 301 0105 0F       		.byte	0xf
+ 302 0106 68000000 		.4byte	0x68
+ 303 010a 00000000 		.4byte	.LFB64
+ 304 010e 2C000000 		.4byte	.LFE64-.LFB64
+ 305 0112 01       		.uleb128 0x1
+ 306 0113 9C       		.byte	0x9c
+ 307 0114 5F010000 		.4byte	0x15f
+ 308 0118 0C       		.uleb128 0xc
+ 309 0119 0C000000 		.4byte	.LBB4
+ 310 011d 20000000 		.4byte	.LBE4-.LBB4
+ 311 0121 4C010000 		.4byte	0x14c
+ 312 0125 08       		.uleb128 0x8
+ 313 0126 6900     		.ascii	"i\000"
+ 314 0128 01       		.byte	0x1
+ 315 0129 15       		.byte	0x15
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 7
+
+
+ 316 012a 68000000 		.4byte	0x68
+ 317 012e 32000000 		.4byte	.LLST2
+ 318 0132 0A       		.uleb128 0xa
+ 319 0133 18000000 		.4byte	.LVL16
+ 320 0137 9C010000 		.4byte	0x19c
+ 321 013b 0D       		.uleb128 0xd
+ 322 013c 1E000000 		.4byte	.LVL17
+ 323 0140 A7010000 		.4byte	0x1a7
+ 324 0144 0E       		.uleb128 0xe
+ 325 0145 01       		.uleb128 0x1
+ 326 0146 50       		.byte	0x50
+ 327 0147 02       		.uleb128 0x2
+ 328 0148 08       		.byte	0x8
+ 329 0149 64       		.byte	0x64
+ 330 014a 00       		.byte	0
+ 331 014b 00       		.byte	0
+ 332 014c 0A       		.uleb128 0xa
+ 333 014d 08000000 		.4byte	.LVL13
+ 334 0151 B0000000 		.4byte	0xb0
+ 335 0155 0A       		.uleb128 0xa
+ 336 0156 0C000000 		.4byte	.LVL14
+ 337 015a B2010000 		.4byte	0x1b2
+ 338 015e 00       		.byte	0
+ 339 015f 0F       		.uleb128 0xf
+ 340 0160 ED000000 		.4byte	.LASF18
+ 341 0164 05       		.byte	0x5
+ 342 0165 1207     		.2byte	0x712
+ 343 0167 6B010000 		.4byte	0x16b
+ 344 016b 10       		.uleb128 0x10
+ 345 016c 76000000 		.4byte	0x76
+ 346 0170 11       		.uleb128 0x11
+ 347 0171 81000000 		.4byte	0x81
+ 348 0175 80010000 		.4byte	0x180
+ 349 0179 12       		.uleb128 0x12
+ 350 017a A2000000 		.4byte	0xa2
+ 351 017e 3F       		.byte	0x3f
+ 352 017f 00       		.byte	0
+ 353 0180 13       		.uleb128 0x13
+ 354 0181 6D010000 		.4byte	.LASF19
+ 355 0185 01       		.byte	0x1
+ 356 0186 07       		.byte	0x7
+ 357 0187 70010000 		.4byte	0x170
+ 358 018b 05       		.uleb128 0x5
+ 359 018c 03       		.byte	0x3
+ 360 018d 00000000 		.4byte	senoTabla
+ 361 0191 14       		.uleb128 0x14
+ 362 0192 73696E00 		.ascii	"sin\000"
+ 363 0196 73696E00 		.ascii	"sin\000"
+ 364 019a 08       		.byte	0x8
+ 365 019b 6F       		.byte	0x6f
+ 366 019c 15       		.uleb128 0x15
+ 367 019d 5F010000 		.4byte	.LASF20
+ 368 01a1 5F010000 		.4byte	.LASF20
+ 369 01a5 06       		.byte	0x6
+ 370 01a6 37       		.byte	0x37
+ 371 01a7 15       		.uleb128 0x15
+ 372 01a8 06010000 		.4byte	.LASF21
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 8
+
+
+ 373 01ac 06010000 		.4byte	.LASF21
+ 374 01b0 07       		.byte	0x7
+ 375 01b1 77       		.byte	0x77
+ 376 01b2 15       		.uleb128 0x15
+ 377 01b3 1B000000 		.4byte	.LASF22
+ 378 01b7 1B000000 		.4byte	.LASF22
+ 379 01bb 06       		.byte	0x6
+ 380 01bc 33       		.byte	0x33
+ 381 01bd 00       		.byte	0
+ 382              		.section	.debug_abbrev,"",%progbits
+ 383              	.Ldebug_abbrev0:
+ 384 0000 01       		.uleb128 0x1
+ 385 0001 11       		.uleb128 0x11
+ 386 0002 01       		.byte	0x1
+ 387 0003 25       		.uleb128 0x25
+ 388 0004 0E       		.uleb128 0xe
+ 389 0005 13       		.uleb128 0x13
+ 390 0006 0B       		.uleb128 0xb
+ 391 0007 03       		.uleb128 0x3
+ 392 0008 0E       		.uleb128 0xe
+ 393 0009 1B       		.uleb128 0x1b
+ 394 000a 0E       		.uleb128 0xe
+ 395 000b 55       		.uleb128 0x55
+ 396 000c 17       		.uleb128 0x17
+ 397 000d 11       		.uleb128 0x11
+ 398 000e 01       		.uleb128 0x1
+ 399 000f 10       		.uleb128 0x10
+ 400 0010 17       		.uleb128 0x17
+ 401 0011 00       		.byte	0
+ 402 0012 00       		.byte	0
+ 403 0013 02       		.uleb128 0x2
+ 404 0014 24       		.uleb128 0x24
+ 405 0015 00       		.byte	0
+ 406 0016 0B       		.uleb128 0xb
+ 407 0017 0B       		.uleb128 0xb
+ 408 0018 3E       		.uleb128 0x3e
+ 409 0019 0B       		.uleb128 0xb
+ 410 001a 03       		.uleb128 0x3
+ 411 001b 0E       		.uleb128 0xe
+ 412 001c 00       		.byte	0
+ 413 001d 00       		.byte	0
+ 414 001e 03       		.uleb128 0x3
+ 415 001f 16       		.uleb128 0x16
+ 416 0020 00       		.byte	0
+ 417 0021 03       		.uleb128 0x3
+ 418 0022 0E       		.uleb128 0xe
+ 419 0023 3A       		.uleb128 0x3a
+ 420 0024 0B       		.uleb128 0xb
+ 421 0025 3B       		.uleb128 0x3b
+ 422 0026 0B       		.uleb128 0xb
+ 423 0027 49       		.uleb128 0x49
+ 424 0028 13       		.uleb128 0x13
+ 425 0029 00       		.byte	0
+ 426 002a 00       		.byte	0
+ 427 002b 04       		.uleb128 0x4
+ 428 002c 24       		.uleb128 0x24
+ 429 002d 00       		.byte	0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 9
+
+
+ 430 002e 0B       		.uleb128 0xb
+ 431 002f 0B       		.uleb128 0xb
+ 432 0030 3E       		.uleb128 0x3e
+ 433 0031 0B       		.uleb128 0xb
+ 434 0032 03       		.uleb128 0x3
+ 435 0033 08       		.uleb128 0x8
+ 436 0034 00       		.byte	0
+ 437 0035 00       		.byte	0
+ 438 0036 05       		.uleb128 0x5
+ 439 0037 16       		.uleb128 0x16
+ 440 0038 00       		.byte	0
+ 441 0039 03       		.uleb128 0x3
+ 442 003a 0E       		.uleb128 0xe
+ 443 003b 3A       		.uleb128 0x3a
+ 444 003c 0B       		.uleb128 0xb
+ 445 003d 3B       		.uleb128 0x3b
+ 446 003e 05       		.uleb128 0x5
+ 447 003f 49       		.uleb128 0x49
+ 448 0040 13       		.uleb128 0x13
+ 449 0041 00       		.byte	0
+ 450 0042 00       		.byte	0
+ 451 0043 06       		.uleb128 0x6
+ 452 0044 2E       		.uleb128 0x2e
+ 453 0045 01       		.byte	0x1
+ 454 0046 3F       		.uleb128 0x3f
+ 455 0047 19       		.uleb128 0x19
+ 456 0048 03       		.uleb128 0x3
+ 457 0049 0E       		.uleb128 0xe
+ 458 004a 3A       		.uleb128 0x3a
+ 459 004b 0B       		.uleb128 0xb
+ 460 004c 3B       		.uleb128 0x3b
+ 461 004d 0B       		.uleb128 0xb
+ 462 004e 27       		.uleb128 0x27
+ 463 004f 19       		.uleb128 0x19
+ 464 0050 11       		.uleb128 0x11
+ 465 0051 01       		.uleb128 0x1
+ 466 0052 12       		.uleb128 0x12
+ 467 0053 06       		.uleb128 0x6
+ 468 0054 40       		.uleb128 0x40
+ 469 0055 18       		.uleb128 0x18
+ 470 0056 9642     		.uleb128 0x2116
+ 471 0058 19       		.uleb128 0x19
+ 472 0059 01       		.uleb128 0x1
+ 473 005a 13       		.uleb128 0x13
+ 474 005b 00       		.byte	0
+ 475 005c 00       		.byte	0
+ 476 005d 07       		.uleb128 0x7
+ 477 005e 0B       		.uleb128 0xb
+ 478 005f 01       		.byte	0x1
+ 479 0060 11       		.uleb128 0x11
+ 480 0061 01       		.uleb128 0x1
+ 481 0062 12       		.uleb128 0x12
+ 482 0063 06       		.uleb128 0x6
+ 483 0064 00       		.byte	0
+ 484 0065 00       		.byte	0
+ 485 0066 08       		.uleb128 0x8
+ 486 0067 34       		.uleb128 0x34
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 10
+
+
+ 487 0068 00       		.byte	0
+ 488 0069 03       		.uleb128 0x3
+ 489 006a 08       		.uleb128 0x8
+ 490 006b 3A       		.uleb128 0x3a
+ 491 006c 0B       		.uleb128 0xb
+ 492 006d 3B       		.uleb128 0x3b
+ 493 006e 0B       		.uleb128 0xb
+ 494 006f 49       		.uleb128 0x49
+ 495 0070 13       		.uleb128 0x13
+ 496 0071 02       		.uleb128 0x2
+ 497 0072 17       		.uleb128 0x17
+ 498 0073 00       		.byte	0
+ 499 0074 00       		.byte	0
+ 500 0075 09       		.uleb128 0x9
+ 501 0076 34       		.uleb128 0x34
+ 502 0077 00       		.byte	0
+ 503 0078 03       		.uleb128 0x3
+ 504 0079 0E       		.uleb128 0xe
+ 505 007a 3A       		.uleb128 0x3a
+ 506 007b 0B       		.uleb128 0xb
+ 507 007c 3B       		.uleb128 0x3b
+ 508 007d 0B       		.uleb128 0xb
+ 509 007e 49       		.uleb128 0x49
+ 510 007f 13       		.uleb128 0x13
+ 511 0080 02       		.uleb128 0x2
+ 512 0081 17       		.uleb128 0x17
+ 513 0082 00       		.byte	0
+ 514 0083 00       		.byte	0
+ 515 0084 0A       		.uleb128 0xa
+ 516 0085 898201   		.uleb128 0x4109
+ 517 0088 00       		.byte	0
+ 518 0089 11       		.uleb128 0x11
+ 519 008a 01       		.uleb128 0x1
+ 520 008b 31       		.uleb128 0x31
+ 521 008c 13       		.uleb128 0x13
+ 522 008d 00       		.byte	0
+ 523 008e 00       		.byte	0
+ 524 008f 0B       		.uleb128 0xb
+ 525 0090 2E       		.uleb128 0x2e
+ 526 0091 01       		.byte	0x1
+ 527 0092 3F       		.uleb128 0x3f
+ 528 0093 19       		.uleb128 0x19
+ 529 0094 03       		.uleb128 0x3
+ 530 0095 0E       		.uleb128 0xe
+ 531 0096 3A       		.uleb128 0x3a
+ 532 0097 0B       		.uleb128 0xb
+ 533 0098 3B       		.uleb128 0x3b
+ 534 0099 0B       		.uleb128 0xb
+ 535 009a 27       		.uleb128 0x27
+ 536 009b 19       		.uleb128 0x19
+ 537 009c 49       		.uleb128 0x49
+ 538 009d 13       		.uleb128 0x13
+ 539 009e 8701     		.uleb128 0x87
+ 540 00a0 19       		.uleb128 0x19
+ 541 00a1 11       		.uleb128 0x11
+ 542 00a2 01       		.uleb128 0x1
+ 543 00a3 12       		.uleb128 0x12
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 11
+
+
+ 544 00a4 06       		.uleb128 0x6
+ 545 00a5 40       		.uleb128 0x40
+ 546 00a6 18       		.uleb128 0x18
+ 547 00a7 9742     		.uleb128 0x2117
+ 548 00a9 19       		.uleb128 0x19
+ 549 00aa 01       		.uleb128 0x1
+ 550 00ab 13       		.uleb128 0x13
+ 551 00ac 00       		.byte	0
+ 552 00ad 00       		.byte	0
+ 553 00ae 0C       		.uleb128 0xc
+ 554 00af 0B       		.uleb128 0xb
+ 555 00b0 01       		.byte	0x1
+ 556 00b1 11       		.uleb128 0x11
+ 557 00b2 01       		.uleb128 0x1
+ 558 00b3 12       		.uleb128 0x12
+ 559 00b4 06       		.uleb128 0x6
+ 560 00b5 01       		.uleb128 0x1
+ 561 00b6 13       		.uleb128 0x13
+ 562 00b7 00       		.byte	0
+ 563 00b8 00       		.byte	0
+ 564 00b9 0D       		.uleb128 0xd
+ 565 00ba 898201   		.uleb128 0x4109
+ 566 00bd 01       		.byte	0x1
+ 567 00be 11       		.uleb128 0x11
+ 568 00bf 01       		.uleb128 0x1
+ 569 00c0 31       		.uleb128 0x31
+ 570 00c1 13       		.uleb128 0x13
+ 571 00c2 00       		.byte	0
+ 572 00c3 00       		.byte	0
+ 573 00c4 0E       		.uleb128 0xe
+ 574 00c5 8A8201   		.uleb128 0x410a
+ 575 00c8 00       		.byte	0
+ 576 00c9 02       		.uleb128 0x2
+ 577 00ca 18       		.uleb128 0x18
+ 578 00cb 9142     		.uleb128 0x2111
+ 579 00cd 18       		.uleb128 0x18
+ 580 00ce 00       		.byte	0
+ 581 00cf 00       		.byte	0
+ 582 00d0 0F       		.uleb128 0xf
+ 583 00d1 34       		.uleb128 0x34
+ 584 00d2 00       		.byte	0
+ 585 00d3 03       		.uleb128 0x3
+ 586 00d4 0E       		.uleb128 0xe
+ 587 00d5 3A       		.uleb128 0x3a
+ 588 00d6 0B       		.uleb128 0xb
+ 589 00d7 3B       		.uleb128 0x3b
+ 590 00d8 05       		.uleb128 0x5
+ 591 00d9 49       		.uleb128 0x49
+ 592 00da 13       		.uleb128 0x13
+ 593 00db 3F       		.uleb128 0x3f
+ 594 00dc 19       		.uleb128 0x19
+ 595 00dd 3C       		.uleb128 0x3c
+ 596 00de 19       		.uleb128 0x19
+ 597 00df 00       		.byte	0
+ 598 00e0 00       		.byte	0
+ 599 00e1 10       		.uleb128 0x10
+ 600 00e2 35       		.uleb128 0x35
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 12
+
+
+ 601 00e3 00       		.byte	0
+ 602 00e4 49       		.uleb128 0x49
+ 603 00e5 13       		.uleb128 0x13
+ 604 00e6 00       		.byte	0
+ 605 00e7 00       		.byte	0
+ 606 00e8 11       		.uleb128 0x11
+ 607 00e9 01       		.uleb128 0x1
+ 608 00ea 01       		.byte	0x1
+ 609 00eb 49       		.uleb128 0x49
+ 610 00ec 13       		.uleb128 0x13
+ 611 00ed 01       		.uleb128 0x1
+ 612 00ee 13       		.uleb128 0x13
+ 613 00ef 00       		.byte	0
+ 614 00f0 00       		.byte	0
+ 615 00f1 12       		.uleb128 0x12
+ 616 00f2 21       		.uleb128 0x21
+ 617 00f3 00       		.byte	0
+ 618 00f4 49       		.uleb128 0x49
+ 619 00f5 13       		.uleb128 0x13
+ 620 00f6 2F       		.uleb128 0x2f
+ 621 00f7 0B       		.uleb128 0xb
+ 622 00f8 00       		.byte	0
+ 623 00f9 00       		.byte	0
+ 624 00fa 13       		.uleb128 0x13
+ 625 00fb 34       		.uleb128 0x34
+ 626 00fc 00       		.byte	0
+ 627 00fd 03       		.uleb128 0x3
+ 628 00fe 0E       		.uleb128 0xe
+ 629 00ff 3A       		.uleb128 0x3a
+ 630 0100 0B       		.uleb128 0xb
+ 631 0101 3B       		.uleb128 0x3b
+ 632 0102 0B       		.uleb128 0xb
+ 633 0103 49       		.uleb128 0x49
+ 634 0104 13       		.uleb128 0x13
+ 635 0105 3F       		.uleb128 0x3f
+ 636 0106 19       		.uleb128 0x19
+ 637 0107 02       		.uleb128 0x2
+ 638 0108 18       		.uleb128 0x18
+ 639 0109 00       		.byte	0
+ 640 010a 00       		.byte	0
+ 641 010b 14       		.uleb128 0x14
+ 642 010c 2E       		.uleb128 0x2e
+ 643 010d 00       		.byte	0
+ 644 010e 3F       		.uleb128 0x3f
+ 645 010f 19       		.uleb128 0x19
+ 646 0110 3C       		.uleb128 0x3c
+ 647 0111 19       		.uleb128 0x19
+ 648 0112 6E       		.uleb128 0x6e
+ 649 0113 08       		.uleb128 0x8
+ 650 0114 03       		.uleb128 0x3
+ 651 0115 08       		.uleb128 0x8
+ 652 0116 3A       		.uleb128 0x3a
+ 653 0117 0B       		.uleb128 0xb
+ 654 0118 3B       		.uleb128 0x3b
+ 655 0119 0B       		.uleb128 0xb
+ 656 011a 00       		.byte	0
+ 657 011b 00       		.byte	0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 13
+
+
+ 658 011c 15       		.uleb128 0x15
+ 659 011d 2E       		.uleb128 0x2e
+ 660 011e 00       		.byte	0
+ 661 011f 3F       		.uleb128 0x3f
+ 662 0120 19       		.uleb128 0x19
+ 663 0121 3C       		.uleb128 0x3c
+ 664 0122 19       		.uleb128 0x19
+ 665 0123 6E       		.uleb128 0x6e
+ 666 0124 0E       		.uleb128 0xe
+ 667 0125 03       		.uleb128 0x3
+ 668 0126 0E       		.uleb128 0xe
+ 669 0127 3A       		.uleb128 0x3a
+ 670 0128 0B       		.uleb128 0xb
+ 671 0129 3B       		.uleb128 0x3b
+ 672 012a 0B       		.uleb128 0xb
+ 673 012b 00       		.byte	0
+ 674 012c 00       		.byte	0
+ 675 012d 00       		.byte	0
+ 676              		.section	.debug_loc,"",%progbits
+ 677              	.Ldebug_loc0:
+ 678              	.LLST0:
+ 679 0000 02000000 		.4byte	.LVL0
+ 680 0004 06000000 		.4byte	.LVL1
+ 681 0008 0200     		.2byte	0x2
+ 682 000a 30       		.byte	0x30
+ 683 000b 9F       		.byte	0x9f
+ 684 000c 06000000 		.4byte	.LVL1
+ 685 0010 4E000000 		.4byte	.LVL12
+ 686 0014 0100     		.2byte	0x1
+ 687 0016 54       		.byte	0x54
+ 688 0017 00000000 		.4byte	0
+ 689 001b 00000000 		.4byte	0
+ 690              	.LLST1:
+ 691 001f 22000000 		.4byte	.LVL5
+ 692 0023 25000000 		.4byte	.LVL6-1
+ 693 0027 0100     		.2byte	0x1
+ 694 0029 50       		.byte	0x50
+ 695 002a 00000000 		.4byte	0
+ 696 002e 00000000 		.4byte	0
+ 697              	.LLST2:
+ 698 0032 0C000000 		.4byte	.LVL14
+ 699 0036 10000000 		.4byte	.LVL15
+ 700 003a 0200     		.2byte	0x2
+ 701 003c 30       		.byte	0x30
+ 702 003d 9F       		.byte	0x9f
+ 703 003e 10000000 		.4byte	.LVL15
+ 704 0042 2C000000 		.4byte	.LFE64
+ 705 0046 0100     		.2byte	0x1
+ 706 0048 54       		.byte	0x54
+ 707 0049 00000000 		.4byte	0
+ 708 004d 00000000 		.4byte	0
+ 709              		.section	.debug_aranges,"",%progbits
+ 710 0000 24000000 		.4byte	0x24
+ 711 0004 0200     		.2byte	0x2
+ 712 0006 00000000 		.4byte	.Ldebug_info0
+ 713 000a 04       		.byte	0x4
+ 714 000b 00       		.byte	0
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 14
+
+
+ 715 000c 0000     		.2byte	0
+ 716 000e 0000     		.2byte	0
+ 717 0010 00000000 		.4byte	.LFB63
+ 718 0014 68000000 		.4byte	.LFE63-.LFB63
+ 719 0018 00000000 		.4byte	.LFB64
+ 720 001c 2C000000 		.4byte	.LFE64-.LFB64
+ 721 0020 00000000 		.4byte	0
+ 722 0024 00000000 		.4byte	0
+ 723              		.section	.debug_ranges,"",%progbits
+ 724              	.Ldebug_ranges0:
+ 725 0000 00000000 		.4byte	.LFB63
+ 726 0004 68000000 		.4byte	.LFE63
+ 727 0008 00000000 		.4byte	.LFB64
+ 728 000c 2C000000 		.4byte	.LFE64
+ 729 0010 00000000 		.4byte	0
+ 730 0014 00000000 		.4byte	0
+ 731              		.section	.debug_line,"",%progbits
+ 732              	.Ldebug_line0:
+ 733 0000 27020000 		.section	.debug_str,"MS",%progbits,1
+ 733      0200D301 
+ 733      00000201 
+ 733      FB0E0D00 
+ 733      01010101 
+ 734              	.LASF26:
+ 735 0000 67656E65 		.ascii	"generarTablaSeno\000"
+ 735      72617254 
+ 735      61626C61 
+ 735      53656E6F 
+ 735      00
+ 736              	.LASF9:
+ 737 0011 5F5F696E 		.ascii	"__int32_t\000"
+ 737      7433325F 
+ 737      7400
+ 738              	.LASF22:
+ 739 001b 56444143 		.ascii	"VDAC_Start\000"
+ 739      5F537461 
+ 739      727400
+ 740              	.LASF12:
+ 741 0026 666C6F61 		.ascii	"float\000"
+ 741      7400
+ 742              	.LASF1:
+ 743 002c 756E7369 		.ascii	"unsigned char\000"
+ 743      676E6564 
+ 743      20636861 
+ 743      7200
+ 744              	.LASF23:
+ 745 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 745      43313120 
+ 745      352E342E 
+ 745      31203230 
+ 745      31363036 
+ 746 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 746      20726576 
+ 746      6973696F 
+ 746      6E203233 
+ 746      37373135 
+ 747 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 15
+
+
+ 747      66756E63 
+ 747      74696F6E 
+ 747      2D736563 
+ 747      74696F6E 
+ 748              	.LASF5:
+ 749 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 749      20756E73 
+ 749      69676E65 
+ 749      6420696E 
+ 749      7400
+ 750              	.LASF3:
+ 751 00da 73686F72 		.ascii	"short unsigned int\000"
+ 751      7420756E 
+ 751      7369676E 
+ 751      65642069 
+ 751      6E7400
+ 752              	.LASF18:
+ 753 00ed 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 753      52784275 
+ 753      66666572 
+ 753      00
+ 754              	.LASF13:
+ 755 00fa 646F7562 		.ascii	"double\000"
+ 755      6C6500
+ 756              	.LASF27:
+ 757 0101 6D61696E 		.ascii	"main\000"
+ 757      00
+ 758              	.LASF21:
+ 759 0106 43794465 		.ascii	"CyDelayUs\000"
+ 759      6C617955 
+ 759      7300
+ 760              	.LASF8:
+ 761 0110 756E7369 		.ascii	"unsigned int\000"
+ 761      676E6564 
+ 761      20696E74 
+ 761      00
+ 762              	.LASF7:
+ 763 011d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 763      206C6F6E 
+ 763      6720756E 
+ 763      7369676E 
+ 763      65642069 
+ 764              	.LASF10:
+ 765 0134 696E7433 		.ascii	"int32_t\000"
+ 765      325F7400 
+ 766              	.LASF15:
+ 767 013c 73697A65 		.ascii	"sizetype\000"
+ 767      74797065 
+ 767      00
+ 768              	.LASF6:
+ 769 0145 6C6F6E67 		.ascii	"long long int\000"
+ 769      206C6F6E 
+ 769      6720696E 
+ 769      7400
+ 770              	.LASF24:
+ 771 0153 6D61696E 		.ascii	"main.c\000"
+ 771      2E6300
+ARM GAS  C:\Users\Henry\AppData\Local\Temp\ccDpeWf7.s 			page 16
+
+
+ 772              	.LASF14:
+ 773 015a 63686172 		.ascii	"char\000"
+ 773      00
+ 774              	.LASF20:
+ 775 015f 56444143 		.ascii	"VDAC_SetValue\000"
+ 775      5F536574 
+ 775      56616C75 
+ 775      6500
+ 776              	.LASF19:
+ 777 016d 73656E6F 		.ascii	"senoTabla\000"
+ 777      5461626C 
+ 777      6100
+ 778              	.LASF2:
+ 779 0177 73686F72 		.ascii	"short int\000"
+ 779      7420696E 
+ 779      7400
+ 780              	.LASF11:
+ 781 0181 75696E74 		.ascii	"uint8\000"
+ 781      3800
+ 782              	.LASF4:
+ 783 0187 6C6F6E67 		.ascii	"long int\000"
+ 783      20696E74 
+ 783      00
+ 784              	.LASF16:
+ 785 0190 6C6F6E67 		.ascii	"long double\000"
+ 785      20646F75 
+ 785      626C6500 
+ 786              	.LASF0:
+ 787 019c 7369676E 		.ascii	"signed char\000"
+ 787      65642063 
+ 787      68617200 
+ 788              	.LASF17:
+ 789 01a8 616E6775 		.ascii	"angulo\000"
+ 789      6C6F00
+ 790              	.LASF25:
+ 791 01af 433A5C55 		.ascii	"C:\\Users\\Henry\\Documents\\PSoC Creator\\Ej1\\Ej5"
+ 791      73657273 
+ 791      5C48656E 
+ 791      72795C44 
+ 791      6F63756D 
+ 792 01dc 2E637964 		.ascii	".cydsn\000"
+ 792      736E00
+ 793              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,3 +1,4 @@
+docker exec -it mysql_container mysql -uroot -pTuContra000
 docker exec -it mysql_container /bin/bash
 cd /var/lib/mysql-files/
 ls

@@ -8,6 +8,7 @@ class Aplicacion(QtWidgets.QMainWindow, Formulario):
         QtWidgets.QMainWindow.__init__(self)
         Formulario.__init__(self)
         self.setupUi(self)
+        
         self.Boton.clicked.connect(self.aviso)
     def aviso(self):
         self.Campo_entrada.setText("Hola mundo")
