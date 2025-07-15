@@ -1,0 +1,43 @@
+clc; 
+clear; 
+close all;
+% >>>>>>>>>>>>>>>>>> SEÑAL EN EL DOMINIO DEL TIEMPO <<<<<<<<<<<<<<<<<<
+t = 0:0.01:5;                       % Vector de tiempo
+y = double(t >= 1 & t <= 2);        % Pulso rectangular entre t=1 y t=2    
+
+% Graficar f(t)
+figure
+plot(t, y, 'LineWidth', 2, 'Color', 'red')
+grid on
+xlabel('Tiempo [s]')
+ylabel('Amplitud')
+title('f(t) - Señal en el dominio del tiempo')
+
+% >>>>>>>>>> TRANSFORMADA DE FOURIER <<<<<<<<<<
+syms w
+
+% Definir simbólicamente la transformada F(w)
+F_sym = (exp(-2i*w) / (1i*w)) * (exp(1i*w) - 1);
+%F_sym = subs(F_sym, w, 2*pi*w); %para convertir a Herz
+
+% Vector de frecuencias
+w_vals = linspace(-10, 10, 1000);  
+% Evaluar la expresión simbólica directamente
+F_vals = double(subs(F_sym, w, w_vals));
+
+% Graficar magnitud
+figure
+subplot(2,1,1)
+plot(w_vals, abs(F_vals), 'LineWidth', 2, 'Color', 'b')
+grid on
+xlabel('Frecuencia \omega [rad/s]')
+ylabel('|F(\omega)|')
+title('Magnitud del espectro')
+
+% Graficar fase
+subplot(2,1,2)
+plot(w_vals, angle(F_vals), 'LineWidth', 2, 'Color', 'm')
+grid on
+xlabel('Frecuencia \omega [rad/s]')
+ylabel('Fase [rad]')
+title('Fase del espectro')
