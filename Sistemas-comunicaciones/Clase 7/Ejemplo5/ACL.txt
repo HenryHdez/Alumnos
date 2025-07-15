@@ -1,0 +1,14 @@
+!Agregar a R1
+enable
+configure terminal
+!
+ip access-list standard PERMIT_VPCS1
+ permit 192.168.10.10
+ deny   any
+!
+interface FastEthernet0/1
+ ip access-group PERMIT_VPCS1 out
+!
+exit
+exit
+write memory

@@ -1,0 +1,15 @@
+enable
+configure terminal
+! Comentario para el equipo
+! Nombre del Equipo
+hostname R1
+! Configuración de la interface
+interface FastEthernet0/0
+ !Asignación de la direccion ip a la interface
+ ip address 192.168.10.1 255.255.255.0
+ !Inicialización de la interface
+ no shutdown
+! Salir del modo onfguracion
+exit
+exit
+write memory

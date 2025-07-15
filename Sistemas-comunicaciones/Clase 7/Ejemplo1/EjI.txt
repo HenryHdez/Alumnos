@@ -1,0 +1,9 @@
+# VPCS 1
+ip 192.168.0.10 255.255.255.0
+# VPCS 2
+ip 192.168.0.20 255.255.255.0
+#Luego de poner la ip al equipo
+# VPCS 1
+ping 192.168.0.20
+# VPCS 2
+ping 192.168.0.10

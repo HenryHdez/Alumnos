@@ -1,0 +1,11 @@
+PC 1
+ip 192.168.10.10 255.255.255.0 gateway 192.168.10.1
+
+PC 2
+ip 192.168.20.10 255.255.255.0 gateway 192.168.20.1
+
+#luego de asignar las ip's ejecute el comando ping
+ping 192.168.10.1
+ping 192.168.20.1
+ping 192.168.10.10
+ping 192.168.20.10
