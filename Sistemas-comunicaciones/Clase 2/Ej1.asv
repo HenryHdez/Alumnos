@@ -19,6 +19,7 @@ syms w
 % Definir simbólicamente la transformada F(w)
 F_sym = (exp(-2i*w) / (1i*w)) * (exp(1i*w) - 1);
 %F_sym = subs(F_sym, w, 2*pi*w); %para convertir a Herz
+F1=int(1*exp(-1i*w*t),t,1,2);
 % Vector de frecuencias
 w_vals = linspace(-100, 100, 1000);  
 % Evaluar la expresión simbólica directamente

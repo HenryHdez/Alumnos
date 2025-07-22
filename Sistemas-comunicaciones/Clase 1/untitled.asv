@@ -1,0 +1,22 @@
+clear
+clc
+syms w t
+%Transformada
+F1=int(1*exp(-1i*w*t),t,1,2);
+F2=int(2*exp(-1i*w*t),t,4,5);
+F3=int(3*exp(-1i*w*t),t,7,9);
+FT=F1+F2+F3;
+pretty(simplify(FT))
+w_vals=[-10:0.1:-0.1,... 
+    0.1:0.1:10];
+FT_vals=double(subs(FT,w,w_vals));
+plot(w_vals,abs(FT_vals))
+%Transformada inversa
+FTI=int(FT*exp(1i*t*w),w,-100,100);
+FTI_vals = double(subs(FTI, t, 0:0.01:10)); 
+plot(0:0.01:10, FTI_vals); 
+
+
+
+
+

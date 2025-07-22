@@ -1,6 +1,10 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7a62e905-1bf7-4eda-9810-05589c6e34e7
-C:\Users\Henry\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|1fc0708b-7324-46d4-9dd6-6a17a49e4e98
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|189560cd-90ce-44f3-a079-57a4e9704f40
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|134c3794-5240-499c-afa8-409bcf584ee8
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e65ed532-068d-4cf3-b374-559e84ac4f49
-C:\Users\Henry\Documents\PSoC Creator\Ej1\Ej1.cydsn\Ej1.cyprj|7255b8db-3aef-4b36-8271-837ad6678c09
+D:\GiHub\Alumnos\Sistemas-comunicaciones\Clase 6\Ej1\Ej1.cydsn\Ej1.cyprj|84efd1ce-6d24-422b-a781-6e37a8129a68
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|47e9242b-b012-4643-a599-3f640aab9ee4
+C:\Users\Henry\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|4879b034-c92b-4f1f-9a0b-3759a1582ac1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a8943295-2c85-4646-82c4-98784521168f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c7bdc047-c858-4fb6-801e-7d3edea8ab6c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c7a34600-86e4-47a0-be83-d9ae6230d3a8
+D:\GiHub\Alumnos\Sistemas-comunicaciones\Clase 6\Ej1\Ej2.cydsn\Ej2.cyprj|e22c075e-069d-4123-9bfe-912cecb93972
+D:\GiHub\Alumnos\Sistemas-comunicaciones\Clase 6\Ej1\Ej3.cydsn\Ej3.cyprj|7c84d738-bd15-410a-bc8e-d93df133c891
+D:\GiHub\Alumnos\Sistemas-comunicaciones\Clase 6\Ej1\Ej4.cydsn\Ej4.cyprj|c4e67812-06c2-40a2-8ded-75b14bd94983
+D:\GiHub\Alumnos\Sistemas-comunicaciones\Clase 6\Ej1\Ej5.cydsn\Ej5.cyprj|57da500e-771c-40b8-98a0-aad54a70a111

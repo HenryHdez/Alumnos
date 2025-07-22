@@ -1,14 +1,14 @@
 clear; 
 clc; 
 close all;
-syms t n real
+syms t n
 % Definir la función original en el intervalo [-pi, pi]
 f = t;
 % Intervalo del periodo
 T = pi;
 
 % Coeficientes a_0 
-a0 = (1/T)*int(f, t, -T, T);
+a0 = (1/2*T)*int(f, t, -T, T);
 % Coeficientes a_n
 an = (1/T)*int(f*cos(n*pi*t/T), t, -T, T);
 % Coeficientes b_n
@@ -18,7 +18,7 @@ disp('Coeficiente b_n:');
 bn = simplify(bn)
 
 % Aproximar la función con N términos
-N = 10;         % Número de armónicos
+N = 50;         % Número de armónicos
 ft_approx = 0;  % como a0 y an son cero
 
 % Sustituir el valor específico de n

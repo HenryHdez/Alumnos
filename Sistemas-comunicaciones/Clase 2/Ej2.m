@@ -6,7 +6,7 @@ syms w t;
 % Definir la función
 F = (exp(-2j*w)/(1j*w)) * (exp(1j*w) - 1) * exp(1j*w*t);
 % integrar la función ente -10 y 10
-f_t = int(F, w, -50, 50);
+f_t = int(F, w, -100, 100);
 f_t = simplify(f_t);
 disp('Resultado:');
 pretty(f_t)

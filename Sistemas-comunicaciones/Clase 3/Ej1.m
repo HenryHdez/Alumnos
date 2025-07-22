@@ -9,7 +9,7 @@ f = 5;                   % Frecuencia de la señal (Hz)
 x = sin(2*pi*f*t);       % Señal senoidal
 
 % 2. Nivel de SNR deseado
-SNR_dB = 3;                              % Nivel de SNR en dB deseado
+SNR_dB = 10;                             % Nivel de SNR en dB deseado
 P_signal = mean(x.^2);                   % Potencia de la señal
 P_signal_dB = 10 * log10(P_signal);      % Potencia de la señal en dB
 

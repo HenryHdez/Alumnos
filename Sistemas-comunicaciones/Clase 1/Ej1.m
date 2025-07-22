@@ -59,14 +59,14 @@ seno = sin(pi/2);           % Seno
 matriz = [1, 2; 3, 4];     
 escalar = 2;                
 matriz_sumada = matriz + escalar;  
-matriz_producto = matriz * escalar; 
+matriz_producto = matriz * escalar 
 
 % Multiplicar componente a componente
 matriz2 = [5, 6; 7, 8];      
 producto_componentes = matriz .* matriz2;  
 
 % Inicialización de matrices
-matriz_zeros = zeros(3, 3);    % Matriz de ceros
+matriz_zeros = zeros(3, 3)    % Matriz de ceros
 matriz_ones = ones(2, 4);      % Matriz de unos
 matriz_identidad = eye(4);     % Matriz identidad 
 matriz_aleatoria = rand(3, 2); % Matriz con valores aleatorios entre 0 y 1
