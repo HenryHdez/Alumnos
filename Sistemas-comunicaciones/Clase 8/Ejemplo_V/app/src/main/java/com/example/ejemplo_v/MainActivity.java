@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Iniciar la clase. Primero hay que crearla.
         Micanvas fondo = new Micanvas (this);
         setContentView(fondo);
@@ -37,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
             pincel.setStrokeWidth(5);
             pincel.setColor(Color.RED);
             //Configure el objeto
-            canvas.drawRect(10,70,70,1200,pincel);
+            canvas.drawRect(100,70,70,1200,pincel);
 
-            pincel.setTextSize(50); 
-            pincel.setStrokeWidth(20);
+            pincel.setTextSize(100);
+            pincel.setStrokeWidth(1);
             pincel.setColor(Color.BLUE);
             canvas.drawText("Hola", 10, 100, pincel);
+            canvas.drawCircle(30,30,60,pincel);
         }
     }
 }

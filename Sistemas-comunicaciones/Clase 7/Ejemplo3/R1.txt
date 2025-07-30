@@ -1,6 +1,6 @@
 enable
 configure terminal
-hostname R1
+hostname Nombredelrouter
 !
 interface FastEthernet0/0
  no shutdown
