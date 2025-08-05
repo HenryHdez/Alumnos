@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     clientSocket = new Socket();
                     clientSocket.connect(new InetSocketAddress(ip,port),2000);
                     socketOut = new PrintWriter(clientSocket.getOutputStream(), true);
+
                     Tx2.setText("Conectado");
                 }catch(Exception e){
                     e.printStackTrace();
