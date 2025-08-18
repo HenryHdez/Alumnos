@@ -1,0 +1,102 @@
+#--------------------------------Actualizar------------------------------------
+sudo apt update && sudo apt upgrade -y
+sudo snap install curl
+sudo apt install net-tools
+#Verificar la ip
+ifconfig
+
+#--------------------------------Instalar servidor WEB-----------------------
+sudo apt install apache2 -y
+
+#--------------------------------Instalar servidor SSH-----------------------
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
+#Comprobar
+systemctl status ssh
+
+#--------------------------------Instalar servidor DNS-----------------------
+sudo apt install bind9 bind9utils bind9-doc dnsutils -y
+
+#Abrir archivo named.conf.local
+sudo nano /etc/bind/named.conf.local
+
+#Contenido editado
+#primer funcion "Zona directa", traducción DNS->IP
+#segunda funcion "Zona inversa", traducción IP->DNS
+
+zone "milugarfavorito.com" {
+    type master;
+    file "/etc/bind/db.milugarfavorito.com";
+};
+
+zone "1.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192";
+};
+
+#Copiar archivos de base generados
+sudo cp /etc/bind/db.local /etc/bind/db.milugarfavorito.com
+sudo cp /etc/bind/db.127 /etc/bind/db.192
+
+#reiniciar el servicio
+sudo systemctl restart bind9
+
+#Verificar
+dig @localhost milugarfavorito.com
+cat /etc/resolv.conf
+
+#agregar ip a host
+sudo nano /etc/hosts
+
+#Agregar el servidor DNS
+sudo nano /etc/systemd/resolved.conf
+#Descomentar y poner
+[Resolve]
+DNS=127.0.0.1
+FallbackDNS=8.8.8.8
+#Reiniciar el servicio
+sudo systemctl restart systemd-resolved
+
+#Dar permisos a la carpeta
+sudo chmod -R 777 /var/www/
+
+#verificar 
+curl http://milugarfavorito.com
+
+#--------------------------------Instalar servidor DHCP-----------------------
+sudo apt install isc-dhcp-server -y
+
+#Ingrese al archivo
+sudo nano /etc/dhcp/dhcpd.conf
+#Agregue al final del archivo
+default-lease-time 600;
+max-lease-time 7200;
+authoritative;
+
+subnet 192.168.10.0 netmask 255.255.255.0 {
+  range 192.168.10.100 192.168.10.200;
+  option routers 192.168.10.1;
+  option domain-name-servers 192.168.10.11;
+  option domain-name "milugarfavorito.com";
+}
+#Crear archivos
+sudo touch /var/lib/dhcp/dhcpd.leases
+sudo chown dhcpd:dhcpd /var/lib/dhcp/dhcpd.leases
+
+#edite el archivo
+sudo nano /etc/default/isc-dhcp-server
+#Poner la etiqueta de la interface ethernet vista con ifconfig.
+
+#reiniciar los servicios
+sudo systemctl restart isc-dhcp-server
+sudo systemctl enable isc-dhcp-server
+
+#--------------------------------Para probar puede usar-----------------------
+sudo systemctl status apache2
+sudo systemctl status ssh
+sudo systemctl status bind9
+sudo systemctl status isc-dhcp-server
+
+#Verificar estado del dhcp-server
+sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf

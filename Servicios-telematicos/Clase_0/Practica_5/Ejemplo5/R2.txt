@@ -1,0 +1,56 @@
+enable
+conf t
+ hostname R2
+
+ interface FastEthernet0/0
+  description Hacia R1 (RIP)
+  ip address 10.0.12.2 255.255.255.252
+  no shutdown
+
+ interface FastEthernet0/1
+  description Hacia R3 (BGP)
+  ip address 10.0.23.1 255.255.255.252
+  no shutdown
+
+ ! RIP solo al dominio izquierdo
+ router rip
+  version 2
+  no auto-summary
+  network 10.0.12.0
+
+ ! --- Redistribución y filtros ---
+ ! Filtro de prefijos para BGP: deja pasar SOLO la LAN 192.168.10.0/24
+ !  - ip prefix-list      = crea una lista de prefijos IPv4 para usar en route-maps/policías
+ !  - PL-RIP-TO-BGP       = nombre del filtro
+ !  - seq 5               = orden de evaluación (etiqueta de la regla)
+ !  - permit              = regla que permite la coincidencia
+ !  - 192.168.10.0/24     = coincide EXACTAMENTE con ese /24 
+ ip prefix-list PL-RIP-TO-BGP seq 5 permit 192.168.10.0/24
+ ip prefix-list PL-BGP-TO-RIP seq 5 permit 10.10.10.0/24
+
+! Inicia/define una intrucción del route-map llamada "RIP-TO-BGP"
+!  - route-map         : crea/edita una política de coincidencia y acciones
+!  - RIP-TO-BGP        : nombre de la política (se usará al redistribuir en BGP)
+!  - permit            : acción si esta intrucción COINCIDE (deja pasar la ruta)
+!  - 10                : número de SECUENCIA; orden de evaluación (menor → mayor)
+ route-map RIP-TO-BGP permit 10
+  match ip address prefix-list PL-RIP-TO-BGP
+
+ route-map BGP-TO-RIP permit 10
+  match ip address prefix-list PL-BGP-TO-RIP
+  ! Fija la MÉTRICA de RIP (saltos) en 2 para las rutas que coincidan
+  set metric 2
+
+ router bgp 65100
+  ! Habilita el registro en el sistema de todos los CAMBIOS DE ESTADO de vecinos BGP
+  bgp log-neighbor-changes
+  neighbor 10.0.23.2 remote-as 65000
+  neighbor 10.0.23.2 description eBGP con R3
+  ! Exportar la LAN de R1 (vía RIP) hacia BGP
+  redistribute rip route-map RIP-TO-BGP
+  
+  ! Importar desde BGP hacia RIP solo la LAN de R5
+  router rip
+  redistribute bgp 65100 metric 2 route-map BGP-TO-RIP
+end
+write memory

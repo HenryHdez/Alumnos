@@ -1,0 +1,34 @@
+conf t
+hostname R4
+interface FastEthernet0/0
+ ip address 10.0.45.1 255.255.255.252
+ no shutdown
+interface FastEthernet0/1
+ ip address 10.0.34.2 255.255.255.252
+ no shutdown
+
+! OSPF hacia R5
+router ospf 10
+ network 10.0.45.0 0.0.0.3 area 0
+
+! Filtros y route-maps
+ip prefix-list PL-OSPF-TO-BGP seq 5 permit 10.10.10.0/24
+ip prefix-list PL-BGP-TO-OSPF seq 5 permit 192.168.10.0/24
+
+route-map OSPF-TO-BGP permit 10
+ match ip address prefix-list PL-OSPF-TO-BGP
+route-map BGP-TO-OSPF permit 10
+ match ip address prefix-list PL-BGP-TO-OSPF
+
+! BGP con R3
+router bgp 65200
+ bgp log-neighbor-changes
+ neighbor 10.0.34.1 remote-as 65000
+ ! Exporta LAN de R5 (vía OSPF) hacia BGP
+ redistribute ospf 10 route-map OSPF-TO-BGP
+
+! Importa desde BGP hacia OSPF solo la LAN de R1
+router ospf 10
+ redistribute bgp 65200 subnets metric-type 2 metric 20 route-map BGP-TO-OSPF
+end
+write memory

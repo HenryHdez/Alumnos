@@ -1,0 +1,15 @@
+enable
+configure terminal
+ hostname Ejemplo1
+
+ interface FastEthernet0/0
+  description LAN 192.168.10.0/24
+  ip address 192.168.10.1 255.255.255.0
+  no shutdown
+
+ interface FastEthernet0/1
+  description LAN 10.10.10.0/24
+  ip address 10.10.10.1 255.255.255.0
+  no shutdown
+end
+write memory

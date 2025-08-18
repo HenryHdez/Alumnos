@@ -1,0 +1,70 @@
+!Codigo R1
+enable
+conf t
+ hostname R1
+
+ interface FastEthernet0/0
+  description LAN VPC1
+  ip address 192.168.10.1 255.255.255.0
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R2 Fa0/0
+  ip address 10.0.12.1 255.255.255.252
+  no shutdown
+
+ router rip
+  version 2
+  no auto-summary
+  network 192.168.10.0
+  network 10.0.12.0
+  passive-interface FastEthernet0/0
+end
+write memory
+
+!Codigo R2
+enable
+conf t
+ hostname R2
+
+ interface FastEthernet0/0
+  description Enlace a R1 Fa0/1
+  ip address 10.0.12.2 255.255.255.252
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R3 Fa0/1
+  ip address 10.0.23.1 255.255.255.252
+  no shutdown
+
+ router rip
+  version 2
+  no auto-summary
+  network 10.0.12.0
+  network 10.0.23.0
+end
+write memory
+
+!Codigo R3
+enable
+conf t
+ hostname R3
+
+ interface FastEthernet0/0
+  description LAN VPC2
+  ip address 10.10.10.1 255.255.255.0
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R2 Fa0/1
+  ip address 10.0.23.2 255.255.255.252
+  no shutdown
+
+ router rip
+  version 2
+  no auto-summary
+  network 10.10.10.0
+  network 10.0.23.0
+  passive-interface FastEthernet0/0
+end
+write memory

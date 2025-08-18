@@ -1,0 +1,18 @@
+#Fijar la carpeta y crear la aplicación
+npx create-react-app ejemplo_1
+#ejemplo_1 es una etiqueta cualquiera
+
+#Fijar la ruta
+cd ejemplo_1
+
+#Instale leaflet
+npm install leaflet react-leaflet
+npm install react-leaflet leaflet html-to-image
+npm install leaflet-image
+npm install dom-to-image file-saver
+npm install html-to-image file-saver
+
+#Iniciar el programa
+npm start
+
+#Registrese en https://openrouteservice.org/

@@ -1,0 +1,18 @@
+enable
+conf t
+hostname R5
+
+interface FastEthernet0/0
+ ip address 10.0.45.2 255.255.255.252
+ no shutdown
+
+interface FastEthernet0/1
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+
+router ospf 10
+ router-id 5.5.5.5
+ network 10.0.45.0 0.0.0.3 area 0
+ network 10.10.10.0 0.0.0.255 area 0
+end
+write memory

@@ -1,0 +1,76 @@
+!Codigo R1 (AS65001)
+enable
+conf t
+ hostname R1
+
+ interface FastEthernet0/0
+  description LAN VPC1
+  ip address 192.168.10.1 255.255.255.0
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R2 Fa0/0
+  ip address 10.0.12.1 255.255.255.252
+  no shutdown
+
+ router bgp 65001
+  bgp log-neighbor-changes
+  neighbor 10.0.12.2 remote-as 65002
+  neighbor 10.0.12.2 description eBGP a R2
+  network 192.168.10.0 mask 255.255.255.0
+  network 10.0.12.0 mask 255.255.255.252
+end
+write memory
+
+!Codigo R2 (AS65002)
+conf t
+ hostname R2
+
+ interface FastEthernet0/0
+  description Enlace a R1 Fa0/1
+  ip address 10.0.12.2 255.255.255.252
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R3 Fa0/1
+  ip address 10.0.23.1 255.255.255.252
+  no shutdown
+
+ router bgp 65002
+  bgp log-neighbor-changes
+  neighbor 10.0.12.1 remote-as 65001
+  neighbor 10.0.12.1 description eBGP a R1
+  neighbor 10.0.23.2 remote-as 65003
+  neighbor 10.0.23.2 description eBGP a R3
+  network 10.0.12.0 mask 255.255.255.252
+  network 10.0.23.0 mask 255.255.255.252
+end
+write memory
+
+!Codigo R3
+enable
+conf t
+ hostname R3
+
+ interface FastEthernet0/0
+  description LAN VPC2
+  ip address 10.10.10.1 255.255.255.0
+  no shutdown
+
+ interface FastEthernet0/1
+  description Enlace a R2 Fa0/1
+  ip address 10.0.23.2 255.255.255.252
+  no shutdown
+
+ router bgp 65003
+  bgp log-neighbor-changes
+  neighbor 10.0.23.1 remote-as 65002
+  neighbor 10.0.23.1 description eBGP a R2
+  network 10.10.10.0 mask 255.255.255.0
+  network 10.0.23.0 mask 255.255.255.252
+end
+write memory
+
+ip 192.168.10.10 255.255.255.0 192.168.10.1
+
+ip 10.10.10.10 255.255.255.0 10.10.10.1

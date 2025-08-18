@@ -1,0 +1,16 @@
+!A partir del código anterior
+conf t
+ ip dhcp excluded-address 192.168.10.1 192.168.10.20
+ ip dhcp excluded-address 10.10.10.1 10.10.10.20
+
+ ip dhcp pool LAN_192_168_10
+  network 192.168.10.0 255.255.255.0
+  default-router 192.168.10.1
+  dns-server 8.8.8.8
+
+ ip dhcp pool LAN_10_10_10
+  network 10.10.10.0 255.255.255.0
+  default-router 10.10.10.1
+  dns-server 8.8.8.8
+end
+write memory

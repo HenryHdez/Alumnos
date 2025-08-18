@@ -1,0 +1,18 @@
+enable
+conf t
+hostname R3
+
+interface FastEthernet0/0
+ ip address 10.0.23.2 255.255.255.252
+ no shutdown
+
+interface FastEthernet0/1
+ ip address 10.0.34.1 255.255.255.252
+ no shutdown
+ 
+router bgp 65000
+ bgp log-neighbor-changes
+ neighbor 10.0.23.1 remote-as 65100
+ neighbor 10.0.34.2 remote-as 65200
+end
+write memory
