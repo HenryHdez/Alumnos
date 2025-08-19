@@ -18,6 +18,7 @@ conf t
   no auto-summary
   network 192.168.10.0
   network 10.0.12.0
+  !Interface de datos hacia el lado del cliente
   passive-interface FastEthernet0/0
 end
 write memory

@@ -14,9 +14,14 @@ conf t
   no shutdown
 
  router ospf 1
+  !ID del ospf
   router-id 1.1.1.1
+  !Todas las interfaces en modo pasivo por defecto
   passive-interface default
+  !La Fa0/1 no es pasiva
   no passive-interface FastEthernet0/1
+  %Indica que redes participan del OSPF y pone la wildcard
+  %Wilcard es una mascara para identificar bits que deben coincidir
   network 10.0.12.0 0.0.0.3 area 0
   network 192.168.10.0 0.0.0.255 area 0
 end
