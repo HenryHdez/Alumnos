@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  servidor_ftpd:
+    image: stilliard/pure-ftpd:hardened
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    environment:
+      - PUBLICHOST=localhost
+    volumes:
+      - /home/ftpusers:/home/ftpusers
+
+  servidor_nginx:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - /home/ftpusers:/usr/share/nginx/html/ftp
+      - ./html:/usr/share/nginx/html
+
+
+
