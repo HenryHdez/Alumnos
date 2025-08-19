@@ -16,7 +16,7 @@
         function ejecutarEjemplos() {
             console.log("==== Tipos de Variables ====");
 
-            // 1️⃣ Declaración de variables en JavaScript
+            //Declaración de variables en JavaScript
 
             // var (Ámbito global o de función, se puede redeclarar)
             var nombre = "Juan";
@@ -32,7 +32,7 @@
             console.log("Const país:", pais);
             
             // Intentar reasignar una constante dará un error:
-            // pais = "México"; ❌ Esto generará un error
+            // pais = "México"; Esto generará un error
 
             console.log("\n==== Tipos de Datos ====");
             let numero = 42;         // Número
@@ -49,7 +49,7 @@
 
             console.log("\n==== Estructuras de Control de Flujo ====");
 
-            // 2️⃣ Condicional if-else
+            // Condicional if-else
             let temperatura = 30;
             if (temperatura > 25) {
                 console.log("Hace calor");
@@ -57,7 +57,7 @@
                 console.log("El clima es agradable");
             }
 
-            // 3️⃣ Switch case
+            // Switch case
             let dia = "lunes";
             switch (dia) {
                 case "lunes":
@@ -72,19 +72,19 @@
 
             console.log("\n==== Bucles ====");
 
-            // 4️⃣ Bucle for
+            // Bucle for
             for (let i = 0; i < 5; i++) {
                 console.log("Iteración:", i);
             }
 
-            // 5️⃣ Bucle while
+            // Bucle while
             let contador = 0;
             while (contador < 3) {
                 console.log("Contador en while:", contador);
                 contador++;
             }
 
-            // 6️⃣ Bucle do-while
+            // Bucle do-while
             let numeroWhile = 0;
             do {
                 console.log("Número en do-while:", numeroWhile);
@@ -93,13 +93,13 @@
 
             console.log("\n==== Funciones en JavaScript ====");
 
-            // 7️⃣ Función tradicional
+            // Función tradicional
             function saludar(nombre) {
                 return "Hola, " + nombre;
             }
             console.log(saludar("Carlos"));
 
-            // 8️⃣ Función de flecha
+            // Función de flecha
             const multiplicar = (a, b) => a * b;
             console.log("Multiplicación:", multiplicar(5, 3));
         }
