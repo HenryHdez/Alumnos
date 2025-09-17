@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!--Agregue está etiqueta al codigo-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!---->
+    <!--Agregar estos permisos para habilitar la app y dar permisos en el celu-->
+    <uses-permission android:name="android.permission.BLUETOOTH" tools:ignore="CoarseFineLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" tools:ignore="CoarseFineLocation" />
+    <!--Termina comentario-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +16,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ejemplo_I"
-        tools:targetApi="31">
+        android:theme="@style/Theme.EjemploI">
         <activity
             android:name=".MainActivity"
             android:exported="true">

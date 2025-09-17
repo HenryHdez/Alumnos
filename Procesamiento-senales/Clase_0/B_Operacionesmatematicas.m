@@ -1,5 +1,5 @@
 clc; %Limpiar Pantalla
-clear all; %Eliminar Variables del WorkSpace
+clear; %Eliminar Variables del WorkSpace
 %%Operaciones Básicas en MATLAB
 %%Suma
 Resultado=entera+decimal;
@@ -44,7 +44,7 @@ syms f(t) s(x,y) M(j,i); %Definir funciones de cuantos nesecite argumentos
 %%Definir la formula
 f(t) = t^2;
 %%Evaluando la Función
-disp(f(5));
+disp(f(5))
 %%Ahora con mas de una variable
 s(x,y)=x+y;
 %%Evaluando la función
@@ -57,7 +57,7 @@ disp(M(3,2))
 S = (a^2-a*b-a*c+b^2-b*c+c^2)^(1/2);
 %%Una forma de simplificar un polinomio
 S=simplify(S);
-disp(S)
+disp(1/S);
 %%Una forma de mostrar la ecuación de una manera agradable
 pretty(1/S);
 %%Ahora una forma de solucionar polinomios usando el comando solve

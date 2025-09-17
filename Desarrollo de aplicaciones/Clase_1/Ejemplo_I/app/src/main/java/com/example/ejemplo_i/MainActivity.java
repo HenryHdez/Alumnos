@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
     private EditText Caja1, Caja2, Caja3;
     @Override

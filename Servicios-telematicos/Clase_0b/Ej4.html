@@ -24,4 +24,19 @@
     </form>
 
 </body>
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario
+
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        console.log('Nombre:', nombre);
+        console.log('Correo:', email);
+        console.log('Mensaje:', mensaje);
+
+        alert('Formulario enviado. Revisa la consola para ver los datos.');
+    });
+</script>
 </html>

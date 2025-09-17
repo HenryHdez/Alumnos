@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Socket clientSocket;
     private PrintWriter socketOut;
     private int port = 1234;
-    private final String ip = "192.168.104.54";
+    private final String ip = "192.168.244.54";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     clientSocket = new Socket();
                     clientSocket.connect(new InetSocketAddress(ip,port),2000);
                     socketOut = new PrintWriter(clientSocket.getOutputStream(), true);
+
                     Tx2.setText("Conectado");
                 }catch(Exception e){
                     e.printStackTrace();

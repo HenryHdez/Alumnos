@@ -2,7 +2,6 @@ enable
 configure terminal
 
 hostname R1
-no ip domain-lookup
 
 interface FastEthernet0/0
  description LAN hacia Switch
@@ -17,9 +16,10 @@ interface FastEthernet0/1
 ! ACL ESTANDAR permitir solo 10 y 11
 ! (bloquea los demás VPCS al router)
 
+
 access-list 10 permit 192.168.10.10 0.0.0.0
 access-list 10 permit 192.168.10.11 0.0.0.0
-access-list 10 deny   any
+access-list 10 deny any
 
 ! Aplicar la ACL de ENTRADA en Fa0/0 (trafico LAN -> router)
 interface FastEthernet0/0

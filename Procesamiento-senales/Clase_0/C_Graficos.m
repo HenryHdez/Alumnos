@@ -4,7 +4,7 @@ y=cos(t);
 %plot(t,y) %Solito
 grid on
 plot(t,y,'linewidth',2) %Con mayor grosor en la línea
-%axis([0,10,0,1])
+axis([0,10,0,1])
 xlabel('tiempo')
 ylabel('Amplitud')
 legend('Coseno');

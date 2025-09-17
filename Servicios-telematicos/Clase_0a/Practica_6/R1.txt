@@ -5,7 +5,7 @@ hostname R1
 interface FastEthernet0/0
  description LAN hacia clientes
  ip address 192.168.10.1 255.255.255.0
- ip helper-address 192.168.10.11
+ ip helper-address 192.168.10.10
  no shutdown
 
 interface FastEthernet0/1

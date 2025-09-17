@@ -69,6 +69,7 @@ sudo apt install isc-dhcp-server -y
 
 #Ingrese al archivo
 sudo nano /etc/dhcp/dhcpd.conf
+
 #Agregue al final del archivo
 default-lease-time 600;
 max-lease-time 7200;
@@ -80,6 +81,7 @@ subnet 192.168.10.0 netmask 255.255.255.0 {
   option domain-name-servers 192.168.10.11;
   option domain-name "milugarfavorito.com";
 }
+
 #Crear archivos
 sudo touch /var/lib/dhcp/dhcpd.leases
 sudo chown dhcpd:dhcpd /var/lib/dhcp/dhcpd.leases

@@ -15,6 +15,7 @@ conf t
 
  router rip
   version 2
+  !Evita el almacenamiento continuo de informacion y refresca la tabla de direcciones
   no auto-summary
   network 192.168.10.0
   network 10.0.12.0

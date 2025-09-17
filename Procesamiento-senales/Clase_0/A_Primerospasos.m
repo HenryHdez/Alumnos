@@ -2,8 +2,8 @@
 %porcentaje
 %%Para Limpiar el comand Window use clc
 clc
-%%Para borrar el Workspace use Clear all
-clear all
+%%Para borrar el Workspace use Clear
+clear
 %%Las Variables en Matlab No tienen Tipo
 entera=4;
 decimal=0.1;

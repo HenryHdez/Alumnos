@@ -1,29 +1,40 @@
-%>>>>>>>>>>>>TRANSFORMADA DE FOURIER<<<<<<<<<<
-%Defina el conjuto de muestras
-x=[0,2,2,0,1,1,0,2,2,0,1,1];
-n=[0,1,2,3,4,5,6,7,8,9,10,11];
-%Calculo de x(k) de forma manual
-N = 7;
-x(k)=2*exp(-2*1i*pi*k/7)+2*exp(-2*1i*pi*k*2/7)...
-     +exp(-2*1i*pi*k*4/7)+exp(-2*1i*pi*k*5/7);
-%Rango de valores para k
-k=-10:0.2:10;
+%>>>>>>>>>>>>TRANSFORMADA INVERSA DE FOURIER<<<<<<<<<<
+%Vectores dados
+x1=[0,2,2,0,1,1,0,2,2,0,1,1];
+n1=[0,1,2,3,4,5,6,7,8,9,10,11];
 
-% Inicialización del vector de la señal en el tiempo
+% Definición de parámetros
+N = 7;                  % Longitud fundamental
+n = 0:N-1;              % Índices de tiempo
+k = 0:10;               % Índices de frecuencia
+
+% Definición de X[k]
+Xk = zeros(1, N);
+for kk = 1:N
+    k_val = k(kk);
+    Xk(kk) = 2*exp(-1j*2*pi*k_val*1/N) ...
+           + 2*exp(-1j*2*pi*k_val*2/N) ...
+           +   exp(-1j*2*pi*k_val*4/N) ...
+           +   exp(-1j*2*pi*k_val*5/N);
+end
+
+% Cálculo de la IDFT
 xn = zeros(1, N);
-% Cálculo de la transformada inversa
-for n = 0:N-1
-    for k = 0:N-1
-        xn(n+1) = xn(n+1) + (1/N) * Xk(k+1) * exp(1i*2*pi*n*k/N);
+for nn = 1:N
+    for kk = 1:N
+        xn(nn) = xn(nn) + (1/N) * Xk(kk) * exp(1j*2*pi*(nn-1)*(kk-1)/N);
     end
 end
-% Visualización de la señal en el tiempo
-n = 0:N-1; % Vector de tiempo/discreto
-stem(n, real(xn), 'linewidth', 2); % Se grafica la parte real de la señal
-grid on;
-axis([0 N-1 min(real(xn)) max(real(xn))]);
-xlabel('n');
-ylabel('x[n]');
-title('Señal en el dominio del tiempo');
 
+% Graficar resultados
+figure
+subplot(2,1,1);
+stem(n1(1:7), x1(1:7),'filled','LineWidth',1.5); grid on;
+xlabel('n'); ylabel('x[n]');
+title('Datos originales');
+
+subplot(2,1,2);
+stem(n, real(xn),'filled','LineWidth',1.5); grid on;
+xlabel('n'); ylabel('x[n]');
+title('Señal reconstruida');
 

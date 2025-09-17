@@ -1,0 +1,55 @@
+%>>>>>>>>>>>>TRANSFORMADA INVERSA DE FOURIER (IDFT)<<<<<<<<<<
+clear; clc; close all;
+
+%---------------------------
+% Parámetros de la DFT
+%---------------------------
+N = 7;                 % Longitud fundamental
+k = 0:N-1;             % Índice de frecuencia discreta
+n = 0:N-1;             % Índice de tiempo discreto
+
+Xk = 2*exp(-1j*2*pi*(1/7)*k) ...
+   + 2*exp(-1j*2*pi*(2/7)*k) ...
+   +   exp(-1j*2*pi*(4/7)*k) ...
+   +   exp(-1j*2*pi*(5/7)*k);
+
+%---------------------------
+% IDFT: x[n] = (1/N) sum_{k=0}^{N-1} X[k] e^{j 2pi kn / N}
+% (implementación matricial estable y clara)
+%---------------------------
+W_idft = exp(1j*2*pi/N).^(n.'*k); % matriz NxN
+xn = (1/N) * (W_idft * Xk.');     % columna N
+
+% (Opcional) Suprimir pequeñas partes imaginarias numéricas
+xn_real = real(xn);   % para graficar como señal real
+
+%---------------------------
+% Verificación (opcional): DFT de vuelta debe coincidir con Xk
+%---------------------------
+W_dft = exp(-1j*2*pi/N).^(k.'*n); % matriz DFT NxN
+Xk_ver = (W_dft * xn);            % debe ~ Xk.'
+err = norm(Xk_ver.' - Xk);        % error numérico esperado ~ 1e-14
+
+%---------------------------
+% Gráficas
+%---------------------------
+figure('Name','IDFT de X[k] dado','Color','w');
+
+subplot(3,1,1);
+stem(k, abs(Xk), 'filled','LineWidth',1.5); grid on;
+xlabel('k'); ylabel('|X[k]|');
+title('Espectro dado |X[k]|');
+
+subplot(3,1,2);
+stem(n, xn_real, 'filled','LineWidth',1.8); grid on;
+xlabel('n'); ylabel('x[n]');
+title('Señal reconstruida por IDFT (parte real)');
+
+subplot(3,1,3);
+plot(n, imag(xn), 'o--','LineWidth',1.2); grid on;
+xlabel('n'); ylabel('Im\{x[n]\}');
+title('Parte imaginaria (debe ser \approx 0 numéricamente)');
+
+% Mostrar en consola el resultado y el error de verificación
+disp('x[n] (reconstruida, parte real):'); disp(xn_real.');
+disp(['Error de verificación ||DFT(x[n]) - X[k]||_2 = ', num2str(err)]);
