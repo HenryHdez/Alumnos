@@ -10,7 +10,7 @@ def funcion_hilo_1():
 
 def funcion_hilo_2():
     print ("\n Hilo 2 en ejecución")
-    time.sleep(4)
+    time.sleep(2)
     print ("\n Fin del hilo 2")
 
 '''Función principal'''

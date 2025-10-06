@@ -20,7 +20,6 @@ for conexiones in range (Clientes):
 
 while True:
     bytes_a_recibir = 1024
-    conexiones = 2
     texto=' '
     """Este for escanea de manera secuencial el socket."""
     for conexiones in range (Clientes):

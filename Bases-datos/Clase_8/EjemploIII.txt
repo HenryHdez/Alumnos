@@ -1,0 +1,97 @@
+# Borrar contenedores anteriores (si existen)
+docker rm -f mongo1 mongo2 mongo3 
+
+# Crear red interna
+docker network create mongo-rs
+
+# Crear los tres nodos
+
+# Nodo 1 (será el PRIMARY)
+docker run -d --name mongo1 --hostname mongo1 --net mongo-rs -p 27017:27017 -v mongo1:/data/db mongo:latest --replSet rs0 --bind_ip_all
+
+# Nodo 2 (SECONDARY)
+docker run -d --name mongo2 --hostname mongo2 --net mongo-rs -p 27018:27017 -v mongo2:/data/db mongo:latest --replSet rs0 --bind_ip_all
+
+# Nodo 3 (SECONDARY)
+docker run -d --name mongo3 --hostname mongo3 --net mongo-rs -p 27019:27017 -v mongo3:/data/db mongo:latest --replSet rs0 --bind_ip_all
+
+# Verificar que los tres contenedores estén activos
+docker ps
+
+#--------------------------------------------------------------
+# Iniciar el Replica Set (NODO 1)
+# El unico con permisos de R/W es el nodo 1
+# Si el nodo 1 cae el 2 o 3 pasa a ser el nuevo maestro
+#--------------------------------------------------------------
+docker exec -it mongo1 mongosh 
+rs.initiate({
+  _id: 'rs0',
+  members: [
+    { _id: 0, host: 'mongo1:27017', priority: 2 },
+    { _id: 1, host: 'mongo2:27017', priority: 1 },
+    { _id: 2, host: 'mongo3:27017', priority: 1 }
+  ]
+})
+
+# Verificar cluster
+rs.status()
+
+#--------------------------------------------------------------
+# Probar escritura en el PRIMARY (NODO 1)
+#--------------------------------------------------------------
+use EjemploI;
+
+db.libros.insertOne({
+  titulo: 'Cien años de soledad1',
+  autor: 'Gabriel García Márquez',
+  publicado: 1967,
+  generos: ['Realismo mágico', 'Novela'],
+  editora: { nombre: 'Editorial Sudamericana', pais: 'Argentina' },
+  enStock: 12,
+  valoraciones: [
+    { usuario: 'Carlos', puntuacion: 5, comentario: 'Increíble historia.' },
+    { usuario: 'María', puntuacion: 4, comentario: 'Muy buen libro.' }
+  ]
+});
+
+db.libros.find().pretty();
+
+#--------------------------------------------------------------
+# Probar lectura en el SECUNDARIO (NODO 2)
+#--------------------------------------------------------------
+docker exec -it mongo2 mongosh 
+db.getMongo().setReadPref('secondary');
+db.getSiblingDB('EjemploI').libros.find().pretty();
+
+#--------------------------------------------------------------
+# Probar lectura en el SECUNDARIO (NODO 3)
+#--------------------------------------------------------------
+docker exec -it mongo3 mongosh 
+db.getMongo().setReadPref('secondary');
+db.getSiblingDB('EjemploI').libros.find().pretty();
+
+#Fin de proceso (NODO 1)
+rs.status();
+
+#Pruebe lo siguente
+En la terminal del nodo 2
+
+use EjemploI;
+db.libros.insertOne({
+  titulo: 'Cien años de soledad ><>>>>>>>1<<<<<<<<',
+  autor: 'Gabriel García Márquez',
+  publicado: 1967,
+  generos: ['Realismo mágico', 'Novela'],
+  editora: { nombre: 'Editorial Sudamericana', pais: 'Argentina' },
+  enStock: 12,
+  valoraciones: [
+    { usuario: 'Carlos', puntuacion: 5, comentario: 'Increíble historia.' },
+    { usuario: 'María', puntuacion: 4, comentario: 'Muy buen libro.' }
+  ]
+});
+
+# En un 4to terminal 
+docker stop mongo1
+docker ps
+
+# Repita el paso anterior

@@ -1,4 +1,4 @@
-//Importe el módulo express
+//Importe el módulo express (npm install express)
 const express = require("express");
 //Variable que almacena el objeto para usar los métodos de la clase
 const app = express();

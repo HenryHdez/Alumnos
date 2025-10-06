@@ -33,7 +33,7 @@ MASTER_HOST='mysql-master',
 MASTER_USER='udistrital', 
 MASTER_PASSWORD='Slavepass123', 
 MASTER_LOG_FILE='mysql-bin.000003', 
-MASTER_LOG_POS=1156,
+MASTER_LOG_POS=1157,
 MASTER_PORT=3306;
 
 #Iniciar esclavo

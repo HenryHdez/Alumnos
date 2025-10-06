@@ -1,5 +1,5 @@
-#FROM node:16
-FROM node:10-alpine
+#FROM node:20
+FROM node:20
 #Crear directorio para la aplicación
 WORKDIR /app
 #Importar el archivo json del proyecto

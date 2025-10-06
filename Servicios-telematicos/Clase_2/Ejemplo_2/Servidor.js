@@ -1,13 +1,13 @@
 //Importe los módulos requeridos
 const express = require("express");
 const app = express();
-const puerto = 5000;
+const puerto = 5001;
 //Motor de plantillas
 app.set('view engine', 'ejs');
 app.set('views',__dirname+'/views');
 //Atención de la solicitud
 app.get('/', (req,res)=>{
-    res.render("index", {titulo:"Titulo dinámico.",
+    res.render("index", {titulo:"Hola.",
                         parrafo:"Este es un parráfo de ejemplo.",
                         Variable_n:"Esta es la n-ésima variable."})
 });

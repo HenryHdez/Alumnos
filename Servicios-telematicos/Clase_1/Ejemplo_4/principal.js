@@ -4,7 +4,7 @@ const servidor = http.createServer
 //Cuando creen el servidor siempre da un requerimiento (req) 
 //y da una respuesta (res)
 const server=http.createServer((req, res)=>{
-    res.end("Atendiendo una solicitud v2");
+    res.end("<h1>Atendiendo una solicitud v2</h1>");
 });
 //Nomenclatura de un puerto disponible para usar el servidor
 const puerto=3000;
