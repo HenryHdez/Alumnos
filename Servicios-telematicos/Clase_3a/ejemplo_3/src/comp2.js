@@ -25,7 +25,8 @@ function MiComponente2() {
     fetch(`${process.env.PUBLIC_URL}/plantilla.html`)
       .then(response => response.text())      // Convertir la respuesta del servidor a texto
       .then(data => setContenidoHTML(data));  // Guardar el contenido del archivo en el estado
-  }, []); // El arreglo vacío [] asegura que esto solo se ejecute una vez al montar el componente
+  }, []); 
+  // El arreglo vacío [] asegura que esto solo se ejecute una vez al montar el componente
 
   return (
     <div dangerouslySetInnerHTML={{ __html: contenidoHTML }} />

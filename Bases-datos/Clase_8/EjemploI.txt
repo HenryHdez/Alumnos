@@ -74,7 +74,8 @@ db.libros.insert({
 });
 
 #Libro 3
-db.libros.insert({
+db.libros.insert(
+    {
     titulo: "Don Quijote de la Mancha",
     autor: "Miguel de Cervantes Saavedra",
     publicado: 1605,
@@ -89,7 +90,8 @@ db.libros.insert({
         { usuario: "Isabella", puntuacion: 5, comentario: "Un relato profundo y divertido. Indispensable." },
         { usuario: "Ricardo", puntuacion: 4, comentario: "Extenso, pero vale la pena leerlo." }
     ]
-});
+}
+);
 
 #Consultar todos los libros de Gabriel Garcia Marquez
 db.libros.find({ autor: "Gabriel García Márquez" });

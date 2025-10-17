@@ -6,8 +6,12 @@ pagina = Flask(__name__)
 
 """En este caso se direcciona un archivo con formato HTML"""
 @pagina.route('/')
-def Funcion():
-    return "hola mundo"#render_template('mi_primer_pagina.html')
+def Funcion1():
+    return render_template('pagina.html')
+
+@pagina.route('/contacto')
+def Funcion2():
+    return "hola contcto"
 
 """Ejecución del servidor de flask"""
 if __name__ == '__main__':

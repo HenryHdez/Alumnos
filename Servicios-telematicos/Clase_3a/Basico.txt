@@ -1,5 +1,5 @@
 #Fijar la carpeta y crear la aplicación
-npx create-react-app ejemplo_1
+npx create-react-app ejemplo_x
 #ejemplo_1 es una etiqueta cualquiera
 
 #Fijar la ruta

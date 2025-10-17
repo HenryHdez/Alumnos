@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //UseState preserva el valor de una variable
-//Imlementen {{}} cuando sea nesesario
+//Implemente {{}} cuando sea nesesario
 
 function Contador2() {
   const [contador, setContador] = useState(0);

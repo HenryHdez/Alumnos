@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-//import Contador from './EstFuncontador';
-//import Contador2 from './EstFuncontador2';
-//import Temporizador from './EstTempo';
+import Contador from './EstFuncontador';
+import Contador2 from './EstFuncontador2';
+import Temporizador from './EstTempo';
 import TemporizadorConBotones from './EstTempoBot'
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
   //<TemporizadorConBotones/>
   return (
     <div>
-      <TemporizadorConBotones/>
+      <TemporizadorConBotones />
+
     </div>
   );
 }
