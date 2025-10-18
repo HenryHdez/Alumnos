@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <!--Configuracion de la pagina o librerias-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Titulo de la pesataña</title>
+    </head>
+    <!--Informacion para mostrar-->
+    <body>
+        <!--segmentar-->
+        <div align="center">
+            <!--Etiquetas para el titulo-->
+            <!--h1 hasta h6-->
+            <h1>Hola mundo</h1>
+            <!--Parrafo-->
+            <p>
+                Este es el <b>texto de un parrafo.</b> 
+                <br> <!--Salto de linea-->
+                Esta <i>es la segunda linea</i> del parrafo.
+                {{ variable }}
+            </p>
+        </div>
+
+        <div>
+            <h6>Titulo 2</h6>
+            <p>
+                {% if variablec == 10 %}
+                    <h2>La variable es 10</h2>
+                    <font face="arial">Texto en arial </font> 
+                {% else %}
+                    <h3>La variable no es 10, es {{ variablec }}</h3>
+                    <font face="arial" size="10" color="blue"> 
+                        Texto de prueba
+                    </font>
+                {% endif %}
+            </p>
+        </div>
+
+        <div>
+            <!--Enlaces internos-->
+            <a href="/otrapag">Enlace a google</a>
+
+            <br>
+
+            <!--scr es la ruta de la imagen-->
+            <img src="{{ url_for('static', filename='/imagenes/UD.png') }}"
+                 title="Facultad tecnologica"/>
+
+            <br>
+
+            <div align="center">
+                <a href="https://www.udistrital.edu.co/inicio" target="_blank" >
+                    <img src="{{ url_for('static', filename='/imagenes/Escudo_UD.png') }}" 
+                        title="Enlace"
+                        width="50px"
+                        height="50px"/>
+                </a>
+            </div>
+            <!--Imagenes, para agregar una imagen crear la carpeta static
+            static contiene todo lo que no va a cambiar durante la ejecucion
+            imagenes, fuentes, las hojas de estilo y scripts-->
+        </div>
+    </body>
+</html>
