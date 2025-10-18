@@ -29,7 +29,7 @@ const Mapaconruta = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; OpenStreetMap contributors'
       />
-      {ruta.length > 0 && <Polyline positions={ruta} color="blue" />}
+      {ruta.length > 0 && <Polyline positions={ruta} color="red" />}
     </MapContainer>
   );
 };

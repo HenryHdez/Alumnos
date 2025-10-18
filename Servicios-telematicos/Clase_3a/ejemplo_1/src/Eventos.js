@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 
 const EventMap = () => {
   //Almacenar posición
-  //const [mapClickPos, setMapClickPos] = useState(null);
+  ///const [mapClickPos, setMapClickPos] = useState(null);
 
   const MapEvents = () => {
     useMapEvents({

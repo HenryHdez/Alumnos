@@ -12,7 +12,7 @@ function App() {
   //<Mapaconruta></Mapaconruta>
   return (
     <div>
-      <MostrarPunto></MostrarPunto>
+      <Mapaconruta></Mapaconruta>
     </div>
   );
 }
