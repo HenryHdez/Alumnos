@@ -59,7 +59,7 @@ FallbackDNS=8.8.8.8
 sudo systemctl restart systemd-resolved
 
 #Dar permisos a la carpeta
-sudo chmod -R 777 /var/www/
+sudo chmod -R 777 /var/www/html
 
 #verificar 
 curl http://milugarfavorito.com
