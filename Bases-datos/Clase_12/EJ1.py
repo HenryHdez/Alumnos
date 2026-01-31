@@ -6,7 +6,7 @@ with open('Prueba.jpg', 'rb') as file:
     archivo = file.read()
 # Codificar archivo a base 64
 contenido_codificado = base64.b64encode(archivo)
-# print(contenido_codificado)
+#print(contenido_codificado)
 
 # Decodifica el contenido de la imagen en Base64
 contenido_decodificado = base64.b64decode(contenido_codificado)

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from shapely.geometry import LineString
 
 # Cargar el mapa de Colombia
-mapa_colombia = gpd.read_file('MapaAdmin/COL_adm0.shp')  # Asegúrate de tener el archivo correcto
+mapa_colombia = gpd.read_file('MapaAdmin/COL_adm0.shp') 
 
 # Coordenadas de Bogotá y Medellín
 coord_bogota = (-74.08175, 4.60971)

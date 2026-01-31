@@ -1,12 +1,29 @@
+#Contenedores de servicio
+services:
+#Etiqueta para el contenedor 1
+  WEB1:
+    #image: nginx:alpine
+    build:
+    context: ./ubicacion_del_Dockerfile
+    dockerfile: Dockerfile-personalizado
+    ports: 
+      - 8080:80
+    volumes:
+      - ./html:/usr/share/nginx/html
+#Etiqueta para el contenedor 2
+  WEB2:
+    image: python
+    ports: 
+      - 8081:80
+    volumes:
+      - ./html2:/usr/share/nginx/html
+
+
 #Construcción de un dockerfile
 web:
   build:
     context: ./ubicacion_del_Dockerfile
     dockerfile: Dockerfile-personalizado
-#Ejecución de un comando
-web:
-  build: .
-  command: python manage.py runserver 0.0.0.0:8000
 #Ejecución despues de que se haya creado algun servicio
 web:
   build: .

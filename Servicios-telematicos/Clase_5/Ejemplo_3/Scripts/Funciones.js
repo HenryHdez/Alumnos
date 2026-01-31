@@ -6,7 +6,7 @@ function draw() {
         //Defina una variable donde dibujar
         var lienzo = canvas.getContext('2d');
         //Defina el color a utilizar
-        //lienzo.fillStyle = 'rgb(200, 0, 0)';
+        lienzo.fillStyle = 'rgb(200, 0, 0)';
         lienzo.beginPath();
         lienzo.lineWidth=4;
         lienzo.strokeStyle = "red";
@@ -45,6 +45,6 @@ function draw() {
         grd.addColorStop(1, "white");
         // Llene algo con el gradiente
         lienzo.fillStyle = grd;
-        lienzo.fillRect(10, 10, 150, 80); 
+        lienzo.fillRect(100, 100, 150, 80); 
     }
 }

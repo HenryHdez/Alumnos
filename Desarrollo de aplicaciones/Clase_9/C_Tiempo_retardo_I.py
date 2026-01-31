@@ -4,7 +4,7 @@ import os
 from time import time
 #Asigne a una variable la dirección IP
 #del equipo con el que se desee establecer una conexión
-IP="172.24.32.1"
+IP="192.168.1.6"
 
 tiempo_inicio = time()
 Estado=os.system("ping "+IP)

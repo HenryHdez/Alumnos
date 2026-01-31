@@ -27,14 +27,14 @@ figure('Name', 'Comparación de Comando de Voz', 'NumberTitle', 'off');
 % Señal original - Prueba
 subplot(2,2,1)
 plot(t_test, x_test);
-title('🔊 Señal de prueba (test.wav)');
+title('Señal de prueba (test.wav)');
 xlabel('Tiempo (s)');
 ylabel('Amplitud');
 
 % Señal reconocida
 subplot(2,2,2)
 plot(t_ref, x_refs{idx});
-title(['🔈 Señal reconocida: ', comandos{idx}, '.wav']);
+title(['Señal reconocida: ', comandos{idx}, '.wav']);
 xlabel('Tiempo (s)');
 ylabel('Amplitud');
 
@@ -42,7 +42,7 @@ ylabel('Amplitud');
 subplot(2,2,3)
 imagesc(mfcc_test');
 axis xy;
-title('🧠 MFCC de prueba');
+title('MFCC de prueba');
 xlabel('Tiempo (marcos)');
 ylabel('Coeficientes');
 
@@ -50,6 +50,6 @@ ylabel('Coeficientes');
 subplot(2,2,4)
 imagesc(mfcc_refs{idx}');
 axis xy;
-title(['🧠 MFCC de "', comandos{idx}, '"']);
+title(['MFCC de "', comandos{idx}, '"']);
 xlabel('Tiempo (marcos)');
 ylabel('Coeficientes');

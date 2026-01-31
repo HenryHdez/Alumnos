@@ -1,0 +1,52 @@
+INSTALACIÓN Y CONFIGURACIÓN DE OPENSSH Y SNMP
+=============================================
+
+1. OPENSSH
+----------
+
+Instalar OpenSSH Server:
+    sudo apt update
+    sudo apt install openssh-server -y
+
+Verificar estado:
+    sudo systemctl status ssh
+
+Habilitar al arranque:
+    sudo systemctl enable ssh
+
+Archivo de configuración:
+    sudo nano /etc/ssh/sshd_config
+
+Reiniciar servicio después de cambios:
+    sudo systemctl restart ssh
+
+2. SNMP
+-------
+
+Instalar SNMP y SNMPD:
+    sudo apt update
+    sudo apt install snmp snmpd -y
+
+Editar archivo de configuración:
+    sudo nano /etc/snmp/snmpd.conf
+
+Configuración básica (solo lectura):
+    rocommunity public  localhost
+    agentAddress udp:161
+
+Reiniciar y habilitar SNMPD:
+    sudo systemctl restart snmpd
+    sudo systemctl enable snmpd
+
+Prueba local:
+    snmpwalk -v2c -c public localhost
+
+
+3. PRUEBAS BÁSICAS
+------------------
+
+SNMP desde otra máquina:
+    snmpwalk -v2c -c public 192.168.1.8
+
+Ejecutar snmpwalk vía SSH:
+    ssh ubuntu@192.168.1.8 "snmpwalk -v2c -c public 192.168.1.8"

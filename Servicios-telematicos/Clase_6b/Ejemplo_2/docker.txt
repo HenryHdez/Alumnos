@@ -3,7 +3,7 @@ docker-compose up -d
 
 #Crear usuario y contraseña
 #docker exec -it <nombre_del_contenedor> pure-pw useradd NOMBREUSUARIO -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/NOMBREUSUARIO
-docker exec -it servidor_ftpd-1 pure-pw useradd Henry -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/Henry
+docker exec -it ejemplo_2-servidor_ftpd-1 pure-pw useradd Henry -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/Henry
 
 #o pegar en exec de docker
 

@@ -1,6 +1,6 @@
 clear, clc
 %Operaciones morfológicas
-Ima=imread('circulos.jpg');
+Ima=imread('Imagenes/circulos.jpg');
 %Circulos rojos
 Ima_R=Ima(:,:,1);
 Ima_R=edge(Ima_R,'canny');
@@ -17,7 +17,7 @@ imshow(Ima_Esq)
 %skel, remove, circles, bridge
 
 
-%[L, Ne]=bwlabel(Ima_R);
+[L, Ne]=bwlabel(Ima_D);
 
 
 %Estimar propiedad
@@ -28,7 +28,7 @@ imshow(Ima_Esq)
 % ConvexImage, ConvexArea, Image,     FilledImage,  FilledArea, 
 % EulerNumber Extrema, EquivDiameter, Solidity,     Extent, 
 % PixelIdxList, PixelList, Perimeter.
-%Area=regionprops(L,'Area'); %Area de cada circulo
+Area=regionprops(L,'Perimeter') %Area de cada circulo
 %Perimetro=regionprops(L,'Perimeter'); %Perimetro de cada circulo
 
 % px=10;                       %Cantidad de pixeles

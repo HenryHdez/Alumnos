@@ -31,4 +31,4 @@ end
 [~, idx] = min(distancias);
 
 % Mostrar el nombre del comando reconocido
-fprintf('✅ Comando reconocido: %s\n', comandos{idx});
+fprintf('Comando reconocido: %s\n', comandos{idx});

@@ -13,7 +13,8 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
-});
+}
+);
 //Realizar una consulta de la tabla elementos
 app.get('/elementos', async (req, res) => {
   try {

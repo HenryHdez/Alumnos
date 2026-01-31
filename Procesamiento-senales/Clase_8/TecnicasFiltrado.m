@@ -1,6 +1,6 @@
 clear, clc
 %Importe la imágen
-Ima=imread('Koopa.png');
+Ima=imread('Imagenes/Koopa.png');
 %Convierta en escala de gris
 Ima_gray=rgb2gray(Ima);
 %Agregue ruido a la imágen
