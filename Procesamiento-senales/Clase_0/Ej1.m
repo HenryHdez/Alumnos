@@ -18,7 +18,7 @@ disp('Coeficiente b_n:');
 bn = simplify(bn)
 
 % Aproximar la función con N términos
-N = 5;         % Número de armónicos
+N = 20;         % Número de armónicos
 ft_approx = 0;  % como a0 y an son cero
 
 % Sustituir el valor específico de n

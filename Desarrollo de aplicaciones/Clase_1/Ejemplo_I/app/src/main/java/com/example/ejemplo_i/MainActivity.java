@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         //Definición del constructor
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Caja1=(EditText) findViewById(R.id.In1);
         Caja2=(EditText) findViewById(R.id.In2);
         Caja3=(EditText) findViewById(R.id.Sal1);
@@ -29,4 +28,5 @@ public class MainActivity extends AppCompatActivity {
         String Salida=String.valueOf(z);
         Caja3.setText(Salida);
     }
+
 }

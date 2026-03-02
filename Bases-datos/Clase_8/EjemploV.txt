@@ -1,0 +1,150 @@
+API: es una interfaz que permite que distintos sistemas se comuniquen entre sí 
+mediante reglas y formatos definidos para solicitar y enviar datos o servicios.
+
+===============================================================================
+Crear API
+===============================================================================
+La API permitirá:
+- Crear (POST)
+- Leer (GET)
+- Actualizar (PUT)
+- Eliminar (DELETE)
+
+Tecnologías:
+- MongoDB (base de datos)
+- RESTHeart (API REST ya construida para MongoDB)
+
+docker network create redmongo
+docker run -d --name mongo --network redmongo -p 127.0.0.1:27017:27017 -v mongo_data:/data/db -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin123 mongo:6
+
+docker run -d --name mongo --network redmongo `
+  -p 127.0.0.1:27017:27017 `
+  -v mongo_data:/data/db `
+  -e MONGO_INITDB_ROOT_USERNAME=admin `
+  -e MONGO_INITDB_ROOT_PASSWORD=admin123 `
+  mongo:6
+
+docker exec -it mongo mongosh -u admin -p admin123 --authenticationDatabase admin
+
+Verificación:
+docker ps
+docker exec -it mongo mongosh --eval "db.adminCommand({ ping: 1 })"
+
+Si responde "ok: 1", MongoDB está funcionando.
+
+===============================================================================
+Levantar RESTHeart
+===============================================================================
+RESTHeart expone MongoDB como una API REST automáticamente.
+docker rm -f n8n 2>$null
+
+docker run -d --name n8n --network redmongo `
+  -p 127.0.0.1:5678:5678 `
+  -v n8n_data:/home/node/.n8n `
+  -e N8N_HOST=127.0.0.1 `
+  -e N8N_PORT=5678 `
+  -e N8N_PROTOCOL=http `
+  -e WEBHOOK_URL=http://127.0.0.1:5678 `
+  n8nio/n8n:latest
+
+
+En el navegador:
+http://127.0.0.1:5678
+
+Debe responder con estado OK.
+
+===============================================================================
+6) API REST – CRUD SIMPLE (colección "items")
+===============================================================================
+La API se accede por HTTP.
+Se puede usar:
+- navegador
+- curl
+- Postman
+
+La base usada por defecto es "restheart".
+
+-------------------------------------------------------------------------------
+6.1 Crear colección (PUT)
+-------------------------------------------------------------------------------
+curl -X PUT http://127.0.0.1:8080/items
+
+-------------------------------------------------------------------------------
+6.2 CREATE – Insertar documento (POST)
+-------------------------------------------------------------------------------
+curl -X POST http://127.0.0.1:8080/items ^
+  -H "Content-Type: application/json" ^
+  -d "{ \"name\": \"lapiz\", \"price\": 1200 }"
+
+La respuesta incluye un encabezado "Location" con el ID del documento.
+
+-------------------------------------------------------------------------------
+6.3 READ – Listar documentos (GET)
+-------------------------------------------------------------------------------
+curl http://127.0.0.1:8080/items
+
+-------------------------------------------------------------------------------
+6.4 READ – Obtener documento por ID (GET)
+-------------------------------------------------------------------------------
+(Reemplace <id> por el valor devuelto en Location)
+
+curl http://127.0.0.1:8080/items/<id>
+
+-------------------------------------------------------------------------------
+6.5 UPDATE – Reemplazar documento (PUT)
+-------------------------------------------------------------------------------
+curl -X PUT http://127.0.0.1:8080/items/<id> ^
+  -H "Content-Type: application/json" ^
+  -d "{ \"name\": \"lapiz HB\", \"price\": 1500 }"
+
+-------------------------------------------------------------------------------
+6.6 DELETE – Eliminar documento (DELETE)
+-------------------------------------------------------------------------------
+curl -X DELETE http://127.0.0.1:8080/items/<id>
+
+===============================================================================
+7) Verificación desde MongoDB Compass
+===============================================================================
+Conectarse a MongoDB:
+
+- Host: 127.0.0.1
+- Puerto: 27017
+- Sin autenticación
+
+Buscar:
+- Base de datos: restheart
+- Colección: items
+
+Los documentos creados por la API deben aparecer allí.
+
+===============================================================================
+8) Detener y limpiar entorno (opcional)
+===============================================================================
+Detener contenedores:
+docker stop restheart mongo
+
+Eliminar contenedores:
+docker rm restheart mongo
+
+Eliminar red:
+docker network rm redmongo
+
+Eliminar volumen (BORRA DATOS):
+docker volume rm mongo_data
+
+===============================================================================
+9) Resumen conceptual
+===============================================================================
+- MongoDB NO expone HTTP directamente
+- RESTHeart actúa como traductor HTTP ↔ MongoDB
+- No se escribe backend ni código
+- CRUD completo usando solo Docker + HTTP
+- Ideal para:
+  * laboratorios
+  * docencia
+  * pruebas de APIs
+  * demostraciones CRUD
+
+===============================================================================
+FIN DEL DOCUMENTO
+===============================================================================

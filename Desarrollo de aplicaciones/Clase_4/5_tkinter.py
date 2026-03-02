@@ -2,7 +2,6 @@
 """Mi primer aplicación con interfaz grafica"""
 """importe la libreria Tkinter"""
 from tkinter import *
-
 """Función principal"""
 if __name__ == "__main__":
     """Crear ventana vacia"""
@@ -11,9 +10,11 @@ if __name__ == "__main__":
     Aplicacion.title("Primer App")
     etiqueta=Label(Aplicacion,text="Saludos")
     boton=Button(Aplicacion,text="OK")
+    boton2=Button(Aplicacion,text="Cerrar", command=Aplicacion.destroy)
     """Poner objetos en la ventana"""
     etiqueta.pack()
     boton.pack()
+    boton2.pack()
     """La instrucción Mainloop manitene activa 
     la aplicación"""
     Aplicacion.mainloop()

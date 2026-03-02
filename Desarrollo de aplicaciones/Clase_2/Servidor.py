@@ -2,7 +2,7 @@
 import socket
 
 Nombre_Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-IP_Servidor = "192.168.244.54"
+IP_Servidor = "10.31.3.54"
 Puerto=1234
 Nombre_Socket.bind((IP_Servidor, Puerto))
 Nombre_Socket.listen(1)

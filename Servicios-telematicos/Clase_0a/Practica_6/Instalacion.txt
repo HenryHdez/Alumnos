@@ -15,6 +15,9 @@ sudo systemctl start ssh
 #Comprobar
 systemctl status ssh
 
+#Conexión ssh desde un terminal
+ssh ubuntu@ip
+
 #--------------------------------Instalar servidor DNS-----------------------
 sudo apt install bind9 bind9utils bind9-doc dnsutils -y
 

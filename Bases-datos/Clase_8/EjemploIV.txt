@@ -1,0 +1,111 @@
+>>>>>>Replicar una BD con Mongo<<<<<<<<<<<<<
+
+===============================================================================
+Concepto
+===============================================================================
+Un "replica set" es un conjunto de instancias mongod que mantienen el mismo
+conjunto de datos en varios nodos; hay 1 nodo PRIMARY y los demás son SECONDARY. 
+
+===============================================================================
+Crear una red
+===============================================================================
+docker network create redmongo
+docker network ls
+
+===============================================================================
+Crear 3 volúmenes persistentes (datos)
+===============================================================================
+Un volumen persistente es un mecanismo de almacenamiento externo al contenedor 
+que permite conservar los datos aunque el contenedor se detenga, se elimine o 
+se recree.
+
+docker volume create mongo1_data
+docker volume create mongo2_data
+docker volume create mongo3_data
+
+===============================================================================
+Levantar 3 contenedores MongoDB con --replSet (misma configuración)
+===============================================================================
+Nodo 1:
+docker run -d --name mongo1 --network redmongo -p 27017:27017 -v mongo1_data:/data/db mongo:6 mongod --replSet rs0 --bind_ip_all --port 27017
+
+Nodo 2:
+docker run -d --name mongo2 --network redmongo -p 27018:27017 -v mongo2_data:/data/db mongo:6 mongod --replSet rs0 --bind_ip_all --port 27017
+
+Nodo 3:
+docker run -d --name mongo3 --network redmongo -p 27019:27017 -v mongo3_data:/data/db mongo:6 mongod --replSet rs0 --bind_ip_all --port 27017
+
+Notas:
+- Dentro de la red Docker: los 3 escuchan 27017 (mongo1:27017, mongo2:27017, mongo3:27017).
+- El nombre del replica set es rs0 (debe coincidir en todos). :contentReference[oaicite:3]{index=3}
+
+Verificar contenedores:
+docker ps
+
+===============================================================================
+Inicializar el Replica Set (rs.initiate) desde mongo1
+===============================================================================
+Abrir shell:
+docker exec -it mongo1 mongosh
+
+En mongosh, ejecutar (copiar/pegar):
+
+rs.initiate({
+  _id: "rs0",
+  members: [
+    { _id: 0, host: "mongo1:27017" },
+    { _id: 1, host: "mongo2:27017" },
+    { _id: 2, host: "mongo3:27017" }
+  ]
+})
+
+Validar estado:
+rs.status()
+
+Salir:
+exit
+
+===============================================================================
+Probar replicación
+===============================================================================
+Insertar en el primario (desde mongo1):
+docker exec -it mongo1 mongosh
+
+En mongosh:
+use demo
+db.pruebas.insertOne({ mensaje: "ok", fecha: new Date() })
+
+Confirmar quién es PRIMARY/SECONDARY:
+rs.status()
+
+Leer desde un secundario (para pruebas):
+docker exec -it mongo2 mongosh
+
+En mongosh:
+rs.secondaryOk()
+
+db.getName()
+show dbs
+use demo
+show collections
+db.pruebas.find()
+
+===============================================================================
+Comandos útiles
+===============================================================================
+Ver logs:
+docker logs mongo1
+docker logs mongo2
+docker logs mongo3
+
+detener todo
+docker stop mongo1 mongo2 mongo3
+
+Eliminar contenedores (conserva volúmenes):
+docker rm mongo1 mongo2 mongo3
+
+Eliminar volúmenes (borra datos):
+docker volume rm mongo1_data mongo2_data mongo3_data
+
+Eliminar red:
+docker network rm redmongo
