@@ -17,7 +17,6 @@ BEGIN
   
 END;//
 DELIMITER ;
-
 CALL obtener_iniciales_nombre;
 DROP PROCEDURE obtener_iniciales_nombre;
 

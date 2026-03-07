@@ -33,16 +33,18 @@ MASTER_HOST='mysql-master',
 MASTER_USER='udistrital', 
 MASTER_PASSWORD='Slavepass123', 
 MASTER_LOG_FILE='mysql-bin.000003', 
-MASTER_LOG_POS=1157,
+MASTER_LOG_POS=1566,
 MASTER_PORT=3306;
 
 #Iniciar esclavo
 START SLAVE;
 SHOW SLAVE STATUS\G;
 
-#Si da error de SHA en el maestro configure lo siguiente
+#Si da error de SHA en el maestro configure lo siguiente (Terminal 1)
 UNLOCK TABLES;
 ALTER USER 'udistrital'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'Slavepass123';
+#Terminal 2
+RESET REPLICA;
 
 #Terminal 1
 #Maestro 
@@ -65,5 +67,3 @@ INSERT INTO Tabla1(name) VALUES ('Registro 5');
 #Esclavo
 USE baseprueba;
 SELECT * FROM Tabla1;
-
-
