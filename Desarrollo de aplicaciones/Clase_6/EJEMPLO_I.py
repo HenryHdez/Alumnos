@@ -9,9 +9,9 @@ MSG = MIMEMultipart()
 """Escriba el cuerpo del correo electrónico"""
 Mensaje = "Bienvenido al curso"""
 """Establezca los parámetros del correo electrónico"""
-Contrasena     = "pzpisvwkusurpkcs"
+Contrasena     = ""
 MSG['From']    = "correopruebaclasesud@gmail.com"
-MSG['To']      = "heahernandezma@unal.edu.co"
+MSG['To']      = ""
 MSG['Subject'] = "Bienvenida"
 """Agregue el cuerpo del correo al objeto"""
 MSG.attach(MIMEText (Mensaje, 'plain'))

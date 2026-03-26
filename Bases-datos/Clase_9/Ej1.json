@@ -1,0 +1,110 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"Nombre\": \"Profesor\",\n  \"Edad\": 25,\n  \"Hobbie\": \"Leer\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -160,
+        -144
+      ],
+      "id": "49751a3a-b11a-47d6-9a45-d46f9e7debee",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtener datos de entrada\nconst nombre = $json.Nombre;\nconst edad = $json.Edad;\n// Procesar información\nconst resultado = {\n  nombre_mayuscula: nombre.toUpperCase(),\n  edad: edad,\n  edad_doble: edad * 2,\n  mensaje: `Hola ${nombre}, tu edad es ${edad}`\n};\n// Retornar resultado\nreturn [\n  {\n    json: resultado\n  }\n];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        -144
+      ],
+      "id": "3c948f56-b648-4b09-94c3-20fad3e3f9e6",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "path": "Ej2",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -352,
+        -144
+      ],
+      "id": "83d6f1cb-0c82-41b2-833a-95b1fbf99223",
+      "name": "Webhook",
+      "webhookId": "84278798-fd49-4abd-8aaa-05ca7b3d7035"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        208,
+        -144
+      ],
+      "id": "435c27e8-aea4-407c-886f-4d5bea32ebf6",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "40076ac1-4493-4a67-bbde-de25a252072e",
+  "meta": {
+    "instanceId": "a9b4f44f375db5ebf20e498696c07170cda12ba8311313f7fc34d659248f41a8"
+  },
+  "id": "Y77W0dSoHL0Ginso",
+  "tags": []
+}

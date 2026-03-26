@@ -5,13 +5,13 @@ import pymysql as mysql
 ORIGEN="localhost"
 USUARIO="root"
 CONTRASENA="12345"
-BASEDATOS="ejm1"
+BASEDATOS="CLASE_APP1"
 
 """Establecer la conexión con la BD"""
 BD = mysql.connect(host=ORIGEN, user=USUARIO, passwd=CONTRASENA, db=BASEDATOS)
 Cursor = BD.cursor()
 """Ejecutar comandos de SQL con .execute, por ejemplo una consulta"""
-Cursor.execute("SELECT * FROM tabla")
+Cursor.execute("SELECT * FROM EJ1")
 for row in Cursor:
    print(row)
 """Cerrar la BD"""

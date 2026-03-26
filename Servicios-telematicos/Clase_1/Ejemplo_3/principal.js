@@ -6,4 +6,3 @@ console.log(cowsay.say({
     e : "oO",
     T : "U "
 }));
-

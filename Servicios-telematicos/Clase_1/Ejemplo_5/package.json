@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.17.1"
+    "cowsay": "^1.6.0",
+    "express": "^4.17.1",
+    "yosay-sogou": "^0.0.2"
   }
 }

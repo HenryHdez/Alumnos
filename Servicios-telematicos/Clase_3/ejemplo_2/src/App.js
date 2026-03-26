@@ -12,7 +12,7 @@ function App() {
   //<TemporizadorConBotones/>
   return (
     <div>
-      <TemporizadorConBotones />
+      <Contador />
 
     </div>
   );

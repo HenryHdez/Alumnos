@@ -1,0 +1,110 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"datos\": [\n    {\n      \"Id\": 1,\n      \"Nombre\": \"Ana\",\n      \"Edad\": 20,\n      \"Programa\": \"Ingenieria\",\n      \"Semestre\": 5,\n      \"Promedio\": 4.2,\n      \"Activo\": true,\n      \"Hobbies\": [\"Leer\", \"Programar\"],\n      \"Ciudad\": \"Bogota\"\n    },\n    {\n      \"Id\": 2,\n      \"Nombre\": \"Luis\",\n      \"Edad\": 17,\n      \"Programa\": \"Electronica\",\n      \"Semestre\": 2,\n      \"Promedio\": 3.8,\n      \"Activo\": true,\n      \"Hobbies\": [\"Futbol\", \"Musica\"],\n      \"Ciudad\": \"Medellin\"\n    },\n    {\n      \"Id\": 3,\n      \"Nombre\": \"Marta\",\n      \"Edad\": 23,\n      \"Programa\": \"Telecomunicaciones\",\n      \"Semestre\": 8,\n      \"Promedio\": 4.6,\n      \"Activo\": false,\n      \"Hobbies\": [\"Investigar\", \"Escribir\"],\n      \"Ciudad\": \"Cali\"\n    },\n    {\n      \"Id\": 4,\n      \"Nombre\": \"Carlos\",\n      \"Edad\": 19,\n      \"Programa\": \"Sistemas\",\n      \"Semestre\": 4,\n      \"Promedio\": 3.1,\n      \"Activo\": true,\n      \"Hobbies\": [\"Videojuegos\"],\n      \"Ciudad\": \"Barranquilla\"\n    },\n    {\n      \"Id\": 5,\n      \"Nombre\": \"Sofia\",\n      \"Edad\": 21,\n      \"Programa\": \"Industrial\",\n      \"Semestre\": 6,\n      \"Promedio\": 4.0,\n      \"Activo\": true,\n      \"Hobbies\": [\"Dibujar\", \"Leer\"],\n      \"Ciudad\": \"Bogota\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -160,
+        -144
+      ],
+      "id": "49751a3a-b11a-47d6-9a45-d46f9e7debee",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "path": "Ej2",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -352,
+        -144
+      ],
+      "id": "83d6f1cb-0c82-41b2-833a-95b1fbf99223",
+      "name": "Webhook",
+      "webhookId": "84278798-fd49-4abd-8aaa-05ca7b3d7035"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        240,
+        -144
+      ],
+      "id": "435c27e8-aea4-407c-886f-4d5bea32ebf6",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Tomar el arreglo que viene desde Edit Fields\nconst lista = $json.datos;\nlet resultado = [];\n\n// Recorrer cada registro\nfor (let i = 0; i < lista.length; i++) {\n  // Copiar el registro actual\n  let estudiante = { ...lista[i] };\n  //ACTUALIZAR / AGREGAR CAMPOS NUEVOS\n  estudiante.Estado = \"Revisado\";\n  estudiante.Anio = 2026;\n  \n  //MODIFICAR CAMPOS EXISTENTES\n  estudiante.Nombre = estudiante.Nombre.toUpperCase();\n  estudiante.Programa = \"Programa de \" + estudiante.Programa;\n\n  // Cambiar Activo de booleano a texto\n  if (estudiante.Activo === true) {\n    estudiante.Activo = \"Si\";\n  } else {\n    estudiante.Activo = \"No\";\n  }\n\n  // ELIMINAR CAMPOS\n  delete estudiante.Hobbies;\n\n  // FILTRAR REGISTROS\n  if (estudiante.Edad >= 18 && estudiante.Promedio >= 4.0) {\n    resultado.push({\n      json: estudiante\n    });\n  }\n}\n\nreturn resultado;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        -144
+      ],
+      "id": "e2f729ff-8420-418c-b961-86be48edad7b",
+      "name": "Code in JavaScript"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "f16bb9da-1642-4734-a461-cec32a3d5f57",
+  "meta": {
+    "instanceId": "a9b4f44f375db5ebf20e498696c07170cda12ba8311313f7fc34d659248f41a8"
+  },
+  "id": "Y77W0dSoHL0Ginso",
+  "tags": []
+}

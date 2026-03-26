@@ -1,0 +1,87 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "Ej1",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -288,
+        48
+      ],
+      "id": "115a6109-2651-4f69-b376-cc9ed7aae2a6",
+      "name": "Webhook",
+      "webhookId": "69ab5746-38be-4916-b5cc-99a1fb93d9a1"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        128,
+        48
+      ],
+      "id": "5e6c4eb7-d26f-4972-8a95-573a77ca5460",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"Mensaje\": \"Hola mundo\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -80,
+        48
+      ],
+      "id": "96d8cf3d-5674-4ac0-9111-a442ba332852",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "e13fa3fe-559a-40ce-a1d0-292a68a39fb0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "11b3c97722a4d99d2ca30bbc841e62e952b1c0c1817e5c11c829ceb3a5c2fd88"
+  },
+  "id": "NeValYV0cmoTTdOB",
+  "tags": []
+}

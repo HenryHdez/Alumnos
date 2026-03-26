@@ -1,0 +1,110 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        -128
+      ],
+      "id": "d8509303-2074-444b-a12f-fd2ac33a02a3",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "//MANEJO ABREVIADO DE JSON\nconst lista = $json.datos;\n\n// FUNCIÓN FLECHA\n// Forma tradicional\nfunction doble(x) {\n  return x * 2;\n}\n// Forma flecha equivalente\nconst dobleFlecha = x => x * 2;\n\n// MAP (transformar datos)\n// map es un método de los arrays que recorre todos los elementos y crea un nuevo array transformado\nconst nombres = lista.map(item => ({\n  nombre: item.Nombre,\n  mayor: item.Edad >= 18\n}));\n\n// REDUCE (acumular valores)\n// reduce es un método de los arrays que recorre todos los elementos y los combina en un único resultado.\n\nconst sumaPromedios = lista.reduce(\n  (acum, item) => acum + item.Promedio,\n  0\n);\n\n// DESTRUCTURING (extraer variables)\nconst ejemplo = lista[0];\nconst { Nombre, Edad } = ejemplo;\n\n// SPREAD (copiar y modificar objetos)\nconst copia = {\n  ...ejemplo,\n  Nombre: ejemplo.Nombre.toUpperCase()\n};\n\n// CREAR NUEVO JSON LIMPIO\nconst transformado = lista.map(item => ({\n  nombre: item.Nombre,\n  edad: item.Edad\n}));\n\n// CADENA DE OPERACIONES\nconst resultado = lista\n  .filter(item => item.Edad >= 18)\n  .map(item => ({\n    nombre: item.Nombre,\n    promedio: item.Promedio\n  }));\n\nreturn [\n  {\n    json: {\n      ejemplo_funcion: doble(5),\n      ejemplo_flecha: dobleFlecha(5),\n      nombres: nombres,\n      suma_promedios: sumaPromedios,\n      destructuring: { Nombre, Edad },\n      copia: copia,\n      transformado: transformado,\n      resultado_final: resultado\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        -128
+      ],
+      "id": "a17a292a-f561-42cc-97a6-2a496f96fbbb",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        -128
+      ],
+      "id": "8cdd8bc4-46f6-4d34-86b2-024e05c3ebd0",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"datos\": [\n    {\n      \"Id\": 1,\n      \"Nombre\": \"Ana\",\n      \"Edad\": 20,\n      \"Programa\": \"Ingenieria\",\n      \"Semestre\": 5,\n      \"Promedio\": 4.2,\n      \"Activo\": true,\n      \"Hobbies\": [\"Leer\", \"Programar\"],\n      \"Ciudad\": \"Bogota\"\n    },\n    {\n      \"Id\": 2,\n      \"Nombre\": \"Luis\",\n      \"Edad\": 17,\n      \"Programa\": \"Electronica\",\n      \"Semestre\": 2,\n      \"Promedio\": 3.8,\n      \"Activo\": true,\n      \"Hobbies\": [\"Futbol\", \"Musica\"],\n      \"Ciudad\": \"Medellin\"\n    },\n    {\n      \"Id\": 3,\n      \"Nombre\": \"Marta\",\n      \"Edad\": 23,\n      \"Programa\": \"Telecomunicaciones\",\n      \"Semestre\": 8,\n      \"Promedio\": 4.6,\n      \"Activo\": false,\n      \"Hobbies\": [\"Investigar\", \"Escribir\"],\n      \"Ciudad\": \"Cali\"\n    },\n    {\n      \"Id\": 4,\n      \"Nombre\": \"Carlos\",\n      \"Edad\": 19,\n      \"Programa\": \"Sistemas\",\n      \"Semestre\": 4,\n      \"Promedio\": 3.1,\n      \"Activo\": true,\n      \"Hobbies\": [\"Videojuegos\"],\n      \"Ciudad\": \"Barranquilla\"\n    },\n    {\n      \"Id\": 5,\n      \"Nombre\": \"Sofia\",\n      \"Edad\": 21,\n      \"Programa\": \"Industrial\",\n      \"Semestre\": 6,\n      \"Promedio\": 4.0,\n      \"Activo\": true,\n      \"Hobbies\": [\"Dibujar\", \"Leer\"],\n      \"Ciudad\": \"Bogota\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -208,
+        -128
+      ],
+      "id": "c238d45b-8065-42ab-aa3c-e98719b34022",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "7fd881a9-63f2-44fe-9c22-545df8638c03",
+  "meta": {
+    "instanceId": "a9b4f44f375db5ebf20e498696c07170cda12ba8311313f7fc34d659248f41a8"
+  },
+  "id": "Y77W0dSoHL0Ginso",
+  "tags": []
+}

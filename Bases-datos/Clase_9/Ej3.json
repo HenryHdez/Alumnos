@@ -1,0 +1,84 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        -128
+      ],
+      "id": "d8509303-2074-444b-a12f-fd2ac33a02a3",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "// var: variable global\nvar variable_var = \"Soy var\";\n// let: variable local\nlet variable_let = \"Soy let\";\n// const: constante \nconst variable_const = \"Soy const\";\n\n// TIPOS DE DATOS\n// Número\nlet numero = 10;\nlet decimal = 3.14;\n// String\nlet texto = \"Hola mundo\";\n// Boolean\nlet activo = true;\n// Null\nlet vacio = null;\n// Undefined\nlet indefinido;\n// Array\nconst numeros = [1, 2, 3, 4, 5];\n// Matriz\nconst matriz = [\n  [1, 2],\n  [3, 4]\n];\n// Objeto\nconst persona = {\n  nombre: \"Ana\",\n  edad: 25\n};\n// Operaciones +,-,*,/ y las de Math\nlet suma = numero + (decimal*Math.PI);\n\n// ESTRUCTURAS DE CONTROL DE FLUJO\n// For\nlet suma_lista = 0;\nfor (let i = 0; i < numeros.length; i++) {\n  suma_lista = suma_lista + numeros[i];\n}\n// Condicional\nlet resultado = \"\";\nif (numero > 5) {\n  resultado = \"Mayor a 5\";\n} else {\n  resultado = \"Menor o igual a 5\";\n}\n\n// var vs let\n\nvar ejemplo_var = \"global\";\nif (true) {\n  // cambia la variable definida antes de if\n  var ejemplo_var = \"cambio con var\"; \n}\n\nlet ejemplo_let = \"global\";\n\nif (true) {\n  //parecen variables independientes y no cambia la de afuera\n  let ejemplo_let = \"solo dentro del bloque\"; \n}\n\nreturn [\n  {\n    json: {\n      var: variable_var,\n      let: variable_let,\n      const: variable_const,\n      numero: numero,\n      decimal: decimal,\n      texto: texto,\n      booleano: activo,\n      null: vacio,\n      undefined: indefinido,\n      array: numeros,\n      matriz: matriz,\n      objeto: persona,\n      suma: suma,\n      suma_lista: suma_lista,\n      resultado: resultado,\n      ejemplo_var: ejemplo_var,\n      ejemplo_let: ejemplo_let\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        -128
+      ],
+      "id": "a17a292a-f561-42cc-97a6-2a496f96fbbb",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        -128
+      ],
+      "id": "8cdd8bc4-46f6-4d34-86b2-024e05c3ebd0",
+      "name": "Convert to File"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "eca381b0-d83f-47ac-953b-6b65d661e10f",
+  "meta": {
+    "instanceId": "a9b4f44f375db5ebf20e498696c07170cda12ba8311313f7fc34d659248f41a8"
+  },
+  "id": "Y77W0dSoHL0Ginso",
+  "tags": []
+}

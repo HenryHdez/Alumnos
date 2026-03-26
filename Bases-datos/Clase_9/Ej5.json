@@ -1,0 +1,71 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "dd0e0788-6479-4e2f-ba2e-4c9d197973ba",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "fromEmail": "disritalclasesud@gmail.com",
+        "toEmail": "heahernandezma@unal.edu.co",
+        "subject": "Hola mundo",
+        "html": "<h1>Hola n8n</h1>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "caff4816-0a36-4e64-b905-d942680e7e21",
+      "name": "Send an Email",
+      "webhookId": "e19b50cd-0e00-4641-8cb1-af0fa3d2f1b8",
+      "credentials": {
+        "smtp": {
+          "id": "AwSLSu5wJh34c7PL",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send an Email": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "69f57f07-6fa7-443f-b929-8f52a961d4d2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "229564d47309a49bb2210d4f4e3aa6cfd38dccc402b12a34e6cd98bf0d3cbdcd"
+  },
+  "id": "kbIVqaUpQwlgSGeq",
+  "tags": []
+}

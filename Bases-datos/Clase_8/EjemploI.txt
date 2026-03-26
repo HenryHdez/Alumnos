@@ -97,7 +97,7 @@ db.libros.insert(
 db.libros.find({ autor: "Gabriel García Márquez" });
 #Libros publicados despues de 1980
 db.libros.find({ publicado: { $gt: 1980 } });
-#Libros que en el titulo tienen la palabra ijote
+#Libros que en el titulo tienen la palabra jote
 db.libros.find({ titulo: /ijote/i });
 #Libros que han sido valorados por Laura
 db.libros.find({ "valoraciones.usuario": "Laura" });

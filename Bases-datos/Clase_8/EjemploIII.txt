@@ -2,18 +2,18 @@
 docker rm -f mongo1 mongo2 mongo3 
 
 # Crear red interna
-docker network create mongo-rs
+docker network create redmongo
 
 # Crear los tres nodos
 
 # Nodo 1 (será el PRIMARY)
-docker run -d --name mongo1 --hostname mongo1 --net mongo-rs -p 27017:27017 -v mongo1:/data/db mongo:latest --replSet rs0 --bind_ip_all
+docker run -d --name mongo1 --hostname mongo1 --net redmongo -p 27017:27017 -v mongo1:/data/db mongo:latest --replSet rs0 --bind_ip_all
 
 # Nodo 2 (SECONDARY)
-docker run -d --name mongo2 --hostname mongo2 --net mongo-rs -p 27018:27017 -v mongo2:/data/db mongo:latest --replSet rs0 --bind_ip_all
+docker run -d --name mongo2 --hostname mongo2 --net redmongo -p 27018:27017 -v mongo2:/data/db mongo:latest --replSet rs0 --bind_ip_all
 
 # Nodo 3 (SECONDARY)
-docker run -d --name mongo3 --hostname mongo3 --net mongo-rs -p 27019:27017 -v mongo3:/data/db mongo:latest --replSet rs0 --bind_ip_all
+docker run -d --name mongo3 --hostname mongo3 --net redmongo -p 27019:27017 -v mongo3:/data/db mongo:latest --replSet rs0 --bind_ip_all
 
 # Verificar que los tres contenedores estén activos
 docker ps
@@ -95,3 +95,23 @@ docker stop mongo1
 docker ps
 
 # Repita el paso anterior
+
+===============================================================================
+Comandos útiles
+===============================================================================
+Ver logs:
+docker logs mongo1
+docker logs mongo2
+docker logs mongo3
+
+detener todo
+docker stop mongo1 mongo2 mongo3
+
+Eliminar contenedores (conserva volúmenes):
+docker rm mongo1 mongo2 mongo3
+
+Eliminar volúmenes (borra datos):
+docker volume rm mongo1_data mongo2_data mongo3_data
+
+Eliminar red:
+docker network rm redmongo
