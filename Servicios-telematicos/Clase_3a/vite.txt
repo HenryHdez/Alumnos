@@ -1,0 +1,14 @@
+#ejecutar 
+npm create vite@latest Clase
+
+#Ir al directorio
+cd Clase
+npm run dev
+
+#ctrl para terminar
+
+#En el ejemplo 3
+npm install bootstrap react-bootstrap
+
+#En el ejemplo 4
+npm install react-router-dom
