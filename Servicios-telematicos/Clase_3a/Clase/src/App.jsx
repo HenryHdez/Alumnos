@@ -1,28 +1,28 @@
-import { useState } from 'react';
-import {
-  Container,
-  Card,
-  Form,
-  Button,
-  Modal
-} from 'react-bootstrap';
-
-import Dropdown from 'react-bootstrap/Dropdown';
+import { useState } from 'react'
+import './App.css'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function App() {
-  return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Dropdown Button
-      </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
+  return (
+    <>
+    <div>
+      {/* Comentario en Vite */}
+      <Button variant="success">Success</Button>
+          <Form>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Example textarea</Form.Label>
+        <Form.Control as="textarea" rows={3} />
+      </Form.Group>
+    </Form>
+    </div>
+    </>
+  )
 }
 
-export default App;
+export default App

@@ -6,7 +6,7 @@ import MiComponente2 from './comp2.js'
 function App() {
   return (
     <div className="App">
-      <MiComponente></MiComponente>
+      <MiComponente2></MiComponente2>
     </div>
   );
 }
