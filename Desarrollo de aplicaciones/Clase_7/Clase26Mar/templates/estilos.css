@@ -1,0 +1,49 @@
+            /* Selector universal */
+            * {
+                margin: 10;
+                padding: 10;
+            }
+            body{
+                background-color: brown;            }
+            /* Esto es un comentario de css */
+            /*asignacion de estilos a los elementos p*/
+            p{
+                color: red;
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            } 
+            /*Asignacion por clase*/
+            .parrafoespecifico{
+                color: green;
+                font-size: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+            }    
+            /*Asignacion por etiqueta*/
+            div p{
+                color: rgb(183, 255, 0);
+                font-size: 30px;
+                font-family: 'Courier New', Courier, monospace;
+            }    
+
+            div button{
+                background-color: black;
+                color: white;
+                font-size: 20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            button:hover{
+                background-color: rgb(255, 0, 0);
+                color: white;
+                font-size: 20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            div:hover{
+                background-color: rgb(0, 255, 255);
+            }
+
+            .colortexto{
+                color: rgb(0, 255, 145);
+                background-color: rgb(255, 255, 255);
+            }

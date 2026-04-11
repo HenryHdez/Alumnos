@@ -1,0 +1,61 @@
+<!--Live Server-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Modal básico</title>
+
+<style>
+/* Fondo del modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Clase para ocultar */
+.oculto {
+    display: none;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Botón para abrir -->
+<button onclick="mostrarModal()">Abrir modal</button>
+
+<!-- Modal -->
+<div id="miModal" class="modal oculto">
+    <div class="modal-contenido">
+        <p>Este es un modal</p>
+        <button onclick="ocultarModal()">Cerrar</button>
+    </div>
+</div>
+
+<script>
+function mostrarModal() {
+    document.getElementById("miModal").classList.remove("oculto");
+}
+
+function ocultarModal() {
+    document.getElementById("miModal").classList.add("oculto");
+}
+</script>
+
+</body>
+</html>

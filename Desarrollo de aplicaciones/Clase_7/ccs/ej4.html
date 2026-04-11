@@ -1,0 +1,16 @@
+<style>
+.activo {
+    color: white;
+    background-color: blue;
+}
+</style>
+
+<p id="texto">Texto de ejemplo</p>
+<button onclick="activar()">Activar estilo</button>
+
+<script>
+function activar() {
+    document.getElementById("texto").classList.add("activo");
+    //document.getElementById("texto").setAttribute("style", "color: purple; font-size: 18px;");
+}
+</script>

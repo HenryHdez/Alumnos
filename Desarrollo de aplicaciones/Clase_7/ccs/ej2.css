@@ -1,0 +1,33 @@
+/* Selector de etiqueta (elemento) */
+p {
+    color: blue;
+    font-size: 16px;
+}
+
+/* Selector de clase */
+.texto {
+    color: green;
+}
+
+/* Selector de id */
+#titulo {
+    color: red;
+    font-weight: bold;
+}
+
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Selector descendente (a los p dentro de un div)*/
+div p {
+    color: purple;
+}
+
+/* Selector de pseudo-clase (Estilos especificados)*/
+button:hover {
+    background-color: black;
+    color: white;
+}

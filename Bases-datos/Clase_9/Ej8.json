@@ -1,0 +1,315 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM clientes;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        240,
+        -336
+      ],
+      "id": "62c3c4cc-f864-402f-a1e7-8c694d2b0604",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "mySql": {
+          "id": "C3oaCG95m4Jsa6Az",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "clientesget",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        -336
+      ],
+      "id": "a8387404-e499-40e8-83f8-595d04f88f0b",
+      "name": "Webhook",
+      "webhookId": "cd05cf22-a317-417d-bbd1-b6f41ea8c4bf"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        464,
+        -336
+      ],
+      "id": "74663a45-1901-4fb8-9619-7359cec084f6",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO clientes (nombre, correo, ciudad)\nVALUES (\n  '{{$json.body.nombre}}',\n  '{{$json.body.correo}}',\n  '{{$json.body.ciudad}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        240,
+        -160
+      ],
+      "id": "f58a5195-6348-40b4-8b8a-1db33bfa00db",
+      "name": "Execute a SQL query1",
+      "credentials": {
+        "mySql": {
+          "id": "C3oaCG95m4Jsa6Az",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        464,
+        -160
+      ],
+      "id": "ec9bc42a-9645-4e8c-b77c-ac163aa226b7",
+      "name": "Respond to Webhook1"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE clientes\nSET nombre = '{{$json.body.nombre}}',\n    correo = '{{$json.body.correo}}',\n    ciudad = '{{$json.body.ciudad}}'\nWHERE ciudad = '{{$json.body.ciudad}}';",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        240,
+        16
+      ],
+      "id": "e84f6b2b-8dab-4022-8f0b-f6358d9dc0d3",
+      "name": "Execute a SQL query2",
+      "credentials": {
+        "mySql": {
+          "id": "C3oaCG95m4Jsa6Az",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        464,
+        16
+      ],
+      "id": "e06544c9-91e9-4b48-841e-44e7fbc7d486",
+      "name": "Respond to Webhook2"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM clientes\nWHERE nombre = '{{$json.body.nombre}}';",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        240,
+        176
+      ],
+      "id": "b000f85e-ff23-44f1-9904-557cb011eb82",
+      "name": "Execute a SQL query3",
+      "credentials": {
+        "mySql": {
+          "id": "C3oaCG95m4Jsa6Az",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        464,
+        176
+      ],
+      "id": "fdcf61d8-008b-4cb3-ab51-32ddc48d7d38",
+      "name": "Respond to Webhook3"
+    },
+    {
+      "parameters": {
+        "httpMethod": "DELETE",
+        "path": "clientesdelete",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        176
+      ],
+      "id": "8655408b-8930-4026-b9ed-18c14d902cc5",
+      "name": "Webhook3",
+      "webhookId": "cd05cf22-a317-417d-bbd1-b6f41ea8c4bf"
+    },
+    {
+      "parameters": {
+        "httpMethod": "PUT",
+        "path": "clientesput",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        16
+      ],
+      "id": "67d1dc34-0f87-4d68-87bb-c85edbd9da10",
+      "name": "Webhook2",
+      "webhookId": "cd05cf22-a317-417d-bbd1-b6f41ea8c4bf"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clientespost",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        -160
+      ],
+      "id": "fbf26f15-2a3a-49ff-a2ae-a1587a6f77e8",
+      "name": "Webhook1",
+      "webhookId": "cd05cf22-a317-417d-bbd1-b6f41ea8c4bf"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query2": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query3": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook3": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook2": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "b855eb24-e619-4403-ad61-f62ae872ddef",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "383ea562de665374e8e22fd6423a32aebbe12b1b0871c7a2891193c6461bce04"
+  },
+  "id": "riyhA82zy98SgD73",
+  "tags": []
+}

@@ -1,0 +1,93 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM clientes;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        208,
+        0
+      ],
+      "id": "62c3c4cc-f864-402f-a1e7-8c694d2b0604",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "mySql": {
+          "id": "C3oaCG95m4Jsa6Az",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "clientes",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        16,
+        0
+      ],
+      "id": "a8387404-e499-40e8-83f8-595d04f88f0b",
+      "name": "Webhook",
+      "webhookId": "cd05cf22-a317-417d-bbd1-b6f41ea8c4bf"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        432,
+        0
+      ],
+      "id": "74663a45-1901-4fb8-9619-7359cec084f6",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "059e3f6d-70ef-48fe-941d-92dd0d0b8e34",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "383ea562de665374e8e22fd6423a32aebbe12b1b0871c7a2891193c6461bce04"
+  },
+  "id": "riyhA82zy98SgD73",
+  "tags": []
+}

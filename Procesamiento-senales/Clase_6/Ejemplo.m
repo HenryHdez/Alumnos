@@ -15,7 +15,7 @@ Salida=[y1,y2,y3];
 red = newrb(Entrada,Salida);
 %Simulación de la red
 %Todas las combinaciones
-y = red(x2);
+y = red(x1);
 %plot(y)
 prom=mean(y)
 if(prom>0.9 && prom<1.2)

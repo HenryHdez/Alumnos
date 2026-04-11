@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+    </head>
+    <!--Lo que quiero ver en la pagina web-->
+    <body>
+        <h1>Datos del usuario</h1>
+        <form action='/bienvenida' method='POST'>
+            <!--GET = LEER DESDE EL SERVIDOR-->
+            <!--POST = ENVIAR AL SERVIDOR-->
+            <p>
+                <label for='C1'>Digite algo:</label>
+                <input type='text' placeholder='Digite su nombre' name='Entrada' id='C1'></input>
+                <label for='C2'>Digite edad:</label>
+                <input type='number' placeholder='Digite su edad' name='Entrada2' id='C2'></input>
+                <label for='C3'>Digite edad:</label>
+                <input type='search' placeholder='Digite su busqueda' name='Entrada3' id='C3'></input>
+            </p>
+            <p>
+                <label for='listausuar'>Seleccione opcion:</label>
+                <select name='listanombres' id='listausuar'>
+                    <option value='Juan'>Etiqueta Juan</option>
+                    <option value='Ricardo'>Etiqueta Ricardo</option>
+                    <option value='HH'>Etiqueta HH</option>
+                </select>
+            </p>
+            <p>
+                <input type='radio' name='OP1' required>Opcion 1</input>
+                <input type='radio' name='OP2'>Opcion 2</input>
+            </p>
+            <button type='submit' name='B2'>Haga clic para finalizar</button>
+        </form>
+        <!--Responde a javascript-->
+        <p>
+            <div id='Aviso'>
+                Hola javascript
+            </div>
+        </p>
+        <p>
+            <input type='number' placeholder='Digite 1' name='Entrada1' id='C4'></input>
+            <input type='number' placeholder='Digite 2' name='Entrada2' id='C5'></input>
+            <button onclick='Funcion1()' name='B1'>Boton normal</button>
+            <button onclick='Funcion2(1,2)' name='B2'>Boton normal 2</button>
+            <button onclick="Funcion3({{var2}})" name='B3'>Boton normal 3</button>
+        </p>        
+        
+    </body>
+    <!--Todo lo que se define aca es global para esta pagina-->
+    <script type="text/javascript">
+        //Var es una variable global
+        var numero1=1.3
+        var texto="Hola"
+        function Funcion1(){
+            alert('Hola mundo')
+        }
+
+        function Funcion2(a,b){
+            //let es una variable local
+            let c=a+b;
+            let aviso=document.getElementById('Aviso');
+            let num1=document.getElementById('C4').value;
+            let num2=document.getElementById('C5').value;
+            let resul=(num1+num2)*a/b
+            console.log('Aviso...')
+            aviso.innerHTML="El resultado es: "+resul
+        }
+
+        function Funcion3(t){
+            //Estructuras de control de flujo
+            //condicionales
+            console.log(t)
+            if(t==1){
+                alert('Es uno')
+            }
+            else if(t==2)
+                alert('Es dos')
+            else{
+                alert('No es uno')
+            }
+            //Iterativas
+            for (let i=0;i<10;i++){
+
+            }
+            i=0;
+            while(i>0){
+                i=i-1;
+            }
+        }
+    </script>
+</html>

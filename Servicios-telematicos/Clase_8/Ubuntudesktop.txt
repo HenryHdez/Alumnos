@@ -1,0 +1,33 @@
+/////////Crear red
+docker network create red_ubuntu_lab
+
+/////////Crear volumenes (Sigue aun terminado el ciclo de vida del contenedor)
+docker volume create ubuntu1_data
+docker volume create ubuntu2_data
+
+/////////Descargar imagen con escritorio
+docker pull lscr.io/linuxserver/webtop:ubuntu-xfce
+
+/////////Crear contenedor 1
+docker run -d --name ubuntu1 --hostname ubuntu1 --network red_ubuntu_lab -p 3001:3000 -v ubuntu1_data:/config --shm-size="1gb" lscr.io/linuxserver/webtop:ubuntu-xfce
+
+/////////Crear contenedor 2
+docker run -d --name ubuntu2 --hostname ubuntu2 --network red_ubuntu_lab -p 3002:3000 -v ubuntu2_data:/config --shm-size="1gb" lscr.io/linuxserver/webtop:ubuntu-xfce
+
+/////////Instalar ping
+docker exec ubuntu1 bash -c "apt update && apt install -y iputils-ping"
+docker exec ubuntu2 bash -c "apt update && apt install -y iputils-ping"
+
+/////////Probar conectividad
+docker exec ubuntu1 ping -c 3 ubuntu2
+docker exec ubuntu2 ping -c 3 ubuntu1
+
+/////////Accesos
+echo Ubuntu 1: http://localhost:3001
+echo Ubuntu 2: http://localhost:3002
+
+
+///en el entorno
+ifconfig
+apt update
+apt install -y net-tools

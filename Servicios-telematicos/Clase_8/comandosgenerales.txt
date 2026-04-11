@@ -1,0 +1,60 @@
+# ========== GIT
+///Enviar al git
+docker tag paginacorreo henryhdezm/ejemplo10abril:tagname
+docker push henryhdezm/ejemplo10abril:tagname
+///Clonar del git
+docker pull henryhdezm/ejemplo10abril:tagname
+docker tag henryhdezm/ejemplo10abril:tagname paginacorreo2
+docker run paginacorreo2
+
+# ========== VERIFICACIÓN
+docker --version
+docker info
+
+# ========== IMÁGENES
+docker search ubuntu
+docker pull ubuntu
+docker images
+docker rmi ubuntu
+
+# ========== CONTENEDORES
+docker run -it ubuntu bash
+docker run -d ubuntu
+docker run -it --name mi_contenedor ubuntu bash
+docker ps
+docker ps -a
+docker stop mi_contenedor
+docker start mi_contenedor
+docker rm mi_contenedor
+docker rm -f mi_contenedor
+
+# ========== ACCESO A CONTENEDORES
+docker exec -it mi_contenedor bash
+docker exec mi_contenedor ls
+docker atach mi_contenedordo
+
+# ========== REDES
+docker network ls
+docker network create mi_red
+docker network inspect mi_red
+docker run -d --network mi_red --name c1 ubuntu
+
+# ========== VOLÚMENES
+docker volume create mi_volumen
+docker volume ls
+docker run -it -v mi_volumen:/datos ubuntu
+docker volume rm mi_volumen
+
+# ========== PUERTOS
+docker run -d -p 8080:80 nginx
+
+# ========== INSPECCIÓN
+docker logs mi_contenedor
+docker stats
+docker inspect mi_contenedor
+docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" mi_contenedor
+
+# ========== LIMPIEZA
+docker container prune
+docker image prune
+docker system prune

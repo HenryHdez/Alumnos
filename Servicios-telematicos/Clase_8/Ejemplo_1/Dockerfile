@@ -10,8 +10,3 @@ RUN npm install
 COPY . .
 #Publicar aplicación
 CMD [ "node", "Correo.js" ]
-
-docker network create cualquiera
-docker network ls
-docker network inspect cualquiera
-docker run -dit --name container3 --network cualquiera alpine ash 

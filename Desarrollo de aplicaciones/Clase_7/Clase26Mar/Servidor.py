@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Importe la líbreria"""
-from flask import Flask, render_template
+from flask import Flask, request ,render_template
 """Inicialización de la página"""
 pagina = Flask(__name__)
 
@@ -13,11 +13,21 @@ def Funcion1():
     c=a+b
     lista=["Hola","Alumnos","desarrollo de aplicaciones"]
     #del lado del cliente{{Variable}}
-    return render_template('index.html',resultado=c,listaHTML=lista)
+    return render_template('Ej1.html', var2=a)
 
-@pagina.route('/otrpag')
+@pagina.route('/bienvenida', methods=['GET', 'POST'])
 def Funcion2():
-    return render_template('pagina1.html')
+    respuesta=request.method
+    if respuesta=='GET':
+        return render_template('pagina1.html')
+    else:
+        valores_pagina=request.form
+        print(valores_pagina)
+        if valores_pagina['listanombres']=='HH':
+            texto='Titulo'
+            return texto+"<h1>Hola HH</h1>"
+        else:
+            return valores_pagina['Entrada']
 
 @pagina.route('/otrpag2')
 def Funcion3():

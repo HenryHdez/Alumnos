@@ -5,7 +5,11 @@ var MTA = nodemailer.createTransport({
   auth: {
     user: 'usuario@udistrital.edu.co',
     pass: '*****'
-  }});
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+});
 //Configurar el correo electrónico
 var Opciones = {
   from: 'usuario@udistrital.edu.co',

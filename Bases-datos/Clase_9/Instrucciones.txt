@@ -3,3 +3,37 @@ docker run -it --rm --name n8n -p 5678:5678 -u root -v C:\n8n_data:/home/node/.n
 
 #En el navegador
 http://localhost:5678
+
+
+#En el Ej7 clone las siguientes imagenes
+docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=api_db -e MYSQL_USER=n8n -e MYSQL_PASSWORD=n8n123 -p 3310:3306 mysql:latest
+
+docker network create n8n_net
+
+docker network connect n8n_net n8n
+docker network connect n8n_net mysql
+docker exec -it n8n ping mysql
+
+docker exec -it mysql mysql -u root -p
+
+ALTER USER 'root'@'%' IDENTIFIED BY 'root123';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+USE api_db;
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(120) NOT NULL UNIQUE,
+    ciudad VARCHAR(80),
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO clientes (nombre, correo, ciudad)
+VALUES
+('Henry Hernandez', 'henry@correo.com', 'Bogotá'),
+('Ana Ruiz', 'ana@correo.com', 'Medellín'),
+('Carlos Pérez', 'carlos@correo.com', 'Cali');
+
+docker network inspect n8n_net
