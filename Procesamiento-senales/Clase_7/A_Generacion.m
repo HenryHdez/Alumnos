@@ -33,7 +33,7 @@ end
 figure
 imshow(Grises)
 %Genere las matrices de color
-Matriz_Rojo =0.5.*MA;
+Matriz_Rojo =1.*MA;
 Matriz_Azul =0.1.*MA;
 Matriz_Verde=0.2.*MA;
 %Componente Rojo

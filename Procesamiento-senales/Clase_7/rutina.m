@@ -1,6 +1,6 @@
 clear, clc
-ima1=imread('Hongo.jpg');
-ima2=imread('Fondo.jpg');
+ima1=imread('Imagenes/Hongo.jpg');
+ima2=imread('Imagenes/Fondo.jpg');
 ima3=imresize(ima1,0.3);
 L=size(ima3);
 Memoria=ima2;

@@ -31,3 +31,11 @@ echo Ubuntu 2: http://localhost:3002
 ifconfig
 apt update
 apt install -y net-tools
+
+//si ya esta creado el contenedor
+docker start ubuntu1
+docker start ubuntu2
+
+docker exec ubuntu1 bash -c "apt update && apt install -y apache2"
+docker exec ubuntu1 bash -c "service apache2 start"
+docker exec ubuntu1 bash -c "service apache2 status"

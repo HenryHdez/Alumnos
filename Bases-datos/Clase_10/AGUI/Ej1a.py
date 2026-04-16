@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 #Ver temas disponibles
 print(sg.theme_list())
 
-sg.theme('DarkBlue3')
+sg.theme('DarkBlue9')
 # Definir layout
 layout = [
     [sg.Text('Ingrese un número:', font=('Arial', 14), text_color='yellow')],
