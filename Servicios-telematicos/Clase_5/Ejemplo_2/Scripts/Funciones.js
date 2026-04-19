@@ -7,7 +7,7 @@ function iniciar_WEBCAM(){
     const errorMsgElement = document.querySelector('span#errorMsg');
     //Asignar dimensionalidad al área de video
     const constraints = {
-    audio: true,
+    audio: false,
     video: {width: 680, height: 480}
     };
     // Solicitar permiso para acceder a la WEBCAM

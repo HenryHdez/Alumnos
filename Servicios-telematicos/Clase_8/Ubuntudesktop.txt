@@ -36,6 +36,68 @@ apt install -y net-tools
 docker start ubuntu1
 docker start ubuntu2
 
+//Directamente en la terminal
 docker exec ubuntu1 bash -c "apt update && apt install -y apache2"
 docker exec ubuntu1 bash -c "service apache2 start"
 docker exec ubuntu1 bash -c "service apache2 status"
+
+//En el terminal de la maquina virtual
+sudo apt update 
+sudo apt install -y apache2
+sudo service apache2 start
+sudo service apache2 status
+
+//Actualice el archivo index.html
+
+--Asigne permisos
+sudo chown -R root:www-data /var/www/html
+sudo chmod -R 777 /var/www/html
+--copiar archivo
+/var/www/html/index.html
+
+//Instalar nodejs
+docker exec -u 0 ubuntu2 bash -c "apt update && apt install -y curl"
+docker exec -u 0 ubuntu2 bash -c "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -"
+docker exec -u 0 ubuntu2 bash -c "apt install -y nodejs"
+
+docker exec ubuntu2 node -v
+docker exec ubuntu2 npm -v
+
+//En el temrinal del contenedor
+//Instalar nano
+sudo apt update
+sudo apt install -y nano
+
+//Crear proyecto
+sudo mkdir /home/prueba
+cd /home/prueba
+sudo npm init -y
+sudo npm install express
+sudo nano Servidor.js
+
+//Guarde el siguiente codigo
+
+const express = require('express');
+const app = express();
+const PORT = 5000;
+
+app.get('/', (req, res) => {
+  res.send('Hola mundo');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor ejecutándose en puerto ${PORT}`);
+});
+
+ctrl+x, y y enter
+node Servidor
+//Desde el navegador de cualquier contenedor
+http://ubuntu1:5000
+
+
+--Docker no permite agregar puertos a contenedores en ejecución, por lo tanto, para exponer el puerto 5000
+elimine el contenedor y creelo nuevamente
+docker stop ubuntu1
+docker rm ubuntu1
+
+docker run -d --name ubuntu3 --hostname ubuntu3 --network red_ubuntu_lab -p 3003:3000 -p 5001:5000 -v ubuntu1_data:/config --shm-size="1gb" lscr.io/linuxserver/webtop:ubuntu-xfce

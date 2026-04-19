@@ -1,0 +1,16 @@
+//Instale node en ambos contenedores
+//cree un proyecto nuevo
+sudo mkdir /home/comunica
+cd /home/comunica
+npm init -y
+npm i net
+npm i os
+npm i express
+sudo nano archivo.js
+
+//Para el Cliente EJ3 instale pyhton
+sudo apt update
+sudo apt install -y python3 python3-pip
+
+python3 --version
+pip3 --version

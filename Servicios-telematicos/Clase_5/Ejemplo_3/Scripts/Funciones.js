@@ -6,7 +6,7 @@ function draw() {
         //Defina una variable donde dibujar
         var lienzo = canvas.getContext('2d');
         //Defina el color a utilizar
-        lienzo.fillStyle = 'rgb(200, 0, 0)';
+        lienzo.fillStyle = 'rgb(175, 30, 30)';
         lienzo.beginPath();
         lienzo.lineWidth=4;
         lienzo.strokeStyle = "red";
