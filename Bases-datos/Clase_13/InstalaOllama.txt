@@ -1,0 +1,14 @@
+#Ejecutar ollama
+docker run -d --name ollama -p 11434:11434 -v ollama_data:/root/.ollama ollama/ollama:latest
+
+#descarga tyny ollama u ollama 3.1
+docker exec -it ollama ollama pull tinyllama
+docker exec -it ollama ollama pull llama3.2
+
+
+#En el powershell de windows
+Invoke-WebRequest -Uri "http://localhost:11434/api/generate" -Method POST -Body '{"model":"tinyllama","prompt":"define ingenierio en español."}' -ContentType "application/json"
+
+#Instalar cliente ollama
+pip install ollama
+pip install request

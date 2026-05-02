@@ -8,7 +8,7 @@ densidad=0.05;
 Ima_con_ruido_1=imnoise(Ima_gray,'salt & pepper',densidad);
 Ima_con_ruido_2=imnoise(Ima_gray, 'gaussian');
 %Agregue un filtro
-Filtro = fspecial('disk',10);
+Filtro = fspecial('average');
 %Filtro = fspecial('sobel');
 Ima_Filtrada_1=imfilter(Ima_con_ruido_1,Filtro);
 Ima_Filtrada_2=imfilter(Ima_con_ruido_2,Filtro);

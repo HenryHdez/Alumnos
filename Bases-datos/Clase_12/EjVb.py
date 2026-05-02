@@ -5,8 +5,8 @@ from shapely.geometry import Point
 #Descarga un mapa de https://www.diva-gis.org/gdata
 
 # Cargar el Shapefile del mapa de Colombia
-mapa_colombia = gpd.read_file('MapaAdmin/COL_adm0.shp')
-#mapa_colombia2 = gpd.read_file('MapaCarreteras/COL_roads.shp')
+mapa_colombia = gpd.read_file('MapaAdmin/COL_adm2.shp')
+mapa_colombia2 = gpd.read_file('MapaCarreteras/COL_roads.shp')
 
 # Coordenadas de ejemplo de algunas capitales de Colombia
 capitales_data = {
@@ -21,10 +21,10 @@ capitales = gpd.GeoDataFrame(capitales_data, geometry='Coordenadas')
 fig, ax = plt.subplots()
 
 # Dibujar el mapa de Colombia
-mapa_colombia.plot(ax=ax, color='lightgrey')
+mapa_colombia.plot(ax=ax, color='blue', edgecolor='black')
 
 #Dibujar Carreteras
-#mapa_colombia2.plot(ax=ax, color='green')
+mapa_colombia2.plot(ax=ax, color='green')
 
 # Dibujar las capitales en el mapa
 capitales.plot(ax=ax, marker='o', color='red', markersize=50)

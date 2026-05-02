@@ -32,13 +32,13 @@ B = img(:,:,3);
 % R > 0.45, Rojo dominante
 % R > G + Umbral, Componente rojo mayor que verde
 % R > B + Umbral, Componente rojo mayor que azul
-Umbral = 0.0;
+Umbral = 0.5;
 masc_roja = (R > 0.3) & (R > G + Umbral) & (R > B + Umbral);
 %Crear mascara de rojos con valores lógicos
 aplic_mas = repmat(masc_roja,[1 1 3]);
 
 figure;
-imshow(double(aplic_mas));
+imshow(double(aplic_mas))
 title('Máscara roja');
 
 img_no_red = img;

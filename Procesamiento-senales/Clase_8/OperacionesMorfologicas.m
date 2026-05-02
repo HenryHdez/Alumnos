@@ -17,12 +17,15 @@ imshow(Ima_Esq)
 %skel, remove, circles, bridge
 
 
-%[L, Ne]=bwlabel(Ima_R);
+[L, Ne]=bwlabel(Ima_R);
 
 
 %Estimar propiedad
-%propiedad=regionprops(L,'BoundingBox'); %Ubicación
+propiedad=regionprops(L,'BoundingBox'); %Ubicación
 
+Centros=regionprops(L,'Centroid');
+
+imshow(L)
 % Area, Centroid, BoundingBox, SubarrayIdx, MajorAxisLength, 
 % MinorAxisLength,     Eccentricity, Orientation, ConvexHull, 
 % ConvexImage, ConvexArea, Image,     FilledImage,  FilledArea, 
@@ -42,6 +45,11 @@ imshow(Ima_Esq)
 % Im_E=imerode(Ima_R,SE);
 % figure;
 % imshowpair(Ima_R,Im_E,'montage') 
+
+T = struct2table(Centros);
+X = T.Centroid(:,1)
+Y = T.Centroid(:,2)
+plot(X,Y,'o')
 
 
 

@@ -1,7 +1,7 @@
 %Defina el tipo de filtrado a realizar
-Filtro=[ 1, 1, 1;
-         0, 0, 0;
-        -1,-1,-1];
+Filtro=[ 0, -0.1, 0;
+         -0.1, 0.5, -0.1;
+        0,-0.1,0];
 %Importe la imágen
 Ima=imread('Imagenes/Koopa.png');
 figure(1)

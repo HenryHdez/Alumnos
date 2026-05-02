@@ -2,7 +2,7 @@ import sys
 from PyQt6 import uic, QtWidgets
 
 Formulario, Ventana = uic.loadUiType("Ej2.ui")
-#Uso de los radiobuttom
+#Uso de los radiobutton
 class Aplicacion(QtWidgets.QMainWindow, Formulario):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)

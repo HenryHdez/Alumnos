@@ -1,5 +1,0 @@
-ZODB
-BTrees
-persistent
-transaction
-ZEO
