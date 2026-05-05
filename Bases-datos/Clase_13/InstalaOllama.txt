@@ -1,7 +1,7 @@
 #Ejecutar ollama
 docker run -d --name ollama -p 11434:11434 -v ollama_data:/root/.ollama ollama/ollama:latest
 
-#descarga tyny ollama u ollama 3.1
+#descarga tinyllama u ollama 3.2
 docker exec -it ollama ollama pull tinyllama
 docker exec -it ollama ollama pull llama3.2
 
