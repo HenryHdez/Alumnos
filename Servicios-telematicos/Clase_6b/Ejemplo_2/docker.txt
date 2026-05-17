@@ -9,7 +9,7 @@ docker exec -it ejemplo_2-servidor_ftpd-1 pure-pw useradd Henry -f /etc/pure-ftp
 
 pure-pw useradd Henry -f /etc/pure-ftpd/passwd/pureftpd.passwd -m -u ftpuser -d /home/ftpusers/Henry
 
-#Descargue Filezilla e ingrese con las credenciales al servidor 
+#Descargue Filezilla o WinSCP e ingrese con las credenciales al servidor 
 
 #Ver archivos en el servidor
 #ls -l /home/ftpusers/NOMBREUSUARIO

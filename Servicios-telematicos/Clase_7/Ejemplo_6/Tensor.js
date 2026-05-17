@@ -11,6 +11,6 @@ modelo.compile({loss:'meanSquaredError', optimizer:'sgd'});
 //Entrene el modelo
 modelo.fit(xs, ys, {epochs:500});
 //prediga el valor de salida
-var sal=modelo.predict(tf.tensor([5]))
+var sal=modelo.predict(tf.tensor([0]))
 console.log(sal.print())
 

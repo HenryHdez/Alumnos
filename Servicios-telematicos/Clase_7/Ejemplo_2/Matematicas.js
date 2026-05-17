@@ -42,7 +42,7 @@ modelo.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
 //Estimar coeficientes de la recta
 modelo.fit(x,y,{epochs: 500});
 //Convertir tensor en arreglo 
-var sal=modelo.predict(tf.tensor([9, 2],[2,1])).arraySync();
+var sal=modelo.predict(tf.tensor([9, 2, 20],[2,1])).arraySync();
 //Leer valor de la lista
 console.log(sal)
 

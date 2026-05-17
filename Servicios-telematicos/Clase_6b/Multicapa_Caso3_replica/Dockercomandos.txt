@@ -8,7 +8,8 @@ docker swarm init
 docker swarm join-token manager
 
 #Crear la pila
-docker stack deploy -c docker-compose.yml nombrestack
+docker stack deploy -c docker-compose.yml --detach=false nombrestack
 
 #Eliminar cluster
 docker stack rm nombrestack
+docker swarm leave --force
