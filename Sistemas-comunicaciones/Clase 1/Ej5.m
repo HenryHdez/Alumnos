@@ -15,10 +15,10 @@ an = (1/T)*int(f*cos(n*pi*t/T), t, -T, T);
 bn = (1/T)*int(f*sin(n*pi*t/T), t, -T, T);
 % Mostrar el resultado simbólico para b_n
 disp('Coeficiente b_n:');
-bn = simplify(bn)
+bn = simplify(bn);
 
 % Aproximar la función con N términos
-N = 50;         % Número de armónicos
+N = 15;         % Número de armónicos
 ft_approx = 0;  % como a0 y an son cero
 
 % Sustituir el valor específico de n

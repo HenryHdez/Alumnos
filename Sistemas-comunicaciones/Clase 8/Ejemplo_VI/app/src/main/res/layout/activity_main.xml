@@ -27,4 +27,24 @@
         android:layout_marginTop="522dp"
         android:layout_marginEnd="62dp" />
 
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="279dp"
+        android:layout_marginBottom="76dp"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="78dp"
+        app:srcCompat="@android:drawable/stat_sys_data_bluetooth" />
+
 </RelativeLayout>

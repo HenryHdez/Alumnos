@@ -11,7 +11,7 @@ t = (0:N-1).*Ts;        % Vector de muestras
 Ac = 1;                 % Amplitud portadora
 fp = 100;               % Frecuencia portadora
 fm = 2;                 % Frecuencia señal a modular
-ka = 1;                 % Índice modulación
+ka = 0.8;                 % Índice modulación
 
 p = cos(2*pi*fp*t);     % Señal portadora
 m = sin(2*pi*fm*t);     % Señal a modular

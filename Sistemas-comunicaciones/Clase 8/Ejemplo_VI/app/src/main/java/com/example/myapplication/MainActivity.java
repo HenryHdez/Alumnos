@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,8 +14,11 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     int x=500;
+    int y=200;
     ImageButton B1;
     ImageButton B2;
+    ImageButton B3;
+    ImageButton B4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,27 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        B3= (ImageButton) findViewById(R.id.imageButton5);
+        B3.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        fondo.Izquierda(view);
+                    }
+                }
+        );
+
+        B4= (ImageButton) findViewById(R.id.imageButton6);
+        B4.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        fondo.Derecha(view);
+                    }
+                }
+        );
+
     }
 
     public class Micanvas extends View {
@@ -65,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             //Otras caracteristicas
             pincel.setStyle(Paint.Style.FILL);
             pincel.setColor(Color.RED);
-            canvas.drawCircle(x,600,30,pincel);
+            canvas.drawCircle(x,y,30,pincel);
         }
         public void Aumentar(View view){
             x=x+10;
@@ -73,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
         }
         public void Disminuir(View view){
             x=x-10;
+            postInvalidate();
+        }
+
+        public void Izquierda(View view){
+            y=y-10;
+            postInvalidate();
+        }
+
+        public void Derecha(View view){
+            y=y+10;
             postInvalidate();
         }
     }

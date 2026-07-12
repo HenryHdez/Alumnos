@@ -46,7 +46,9 @@ potencia = a^2;             % Potencia
 raiz = sqrt(a);             % Raíz cuadrada
 seno = sin(pi/2);           % Seno
 
-
+lista1=[1 , 2 , 3];
+lista2=[4 5 6]';
+a=lista1.*lista2 %Componente a componente * y /
 
 
 
@@ -67,8 +69,8 @@ producto_componentes = matriz .* matriz2;
 
 % Inicialización de matrices
 matriz_zeros = zeros(3, 3)    % Matriz de ceros
-matriz_ones = ones(2, 4);      % Matriz de unos
-matriz_identidad = eye(4);     % Matriz identidad 
+matriz_ones = ones(2, 4)      % Matriz de unos
+matriz_identidad = eye(4)     % Matriz identidad 
 matriz_aleatoria = rand(3, 2); % Matriz con valores aleatorios entre 0 y 1
 % Matriz con enteros aleatorios entre 1 y 10
 matriz_enteros_aleatorios = randi(10, 2, 3); 

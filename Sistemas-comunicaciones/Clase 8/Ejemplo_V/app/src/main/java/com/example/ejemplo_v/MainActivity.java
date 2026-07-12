@@ -34,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
         protected void onDraw(Canvas canvas) {
             //Cree objeto para dibujar
             Paint pincel = new Paint();
-            pincel.setStyle(Paint.Style.STROKE);
+            pincel.setStyle(Paint.Style.FILL);
             pincel.setStrokeWidth(5);
             pincel.setColor(Color.RED);
             //Configure el objeto
-            canvas.drawRect(100,70,70,1200,pincel);
+            canvas.drawRect(100,70,600,1200,pincel);
 
             pincel.setTextSize(100);
-            pincel.setStrokeWidth(1);
+            pincel.setStrokeWidth(10);
             pincel.setColor(Color.BLUE);
-            canvas.drawText("Hola", 10, 100, pincel);
-            canvas.drawCircle(30,30,60,pincel);
+            canvas.drawText("Hola", 150, 100, pincel);
+            canvas.drawCircle(300,250,60,pincel);
         }
     }
 }

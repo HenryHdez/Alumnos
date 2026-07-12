@@ -10,7 +10,7 @@ t=(0:N-1).*Ts;        % Vector de muestras
 figure(1)
 
 %% Señal moduladora
-m=0.5;                                        % Índice de modulación
+m=0.5;                                      % Índice de modulación
 Fmod=10;                                    % Frecuencia señal moduladora
 Amod=5;                                     % Amplitud señal moduladora
 s_mod=Amod*sin(2*pi*Fmod.*t);
