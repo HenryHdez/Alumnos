@@ -1,63 +1,118 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MiApp());
 }
 
-// Permite que la pantalla cambie durante la ejecución.
-class MiApp extends StatefulWidget {
+class MiApp extends StatelessWidget {
   const MiApp({super.key});
 
   @override
-  State<MiApp> createState() => _MiAppState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: PaginaTemporizador(),
+    );
+  }
 }
 
-// Contiene los datos que pueden cambiar.
-class _MiAppState extends State<MiApp> {
-  // Guarda el nombre ingresado por el usuario.
-  String nombre = '';
+class PaginaTemporizador extends StatefulWidget {
+  const PaginaTemporizador({super.key});
+
+  @override
+  State<PaginaTemporizador> createState() {
+    return _PaginaTemporizadorState();
+  }
+}
+
+class _PaginaTemporizadorState
+    extends State<PaginaTemporizador> {
+  // Almacena la cantidad de segundos.
+  int segundos = 0;
+
+  // ? indica que la variable puede ser nula.
+  Timer? temporizador;
+
+  // Inicia el temporizador.
+  void iniciar() {
+    // Evita iniciar varios temporizadores simultáneamente.
+    if (temporizador?.isActive ?? false) {
+      return;
+    }
+
+    // Ejecuta una acción cada segundo.
+    temporizador = Timer.periodic(
+      const Duration(seconds: 1),
+      (timer) {
+        setState(() {
+          segundos++;
+        });
+      },
+    );
+  }
+
+  // Detiene el temporizador.
+  void detener() {
+    temporizador?.cancel();
+  }
+
+  @override
+  void dispose() {
+    // Detiene el temporizador al cerrar la pantalla.
+    temporizador?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        // Agrega espacio alrededor del contenido.
-        body: Padding(
-          padding: const EdgeInsets.all(30),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Temporizador'),
+      ),
 
-          // Organiza los elementos verticalmente.
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Campo de entrada de texto.
-              TextField(
-                // Guarda el contenido escrito.
-                onChanged: (texto) {
-                  nombre = texto;
-                },
-                decoration: const InputDecoration(
-                  labelText: 'Escriba su nombre',
+      body: Center(
+        child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Text(
+              'Tiempo transcurrido',
+              style: TextStyle(fontSize: 20),
+            ),
+
+            const SizedBox(height: 15),
+            
+            // Muestra los segundos.
+            Text(
+              '$segundos segundos',
+              style: const TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+
+            const SizedBox(height: 30),
+
+            // Ubica los botones horizontalmente.
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: iniciar,
+                  child: const Text('Iniciar'),
                 ),
-              ),
 
-              // Agrega separación vertical.
-              const SizedBox(height: 20),
+                const SizedBox(width: 20),
 
-              // Botón para mostrar el resultado.
-              ElevatedButton(
-                onPressed: () {
-                  // Actualiza la interfaz.
-                  setState(() {});
-                },
-                child: const Text('Saludar'),
-              ),
-
-              const SizedBox(height: 20),
-
-              // Muestra el nombre ingresado.
-              Text('Hola, $nombre'),
-            ],
-          ),
+                ElevatedButton(
+                  onPressed: detener,
+                  child: const Text('Detener'),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

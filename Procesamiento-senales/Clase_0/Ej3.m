@@ -7,7 +7,7 @@ t = -2:0.01:2;
 f1 = double(t < 0);
 f2 = -2 * double(t >= 0);
 y = f1 + f2;
-cantidad_de_terminos = 50;
+cantidad_de_terminos = 30;
 acumulador = 0;
 
 %% Expansión de la sumatoria

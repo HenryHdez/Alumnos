@@ -3,7 +3,7 @@ clc;
 close all;
 syms t n
 % Definir la función original en el intervalo [-pi, pi]
-f = t;
+f = t^2;
 % Intervalo del periodo
 T = pi;
 
@@ -18,14 +18,16 @@ disp('Coeficiente b_n:');
 bn = simplify(bn)
 
 % Aproximar la función con N términos
-N = 20;         % Número de armónicos
-ft_approx = 0;  % como a0 y an son cero
+N = 10;         % Número de armónicos
+ft_approx = 0;  
 
 % Sustituir el valor específico de n
 for k = 1:N
+    ak = subs(an, n, k);
     bk = subs(bn, n, k);  
-    ft_approx = ft_approx + bk * sin(k*pi*t/T);
+    ft_approx = ft_approx + ak * cos(k*pi*t/T)+ bk * sin(k*pi*t/T);
 end
+ft_approx = ft_approx +a0;
 % Mostrar la expansión
 disp(ft_approx)
 
@@ -33,7 +35,7 @@ disp(ft_approx)
 % Vector de tiempo
 t_vals = linspace(-pi, pi, 1000); 
 % Función original
-f_vals = t_vals;                      
+f_vals = t_vals.^2;                      
 % Evaluación simbólica
 f_fourier = double(subs(ft_approx, t, t_vals));  
 

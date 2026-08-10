@@ -1,63 +1,73 @@
 import 'package:flutter/material.dart';
 
+// Punto de entrada.
 void main() {
   runApp(const MiApp());
 }
 
-// Permite que la pantalla cambie durante la ejecución.
-class MiApp extends StatefulWidget {
+// Configuración general de la aplicación.
+class MiApp extends StatelessWidget {
   const MiApp({super.key});
 
   @override
-  State<MiApp> createState() => _MiAppState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: PaginaPrincipal(),
+    );
+  }
 }
 
-// Contiene los datos que pueden cambiar.
-class _MiAppState extends State<MiApp> {
-  // Guarda el nombre ingresado por el usuario.
-  String nombre = '';
+// Pantalla que puede cambiar.
+class PaginaPrincipal extends StatefulWidget {
+  const PaginaPrincipal({super.key});
+
+  @override
+  State<PaginaPrincipal> createState() {
+    return _PaginaPrincipalState();
+  }
+}
+
+// Datos y comportamiento de la pantalla.
+class _PaginaPrincipalState extends State<PaginaPrincipal> {
+  // Definir variables.
+  String entrada = '';
+  String salida = 'Sin mensaje';
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        // Agrega espacio alrededor del contenido.
-        body: Padding(
-          padding: const EdgeInsets.all(30),
+    return Scaffold(
+      // Barra superior.
+      appBar: AppBar(
+        title: const Text('Titulo cualquiera'),
+      ),
 
-          // Organiza los elementos verticalmente.
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Campo de entrada de texto.
-              TextField(
-                // Guarda el contenido escrito.
-                onChanged: (texto) {
-                  nombre = texto;
-                },
-                decoration: const InputDecoration(
-                  labelText: 'Escriba su nombre',
-                ),
-              ),
+      // Contenido principal.
+      body: Padding(
+        padding: const EdgeInsets.all(20),
 
-              // Agrega separación vertical.
-              const SizedBox(height: 20),
+        child: Column(
+          children: [
+            // Entrada.
+            TextField(
+              onChanged: (texto) {
+                entrada = texto;
+              },
+            ),
 
-              // Botón para mostrar el resultado.
-              ElevatedButton(
-                onPressed: () {
-                  // Actualiza la interfaz.
-                  setState(() {});
-                },
-                child: const Text('Saludar'),
-              ),
+            // Botón.
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  salida = entrada;
+                });
+              },
+              child: const Text('Mostrar'),
+            ),
 
-              const SizedBox(height: 20),
-
-              // Muestra el nombre ingresado.
-              Text('Hola, $nombre'),
-            ],
-          ),
+            // Salida.
+            Text(salida),
+          ],
         ),
       ),
     );

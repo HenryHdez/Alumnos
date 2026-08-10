@@ -3,9 +3,7 @@ void main() {
     nombre: 'Ana',
     nota: 4.2,
   );
-
   estudiante1.mostrarInformacion();
-
   print('Estado: ${estudiante1.obtenerEstado()}');
 }
 
@@ -27,7 +25,6 @@ class Estudiante {
     if (nota >= 3) {
       return 'Aprobado';
     }
-
     return 'No aprobado';
   }
 }

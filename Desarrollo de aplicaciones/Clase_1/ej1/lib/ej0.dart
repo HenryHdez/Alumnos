@@ -1,3 +1,4 @@
+//Plantilla por defecto de Flutter. 
 import 'package:flutter/material.dart';
 
 void main() {

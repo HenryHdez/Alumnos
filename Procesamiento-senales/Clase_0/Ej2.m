@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-N = 10;
+N = 20;
 
 t = linspace(-pi, pi, 1000);
 %Acumula todos los valores de la serie evaluado en todos los puntos de t

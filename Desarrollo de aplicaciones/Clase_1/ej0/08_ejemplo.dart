@@ -56,8 +56,6 @@ void main() {
     }
   } while (opcion != '0');
 }
-
-// Solicita un número hasta que la entrada sea válida.
 double leerNumero(String mensaje) {
   while (true) {
     stdout.write(mensaje);
