@@ -1,3 +1,6 @@
+#En docker
+docker run -e MYSQL_ROOT_PASSWORD=TuContra000 -p 8000:3306 --name mysql_container -d mysql:latest
+
 CREATE DATABASE UNIVERSIDAD;
 USE UNIVERSIDAD;
 
@@ -42,24 +45,7 @@ INSERT INTO Estudiantes_Asignaturas (ID_Estudiante, ID_Asig)
 VALUES (1, 1),
        (4, 3);
        
-       
-       
--- Crear tabla original con datos separados por comas
-CREATE TABLE example (
-   id INT PRIMARY KEY,
-   data VARCHAR(50)
-);
-
-INSERT INTO example VALUES
-   (1, 'apple, orange, banana'),
-   (2, 'pear, peach, kiwi'),
-   (3, 'grape, cherry');
-
 -- Crear tabla separada y poblarla
-CREATE TABLE example_normalized (
-   id INT,
-   item VARCHAR(50)
-);
 
 CREATE TABLE Clientes (
   ID_Cliente INT PRIMARY KEY,
@@ -112,5 +98,3 @@ CREATE TABLE Ventas (
 INSERT INTO Ventas (ID, Producto, Cantidad, Precio)
 VALUES (1, 'A', 5, 10), (2, 'B', 10, 15), (3, 'C', 2, 20),
 (4, 'D', 3, 25);
-
-
