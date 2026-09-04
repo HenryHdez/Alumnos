@@ -164,6 +164,38 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "5082fd3b-2db0-45b8-81e8-795d0bd9864c",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e3",
+                            "x": 36,
+                            "y": -23
+                        },
+                        "node_id": "728945bf-3bc8-4aa4-a3b3-ae8498aa2fa5",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 31,
+                            "y": 69
+                        },
+                        "node_id": "6509ba9c-795f-40b0-b72f-a71045779b8a",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -419,6 +451,26 @@
                             "name": "Ethernet 4",
                             "special": false,
                             "type": "ethernet"
+                        },
+                        {
+                            "name": "Ethernet 7",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "Ethernet 5",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "VMware Network Adapter VMnet2",
+                            "special": true,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "Ethernet 6",
+                            "special": false,
+                            "type": "ethernet"
                         }
                     ],
                     "ports_mapping": [
@@ -457,6 +509,45 @@
                 "width": 159,
                 "x": 194,
                 "y": -37,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": null,
+                "console_auto_start": false,
+                "console_type": "none",
+                "custom_adapters": [],
+                "first_port_name": "",
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "WindowsServer_passDistrit@l-1",
+                    "x": -109,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "WindowsServer_passDistrit@l-1",
+                "node_id": "6509ba9c-795f-40b0-b72f-a71045779b8a",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
+                    "on_close": "power_off",
+                    "ram": 2048,
+                    "usage": "",
+                    "use_any_adapter": true,
+                    "vmname": "WindowsServer_passDistrit@l"
+                },
+                "symbol": ":/symbols/vbox_guest.svg",
+                "template_id": "62ca20f3-c9db-4ef2-aefb-4c014b5ab029",
+                "width": 65,
+                "x": 27,
+                "y": -192,
                 "z": 1
             }
         ]

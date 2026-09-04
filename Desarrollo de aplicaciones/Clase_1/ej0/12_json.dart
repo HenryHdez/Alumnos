@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 Future<void> main() async {
-  Map<String, dynamic> estudiante = {
+  // Diccionario tipo Map "flexible"
+  var estudiante = {
     'nombre': 'Ana',
     'edad': 20,
     'notas': [4.0, 3.5, 4.8],
@@ -13,6 +14,7 @@ Future<void> main() async {
   String contenido =
       await File('estudiante.json').readAsString();
 
+  //Diccionario tipo Map "rigido"
   Map<String, dynamic> datos = jsonDecode(contenido);
   print('Nombre: ${datos['nombre']}');
   print('Notas: ${datos['notas']}');

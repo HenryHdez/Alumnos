@@ -36,6 +36,12 @@ DELETE FROM Libros WHERE titulo = 'The Hobbit';
 
 SELECT autor_id FROM Libros GROUP BY autor_id HAVING COUNT(libro_id) > 1;
 
+CREATE USER 'Clientenuevo'@'localhost' IDENTIFIED BY 'password123';
 
+GRANT SELECT ON CLA7EJ1.Autores TO 'Clientenuevo'@'localhost';
 
+REVOKE SELECT ON CLA7EJ1.Autores FROM 'Clientenuevo'@'localhost';
+
+UNLOCK TABLES;
+ALTER USER 'Clientenuevo'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'password123';
 

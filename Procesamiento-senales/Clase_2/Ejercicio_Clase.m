@@ -17,7 +17,7 @@ for kk = 1:N
            +   exp(-1j*2*pi*k_val*4/N) ...
            +   exp(-1j*2*pi*k_val*5/N);
 end
-
+disp(Xk)
 % Cálculo de la IDFT
 xn = zeros(1, N);
 for nn = 1:N

@@ -1,117 +1,62 @@
-import 'dart:async';
+// Importa los componentes visuales de Flutter.
 import 'package:flutter/material.dart';
 
+// Punto de entrada de la aplicación.
 void main() {
   runApp(const MiApp());
 }
 
+// Widget principal.
 class MiApp extends StatelessWidget {
+
   const MiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+  double numero1 = 0;
+  double numero2 = 0;
+  double resultado = 0;
+    return MaterialApp(
+      // Oculta la etiqueta DEBUG.
       debugShowCheckedModeBanner: false,
-      home: PaginaTemporizador(),
-    );
-  }
-}
 
-class PaginaTemporizador extends StatefulWidget {
-  const PaginaTemporizador({super.key});
+      // Primera pantalla de la aplicación.
+      home: Scaffold(
+        // Barra superior.
+        appBar: AppBar(
+          title: const Text('Calculadora'),
+        ),
 
-  @override
-  State<PaginaTemporizador> createState() {
-    return _PaginaTemporizadorState();
-  }
-}
-
-class _PaginaTemporizadorState
-    extends State<PaginaTemporizador> {
-  // Almacena la cantidad de segundos.
-  int segundos = 0;
-
-  // ? indica que la variable puede ser nula.
-  Timer? temporizador;
-
-  // Inicia el temporizador.
-  void iniciar() {
-    // Evita iniciar varios temporizadores simultáneamente.
-    if (temporizador?.isActive ?? false) {
-      return;
-    }
-
-    // Ejecuta una acción cada segundo.
-    temporizador = Timer.periodic(
-      const Duration(seconds: 1),
-      (timer) {
-        setState(() {
-          segundos++;
-        });
-      },
-    );
-  }
-
-  // Detiene el temporizador.
-  void detener() {
-    temporizador?.cancel();
-  }
-
-  @override
-  void dispose() {
-    // Detiene el temporizador al cerrar la pantalla.
-    temporizador?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Temporizador'),
-      ),
-
-      body: Center(
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const Text(
-              'Tiempo transcurrido',
-              style: TextStyle(fontSize: 20),
+        // Contenido de la pantalla.
+        body: const Column(
+          children: [Text(
+            'Ingrese un numero',
+            style: TextStyle(fontSize: 24),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Numero',
             ),
-
-            const SizedBox(height: 15),
-            
-            // Muestra los segundos.
-            Text(
-              '$segundos segundos',
-              style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),
+          ),
+          Text(
+            'Ingrese otro numero',
+            style: TextStyle(fontSize: 24),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Numero',
             ),
-
-            const SizedBox(height: 30),
-
-            // Ubica los botones horizontalmente.
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: iniciar,
-                  child: const Text('Iniciar'),
-                ),
-
-                const SizedBox(width: 20),
-
-                ElevatedButton(
-                  onPressed: detener,
-                  child: const Text('Detener'),
-                ),
-              ],
-            ),
+          ),
+          ElevatedButton(
+            onPressed: null,
+            child: Text('Sumar'),
+          ),
+          Text(
+            'Resultado',
+            style: TextStyle(fontSize: 24),
+          )
           ],
         ),
       ),

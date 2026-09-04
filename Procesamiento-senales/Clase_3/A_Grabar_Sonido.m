@@ -9,7 +9,7 @@ Entrada=audiorecorder(Fs,16,1);
 %Abrir cuadro de dialogo
 msgbox("Grabando...","Titulo");
 %Función para capturar el sonido 
-recordblocking(Entrada,Duracion);
+recordblocking(Entrada, Duracion);
 msgbox("Finalizo la grabacion","titulo")
 %Almacenar audio en una variable
 x=getaudiodata(Entrada,'int16');

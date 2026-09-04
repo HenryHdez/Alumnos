@@ -16,11 +16,8 @@ void main() {
   ({String name, double def}) estudiante = (name: 'Ana', def: 4.5);
 
   // Map (Pares clave-valor)
-  Map<String, dynamic> estudiant = {
-    'nombre': 'Ana',
-    'edad': 20,
-    'nota': 4.5,
-  };
+  var estudiant = {'nombre': 'Ana',
+  'edad': 28};
   // Modificar un valor.
   estudiant['nota'] = 4.8;
   // Agregar una nueva entrada.
@@ -35,4 +32,5 @@ void main() {
   print('Ciudad: $ciudad');
   print('Variable dinámica: $variableDinamica');
   print('Estudiante: ${estudiante.name}, Nota: ${estudiante.def}');
+
 }

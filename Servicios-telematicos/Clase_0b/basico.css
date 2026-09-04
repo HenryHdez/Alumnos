@@ -1,0 +1,191 @@
+    /*
+      TIP 1: SELECTOR UNIVERSAL
+
+      El símbolo * selecciona todos los elementos.
+      box-sizing evita que padding y border aumenten
+      el ancho definido para un elemento.
+    */
+    * {
+      box-sizing: border-box;
+    }
+
+    /*
+      TIP 2: ESTILOS GENERALES
+
+      body representa todo el contenido visible.
+    */
+    body {
+      margin: 0; /* Elimina el margen predeterminado del navegador */
+      font-family: Arial, sans-serif; /* Define el tipo de letra */
+      font-size: 16px; /* Tamaño base del texto */
+      line-height: 1.5; /* Espacio entre líneas */
+      color: #222; /* Color del texto */
+      background-color: #f3f5f7; /* Color del fondo */
+    }
+
+    /*
+      TIP 3: SELECTOR POR ETIQUETA
+
+      Esta regla se aplica a todos los elementos header.
+    */
+    header {
+      padding: 40px 20px; /* Espacio interno */
+      color: white;
+      text-align: center;
+      background-color: #174b7a;
+    }
+
+    /*
+      TIP 4: SELECTOR DESCENDIENTE
+
+      Solamente selecciona los h1 que estén dentro de header.
+    */
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    /*
+      TIP 5: SELECTOR POR CLASE
+
+      Las clases comienzan con un punto.
+      Una misma clase puede utilizarse varias veces.
+    */
+    .contenedor {
+      width: 90%; /* Ocupa el 90 % del espacio disponible */
+      max-width: 1100px; /* No supera los 1100 píxeles */
+      margin: 30px auto; /* Centra horizontalmente el contenedor */
+    }
+
+    /*
+      TIP 6: MODELO DE CAJA
+
+      Todo elemento tiene:
+      contenido + padding + border + margin.
+    */
+    .caja {
+      padding: 20px; /* Espacio interior */
+      margin-bottom: 20px; /* Espacio exterior inferior */
+      border: 1px solid #ccd4dc; /* Borde */
+      border-radius: 10px; /* Esquinas redondeadas */
+      background-color: white;
+    }
+
+    /*
+      TIP 7: SELECTOR POR IDENTIFICADOR
+
+      Los identificadores comienzan con #.
+      Se recomienda utilizar un id una sola vez.
+    */
+    #titulo-importante {
+      color: #174b7a;
+    }
+
+    /*
+      TIP 8: FLEXBOX
+
+      Organiza los elementos en una fila o columna.
+    */
+    .contenedor-flex {
+      display: flex;
+      justify-content: space-between; /* Distribución horizontal */
+      align-items: center; /* Alineación vertical */
+      gap: 20px; /* Espacio entre los elementos */
+    }
+
+    /*
+      TIP 9: FLEX: 1
+
+      Hace que las tarjetas compartan equitativamente
+      el espacio disponible.
+    */
+    .tarjeta {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    /*
+      TIP 10: ESTADO HOVER
+
+      :hover aplica estilos cuando el puntero se
+      encuentra sobre el elemento.
+    */
+    .tarjeta:hover {
+      transform: translateY(-4px);
+      transition: transform 0.2s;
+    }
+
+    /*
+      TIP 11: BOTONES Y ENLACES
+
+      display: inline-block permite asignar padding
+      correctamente a un enlace.
+    */
+    .boton {
+      display: inline-block;
+      padding: 10px 18px;
+      color: white;
+      text-decoration: none; /* Elimina el subrayado */
+      background-color: #147d64;
+      border-radius: 6px;
+    }
+
+    .boton:hover {
+      background-color: #0e5c49;
+    }
+
+    /*
+      TIP 12: ACCESIBILIDAD
+
+      :focus-visible muestra dónde está el foco
+      cuando se navega utilizando el teclado.
+    */
+    .boton:focus-visible {
+      outline: 3px solid #f0b429;
+      outline-offset: 3px;
+    }
+
+    /*
+      TIP 13: IMÁGENES ADAPTABLES
+
+      Evita que una imagen sea más ancha que su contenedor.
+    */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /*
+      TIP 14: PIE DE PÁGINA
+    */
+    footer {
+      padding: 20px;
+      margin-top: 40px;
+      color: white;
+      text-align: center;
+      background-color: #1f2933;
+    }
+
+    /*
+      TIP 15: DISEÑO RESPONSIVE
+
+      Estas reglas se aplican cuando la pantalla
+      mide 700 píxeles o menos.
+    */
+    @media (max-width: 700px) {
+      .contenedor-flex {
+        flex-direction: column;
+      }
+
+      .tarjeta {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
