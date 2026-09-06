@@ -9,7 +9,9 @@ SHOW VARIABLES LIKE 'local_infile';
 #COPIE EL ARCHIVO EN
 SHOW VARIABLES LIKE 'secure_file_priv';
 
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/iris.csv'
+#En docker '/var/lib/mysql-files/iris.csv'
+#En PC 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/iris.csv'
+LOAD DATA INFILE '/var/lib/mysql-files/iris.csv'
 INTO TABLE FLORES
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'

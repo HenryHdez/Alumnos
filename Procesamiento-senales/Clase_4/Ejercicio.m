@@ -1,4 +1,4 @@
-[y, Fs]=audioread('bosque.mp3');
+[y, Fs]=audioread('pato.mp3');
 figure(1)
 plot(y(:,1))
 %Transformada de Fourier de la señal obtenida

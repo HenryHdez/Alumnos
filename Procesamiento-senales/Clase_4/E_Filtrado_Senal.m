@@ -1,4 +1,4 @@
-clc, clear all
+clc, clear
 %>>>Diseñe una señal con frecuencia variable<<<<<
 Fs=4000;                         %Frecuencia de muestreo
 figure(1)                        %(Número de la figura)
