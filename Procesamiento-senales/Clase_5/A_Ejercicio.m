@@ -9,7 +9,7 @@ S_x_2=sum(x.^2);                  %sumatoria x_i^2
 S_y_2=sum(y.^2);                  %sumatoria y_i^2
 S_xy=sum(xy);                     %sumatoria x*y
 rxy=((n*S_xy)-(S_x*S_y));         %Numerador
-rx=((n*S_x_2)-(S_x^2));           %Denominador 1
-ry=((n*S_y_2)-(S_y^2));           %Denominador 2
+rx=sqrt(((n*S_x_2)-(S_x^2)));     %Denominador 1
+ry=sqrt(((n*S_y_2)-(S_y^2)));     %Denominador 2
 r=rxy/(rx*ry);                    %Correlación (r)
 disp(r)                           %Mostrar

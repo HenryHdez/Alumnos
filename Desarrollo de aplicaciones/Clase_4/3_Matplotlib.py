@@ -7,7 +7,7 @@ if __name__=="__main__":
     Genero=['Hombre','Mujer']
     vector_pos = np.arange(len(Marcas))
     #Caracteristicas de las barras y gráfica
-    Ancho_barra = 0.4
+    Ancho_barra = 0.1
     fig, ax = plt.subplots()
     #Barras 1 y 2
     ax.bar(vector_pos,Cantidad_Hombres,Ancho_barra,color='blue',edgecolor='black')

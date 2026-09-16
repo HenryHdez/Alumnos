@@ -27,7 +27,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+/* Botón de envío */
 button {
     font-size: 18px;
     padding: 10px 20px;

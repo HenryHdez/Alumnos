@@ -12,4 +12,7 @@ ls
 
 docker cp mysql_container:/var/lib/mysql-files/iris.sql C:/Users/Henry/Desktop
 
+#Agregar permisos a la carpeta
 docker exec -it mysql_container /bin/bash
+cd /var/lib/mysql-files/
+chmod 777 /var/lib/mysql-files

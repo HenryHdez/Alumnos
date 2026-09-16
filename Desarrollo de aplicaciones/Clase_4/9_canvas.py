@@ -1,4 +1,5 @@
 from tkinter import *
+#py -m pip install Pillow
 from PIL import Image, ImageTk
 
 if __name__ == "__main__":

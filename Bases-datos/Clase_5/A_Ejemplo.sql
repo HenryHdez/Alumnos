@@ -19,6 +19,8 @@ IGNORE 1 ROWS;
 
 SELECT * FROM EJEMPLOI.FLORES;
 
+SHOW VARIABLES LIKE 'secure_file_priv';
+
 SELECT *
 INTO OUTFILE '/var/lib/mysql-files/iris.sql'
 FIELDS TERMINATED BY ','

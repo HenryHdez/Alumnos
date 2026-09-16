@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 2</title>
+</head>
+<body>
+  <h1 id="saludo"></h1>
+
+  <script>
+    const parametros = new URLSearchParams(window.location.search);
+    const nombre = parametros.get("nombre");
+
+    document.getElementById("saludo").textContent =
+      "Bienvenido, " + nombre;
+  </script>
+</body>
+</html>
