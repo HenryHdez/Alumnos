@@ -1,6 +1,4 @@
-/* ------------------------------------------------------------
-   1. CREAR UNA BASE DE DATOS PARA LA PRÁCTICA
-   ------------------------------------------------------------ */
+/* Crear BD */
 
 USE master;
 GO
@@ -9,9 +7,7 @@ CREATE DATABASE SeguridadClase;
 GO
 
 
-/* ------------------------------------------------------------
-   2. CREAR UNA TABLA Y ALGUNOS DATOS
-   ------------------------------------------------------------ */
+/* Crear Tabla */
 
 USE SeguridadClase;
 GO
@@ -35,10 +31,7 @@ FROM Estudiante;
 GO
 
 
-/* ============================================================
-   NIVEL 1: LOGIN
-   Permite entrar a la instancia de SQL Server
-   ============================================================ */
+/* Nivel 1-Login: Permite entrar a la instancia de SQL Server*/
 
 USE master;
 GO
@@ -49,10 +42,7 @@ WITH PASSWORD = 'ClaseSQL1*',
      CHECK_POLICY = ON;
 GO
 
-/* ============================================================
-   NIVEL 2: USER
-   Representa al LOGIN dentro de una base de datos
-   ============================================================ */
+/* Nivel 2-User: Representa al LOGIN dentro de una base de datos*/
 
 USE SeguridadClase;
 GO
@@ -61,9 +51,7 @@ CREATE USER estudiante_sql
 FOR LOGIN estudiante_sql;
 GO
 
-/* ============================================================
-   3. CREAR UN ROL PERSONALIZADO
-   ============================================================ */
+/* Crear Rol */
 
 USE SeguridadClase;
 GO
@@ -136,8 +124,6 @@ REVOKE INSERT
 ON dbo.Estudiante
 FROM rol_consulta;
 GO
-
-
 
 /*Limpieza*/
 USE SeguridadClase;

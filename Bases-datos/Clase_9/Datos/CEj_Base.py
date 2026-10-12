@@ -8,17 +8,17 @@ df=pd.read_sql("SELECT * FROM Clientes", conn)
 print(df)
 
 df = pd.read_sql_query("""
-    SELECT Ciudad, COUNT(*) AS total_clientes
+    SELECT Departamento, COUNT(*) AS total_clientes
     FROM Clientes
-    GROUP BY Ciudad
+    GROUP BY Departamento
     ORDER BY total_clientes DESC;
 """, conn)
 print(df)
 
 df = pd.read_sql_query("""
-    SELECT ciudad, pais, COUNT(*) AS total_clientes
+    SELECT Departamento, Nombre, COUNT(*) AS total_clientes
     FROM Clientes
-    GROUP BY ciudad, pais
+    GROUP BY Departamento, Nombre
     HAVING total_clientes > 2
     ORDER BY total_clientes DESC
 """, conn)

@@ -13,7 +13,7 @@ print("Base64:", archivo_base64[:60])
 diccionario={'imagen1':[archivo_base64]}
 print(diccionario)
 df=pd.DataFrame(diccionario)
-conn = create_engine('mysql+pymysql://root:12345@localhost:3308/BIBLIOTECA')
+conn = create_engine('mysql+pymysql://root:12345@localhost:3306/BIBLIOTECA')
 df.to_sql('Imagenes', conn, if_exists='replace')
 #El string lo podemos enviar a una base de datos donde hay un campo tipo TEXT
 

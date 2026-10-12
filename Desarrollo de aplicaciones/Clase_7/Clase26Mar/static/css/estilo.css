@@ -1,0 +1,22 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        /* Comentarios de varias líneas */
+        h1 {
+            color: blue;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 24px;
+        }
+
+        #etiqueta {
+            color: red;
+            font-weight: bold;
+        }
+
+        .clase1 {
+            color: green;
+            font-style: italic;
+        }

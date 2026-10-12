@@ -6,7 +6,7 @@ t = [0 0 0 1];
 %Definición de la red
 red = feedforwardnet; %feedforwardnet %cascadeforwardnet
 %([Dim capa oculta 1, Dim capa oculta 2, Dim capa oculta 3,...])
-red = feedforwardnet([10,20,30]); %feedforwardnet %cascadeforwardnet
+red = feedforwardnet([10,2,30]); %feedforwardnet %cascadeforwardnet
 %Parámetros de entrenamiento
 red.trainParam.epochs = 20;  %Iteraciones
 red.trainParam.goal = 0.001; %Parada

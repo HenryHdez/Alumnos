@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body onload="funcion2(2,3)">
+    <h1>Salida de Formulario</h1>
+    <p>¡Bienvenido {{ nombre }}!</p>
+    <button><a >Volver al formulario</a></button>
+
+    <p id="parrafo">
+        Esto es un parrafo de ejemplo de HTML.
+        <input type="text" id="entrada" name="entrada" placeholder="Ingrese un valor">
+        <span id="span">Texto inicial.</span>
+    </p>
+    <button onclick="funcion()">Ejecutar funcion</button>
+
+    <input type="text" onclick="funcion3('{{ nombre }}')" value="Ejecutar funcion 3">
+</body>
+
+<script>
+    // Comentario de una sola línea
+    /* 
+    Comentario de varias líneas
+    */
+
+    //Variables globales
+    var a=0;
+    var b=0.0;
+    var texto="texto con doble comilla";
+    function funcion() {
+        var d=2; //Variable global
+        //Variable local
+        let c=10; //Variable local
+        var p=document.getElementById("parrafo");
+        p.innerHTML="El valor de la variable c es: "+c;
+        var entrada=document.getElementById("entrada").value;
+        document.getElementById("span").innerHTML="El valor ingresado es: "+entrada;
+        window.alert("¡Hola! Has ejecutado la función.");
+    }
+
+    function funcion2(x, y) {
+        window.alert(" " + (x+y));
+        return x+y;
+
+    }
+
+    function funcion3(z) {
+        window.alert(" " + z);
+
+    }
+</script>
+
+</html>

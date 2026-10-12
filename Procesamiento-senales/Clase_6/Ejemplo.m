@@ -7,9 +7,9 @@ x3=exp(t);
 x4=cos(t);
 Entrada=[x1,x2,x3];
 %Construyra un arreglo de salida
-y1=ones(1,length(x1));
-y2=2.*ones(1,length(x1));
-y3=3.*ones(1,length(x1));
+y1=1.*ones(1,length(x1));
+y2=2.*ones(1,length(x2));
+y3=3.*ones(1,length(x3));
 Salida=[y1,y2,y3];
 %Entrenamiento y creación de la red de base radial
 red = newrb(Entrada,Salida);

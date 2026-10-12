@@ -36,6 +36,20 @@ rs.initiate({
 # Verificar cluster
 rs.status()
 
+# Agregar en caso de fallo (Primero probar sin estas caracteristicas)
+rs.add({ host: 'mongo2:27017', priority: 1 })
+rs.add({ host: 'mongo3:27017', priority: 1 })
+
+rs.conf().members.map(m => ({
+  nombre: m.host,
+  prioridad: m.priority
+}))
+
+rs.status().members.map(m => ({
+  nombre: m.name,
+  estado: m.stateStr
+}))
+
 #--------------------------------------------------------------
 # Probar escritura en el PRIMARY (NODO 1)
 #--------------------------------------------------------------

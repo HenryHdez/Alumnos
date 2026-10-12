@@ -6,7 +6,7 @@ t = [0 0 0 1];
 %Definición de la red
 red = perceptron;
 %Parámetros de entrenamiento
-red.trainParam.epochs = 20;  %Iteraciones
+red.trainParam.epochs = 10;  %Iteraciones
 red.trainParam.goal = 0.001; %Parada
 %Entrenamiento
 red = train(red,x,t);

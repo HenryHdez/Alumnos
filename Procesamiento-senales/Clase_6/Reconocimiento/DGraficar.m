@@ -16,9 +16,7 @@ end
 
 [~, idx] = min(distancias); % índice del comando más parecido
 
-% ================================
 % GRAFICAR COMPARACIÓN VISUAL
-% ================================
 t_test = (0:length(x_test)-1)/fs;
 t_ref = (0:length(x_refs{idx})-1)/fs;
 

@@ -5,7 +5,7 @@ import Marcarmapa from'./Marcadores'
 import CrearEvent from'./Eventos'
 import SavesMapas from'./Guardar'
 import AdvancedLeafletApp from './Advance';
-import GeoFenceMap from './ejII'
+//import GeoFenceMap from './ejII'
 function App() {
   //<Mapabasico></Mapabasico>
   //<Marcarmapa></Marcarmapa>
@@ -14,7 +14,7 @@ function App() {
   //<AdvancedLeafletApp></AdvancedLeafletApp>
   return (
     <div className="App">
-      <GeoFenceMap></GeoFenceMap>
+      <AdvancedLeafletApp></AdvancedLeafletApp>
     </div>
   );
 }

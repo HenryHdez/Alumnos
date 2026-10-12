@@ -5,6 +5,11 @@ db.libros.find({
     publicado: { $gt: 1960 }
 });
 
+db.libros.find({
+    $and:[{"valoraciones.usuario": "Laura"}, 
+    {"valoraciones.usuario": "Roberto"}]
+});
+
 #Mostrar todos los libros que fueron publicados antes de 1980 o tienen más de 7 ejemplares en stock
 db.libros.find({ 
     $or: [ 
@@ -27,6 +32,7 @@ db.libros.find({
 
 #Todos los libros que tienen una valoración donde la puntuación sea mayor que 4
 db.libros.find({ "valoraciones.puntuacion": { $gt: 4 } });
+
 
 
 #En Mongo compass agregar las comillas a cada documento

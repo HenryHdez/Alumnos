@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--Comentario HTML
+Inicio de la página -->
+<html>
+    <!--Configuracion de la pagina-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Titulo navegador</title>
+    </head>
+    <!--Lo que quiero ver en la pagina web-->
+    <body>
+        <h1>Pagina principal</h1>
+        <a href="/otrpag"><img src="/static/Escudo_UD.png" weight=200 height=100/></a>
+        <a href="/otrpag2">Enlace a pagina 2</a>
+        
+        {% if resultado==3:%}
+            <p style="color:red">Se cumple</p>
+        {% else %}
+            <p style="color:green">No se cumple</p>
+        {% endif %}
+
+        {% for elemento in listaHTML:%}
+            <p>{{elemento}}</p>
+        {% endfor %}
+    </body>
+<!--Fin de la pagina-->
+</html>

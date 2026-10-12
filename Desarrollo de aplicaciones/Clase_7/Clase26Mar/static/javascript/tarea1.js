@@ -1,0 +1,1 @@
+window.alert("¡Hola! Bienvenido a la tarea 1 de JavaScript.");

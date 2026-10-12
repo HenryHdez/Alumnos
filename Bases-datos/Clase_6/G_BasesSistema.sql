@@ -1,10 +1,4 @@
-/* =========================================================
-   PRÁCTICA: BASES DE DATOS DEL SISTEMA EN SQL SERVER
-   ========================================================= */
-
-
-/* 1. MASTER
-   Consultar las bases registradas en la instancia
+/* Master: Consultar las bases registradas en la instancia
 */
 
 USE master;
@@ -18,7 +12,6 @@ SELECT
 FROM sys.databases
 ORDER BY database_id;
 GO
-
 
 /* Consultar los archivos de las bases del sistema */
 
@@ -34,9 +27,7 @@ ORDER BY database_id, type_desc;
 GO
 
 
-/* 2. MODEL
-   Consultar algunas propiedades de la base plantilla
-*/
+/* Model: Consultar algunas propiedades de la base plantilla */
 
 SELECT
     name,
@@ -48,10 +39,7 @@ FROM sys.databases
 WHERE name = 'model';
 GO
 
-
-/* 3. TEMPDB
-   Crear y utilizar una tabla temporal
-*/
+/* TempDB: Crear y utilizar una tabla temporal */
 
 USE tempdb;
 GO
@@ -81,10 +69,7 @@ GO
 DROP TABLE #ProductosTemporales;
 GO
 
-
-/* 4. MSDB
-   Consultar el historial de copias de seguridad
-*/
+/* MSDB: Consultar el historial de copias de seguridad */
 
 USE msdb;
 GO
@@ -103,10 +88,7 @@ FROM dbo.backupset
 ORDER BY backup_finish_date DESC;
 GO
 
-
-/* 5. CONSULTA FINAL
-   Identificar la base actual y el servidor conectado
-*/
+/* Identificar la base actual y el servidor conectado */
 
 SELECT
     @@SERVERNAME AS servidor,
