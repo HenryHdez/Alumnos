@@ -14,6 +14,6 @@ def medir_latencia(destino, timeout):
    else:
       print(f"No hay respuesta desde {destino} (timeout de {timeout}s)")
 
-medir_latencia("192.168.1.7", 2)
+medir_latencia("192.168.10.14", 2)
 
 

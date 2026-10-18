@@ -7,7 +7,7 @@ while i==0
     imagen=getsnapshot(Video);
     Ima_gray=rgb2gray(imagen);
     %Detector de bordes sobel
-    BW1 = edge(Ima_gray,'sobel'); 
-    imshow(BW1)
+    %BW1 = edge(Ima_gray,'sobel'); 
+    imshow(Ima_gray)
     pause(0.1)
 end

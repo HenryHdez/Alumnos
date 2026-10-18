@@ -3,45 +3,56 @@ clear, clc
 Ima=imread('Imagenes/circulos.jpg');
 %Circulos rojos
 Ima_R=Ima(:,:,1);
-Ima_R=edge(Ima_R,'canny');
+Ima_R=1-imbinarize(Ima_R,0.5);
 SE = strel('disk',10);
 Ima_D=imdilate(Ima_R,SE);
-%Rellenar estructuras
-Ima_D=imfill (Ima_D,'Holes');
-figure; 
-imshow(Ima_D)
-%Obtener esqueleto
-Ima_Esq = bwmorph(Ima_D,'skel',Inf); 
-figure; 
-imshow(Ima_Esq)
-%skel, remove, circles, bridge
-
-
-[L, Ne]=bwlabel(Ima_D);
-
-
-%Estimar propiedad
-%propiedad=regionprops(L,'BoundingBox'); %Ubicación
+%Ima_D=edge(Ima_D,'canny');
 
 % Area, Centroid, BoundingBox, SubarrayIdx, MajorAxisLength, 
 % MinorAxisLength,     Eccentricity, Orientation, ConvexHull, 
 % ConvexImage, ConvexArea, Image,     FilledImage,  FilledArea, 
 % EulerNumber Extrema, EquivDiameter, Solidity,     Extent, 
 % PixelIdxList, PixelList, Perimeter.
-Area=regionprops(L,'Perimeter') %Area de cada circulo
-%Perimetro=regionprops(L,'Perimeter'); %Perimetro de cada circulo
 
-% px=10;                       %Cantidad de pixeles
-% %Dilatación
-% SE = strel('disk',px);       %elemento estructurante
-% Im_D=imdilate(Ima_R,SE);
+[L, Ne]=bwlabel(Ima_D);
+propiedad=regionprops(L,'Area');
+Ima_D=imfill (Ima_D,'Holes');
+Ima_Esq = bwmorph(Ima_D,'skel',Inf); 
+Ima_Esq = bwmorph(Ima_Esq,'Bridge'); 
+
+%Ima_D=imerode(Ima_D,SE);
+%Rellenar estructuras
+%Ima_D=imfill (Ima_D,'Holes');
+figure; 
+imshow(Ima_Esq)
+% %Obtener esqueleto
+% Ima_Esq = bwmorph(Ima_D,'skel',Inf); 
 % figure; 
-% imshowpair(Ima_R,Im_D,'montage') 
-% %Erosión
-% SE = strel('disk',px);       %elemento estructurante
-% Im_E=imerode(Ima_R,SE);
-% figure;
-% imshowpair(Ima_R,Im_E,'montage') 
+% imshow(Ima_Esq)
+% %skel, remove, circles, bridge
+% 
+% 
+% [L, Ne]=bwlabel(Ima_D);
+% 
+% 
+% %Estimar propiedad
+% %propiedad=regionprops(L,'BoundingBox'); %Ubicación
+% 
+
+% Area=regionprops(L,'Perimeter') %Area de cada circulo
+% %Perimetro=regionprops(L,'Perimeter'); %Perimetro de cada circulo
+% 
+% % px=10;                       %Cantidad de pixeles
+% % %Dilatación
+% % SE = strel('disk',px);       %elemento estructurante
+% % Im_D=imdilate(Ima_R,SE);
+% % figure; 
+% % imshowpair(Ima_R,Im_D,'montage') 
+% % %Erosión
+% % SE = strel('disk',px);       %elemento estructurante
+% % Im_E=imerode(Ima_R,SE);
+% % figure;
+% % imshowpair(Ima_R,Im_E,'montage') 
 
 
 

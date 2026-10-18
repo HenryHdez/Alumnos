@@ -1,11 +1,11 @@
 import paramiko
 
-host = "192.168.87.253"
+host = "192.168.10.14"
 user = "ubuntu"
 password = "ubuntu" 
 
 # Comando SNMP a ejecutar
-command = "snmpwalk -v 2c -c public 192.168.87.253"
+command = "snmpwalk -v 2c -c public 192.168.10.14"
 
 try:
     # Crear cliente ssh

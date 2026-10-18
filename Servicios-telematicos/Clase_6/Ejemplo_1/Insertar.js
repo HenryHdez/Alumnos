@@ -2,9 +2,9 @@ var mysql      =  require('mysql2');
 //Parámetros de la conexión
 var conexion = mysql.createConnection({
   host             : 'localhost',
-  port             : '3306',
+  port             : '3307',
   user             : 'root',
-  password         : '12345',
+  password         : '0000',
   database         : 'SERVICIOS',
 });
 //Funcion conectar del API, retorna error.

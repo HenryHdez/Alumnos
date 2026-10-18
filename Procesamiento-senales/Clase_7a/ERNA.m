@@ -43,7 +43,7 @@ layers = [
     % Función de activación
     % leakyReluLayer(0.01), sigmoidLayer, reluLayer, tanhLayer
     leakyReluLayer(0.01)
-    %Reduce la dimensionalidad a 2*2
+    %Recorre cada mapa avanzando de 2*2 y conserva el mayor valor
     maxPooling2dLayer(2, 'Stride', 2)
 
     convolution2dLayer(3, 16, 'Padding', 'same')
