@@ -92,12 +92,12 @@ app.listen(PORT, () => {
 ctrl+x, y y enter
 node Servidor
 //Desde el navegador de cualquier contenedor
-http://ubuntu1:5000
+http://ubuntu2:5000
 
 
 --Docker no permite agregar puertos a contenedores en ejecución, por lo tanto, para exponer el puerto 5000
-elimine el contenedor y creelo nuevamente
-docker stop ubuntu1
-docker rm ubuntu1
 
-docker run -d --name ubuntu3 --hostname ubuntu3 --network red_ubuntu_lab -p 3003:3000 -p 5001:5000 -v ubuntu1_data:/config --shm-size="1gb" lscr.io/linuxserver/webtop:ubuntu-xfce
+elimine el contenedor y creelo nuevamente (El volumen se conserva)
+docker stop ubuntu2
+docker rm ubuntu2
+docker run -d --name ubuntu3 --hostname ubuntu3 --network red_ubuntu_lab -p 3003:3000 -p 5001:5000 -v ubuntu2_data:/config --shm-size="1gb" lscr.io/linuxserver/webtop:ubuntu-xfce

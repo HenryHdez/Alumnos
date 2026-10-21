@@ -21,13 +21,13 @@ capitales = gpd.GeoDataFrame(capitales_data, geometry='Coordenadas')
 fig, ax = plt.subplots()
 
 # Dibujar el mapa de Colombia
-mapa_colombia.plot(ax=ax, color='blue', edgecolor='black')
+mapa_colombia.plot(ax=ax, color='blue', edgecolor='red')
 
 #Dibujar Carreteras
 mapa_colombia2.plot(ax=ax, color='green')
 
 # Dibujar las capitales en el mapa
-capitales.plot(ax=ax, marker='o', color='red', markersize=50)
+capitales.plot(ax=ax, marker='o', color='yellow', markersize=50)
 
 # Añadir etiquetas de ciudad
 for x, y, label in zip(capitales.geometry.x, capitales.geometry.y, capitales['Ciudad']):
